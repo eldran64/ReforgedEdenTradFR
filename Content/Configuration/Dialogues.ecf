@@ -17639,22 +17639,22 @@
   OptionNext_1: End
   OptionExecute_1: "AddItem('Token', 1, 6301); SetSignal('KeyTaken', true)"
   OptionIf_1: IsSignalSet('KeyTaken')
-  Option_2: "Exit"
+  Option_2: "Sortir"
   OptionNext_2: End
 }
 
 { +Dialogue Name: Eden_SyndicateAccessCardExit
-  Output: "This terminal has no key card."
-  Option_1: "Exit"
+  Output: "Ce terminal n'a pas de carte-clé."
+  Option_1: "Sortir"
   OptionNext_1: End
 }
 
 { +Dialogue Name: Eden_SyndicateAccessCardTake
-  Output: "A Syndicate goon carelessly left their security card in the computer terminal."
-  Option_1: "Take the keycard."
+  Output: "Un agent du Syndicat a négligemment laissé sa carte de sécurité dans le terminal de l'ordinateur."
+  Option_1: "Prenez la carte-clé."
   OptionNext_1: End
   OptionExecute_1: "AddItem('Token', 1, 6301); SetSignal('KeyTaken', true)"
-  Option_2: "Exit"
+  Option_2: "Sortir"
   OptionNext_2: End
 }
 # ====================================================================================================================================================================================
@@ -18384,7 +18384,7 @@
   Option_1: "<color=#32cd32>Initiate hack.</color>"
   OptionNext_1: Eden_HackEpsilonRelayHack1Setup
   OptionExecute_1: "SetSignal('InProgress', true)"
-  Option_2: "Exit"
+  Option_2: "Sortir"
   OptionNext_2: End
 }
 
@@ -18684,7 +18684,7 @@
   Option_1: "<color=#32cd32>Initiate hack.</color>"
   OptionNext_1: Eden_Hack1_Hack1Setup
   OptionExecute_1: "SetSignal('InProgress', true)"
-  Option_2: "Exit"
+  Option_2: "Sortir"
   OptionNext_2: End
 }
 
@@ -19063,7 +19063,7 @@
 
 { +Dialogue Name: Eden_Explore1_Exit
   Output: "This mission has already been activated. There is nothing of further value to be found here."
-  Option_1: "Exit"
+  Option_1: "Sortir"
   OptionNext_1: End
 }
 
@@ -19082,7 +19082,7 @@
   Option_1: "Download data to PDA and investigate."
   OptionNext_1: End
   OptionExecute_1: "SetSignal('Activated', true)"
-  Option_2: "Exit"
+  Option_2: "Sortir"
   OptionNext_2: End
 }
 
@@ -19091,7 +19091,7 @@
   Option_1: "Download data to PDA and investigate."
   OptionNext_1: End
   OptionExecute_1: "SetSignal('Activated', true)"
-  Option_2: "Exit"
+  Option_2: "Sortir"
   OptionNext_2: End
 }
 
@@ -19100,7 +19100,7 @@
   Option_1: "Download data to PDA and investigate."
   OptionNext_1: End
   OptionExecute_1: "SetSignal('Activated', true)"
-  Option_2: "Exit"
+  Option_2: "Sortir"
   OptionNext_2: End
 }
 
@@ -19321,7 +19321,7 @@
 }
 { +Dialogue Name: Eden_Harvest_Voidium_Deny
   Output: "@d0You have already harvested this Voidium crystal."
-  Option_1: "Exit"
+  Option_1: "Sortir"
   OptionNext_1: End
 }
 
@@ -19354,7 +19354,7 @@
 
 { +Dialogue Name: Eden_Harvest_Voidium_Deny2
   Output: "@d0You lack the tools or understanding to do anything with this."
-  Option_1: "Exit"
+  Option_1: "Sortir"
   OptionNext_1: End
 }
 

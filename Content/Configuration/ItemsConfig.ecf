@@ -24173,7 +24173,7 @@
   StackSize: 1
   Category: Weapons/Items
   IsNightVisionItem: true
-  Info: An experimental light railgun rifle capable of inflicting massive damage to soft targets or light damage to structures. \n\nHas an enhanced targeting system allowing for night vision while helmet is equipped. Toggle with suit light hot key. \n\n1500 damage per shot before resistance modifiers., display: true
+  Info: Un fusil railgun léger expérimental capable d'infliger des dégâts massifs aux cibles molles ou des dégâts légers aux structures. \n\nPossède un système de ciblage amélioré permettant la vision nocturne lorsque le casque est équipé. Il peut être activé par la touche de raccourci de la lumière de la combinaison. \n\n1500 points de dégâts par tir avant les modificateurs de résistance., display: true
   Mass: 25, type: float, display: true, formatter: Kilogram
   Volume: 4, type: float, display: true, formatter: Liter
   Durability: 500, display: true

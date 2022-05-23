@@ -36310,7 +36310,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   AllowPlacingAt: "Base,MS", display: true
   RepairToTemplate: false, display: true
-  Info: An advanced shield generator augmented with alien technology. Creates a reinforced shield at the tradeoff of greatly increased power cpu and pentaxid requirements and a long recharge time. Placeable on Capital Vessels and Bases. Requires 2 CV and 2 BA shield generators to craft. [c][ff8000]This is an extremely rare and expensive device. Save your ship repair template without it. Limit 1 and does not stack with similar devices.[-][/c] \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un générateur de bouclier avancé augmenté d'une technologie extraterrestre. Il crée un bouclier renforcé au prix d'une augmentation considérable de la puissance requise par le processeur et le pentaxid et d'un long temps de recharge. Peut être placé sur les vaisseaux capitaux et les bases. Nécessite 2 générateurs de bouclier CV et 2 BA pour être fabriqué. [c][ff8000]C'est un dispositif extrêmement rare et cher. Gardez votre modèle de réparation de navire sans lui. Limité à 1 et ne s'empile pas avec des dispositifs similaires.[-][/c] \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   HitPoints: 20000, type: int, display: true
   Mass: 14635, type: float, display: true, formatter: Kilogram
   Volume: 4320, type: float, display: true, formatter: Liter
@@ -36346,7 +36346,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "2,1,3", display: true
   AllowPlacingAt: "SS,GV", display: true
   RepairToTemplate: false, display: true
-  Info: An advanced shield generator augmented with alien technology. Creates a reinforced shield at the tradeoff of greatly increased power cpu and pentaxid requirements. Requires 2 HV and 2 SV shield generators to craft. Placeable on Hover Vessels and Small Vessels. [c][ff8000]This is an extremely rare and expensive device. Save your ship repair template without it. Limit 1 and does not stack with similar devices.[-][/c] \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un générateur de bouclier avancé augmenté d'une technologie extraterrestre. Crée un bouclier renforcé au prix d'une augmentation considérable de la puissance du processeur et des besoins en pentaxid. Nécessite 2 générateurs de bouclier HV et 2 SV pour être fabriqué. Peut être placé sur les vaisseaux volants et les petits vaisseaux. [c][ff8000]C'est un dispositif extrêmement rare et cher. Gardez votre modèle de réparation de navire sans lui. Limité à 1 et ne s'empile pas avec des dispositifs similaires.[-][/c] \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   HitPoints: 1000, type: int, display: true
   Mass: 1630, type: float, display: true, formatter: Kilogram
   Volume: 187.5, type: float, display: true, formatter: Liter
@@ -36372,7 +36372,7 @@ HullCombatSmallBlocks
 
 # ========================================================================================================================== Antimatter Tank for the antimatter warp drive.
 { +Block Name: Eden_AntimatterTank, Ref: PentaxidTank
-  Info: A large Pentaxid tank allowing for a greater max warp range when used with an Antimatter Warp Drive. [c][ff8000]This is an extremely rare and expensive device. Save your ship repair template without it. Limit 1 and does not stack with similar devices.[-][/c] \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un grand réservoir Pentaxid permettant une plus grande portée de distorsion maximale lorsqu'il est utilisé avec un moteur de distorsion antimatière. [c][ff8000]C'est un dispositif extrêmement rare et cher. Gardez votre gabarit de réparation de vaisseau sans lui. Limité à 1 et ne s'empile pas avec des dispositifs similaires.[-][/c] \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   Volume: 2250, type: float, display: true, formatter: Liter    
   VolumeCapacity: 9600, type: float, display: true, formatter: Liter #600 or 500 Refined Pentaxid
   HitPoints: 10000, type: int, display: true
@@ -37723,7 +37723,7 @@ HullCombatSmallBlocks
   # ModelOffset: "0,0.5,0"
   Place: Free
   AllowPlacingAt: "Base,MS", display: false
-  Info: A block group for placing default and Project Eden POI devices in creative mode. RMB to change type. Not allowed in blueprints. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un groupe de blocs pour placer les dispositifs POI par défaut et Project Eden en mode créatif. Clic droit pour changer de type. Non autorisé dans les plans. \n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c], display: true
   Mass: 1, type: float, display: true, formatter: Kilogram
   EnergyIn: 1, type: int, display: false, formatter: Watt
   Category: Devices
@@ -37963,7 +37963,7 @@ HullCombatSmallBlocks
   # Mesh-Damage-3: Mesh/D2
   # Mesh-Damage-4: Mesh/D3
   AllowedInBlueprint: false, display: true
-  Info: A powerful anti personel turret for indoor or outdoor use in POIs. Can deal some shield damage but is not effective versus hull or devices. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Une puissante tourelle anti-personnel pour une utilisation intérieure ou extérieure dans les POIs. Elle peut infliger quelques dégâts aux boucliers mais n'est pas efficace contre la coque ou les dispositifs. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   Class: TurretAuto
   Group: cpgAlien
   IndexName: Turret
@@ -38006,7 +38006,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Category: Weapons/Items
-  Info: An extreme range augmented plasma turret for POIs. Fires slow moving but homing plasma projectiles that deal high damage. Use for special encounters only. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Une tourelle à plasma à portée extrême pour les POI. Elle tire des projectiles plasma à mouvement lent mais à tête chercheuse qui infligent des dégâts importants. À n'utiliser que pour les rencontres spéciales. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   PickupTarget: TurretMSLaserBlocks
   TemplateRoot: TurretMSLaserBlocks
   AllowedInBlueprint: false, display: true
@@ -38315,7 +38315,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret  
   Category: Weapons/Items
-  Info: A turret that fires fast moving unguided rockets at medium range for POIs. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Une tourelle qui tire des roquettes non guidées à déplacement rapide à moyenne portée pour les POI. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   PickupTarget: TurretMSRocketBlocks
   TemplateRoot: TurretMSRocketBlocks
   AllowedInBlueprint: false, display: true
@@ -38366,7 +38366,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret  
   Category: Weapons/Items
-  Info: Extreme long range turret that fires guided torpedoes for POIs. Can deal incredible damage per shot but fires very slowly. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Tourelle à très longue portée qui tire des torpilles guidées pour les POI. Elle peut infliger des dégâts incroyables par tir mais tire très lentement. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   PickupTarget: TurretMSRocketBlocks
   TemplateRoot: TurretMSRocketBlocks
   AllowedInBlueprint: false, display: true
@@ -38513,7 +38513,7 @@ HullCombatSmallBlocks
   CustomIcon: TurretAlien
   AllowedInBlueprint: false, display: true
   Model: @models/Blocks/Turrets/TurretAlienPrefab
-  Info: A turret for POIs that fires disruptor blast for high hull damage. Deals little shield damage. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Une tourelle pour les POI qui tire un souffle de disrupteur pour des dommages élevés à la coque. Elle inflige peu de dégâts aux boucliers. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   PickupTarget: TurretBaseLaserBlocks
   TemplateRoot: TurretBaseLaserBlocks
   WeaponItem: Eden_TurretAlienDisruptor_Weapon
@@ -38535,7 +38535,7 @@ HullCombatSmallBlocks
   AllowedInBlueprint: false, display: true
   Model: @models/Blocks/Turrets/TurretZiraxSpherical_PlasmaPrefab
   SizeInBlocks: "3,1,3", display: true
-  Info: A short to medium range blaster turret that deals light to moderate damage to shields and armor alike for POIs. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Une tourelle blaster de courte à moyenne portée qui inflige des dégâts légers à modérés aux boucliers et aux armures des POI. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   PickupTarget: TurretMSProjectileBlocks
   TemplateRoot: TurretMSProjectileBlocks
   WeaponItem: Eden_TurretAlienBlaster_Weapon
@@ -38552,7 +38552,7 @@ HullCombatSmallBlocks
   AllowedInBlueprint: false, display: true
   # Model: @models/Blocks/Turrets/TurretZiraxSpherical_PlasmaPrefab
   # SizeInBlocks: "3,2,3", display: true
-  Info: A medium range blaster turret that deals light to moderate damage to shields and armor alike for POIs. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Une tourelle blaster de moyenne portée qui inflige des dégâts légers à modérés aux boucliers et aux armures des POI. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   PickupTarget: TurretMSProjectileBlocks
   TemplateRoot: TurretMSProjectileBlocks
   WeaponItem: Eden_TurretAlienBlasterT2_Weapon
@@ -38937,7 +38937,7 @@ HullCombatSmallBlocks
 # ========================================================================================================================== Bastion shield generator for POIs
 { +Block Name: Eden_ShieldGeneratorBastion, Ref: ShieldGeneratorBA
   CustomIcon: ShieldGeneratorPOI
-  Info: A powerful but slow charging shield generator for POIs. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un générateur de bouclier puissant mais à chargement lent pour les POIs. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   AllowedInBlueprint: false, display: true     
   AllowPlacingAt: "Base,MS", display: true
 
@@ -38999,7 +38999,7 @@ HullCombatSmallBlocks
 # ========================================================================================================================== Regenerative shield generator for POIs
 { +Block Name: Eden_ShieldGeneratorRegenerate, Ref: ShieldGeneratorBA
   CustomIcon: ShieldGeneratorPOI
-  Info: A quickly regenerating shield generator for POIs. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un générateur de bouclier à régénération rapide pour les POI. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   AllowedInBlueprint: false, display: true
   AllowPlacingAt: "Base,MS", display: true
 
@@ -39045,7 +39045,7 @@ HullCombatSmallBlocks
 # ========================================================================================================================== Light Shield Generator for POIs
 { +Block Name: Eden_ShieldGeneratorPOILightT1, Ref: ShieldGeneratorBA
   CustomIcon: ShieldGeneratorPOI
-  Info: A weak shield generator for POIs. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un générateur de bouclier faible pour les POI. \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   AllowedInBlueprint: false, display: true     
   AllowPlacingAt: "Base,MS", display: true
 
@@ -39629,7 +39629,7 @@ HullCombatSmallBlocks
   TemplateRoot: DecoStoneBlocks
   PickupTarget: DecoStoneBlocks
   Volume: 500000, type: float, display: true, formatter: Liter
-  Info: A decorative block for POIs. Dialog enabled. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un bloc décoratif pour les POIs. Dialogue activé. \n[c][A9A9A9][i]Nécessite le projet Eden.[/i][-][/c], display: true
 }
 
 # ========================================================================================================================== Water Block
@@ -39643,7 +39643,7 @@ HullCombatSmallBlocks
   # Mesh: water
   # Texture: 107
   # AllowPlacingAt: "Base,MS", display: true
-  Info: A decorative block for POIs. Can cause rendering issues in certain placements. Recommended to use half block slabs instead of the full block shape. Can be removed via multi-tool. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un bloc décoratif pour les POI. Peut causer des problèmes de rendu dans certains placements. Il est recommandé d'utiliser des demi-blocs plutôt que des blocs complets. Peut être retiré à l'aide d'un outil multiple. \n[c][A9A9A9][i]Nécessite le projet Eden[/i][-][/c][/c], display: true
   ShowUser: Yes
   AllowedInBlueprint: false, display: true
   TemplateRoot: Eden_WaterBlock
@@ -39671,7 +39671,7 @@ HullCombatSmallBlocks
   # Texture: 121
   # Temperature: 900
   # AllowPlacingAt: "Base,MS", display: true
-  Info: A decorative block for POIs. Can cause rendering issues in certain placements. Recommended to use half block slabs instead of the full block shape. Can be removed via multi-tool. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  Info: Un bloc décoratif pour les POI. Peut causer des problèmes de rendu dans certains placements. Il est recommandé d'utiliser des demi-blocs plutôt que des blocs complets. Peut être retiré à l'aide d'un outil multiple. \n[c][A9A9A9][i]Nécessite le projet Eden[/i][-][/c][/c], display: true
   ShowUser: Yes
   AllowedInBlueprint: false, display: true
   TemplateRoot: DecoStoneBlocks

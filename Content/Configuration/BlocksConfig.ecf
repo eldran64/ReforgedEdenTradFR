@@ -601,7 +601,7 @@ HullCombatSmallBlocks
   { Child DropOnDestroy_2
     Item: Graphite
     Count: "1,3"
-    Prob: 0.05
+    Prob: 0.1
   }
 }
 { Block Id: 52, Name: Grass01
@@ -688,7 +688,7 @@ HullCombatSmallBlocks
   { Child DropOnDestroy_2
     Item: Graphite
     Count: "0,2"
-    Prob: 0.01
+    Prob: 0.03
   }
 }
 
@@ -707,7 +707,7 @@ HullCombatSmallBlocks
   { Child DropOnDestroy_2
     Item: Graphite
     Count: "1,3"
-    Prob: 0.05
+    Prob: 0.075
   }
 }
 { Block Id: 59, Name: RockBrown01
@@ -847,7 +847,7 @@ HullCombatSmallBlocks
   { Child DropOnDestroy
     Item: Salt
     Count: "1,2"
-    Prob: 0.03
+    Prob: 0.05
   }
 }
 # double. delete when save game break
@@ -1197,7 +1197,7 @@ HullCombatSmallBlocks
   { Child DropOnDestroy_2
     Item: Salt
     Count: "1,3"
-    Prob: 0.06
+    Prob: 0.1
   }
 }
 { Block Id: 101, Name: SeaGround03
@@ -1215,7 +1215,7 @@ HullCombatSmallBlocks
   { Child DropOnDestroy_2
     Item: Salt
     Count: "1,3"
-    Prob: 0.06
+    Prob: 0.09
   }
 }
 # double. delete when save game break
@@ -1241,7 +1241,7 @@ HullCombatSmallBlocks
   { Child DropOnDestroy
     Item: Salt
     Count: "1,3"
-    Prob: 0.08
+    Prob: 0.1
   }
 }
 
@@ -1690,7 +1690,6 @@ HullCombatSmallBlocks
   # Class: TradingStation
   Class: NPCDialogue
   NPCModelRotation: false
-  Group: cpgCrewStationAlien
   Material: device
   Shape: ModelEntity
   Model: @models/Blocks/Mothership/TradingConsolePrefab
@@ -1703,8 +1702,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  IsAccessible: true, type: bool
-  IsLockable: true
+  IsAccessible: false, type: bool
   IsOxygenTight: false, display: true
   TemplateRoot: ConsoleBlocks
   HitPoints: 75, type: int, display: true
@@ -3637,14 +3635,13 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Mothership/GeneralPurposeConsolePrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab  
   Class: NPCDialogue    
-  Group: cpgCrewStationAlien
   Category: Deco Blocks
   NPCModelRotation: false
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   Place: Free
   AllowPlacingAt: "Base,MS", display: true
-  IsAccessible: true, type: bool
+  IsAccessible: false, type: bool
   IsOxygenTight: false, display: true
   # AllowedInBlueprint: false, display: true
   # CanPickup: true
@@ -11283,6 +11280,7 @@ HullCombatSmallBlocks
   Material: device
   Shape: ModelEntity
   ShowBlockName: true
+  SymType: 4
   # IsColorable: true
   Model: @reforgedcontent/AdvConstructorRG
   # Model: @models/Blocks/Mothership/ConstructorT2Prefab
@@ -12189,7 +12187,7 @@ HullCombatSmallBlocks
   { Child DropOnDestroy
     Item: Salt
     Count: "1,9"
-    Prob: 0.3
+    Prob: 0.9
   }
 }
 { Block Id: 748, Name: CoralStone03-06, Ref: CoralStone03-05
@@ -14728,6 +14726,7 @@ HullCombatSmallBlocks
   Group: cpgConstructor
   Material: device
   Shape: ModelEntity
+  SymType: 4
   MarketPrice: 6095, display: true
   ShowBlockName: true
   # IsColorable: true
@@ -17154,7 +17153,7 @@ HullCombatSmallBlocks
   CPUIn: 0, type: int, display: false
   EnergyIn: 1, type: int, display: true, formatter: Watt
   StackSize: 1000
-  Accept: "MoneyCard, GoldCoins"   /* the first one is payed out when withdrawing */
+  Accept: "MoneyCard, GoldCoins, PlatinumCard"   /* the first one is payed out when withdrawing */
 
   UnlockCost: 12, display: true
   UnlockLevel: 10, display: true
@@ -19357,6 +19356,7 @@ HullCombatSmallBlocks
   TraderType: TraderDefault
   Material: human
   Shape: ModelEntity
+  MaxCount: 50, type: int, display: true
   TemplateRoot: AlienNPCBlocks
   PickupTarget: AlienNPCBlocks
   Model: @models2/Entities/Enemies/Traders/AlienTraderBlockPrefab
@@ -19968,11 +19968,16 @@ HullCombatSmallBlocks
   ShowBlockName: true
   # Model: @models2/Entities/Decorations/LaboratoryPack/LockerWShelvesPrefab
   # Model: @models/Blocks/Mothership/ArmorLockerPrefab
-  Model: @models/Blocks/Mothership/ArmorLockerBAPrefab
-  Mesh-Damage-1: Mesh/D0
-  Mesh-Damage-2: Mesh/D1
-  Mesh-Damage-3: Mesh/D2
-  Mesh-Damage-4: Mesh/D3
+  # Model: @models/Blocks/Mothership/ArmorLockerBAPrefab
+  # Mesh-Damage-1: Mesh/D0
+  # Mesh-Damage-2: Mesh/D1
+  # Mesh-Damage-3: Mesh/D2
+  # Mesh-Damage-4: Mesh/D3
+  Model: @reforgedcontent/ArmorLockerRG
+  Mesh-Damage-1: D0
+  Mesh-Damage-2: D1
+  Mesh-Damage-3: D2
+  Mesh-Damage-4: D3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   DropInventoryEntity: DropContainer
   Place: Free
@@ -21286,6 +21291,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   # ModelOffset: "0,0.5,0"
   Place: Free
+  MaxCount: 50, type: int, display: true
   AllowPlacingAt: "Base,MS", display: false
   Info: bkiBlockGroup, display: true
   Mass: 80, type: float, display: true, formatter: Kilogram
@@ -21303,6 +21309,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   # ModelOffset: "0,0.5,0"
   Place: Free
+  MaxCount: 50, type: int, display: true
   AllowPlacingAt: "Base,MS", display: false
   Info: bkiBlockGroup, display: true
   Mass: 80, type: float, display: true, formatter: Kilogram
@@ -23264,6 +23271,7 @@ HullCombatSmallBlocks
   Mass: 1660, type: float, display: true, formatter: Kilogram
   Volume: 200, type: float, display: true, formatter: Liter
   StackSize: 1000
+  SymType: 4
 
   EnergyIn: 500, type: int, display: true, formatter: Watt
   CPUIn: 5000, type: int, display: true
@@ -29546,7 +29554,7 @@ HullCombatSmallBlocks
    CustomIcon: StructuralRamp
    Texture: 50
    BlockColor: "110,110,110"
-   Info: A lightweight structural ramp used for boarding ramps and aerodynamics., display: true
+   Info: [c][ff0000]NE SONT PLUS UTILISÉS - Remplacer par de nouveaux blocs de rampe.[-][/c], display: true
    Shape: New
    Place: Free
    Model: WedgeLong
@@ -29558,7 +29566,7 @@ HullCombatSmallBlocks
    Category: BuildingBlocks
    SizeInBlocks: "1,1,3"
    StackSize: 1000
-   ShowUser: Yes
+   ShowUser: No
  }
  { Block Id: 444, Name: StructuralRampSmall
    Material: hullarmoredsmall
@@ -29568,7 +29576,7 @@ HullCombatSmallBlocks
    CustomIcon: StructuralRamp
    Texture: 50
    BlockColor: "110,110,110"
-   Info: A lightweight structural ramp that sacrifices upgradability for aerodynamics., display: true
+   Info: [c][ff0000]NE SONT PLUS UTILISÉS - Remplacer par de nouveaux blocs de rampe.[-][/c], display: true
    Shape: New
    Place: Free
    Model: WedgeLong
@@ -29580,7 +29588,7 @@ HullCombatSmallBlocks
    Category: BuildingBlocks
    SizeInBlocks: "1,1,3"
    StackSize: 2000
-   ShowUser: Yes
+   ShowUser: No
  }
 # 268, 269 free
 # =================================== 1.4 Block Additions ====================================
@@ -32967,7 +32975,7 @@ HullCombatSmallBlocks
   HitPoints: 150, type: int, display: true
   Mass: 1980, type: float, display: true, formatter: Kilogram
   MaxCount: 24, type: int, display: true
-  EnergyIn: -2, type: int, display: false, formatter: Watt
+  EnergyIn: -3, type: int, display: false, formatter: Watt
   CPUIn: 500, type: int, display: true
   TemplateRoot: SolarPanelBlocksT2
   IsOxygenTight: false, display: true
@@ -33233,8 +33241,8 @@ HullCombatSmallBlocks
   Volume: 500000, type: float, display: true, formatter: Liter
   EnergyIn: 2000, type: int, display: true, formatter: Watt
   CPUIn: 0, type: int, display: false
-  ShieldCapacityBonus: 7000, type: int, display: true
-  ShieldRechargeBonus: 50, type: int, display: true
+  ShieldCapacityBonus: 5500, type: int, display: true
+  ShieldRechargeBonus: 30, type: int, display: true
   TemplateRoot: DecoBlocks2
   PickupTarget: DecoBlocks2
   
@@ -34751,8 +34759,888 @@ HullCombatSmallBlocks
   TechTreeParent: ShieldChargerT2Large
   TechTreeNames: "Base,Capital Vessel"
 }
-
-
+# =========================================================
+# ======== Extra Large Ramp Blocks CV/BA =========
+{ Block Name: SteelRampBlocksL
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  Material: hullsteel 
+  Shape: Invisible
+  Place: Free
+  Texture: 50
+  BlockColor: "110,110,110"
+  CustomIcon: SteelRamp1x3L
+  IsOxygenTight: true, display: true
+  AllowPlacingAt: "Base,MS", display: true
+  HitPoints: 1500, type: int, display: true
+  Info: bkiSteelRampBlocks, display: true
+  Mass: 2000, type: float, display: true, formatter: Kilogram
+  Volume: 32, type: float, display: true, formatter: Liter
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 432, display: true
+  UpgradeTo: HardenedRampBlocksL, display: true
+  Category: BuildingBlocks
+  ChildBlocks: "SteelRamp1x3L, SteelRamp1x2L, SteelRampEdge3x3L, SteelRampConnector3x3L, SteelRampConnector1x3L, SteelRampEdge1x3L, SteelRampEdge3x2RL, SteelRampEdge3x2LL, SteelRampConnector3x2RL, SteelRampConnector3x2LL, SteelRampEdge2x2L, SteelRampConnector2x2L"
+  StackSize: 1000
+}
+{ Block Name: SteelRamp1x3L
+  Material: hullsteel
+  Shape: ModelEntity
+  Model: @reforgedcontent/FullStructuralRamp3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  BlockColor: "110,110,110"
+  Info: bkiSteelRampBlocks, display: true
+  IsOxygenTight: true, display: true
+  Collide: "movement,bullet,rocket,melee"
+  TemplateRoot: SteelRampBlocksL
+  PickupTarget: SteelRampBlocksL
+  Place: Free
+  Texture: 50
+  SymType: 1
+  IsTextureable: true
+  IsGPUInstance: false
+  SizeInBlocks: "1,1,3", display: true
+  StackSize: 1000
+  OccupySizeInBlocks: true
+  AllowPlacingAt: "Base,MS", display: true
+  HitPoints: 1500, type: int, display: true
+  Volume: 32, type: float, display: true, formatter: Liter
+  Mass: 2000, type: float, display: true, formatter: Kilogram
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 432, display: true
+  UpgradeTo: HardenedRamp1x3L, display: true
+  Category: BuildingBlocks
+}
+{ Block Name: SteelRamp1x2L, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/HalfStructuralRamp
+  SizeInBlocks: "1,1,2", display: true
+  HitPoints: 750, type: int, display: true
+  Mass: 1000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRamp1x2L, display: true
+}
+{ Block Name: SteelRampEdge3x3L, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/FullConnectorBlue3x3Outside
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 1750, type: int, display: true
+  Mass: 2250, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge3x3L, display: true
+}
+{ Block Name: SteelRampConnector3x3L, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/FullConnectorGreen3x3Inside
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 3000, type: int, display: true
+  Mass: 3750, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector3x3L, display: true
+}
+{ Block Name: SteelRampConnector1x3L, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/FullConnector1x3Inside
+  SizeInBlocks: "3,1,1", display: true
+  SymType: 3
+  HitPoints: 1350, type: int, display: true
+  Mass: 1850, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector1x3L, display: true
+}
+{ Block Name: SteelRampEdge1x3L, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/FullConnectorYellow3x1
+  SizeInBlocks: "3,1,1", display: true
+  SymType: 3
+  HitPoints: 850, type: int, display: true
+  Mass: 1250, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge1x3L, display: true
+}
+{ Block Name: SteelRampEdge3x2RL, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/FullConnectorYellow3x2Right
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: SteelRampEdge3x2LL
+  SymType: 1
+  HitPoints: 2000, type: int, display: true
+  Mass: 2500, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge3x2RL, display: true
+}
+{ Block Name: SteelRampEdge3x2LL, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/FullConnectorYellow3x2
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: SteelRampEdge3x2RL
+  SymType: 1
+  HitPoints: 2000, type: int, display: true
+  Mass: 2500, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge3x2LL, display: true
+}
+{ Block Name: SteelRampConnector3x2RL, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/FullConnectorGreen2x3Inside
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: SteelRampConnector3x2LL
+  SymType: 4
+  HitPoints: 2500, type: int, display: true
+  Mass: 3000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector3x2RL, display: true
+}
+{ Block Name: SteelRampConnector3x2LL, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/FullConnectorGreen3x2Inside
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: SteelRampConnector3x2RL
+  SymType: 4
+  HitPoints: 2500, type: int, display: true
+  Mass: 3000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector3x2LL, display: true
+}
+{ Block Name: SteelRampEdge2x2L, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/HalfConnectorBlue3x3Outside
+  SizeInBlocks: "2,1,2", display: true
+  StackSize: 1000
+  SymType: 2
+  HitPoints: 750, type: int, display: true
+  Mass: 1000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge2x2L, display: true
+}
+{ Block Name: SteelRampConnector2x2L, Ref: SteelRamp1x3L
+  Model: @reforgedcontent/HalfConnectorGreen3x3Inside
+  SizeInBlocks: "2,1,2", display: true
+  SymType: 2
+  HitPoints: 850, type: int, display: true
+  Mass: 1250, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector2x2L, display: true
+}
+# Hardened Steel Ramp Variant
+{ Block Name: HardenedRampBlocksL
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  Material: hullarmored 
+  Shape: Invisible
+  Place: Free
+  Texture: 50
+  BlockColor: "110,110,110"
+  CustomIcon: HardenedRamp1x3L
+  IsOxygenTight: true, display: true
+  AllowPlacingAt: "Base,MS", display: true
+  HitPoints: 3000, type: int, display: true
+  Info: bkiHardenedRampBlocks, display: true
+  Mass: 4000, type: float, display: true, formatter: Kilogram
+  Volume: 32, type: float, display: true, formatter: Liter
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 1440, display: true
+  UpgradeTo: CombatRampBlocksL, display: true
+  Category: BuildingBlocks
+  ChildBlocks: "HardenedRamp1x3L, HardenedRamp1x2L, HardenedRampEdge3x3L, HardenedRampConnector3x3L, HardenedRampConnector1x3L, HardenedRampEdge1x3L, HardenedRampEdge3x2RL, HardenedRampEdge3x2LL, HardenedRampConnector3x2RL, HardenedRampConnector3x2LL, HardenedRampEdge2x2L, HardenedRampConnector2x2L"
+  StackSize: 1000
+}
+{ Block Name: HardenedRamp1x3L
+  Material: hullarmored
+  Shape: ModelEntity
+  Model: @reforgedcontent/FullStructuralRamp3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  BlockColor: "110,110,110"
+  Info: bkiHardenedRampBlocks, display: true
+  IsOxygenTight: true, display: true
+  Collide: "movement,bullet,rocket,melee"
+  TemplateRoot: HardenedRampBlocksL
+  PickupTarget: HardenedRampBlocksL
+  Place: Free
+  Texture: 50
+  SymType: 1
+  IsTextureable: true
+  IsGPUInstance: false
+  SizeInBlocks: "1,1,3", display: true
+  StackSize: 1000
+  OccupySizeInBlocks: true
+  AllowPlacingAt: "Base,MS", display: true
+  HitPoints: 3000, type: int, display: true
+  Volume: 32, type: float, display: true, formatter: Liter
+  Mass: 4000, type: float, display: true, formatter: Kilogram
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 1440, display: true
+  UpgradeTo: CombatRamp1x3L, display: true
+  Category: BuildingBlocks
+}
+{ Block Name: HardenedRamp1x2L, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/HalfStructuralRamp
+  CustomIcon: SteelRamp1x2L
+  SizeInBlocks: "1,1,2", display: true
+  HitPoints: 1500, type: int, display: true
+  Mass: 2000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRamp1x2L, display: true
+}
+{ Block Name: HardenedRampEdge3x3L, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/FullConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge3x3L
+  SymType: 2
+  SizeInBlocks: "3,1,3", display: true
+  HitPoints: 3500, type: int, display: true
+  Mass: 4500, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge3x3L, display: true
+}
+{ Block Name: HardenedRampConnector3x3L, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/FullConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector3x3L
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 6000, type: int, display: true
+  Mass: 7500, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector3x3L, display: true
+}
+{ Block Name: HardenedRampConnector1x3L, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/FullConnector1x3Inside
+  CustomIcon: SteelRampConnector1x3L
+  SymType: 3
+  SizeInBlocks: "3,1,1", display: true
+  HitPoints: 2700, type: int, display: true
+  Mass: 3700, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector1x3L, display: true
+}
+{ Block Name: HardenedRampEdge1x3L, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/FullConnectorYellow3x1
+  CustomIcon: SteelRampEdge1x3L
+  SizeInBlocks: "3,1,1", display: true
+  SymType: 3
+  HitPoints: 1700, type: int, display: true
+  Mass: 2500, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge1x3L, display: true
+}
+{ Block Name: HardenedRampEdge3x2RL, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/FullConnectorYellow3x2Right
+  CustomIcon: SteelRampEdge3x2RL
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: HardenedRampEdge3x2LL
+  SymType: 1
+  HitPoints: 4000, type: int, display: true
+  Mass: 5000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge3x2RL, display: true
+}
+{ Block Name: HardenedRampEdge3x2LL, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/FullConnectorYellow3x2
+  CustomIcon: SteelRampEdge3x2LL
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: HardenedRampEdge3x2RL
+  SymType: 1
+  HitPoints: 4000, type: int, display: true
+  Mass: 5000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge3x2LL, display: true
+}
+{ Block Name: HardenedRampConnector3x2RL, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/FullConnectorGreen2x3Inside
+  CustomIcon: SteelRampConnector3x2RL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: HardenedRampConnector3x2LL
+  SymType: 4
+  HitPoints: 5000, type: int, display: true
+  Mass: 6000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector3x2RL, display: true
+}
+{ Block Name: HardenedRampConnector3x2LL, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/FullConnectorGreen3x2Inside
+  CustomIcon: SteelRampConnector3x2LL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: HardenedRampConnector3x2RL
+  SymType: 4
+  HitPoints: 5000, type: int, display: true
+  Mass: 6000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector3x2LL, display: true
+}
+{ Block Name: HardenedRampEdge2x2L, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/HalfConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge2x2L
+  SizeInBlocks: "2,1,2", display: true
+  SymType: 2
+  StackSize: 1000
+  HitPoints: 1500, type: int, display: true
+  Mass: 2000, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge2x2L, display: true
+}
+{ Block Name: HardenedRampConnector2x2L, Ref: HardenedRamp1x3L
+  Model: @reforgedcontent/HalfConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector2x2L
+  SizeInBlocks: "2,1,2", display: true
+  SymType: 2
+  HitPoints: 1700, type: int, display: true
+  Mass: 2500, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector2x2L, display: true
+}
+# Combat Steel Ramp Variant
+{ Block Name: CombatRampBlocksL
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  Material: hullcombat 
+  Shape: Invisible
+  Place: Free
+  Texture: 50
+  BlockColor: "110,110,110"
+  CustomIcon: CombatRamp1x3L
+  IsOxygenTight: true, display: true
+  AllowPlacingAt: "Base,MS", display: true
+  HitPoints: 6000, type: int, display: true
+  Info: bkiCombatRampBlocks, display: true
+  Mass: 8000, type: float, display: true, formatter: Kilogram
+  Volume: 32, type: float, display: true, formatter: Liter
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 1548, display: true
+  Category: BuildingBlocks
+  ChildBlocks: "CombatRamp1x3L, CombatRamp1x2L, CombatRampEdge3x3L, CombatRampConnector3x3L, CombatRampConnector1x3L, CombatRampEdge1x3L, CombatRampEdge3x2RL, CombatRampEdge3x2LL, CombatRampConnector3x2RL, CombatRampConnector3x2LL, CombatRampEdge2x2L, CombatRampConnector2x2L"
+  StackSize: 1000
+}
+{ Block Name: CombatRamp1x3L
+  Material: hullcombat
+  Shape: ModelEntity
+  Model: @reforgedcontent/FullStructuralRamp3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  BlockColor: "110,110,110"
+  Info: bkiCombatRampBlocks, display: true
+  IsOxygenTight: true, display: true
+  Collide: "movement,bullet,rocket,melee"
+  TemplateRoot: CombatRampBlocksL
+  PickupTarget: CombatRampBlocksL
+  Place: Free
+  Texture: 50
+  SymType: 1
+  IsTextureable: true
+  IsGPUInstance: false
+  SizeInBlocks: "1,1,3", display: true
+  StackSize: 1000
+  OccupySizeInBlocks: true
+  AllowPlacingAt: "Base,MS", display: true
+  HitPoints: 6000, type: int, display: true
+  Volume: 32, type: float, display: true, formatter: Liter
+  Mass: 8000, type: float, display: true, formatter: Kilogram
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 1548, display: true
+  Category: BuildingBlocks
+}
+{ Block Name: CombatRamp1x2L, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/HalfStructuralRamp
+  CustomIcon: SteelRamp1x2L
+  SizeInBlocks: "1,1,2", display: true
+  HitPoints: 3000, type: int, display: true
+  Mass: 4000, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge3x3L, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/FullConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge3x3L
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 7000, type: int, display: true
+  Mass: 9000, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector3x3L, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/FullConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector3x3L
+  SymType: 2
+  SizeInBlocks: "3,1,3", display: true
+  HitPoints: 12000, type: int, display: true
+  Mass: 15000, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector1x3L, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/FullConnector1x3Inside
+  CustomIcon: SteelRampConnector1x3L
+  SymType: 3
+  SizeInBlocks: "3,1,1", display: true
+  HitPoints: 5400, type: int, display: true
+  Mass: 7400, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge1x3L, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/FullConnectorYellow3x1
+  CustomIcon: SteelRampEdge1x3L
+  SizeInBlocks: "3,1,1", display: true
+  SymType: 3
+  HitPoints: 3400, type: int, display: true
+  Mass: 5000, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge3x2RL, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/FullConnectorYellow3x2Right
+  CustomIcon: SteelRampEdge3x2RL
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: CombatRampEdge3x2LL
+  SymType: 1
+  HitPoints: 8000, type: int, display: true
+  Mass: 10000, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge3x2LL, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/FullConnectorYellow3x2
+  CustomIcon: SteelRampEdge3x2LL
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: CombatRampEdge3x2RL
+  SymType: 1
+  HitPoints: 8000, type: int, display: true
+  Mass: 10000, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector3x2RL, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/FullConnectorGreen2x3Inside
+  CustomIcon: SteelRampConnector3x2RL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: CombatRampConnector3x2LL
+  SymType: 4
+  HitPoints: 10000, type: int, display: true
+  Mass: 12000, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector3x2LL, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/FullConnectorGreen3x2Inside
+  CustomIcon: SteelRampConnector3x2LL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: CombatRampConnector3x2RL
+  SymType: 4
+  HitPoints: 10000, type: int, display: true
+  Mass: 12000, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge2x2L, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/HalfConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge2x2L
+  SizeInBlocks: "2,1,2", display: true
+  SymType: 2
+  StackSize: 1000
+  HitPoints: 3000, type: int, display: true
+  Mass: 4000, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector2x2L, Ref: CombatRamp1x3L
+  Model: @reforgedcontent/HalfConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector2x2L
+  SizeInBlocks: "2,1,2", display: true
+  SymType: 2
+  HitPoints: 3400, type: int, display: true
+  Mass: 5000, type: float, display: true, formatter: Kilogram
+}
+# ====== HV/SV Long Ramp Blocks =======
+{ Block Name: SteelRampBlocksS
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  Material: hullsmall 
+  Shape: Invisible
+  Place: Free
+  Texture: 50
+  BlockColor: "110,110,110"
+  IsOxygenTight: true, display: true
+  AllowPlacingAt: "SS,GV", display: true
+  HitPoints: 175, type: int, display: true
+  Info: bkiSteelRampBlocks, display: true
+  Mass: 32, type: float, display: true, formatter: Kilogram
+  Volume: 8, type: float, display: true, formatter: Liter
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 96, display: true
+  UpgradeTo: HardenedRampBlocksS, display: true
+  Category: BuildingBlocks
+  ChildBlocks: "SteelRamp1x3S, SteelRamp1x2S, SteelRampEdge3x3S, SteelRampConnector3x3S, SteelRampConnector1x3S, SteelRampEdge1x3S, SteelRampEdge3x2RS, SteelRampEdge3x2LS, SteelRampConnector3x2RS, SteelRampConnector3x2LS, SteelRampEdge2x2S, SteelRampConnector2x2S"
+  StackSize: 1000
+}
+{ Block Name: SteelRamp1x3S
+  Material: hullsmall
+  Shape: ModelEntity
+  Model: @reforgedcontent/FullStructuralRamp3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  CustomIcon: SteelRamp1x3L
+  BlockColor: "110,110,110"
+  Info: bkiSteelRampBlocks, display: true
+  IsOxygenTight: true, display: true
+  Collide: "movement,bullet,rocket,melee"
+  TemplateRoot: SteelRampBlocksS
+  PickupTarget: SteelRampBlocksS
+  Place: Free
+  Texture: 50
+  SymType: 1
+  IsTextureable: true
+  IsGPUInstance: false
+  SizeInBlocks: "1,1,3", display: true
+  StackSize: 1000
+  OccupySizeInBlocks: true
+  AllowPlacingAt: "SS,GV", display: true
+  HitPoints: 175, type: int, display: true
+  Volume: 8, type: float, display: true, formatter: Liter
+  Mass: 32, type: float, display: true, formatter: Kilogram
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 120, display: true
+  UpgradeTo: HardenedRamp1x3S, display: true
+  Category: BuildingBlocks
+}
+{ Block Name: SteelRamp1x2S, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/HalfStructuralRamp
+  CustomIcon: SteelRamp1x2L
+  SizeInBlocks: "1,1,2", display: true
+  HitPoints: 90, type: int, display: true
+  Mass: 16, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRamp1x2S, display: true
+}
+{ Block Name: SteelRampEdge3x3S, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/FullConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge3x3L
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 220, type: int, display: true
+  Mass: 36, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge3x3S, display: true
+}
+{ Block Name: SteelRampConnector3x3S, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/FullConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector3x3L
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 375, type: int, display: true
+  Mass: 60, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector3x3S, display: true
+}
+{ Block Name: SteelRampConnector1x3S, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/FullConnector1x3Inside
+  CustomIcon: SteelRampConnector1x3L
+  SymType: 3
+  SizeInBlocks: "3,1,1", display: true
+  HitPoints: 195, type: int, display: true
+  Mass: 28, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector1x3S, display: true
+}
+{ Block Name: SteelRampEdge1x3S, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/FullConnectorYellow3x1
+  CustomIcon: SteelRampEdge1x3L
+  SizeInBlocks: "3,1,1", display: true
+  SymType: 3
+  HitPoints: 125, type: int, display: true
+  Mass: 20, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge1x3S, display: true
+}
+{ Block Name: SteelRampEdge3x2RS, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/FullConnectorYellow3x2Right
+  CustomIcon: SteelRampEdge3x2RL
+  SizeInBlocks: "2,1,3", display: true
+  HitPoints: 200, type: int, display: true
+  MirrorTo: SteelRampEdge3x2LS
+  SymType: 1
+  Mass: 40, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge3x2RS, display: true
+}
+{ Block Name: SteelRampEdge3x2LS, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/FullConnectorYellow3x2
+  CustomIcon: SteelRampEdge3x2LL
+  SizeInBlocks: "2,1,3", display: true
+  HitPoints: 200, type: int, display: true
+  MirrorTo: SteelRampEdge3x2RS
+  SymType: 1
+  Mass: 40, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge3x2LS, display: true
+}
+{ Block Name: SteelRampConnector3x2RS, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/FullConnectorGreen2x3Inside
+  CustomIcon: SteelRampConnector3x2RL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: SteelRampConnector3x2LS
+  SymType: 4
+  HitPoints: 345, type: int, display: true
+  Mass: 48, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector3x2RS, display: true
+}
+{ Block Name: SteelRampConnector3x2LS, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/FullConnectorGreen3x2Inside
+  CustomIcon: SteelRampConnector3x2LL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: SteelRampConnector3x2RS
+  SymType: 4
+  HitPoints: 345, type: int, display: true
+  Mass: 48, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector3x2LS, display: true
+}
+{ Block Name: SteelRampEdge2x2S, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/HalfConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge2x2L
+  SizeInBlocks: "2,1,2", display: true
+  StackSize: 1000
+  SymType: 2
+  HitPoints: 120, type: int, display: true
+  Mass: 16, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampEdge2x2S, display: true
+}
+{ Block Name: SteelRampConnector2x2S, Ref: SteelRamp1x3S
+  Model: @reforgedcontent/HalfConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector2x2L
+  SizeInBlocks: "2,1,2", display: true
+  SymType: 2
+  HitPoints: 140, type: int, display: true
+  Mass: 20, type: float, display: true, formatter: Kilogram
+  UpgradeTo: HardenedRampConnector2x2S, display: true
+}
+# Hardened Steel Ramp Variant
+{ Block Name: HardenedRampBlocksS
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  Material: hullarmoredsmall 
+  Shape: Invisible
+  Place: Free
+  Texture: 50
+  BlockColor: "110,110,110"
+  IsOxygenTight: true, display: true
+  AllowPlacingAt: "SS,GV", display: true
+  HitPoints: 350, type: int, display: true
+  Info: bkiHardenedRampBlocks, display: true
+  Mass: 64, type: float, display: true, formatter: Kilogram
+  Volume: 8, type: float, display: true, formatter: Liter
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 320, display: true
+  UpgradeTo: CombatRampBlocksS, display: true
+  Category: BuildingBlocks
+  ChildBlocks: "HardenedRamp1x3S, HardenedRamp1x2S, HardenedRampEdge3x3S, HardenedRampConnector3x3S, HardenedRampConnector1x3S, HardenedRampEdge1x3S, HardenedRampEdge3x2RS, HardenedRampEdge3x2LS, HardenedRampConnector3x2RS, HardenedRampConnector3x2LS, HardenedRampEdge2x2S, HardenedRampConnector2x2S"
+  StackSize: 1000
+}
+{ Block Name: HardenedRamp1x3S
+  Material: hullarmoredsmall
+  Shape: ModelEntity
+  Model: @reforgedcontent/FullStructuralRamp3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  CustomIcon: SteelRamp1x3L
+  BlockColor: "110,110,110"
+  Info: bkiHardenedRampBlocks, display: true
+  IsOxygenTight: true, display: true
+  Collide: "movement,bullet,rocket,melee"
+  TemplateRoot: HardenedRampBlocksS
+  PickupTarget: HardenedRampBlocksS
+  Place: Free
+  Texture: 50
+  IsTextureable: true
+  IsGPUInstance: false
+  SizeInBlocks: "1,1,3", display: true
+  StackSize: 1000
+  SymType: 1
+  OccupySizeInBlocks: true
+  AllowPlacingAt: "SS,GV", display: true
+  HitPoints: 350, type: int, display: true
+  Volume: 32, type: float, display: true, formatter: Liter
+  Mass: 64, type: float, display: true, formatter: Kilogram
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 320, display: true
+  UpgradeTo: CombatRamp1x3S, display: true
+  Category: BuildingBlocks
+}
+{ Block Name: HardenedRamp1x2S, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/HalfStructuralRamp
+  CustomIcon: SteelRamp1x2L
+  SizeInBlocks: "1,1,2", display: true
+  HitPoints: 180, type: int, display: true
+  Mass: 32, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRamp1x2S, display: true
+}
+{ Block Name: HardenedRampEdge3x3S, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/FullConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge3x3L
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 440, type: int, display: true
+  Mass: 72, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge3x3S, display: true
+}
+{ Block Name: HardenedRampConnector3x3S, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/FullConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector3x3L
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 750, type: int, display: true
+  Mass: 120, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector3x3S, display: true
+}
+{ Block Name: HardenedRampConnector1x3S, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/FullConnector1x3Inside
+  CustomIcon: SteelRampConnector1x3L
+  SizeInBlocks: "3,1,1", display: true
+  SymType: 3
+  HitPoints: 390, type: int, display: true
+  Mass: 56, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector1x3S, display: true
+}
+{ Block Name: HardenedRampEdge1x3S, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/FullConnectorYellow3x1
+  CustomIcon: SteelRampEdge1x3L
+  SizeInBlocks: "3,1,1", display: true
+  SymType: 3
+  HitPoints: 250, type: int, display: true
+  Mass: 40, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge1x3S, display: true
+}
+{ Block Name: HardenedRampEdge3x2RS, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/FullConnectorYellow3x2Right
+  CustomIcon: SteelRampEdge3x2RL
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: HardenedRampEdge3x2LS
+  SymType: 1
+  HitPoints: 400, type: int, display: true
+  Mass: 80, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge3x2RS, display: true
+}
+{ Block Name: HardenedRampEdge3x2LS, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/FullConnectorYellow3x2
+  CustomIcon: SteelRampEdge3x2LL
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: HardenedRampEdge3x2RS
+  SymType: 1
+  HitPoints: 400, type: int, display: true
+  Mass: 80, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge3x2LS, display: true
+}
+{ Block Name: HardenedRampConnector3x2RS, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/FullConnectorGreen2x3Inside
+  CustomIcon: SteelRampConnector3x2RL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: HardenedRampConnector3x2LS
+  SymType: 4
+  HitPoints: 690, type: int, display: true
+  Mass: 96, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector3x2RS, display: true
+}
+{ Block Name: HardenedRampConnector3x2LS, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/FullConnectorGreen3x2Inside
+  CustomIcon: SteelRampConnector3x2LL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: HardenedRampConnector3x2RS
+  SymType: 4
+  HitPoints: 690, type: int, display: true
+  Mass: 96, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector3x2LS, display: true
+}
+{ Block Name: HardenedRampEdge2x2S, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/HalfConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge2x2L
+  SizeInBlocks: "2,1,2", display: true
+  StackSize: 1000
+  SymType: 2
+  HitPoints: 240, type: int, display: true
+  Mass: 32, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampEdge2x2S, display: true
+}
+{ Block Name: HardenedRampConnector2x2S, Ref: HardenedRamp1x3S
+  Model: @reforgedcontent/HalfConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector2x2L
+  SizeInBlocks: "2,1,2", display: true
+  SymType: 2
+  HitPoints: 180, type: int, display: true
+  Mass: 40, type: float, display: true, formatter: Kilogram
+  UpgradeTo: CombatRampConnector2x2S, display: true
+}
+# Combat Steel Ramp Variant
+{ Block Name: CombatRampBlocksS
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  Material: hullcombatsmall
+  Shape: Invisible
+  Place: Free
+  Texture: 50
+  BlockColor: "110,110,110"
+  IsOxygenTight: true, display: true
+  AllowPlacingAt: "SS,GV", display: true
+  HitPoints: 700, type: int, display: true
+  Info: bkiCombatRampBlocks, display: true
+  Mass: 128, type: float, display: true, formatter: Kilogram
+  Volume: 8, type: float, display: true, formatter: Liter
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 344, display: true
+  Category: BuildingBlocks
+  ChildBlocks: "CombatRamp1x3S, CombatRamp1x2S, CombatRampEdge3x3S, CombatRampConnector3x3S, CombatRampConnector1x3S, CombatRampEdge1x3S, CombatRampEdge3x2RS, CombatRampEdge3x2LS, CombatRampConnector3x2RS, CombatRampConnector3x2LS, CombatRampEdge2x2S, CombatRampConnector2x2S"
+  StackSize: 1000
+}
+{ Block Name: CombatRamp1x3S
+  Material: hullcombatsmall
+  Shape: ModelEntity
+  Model: @reforgedcontent/FullStructuralRamp3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  CustomIcon: SteelRamp1x3L
+  BlockColor: "110,110,110"
+  Info: bkiCombatRampBlocks, display: true
+  IsOxygenTight: true, display: true
+  Collide: "movement,bullet,rocket,melee"
+  TemplateRoot: CombatRampBlocksS
+  PickupTarget: CombatRampBlocksS
+  Place: Free
+  Texture: 50
+  IsTextureable: true
+  IsGPUInstance: false
+  SizeInBlocks: "1,1,3", display: true
+  StackSize: 1000
+  SymType: 1
+  OccupySizeInBlocks: true
+  AllowPlacingAt: "SS,GV", display: true
+  HitPoints: 700, type: int, display: true
+  Volume: 8, type: float, display: true, formatter: Liter
+  Mass: 64, type: float, display: true, formatter: Kilogram
+  CPUIn: 0, type: int, display: false
+  MarketPrice: 344, display: true
+  Category: BuildingBlocks
+}
+{ Block Name: CombatRamp1x2S, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/HalfStructuralRamp
+  CustomIcon: SteelRamp1x2L
+  SizeInBlocks: "1,1,2", display: true
+  HitPoints: 360, type: int, display: true
+  Mass: 64, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge3x3S, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/FullConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge3x3L
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 880, type: int, display: true
+  Mass: 144, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector3x3S, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/FullConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector3x3L
+  SizeInBlocks: "3,1,3", display: true
+  SymType: 2
+  HitPoints: 1500, type: int, display: true
+  Mass: 240, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector1x3S, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/FullConnector1x3Inside
+  CustomIcon: SteelRampConnector1x3L
+  SizeInBlocks: "3,1,1", display: true
+  SymType: 3
+  HitPoints: 780, type: int, display: true
+  Mass: 112, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge1x3S, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/FullConnectorYellow3x1
+  CustomIcon: SteelRampEdge1x3L
+  SizeInBlocks: "3,1,1", display: true
+  SymType: 3
+  HitPoints: 500, type: int, display: true
+  Mass: 80, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge3x2RS, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/FullConnectorYellow3x2Right
+  CustomIcon: SteelRampEdge3x2RL
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: CombatRampEdge3x2LS
+  SymType: 1
+  HitPoints: 800, type: int, display: true
+  Mass: 160, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge3x2LS, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/FullConnectorYellow3x2
+  CustomIcon: SteelRampEdge3x2LL
+  SizeInBlocks: "2,1,3", display: true
+  MirrorTo: CombatRampEdge3x2RS
+  SymType: 1
+  HitPoints: 800, type: int, display: true
+  Mass: 160, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector3x2RS, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/FullConnectorGreen2x3Inside
+  CustomIcon: SteelRampConnector3x2RL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: CombatRampConnector3x2LS
+  SymType: 4
+  HitPoints: 1380, type: int, display: true
+  Mass: 192, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector3x2LS, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/FullConnectorGreen3x2Inside
+  CustomIcon: SteelRampConnector3x2LL
+  SizeInBlocks: "3,1,2", display: true
+  MirrorTo: CombatRampConnector3x2RS
+  SymType: 4
+  HitPoints: 1380, type: int, display: true
+  Mass: 192, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampEdge2x2S, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/HalfConnectorBlue3x3Outside
+  CustomIcon: SteelRampEdge2x2L
+  SizeInBlocks: "2,1,2", display: true
+  StackSize: 1000
+  SymType: 2
+  HitPoints: 480, type: int, display: true
+  Mass: 64, type: float, display: true, formatter: Kilogram
+}
+{ Block Name: CombatRampConnector2x2S, Ref: CombatRamp1x3S
+  Model: @reforgedcontent/HalfConnectorGreen3x3Inside
+  CustomIcon: SteelRampConnector2x2L
+  SizeInBlocks: "2,1,2", display: true
+  SymType: 2
+  HitPoints: 360, type: int, display: true
+  Mass: 80, type: float, display: true, formatter: Kilogram
+}
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Blocks
 # ============================================================================================================================================================================
@@ -36830,7 +37718,7 @@ HullCombatSmallBlocks
   Mass: 1, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Kilogram
   HitPoints: 150, type: int, display: true
-  EnergyIn: 25, type: int, display: true, formatter: Watt
+  EnergyIn: 20, type: int, display: true, formatter: Watt
   CPUIn: 25, type: int, display: true
   Voxelize: false
   ShowBlockName: true
@@ -37679,7 +38567,7 @@ HullCombatSmallBlocks
   SizeInBlocksLocked: "Base,MS"
   Volume: 2880, type: float, display: true, formatter: Liter
   StackSize: 1000
-  MaxCount: 1, type: int, display: true
+  MaxCount: 2, type: int, display: true
   ForceMaxCount: true
   IsActivateable: true
   Category: Weapons/Items
@@ -37690,7 +38578,7 @@ HullCombatSmallBlocks
   HitPoints: 25000, type: int, display: true
   RotSpeed: 50, type: int, display: true
   EnergyIn: 25000, type: int, display: true, formatter: Watt
-  CPUIn: 1000000, type: int, display: true
+  CPUIn: 3000000, type: int, display: true
   Mass: 8500, type: float, display: true, formatter: Kilogram
   XpFactor: 2
   AboveTerrainCheck: false

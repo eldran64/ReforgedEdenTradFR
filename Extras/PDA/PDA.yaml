@@ -202,7 +202,7 @@ Chapters:
             CompletedMessage: dlg;SM_HRHBG_Start;SM_HRHBG_End;1|
             Check: WaitAction
             Amount: 20
-            AllowManualCompletion: true
+            AllowManualCompletion: false
         StartDelay: 11
         StartMessage: norm;20|pda_rKqwe
       - TaskTitle: pda_Km4iq
@@ -494,7 +494,7 @@ Chapters:
         Actions:
           - ActionTitle: pda_aGS4C
             Description: pda_aG0iq
-            AllowManualCompletion: true
+            AllowManualCompletion: false
             Check: NearPoi
             Names:
               - AlienTowerNewStory
@@ -986,8 +986,8 @@ Chapters:
     RewardedChapters:
       - pda_mGxUG
       - pda_KCsC0
-      - pda_gi7mO
       - pda_40KR4u0
+      - pda_OWSi4GG
   - ChapterTitle: pda_mGxUG
     Category: SoloMission
     NoSkip: false
@@ -2577,6 +2577,23 @@ Chapters:
       NumRepeats: 0
       Delay: 1
       DelayAdd: 0
+  - ChapterTitle: pda_qaeW0CC
+    Category: FAQ
+    NoSkip: true
+    PlayerLevel: 1
+    Activatable: Never
+    Visibility: Always
+    HideTasks: true
+    Tasks:
+      - TaskTitle: pda_MWmCKCO
+        Actions:
+          - ActionTitle: pda_C4GwOOK
+            Check: WaitAction
+            Description: pda_KeKO0ii
+    Description: pda_4OKquGe
+    CompletedMessage: norm;10|pda_8LGm8W4
+    RepeatConditions:
+      NumRepeats: 1
   - ChapterTitle: pda_u6m8Kiq
     Category: FAQ
     NoSkip: true
@@ -4149,7 +4166,7 @@ Chapters:
               - Player
             Amount: 1
             CompletedMessage: norm;10|pda_eeieGSQ
-            AllowManualCompletion: true
+            AllowManualCompletion: false
             Types:
               - 'Token:4009'
       - TaskTitle: pda_K8888GG
@@ -4420,7 +4437,9 @@ Chapters:
             Check: DialogOption
             Names:
               - SM_Tal3Khalad2M_End
+              - SM_Tal3Khalad_Skip2
             Value: 1
+            AllowManualCompletion: false
         OnCompletePlayfieldOps:
           - 'DevicePower: Zirax Convoy; Khalad; false'
       - TaskTitle: pda_a8S8YY4
@@ -5083,91 +5102,16 @@ Chapters:
       - Item: MoneyCard
         Count: 1250
     CompletedMessage: norm;20|pda_GaaOC
-  - ChapterTitle: pda_gi7mO
+  - ChapterTitle: pda_OWSi4GG
     Category: SoloMission
     NoSkip: true
-    PlayerLevel: 1
     Activatable: ByReputation
     Visibility: WhenRewarded
+    PlayerLevel: 1
     Faction: Polaris
-    Description: pda_KGImS
-    Tasks:
-      - TaskTitle: pda_0ea8a
-        StartMessage: norm;10|pda_S0eRe
-        StartDelay: 4
-        Actions:
-          - ActionTitle: pda_eCD8i
-            Description: pda_qGuU0
-            Check: ResourceDiscovered
-            CompletedMessage: norm;10|pda_5WeO8
-            Types:
-              - NeodymiumResource
-      - TaskTitle: pda_uqNaO0G
-        StartMessage: norm;10|pda_Ka1WgCS
-        StartDelay: 7
-        Actions:
-          - ActionTitle: pda_8emWuIC
-            Description: pda_88mSqWm
-            Check: ResourceDiscovered
-            CompletedMessage: norm;13|pda_Ca8CuSi
-            Types:
-              - NeodymiumResource
-      - TaskTitle: pda_keii0Wm
-        StartMessage: norm;20|pda_Sq8WSOK
-        StartDelay: 7
-        Actions:
-          - ActionTitle: pda_8T8IRmK
-            Description: pda_G00KWe4
-            Check: ResourceDiscovered
-            CompletedMessage: norm;13|pda_mMC48Kq
-            Types:
-              - NeodymiumResource
-      - TaskTitle: pda_GaSMS
-        StartMessage: norm;15|pda_a0FSq4m
-        StartDelay: 8
-        OnActivatePlayfieldOps:
-          - 'SpawnDrone: 3; MiningShuttle; NearPlayer'
-        Actions:
-          - ActionTitle: pda_KueiA
-            Description: pda_KKumi
-            Check: SubjectKilled
-            Names:
-              - MiningShuttle
-            Amount: 3
-            CompletedMessage: norm;10|pda_qamC4
-            AllowManualCompletion: true
-      - TaskTitle: pda_0uS8G
-        StartDelay: 7
-        StartMessage: norm;10|pda_ui0YOu4
-        OnActivatePlayfieldOps:
-          - 'SpawnDrone: 1; FastTransport; NearPlayer'
-        Actions:
-          - ActionTitle: pda_C4sSUKK
-            Description: pda_q88Sq
-            Check: InventoryContains
-            Names:
-              - Player
-            Amount: 3
-            CompletedMessage: norm;15|pda_DWO8uS8
-            AllowManualCompletion: true
-            Types:
-              - 'Token:4012'
-      - TaskTitle: pda_COOQ4u0
-        StartDelay: 6
-        StartMessage: norm;20|pda_0aq4bGa
-        Actions:
-          - ActionTitle: pda_uq8quW4
-            Description: pda_GaCqiKm
-            CompletedMessage: ''
-            Check: DialogOption
-            Names:
-              - GIN_Console_Polaris01C
-            Value: 1
+    Description: pda_6m4iWqC
+    CompletedMessage: mbox;20|pda_q4OiuCA
     ReputationLevel: 12001
-    RepeatConditions:
-      NumRepeats: 0
-      Delay: 30
-      DelayAdd: 30
     Rewards:
       - Type: Reputation
         Faction:
@@ -5175,9 +5119,82 @@ Chapters:
         Count: 400
       - Item: MoneyCard
         Count: 6000
-    CompletedMessage: mbox;20|pda_qGSei
-    PlayfieldTypes:
-      - Desert
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 30
+      DelayAdd: 30
+    Tasks:
+      - TaskTitle: pda_8CGemU8
+        StartDelay: 4
+        StartMessage: norm;20|pda_Gu4e8k8
+        Actions:
+          - ActionTitle: pda_suamGi8
+            Description: pda_a8P80eK
+            CompletedMessage: norm;20|pda_O8qWeMe
+            Check: ResourceDiscovered
+            Types:
+              - NeodymiumResource
+            Required: NeedOne
+      - TaskTitle: pda_uq0qiOq
+        StartDelay: 7
+        StartMessage: norm;20|pda_000q0Kq
+        Actions:
+          - ActionTitle: pda_4OM4Y0S
+            Description: pda_emMGSeu
+            Check: ResourceDiscovered
+            Types:
+              - NeodymiumResource
+            Required: NeedOne
+            CompletedMessage: norm;20|pda_UiiqOE0
+      - TaskTitle: pda_qiiOuSu
+        StartMessage: norm;20|pda_hUa0COu
+        StartDelay: 7
+        Actions:
+          - ActionTitle: pda_MiOuSQi
+            Description: pda_W4Q8e88
+            Check: ResourceDiscovered
+            Types:
+              - NeodymiumResource
+            Required: NeedOne
+            CompletedMessage: norm;20|pda_em88sWi
+      - TaskTitle: pda_Cq48W4a
+        Actions:
+          - ActionTitle: pda_u8OKKKG
+            CompletedMessage: norm;20|pda_OKCCM4m
+            Description: pda_VuqUGG8
+            Check: SubjectKilled
+            Names:
+              - MiningShuttle
+            Amount: 3
+            AllowManualCompletion: true
+        StartMessage: norm;20|pda_mn28aS0
+        StartDelay: 8
+        OnActivatePlayfieldOps:
+          - 'SpawnDrone: 3; MiningShuttle; NearPlayer'
+      - TaskTitle: pda_0e0aiS8
+        StartDelay: 7
+        Actions:
+          - ActionTitle: pda_4OCiuGK
+            Description: pda_4706DU8
+            CompletedMessage: norm;20|pda_YqMiCC4
+            AllowManualCompletion: true
+            Check: InventoryContains
+            Names:
+              - Player
+            Amount: 3
+            Types:
+              - 'Token:4012'
+        StartMessage: norm;20|pda_2e8mPiO
+      - TaskTitle: pda_iCKiqeG
+        StartDelay: 6
+        StartMessage: norm;20|pda_Osie4iK
+        Actions:
+          - ActionTitle: pda_CueGHiO
+            Description: pda_qW7Wneq
+            Check: DialogOption
+            Names:
+              - GIN_Console_Polaris01C
+            Value: 1
   - ChapterTitle: pda_40KR4u0
     Category: SoloMission
     NoSkip: true
@@ -5247,7 +5264,7 @@ Chapters:
               - XenuDefenceT3RocketRG
             Amount: 3
             CompletedMessage: norm;10|pda_oaqeAiK
-            AllowManualCompletion: true
+            AllowManualCompletion: false
             Types:
               - CoreNPC
     ReputationLevel: 2000
@@ -6159,7 +6176,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 100
+            Amount: 50
             CompletedMessage: ''
       - TaskTitle: pda_GiKiq8i
         StartMessage: norm;20|pda_WAu04uC
@@ -6199,7 +6216,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 250
+            Amount: 100
             CompletedMessage: ''
       - TaskTitle: pda_0imS4Wi
         StartMessage: norm;20|pda_CEOWmKS
@@ -6238,7 +6255,7 @@ Chapters:
               - ZiraxEliteMarksman
               - ZiraxEliteShotgun
               - ZiraxElitePlasma
-            Amount: 50
+            Amount: 35
             CompletedMessage: ''
       - TaskTitle: pda_aOKRmiO
         StartMessage: norm;20|pda_XuSS0ui
@@ -6393,7 +6410,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 100
+            Amount: 50
             CompletedMessage: ''
       - TaskTitle: pda_CKue84e
         StartMessage: norm;20|pda_G4iaqqe
@@ -6429,7 +6446,7 @@ Chapters:
             Names:
               - ZiraxSniper
               - ZiraxEliteMarksman
-            Amount: 75
+            Amount: 35
             CompletedMessage: ''
       - TaskTitle: pda_OO08mGq
         StartMessage: norm;20|pda_KQ4Cnue
@@ -6470,7 +6487,7 @@ Chapters:
               - AssaultCyborg
               - AssaultCyborgOld
               - AssaultCyborgCommando
-            Amount: 150
+            Amount: 75
             CompletedMessage: ''
       - TaskTitle: pda_aa88e88
         StartMessage: norm;20|pda_2OtWW08
@@ -6625,7 +6642,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 100
+            Amount: 50
             CompletedMessage: ''
       - TaskTitle: pda_WS80cqq
         StartMessage: norm;20|pda_KiiqGaS
@@ -6669,7 +6686,7 @@ Chapters:
               - ZiraxInfectedRed
               - ZiraxInfectedPurple
               - ZiraxInfectedCommander
-            Amount: 150
+            Amount: 50
             CompletedMessage: ''
       - TaskTitle: pda_Guw00Oe
         StartMessage: norm;20|pda_S1eu8GK
@@ -6704,7 +6721,7 @@ Chapters:
             Check: SubjectKilled
             Names:
               - ZiraxCommander
-            Amount: 25
+            Amount: 15
             CompletedMessage: ''
       - TaskTitle: pda_mea9O8S
         StartMessage: norm;20|pda_4Wtm4aC
@@ -6859,7 +6876,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 100
+            Amount: 50
             CompletedMessage: ''
         PictureFile: VanguardProfile.jpg
       - TaskTitle: pda_e8i4jCS
@@ -6898,7 +6915,7 @@ Chapters:
               - Infester
               - AlienAssassinInfected
               - HexapodInfected
-            Amount: 300
+            Amount: 150
             CompletedMessage: ''
       - TaskTitle: pda_miQuKSm
         StartMessage: norm;20|pda_7C8iWuC
@@ -6933,7 +6950,7 @@ Chapters:
             Check: SubjectKilled
             Names:
               - AssaultMech
-            Amount: 25
+            Amount: 15
             CompletedMessage: ''
       - TaskTitle: pda_Ke8auui
         Actions:
@@ -7091,7 +7108,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 100
+            Amount: 50
             CompletedMessage: ''
       - TaskTitle: pda_OSSe84i
         StartMessage: norm;20|pda_SCKsaiq
@@ -7141,7 +7158,7 @@ Chapters:
               - CaveWormGrey
               - CaveWormGreen
               - CaveWormWhite
-            Amount: 300
+            Amount: 150
             CompletedMessage: ''
       - TaskTitle: pda_eGaqOSG
         StartMessage: norm;20|pda_amKWC4O
@@ -7176,7 +7193,7 @@ Chapters:
             Check: SubjectKilled
             Names:
               - ZiraxMale
-            Amount: 100
+            Amount: 35
             CompletedMessage: ''
       - TaskTitle: pda_SDa4Sia
         StartMessage: norm;20|pda_CSuSKqi
@@ -8080,7 +8097,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 200
+            Amount: 100
             CompletedMessage: ''
       - TaskTitle: pda_SWam8mu
         StartMessage: norm;20|pda_SeKGaO4
@@ -8120,7 +8137,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 500
+            Amount: 200
             CompletedMessage: ''
       - TaskTitle: pda_CKa8Cu0
         StartMessage: norm;20|pda_4eqK0mS
@@ -8159,7 +8176,7 @@ Chapters:
               - ZiraxEliteMarksman
               - ZiraxEliteShotgun
               - ZiraxElitePlasma
-            Amount: 100
+            Amount: 50
             CompletedMessage: ''
       - TaskTitle: pda_auSGSmm
         StartMessage: norm;20|pda_aOOM0Uu
@@ -8314,7 +8331,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 200
+            Amount: 100
             CompletedMessage: ''
       - TaskTitle: pda_ECmCmq8
         StartMessage: norm;20|pda_cGCOu8u
@@ -8350,7 +8367,7 @@ Chapters:
             Names:
               - ZiraxSniper
               - ZiraxEliteMarksman
-            Amount: 125
+            Amount: 50
             CompletedMessage: ''
       - TaskTitle: pda_M8E0Sir
         StartMessage: norm;20|pda_mW8eSG8
@@ -8391,7 +8408,7 @@ Chapters:
               - AssaultCyborg
               - AssaultCyborgOld
               - AssaultCyborgCommando
-            Amount: 300
+            Amount: 125
             CompletedMessage: ''
       - TaskTitle: pda_IS8pWWu
         StartMessage: norm;20|pda_4vSPuK0
@@ -8546,7 +8563,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 200
+            Amount: 100
             CompletedMessage: ''
       - TaskTitle: pda_UCGm84G
         StartMessage: norm;20|pda_000e4ma
@@ -8590,7 +8607,7 @@ Chapters:
               - ZiraxInfectedRed
               - ZiraxInfectedPurple
               - ZiraxInfectedCommander
-            Amount: 300
+            Amount: 75
             CompletedMessage: ''
       - TaskTitle: pda_eiEe44j
         StartMessage: norm;20|pda_SWG8aOm
@@ -8625,7 +8642,7 @@ Chapters:
             Check: SubjectKilled
             Names:
               - ZiraxCommander
-            Amount: 50
+            Amount: 30
             CompletedMessage: ''
       - TaskTitle: pda_0C0aiem
         StartMessage: norm;20|pda_8C8S0ug
@@ -8780,7 +8797,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 200
+            Amount: 100
             CompletedMessage: ''
       - TaskTitle: pda_GSE0cKO
         StartMessage: norm;20|pda_qW4G8We
@@ -8818,7 +8835,7 @@ Chapters:
               - Infester
               - AlienAssassinInfected
               - HexapodInfected
-            Amount: 500
+            Amount: 250
             CompletedMessage: ''
       - TaskTitle: pda_8iC4i40
         StartMessage: norm;20|pda_Ciui0ic
@@ -8853,7 +8870,7 @@ Chapters:
             Check: SubjectKilled
             Names:
               - AssaultMech
-            Amount: 40
+            Amount: 25
             CompletedMessage: ''
       - TaskTitle: pda_e4sSCeO
         StartMessage: norm;20|pda_mqiaGCK
@@ -9008,7 +9025,7 @@ Chapters:
               - ZiraxSniper
               - ZiraxMale
               - ZiraxShotgun
-            Amount: 200
+            Amount: 100
             CompletedMessage: ''
       - TaskTitle: pda_Gia0Giq
         StartMessage: norm;20|pda_auuCe8S
@@ -9058,7 +9075,7 @@ Chapters:
               - CaveWormGrey
               - CaveWormGreen
               - CaveWormWhite
-            Amount: 500
+            Amount: 250
             CompletedMessage: ''
       - TaskTitle: pda_uKmO48a
         StartMessage: norm;20|pda_m8iGKaa
@@ -9094,7 +9111,7 @@ Chapters:
             Names:
               - ZiraxMale
               - ZiraxElitePlasma
-            Amount: 100
+            Amount: 50
             CompletedMessage: ''
       - TaskTitle: pda_VCaeWbm
         StartMessage: norm;20|pda_i08KiWe
@@ -10493,7 +10510,7 @@ Chapters:
             Description: eden_pda_4WW0G
             Check: WindowOpened
             CompletedMessage: ''
-            AllowManualCompletion: true
+            AllowManualCompletion: false
             Names:
               - Pda
         StartMessage: norm;45|eden_pda_WpOC4eK
@@ -11128,7 +11145,7 @@ Chapters:
         Actions:
           - ActionTitle: eden_pda_C8ROu
             Description: eden_pda_MW0kW
-            AllowManualCompletion: true
+            AllowManualCompletion: false
             Check: InventoryContains
             Names:
               - Player
@@ -15906,7 +15923,7 @@ Chapters:
             CompletedMessage: ''
             Check: WaitAction
             Amount: 180
-            AllowManualCompletion: true
+            AllowManualCompletion: false
           - ActionTitle: eden_pda_W0iOiKo
             Description: eden_pda_SuCKC08
             IsOptional: 'true'

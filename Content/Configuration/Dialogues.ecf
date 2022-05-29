@@ -3396,7 +3396,7 @@
   Option_2: dialogue_m4IOG
   OptionNext_2: GIN_Console_Package01
   Option_3: dialogue_WeKKWac
-  OptionIf_3: "IsPdaChapterActive('pda_gi7mO') && HasItem('Token', 3, 4006)"
+  OptionIf_3: "IsPdaTaskActive('pda_gi7mO', 'pda_COOQ4u0') && HasItem('Token', 3, 4012)"
   OptionNext_3: GIN_Console_Polaris01A
   Option_4: dialogue_8gamG
   OptionNext_4: End
@@ -4290,7 +4290,7 @@
   Next_4: SM_Tal3Khalad1_01
   NextIf_4: "IsPdaChapterActive('pda_uSkaOaO') && TalonStory == 13"
   Next_5: SM_Tal3Khalad1_Repeat
-  NextIf_5: "IsPdaChapterActive('pda_uSkaOaO') && TalonStory == 14"
+  NextIf_5: "IsPdaTaskActive('pda_uSkaOaO', 'pda_OC4u8Oe')"
   Next_6: SM_Tal3Khalad3_01
   NextIf_6: "IsPdaChapterActive('pda_uSkaOaO') && TalonStory == 19"
   Next_7: SM_TalKhalad_Friend
@@ -5371,636 +5371,430 @@
   OptionNext_1: Return
   Execute_1: "SetNPCName('IDA')"
 }
-{ +Dialogue Name: Console_Reports_HackingFailed
-  Output: dialogue_GBgGOqK
-  Option_1: dialogue_mmSCWbe
-  OptionNext_1: End
-}
 { +Dialogue Name: Console_Reports_HackingComplete
   Output: dialogue_mSSKuGe
   Option_1: dialogue_fi4WW0W
   OptionNext_1: End
 }
+{ +Dialogue Name: Console_Reports_HackingFailed
+  Output: dialogue_GBgGOqK
+  Option_1: dialogue_mmSCWbe
+  OptionNext_1: End
+}
 { +Dialogue Name: Console_Reports_Common_Start
-  NPCName: dialogue_aWi2oaS
-  Variable_1: "SystemLockdown", param1: dbplayerpoi_int
+  NPCName: dialogue_WaAuCCS
+  Variable_1: "SystemLockdownCommon", param1: dbplayerpoi_int
   Variable_2: "PlayerCapture", param1: int
   Variable_3: "SecurityCapture", param1: int
   Variable_4: "PlayerAddCapture", param1: int
   Variable_5: "SecurityAddCapture", param1: int
-  Next_1: Console_Reports_Blocked
-  NextIf_1: "SystemLockdown > 0"
-  Next_2: Console_Reports_Common_Menu
+  Variable_6: "Selector1", param1: int
+  Variable_7: "Selector2", param1: int
+  Variable_8: "Selector3", param1: int
+  Variable_9: "Selector4", param1: int
+  Variable_10: "Selector5", param1: int
+  Variable_11: "CoreSpeed", param1: dbplayerpoi_int
+  Next_1: Console_Common_Blocked
+  NextIf_1: "SystemLockdownCommon > 0"
+  Next_2: Console_Common_Menu
 }
-{ +Dialogue Name: Console_Reports_Common_Menu
-  Output: dialogue_aqSKgA8
-  Option_1: dialogue_GCCaK48
+{ +Dialogue Name: Console_Common_Blocked
+  Output: dialogue_SG6ESKm
+  Option_1: dialogue_8SmUeeS
+  OptionNext_1: End
+  Option_2: dialogue_0uiO84u
+  OptionIf_2: "HasItem('AssaultRifleDebug', 1)"
+  OptionNext_2: End
+  OptionExecute_2: "SystemLockdownCommon = 0"
+}
+{ +Dialogue Name: Console_Common_Menu
+  Output: dialogue_G8OaeKm
+  Option_1: dialogue_8mKKai8
   OptionIf_1: "HasItem('KeyCardCommon', 1) || HasItem('AssaultRifleDebug', 1)"
-  OptionNext_1: Console_Reports_Common_Keycard
+  OptionNext_1: Console_Common_Keycard
   OptionExecute_1: "RemoveItem('KeyCardCommon', 1)"
-  Option_2: dialogue_WCI024S
-  OptionNext_2: Console_Reports_Common_Hacking1
-  Option_3: dialogue_mBq8WRK
-  OptionNext_3: Console_Reports_IDA_Help, param1: Console_Reports_Common_Menu
-  Option_4: dialogue_0aacCaa
-  OptionNext_4: End
+  Option_2: dialogue_iu0cK0W
+  OptionIf_2: "CoreSpeed > 0"
+  OptionNext_2: Console_Common_Hacking1
+  Option_3: dialogue_Kg00Ko0
+  OptionIf_3: "CoreSpeed == 0"
+  OptionNext_3: Console_Common_Hacking1
+  OptionExecute_3: "CoreSpeed = Random(1,3)"
+  Option_4: dialogue_em4CiiW
+  OptionNext_4: Console_Reports_IDA_Help, param1: Console_Common_Menu
+  Option_5: dialogue_maem2aG
+  OptionNext_5: End
   Execute_1: "SetNPCName('System Console - Main Menu')"
+  Variable_1: "SystemCheck", param1: int
+  Variable_2: "HackingReward", param1: int
+  Execute: "SystemCheck = 1;"
 }
-{ +Dialogue Name: Console_Reports_Common_Hacking1
-  Output: dialogue_SmOm7GC
-  Option_1: dialogue_8OOC4GE
-  OptionNext_1: Console_Reports_Common_Hacking2
-  OptionExecute_1: "PlayerCapture = Random(0,10); SecurityCapture = Random(0,5)"
-  Option_2: dialogue_eiOu80W
-  OptionNext_2: Console_Reports_Common_Hacking2
-  OptionExecute_2: "PlayerCapture = Random(0,10); SecurityCapture = Random(0,10)"
-  Option_3: dialogue_8K00KeK
-  OptionNext_3: Console_Reports_Common_Hacking2
-  OptionExecute_3: "PlayerCapture = Random(5,10); SecurityCapture = Random(0,15)"
-  Option_4: dialogue_WuqCikm
-  OptionNext_4: Console_Reports_Common_Hacking2
-  OptionExecute_4: "PlayerCapture = Random(0,15); SecurityCapture = Random(3,10)"
-  Option_5: dialogue_WKgeSu0
-  OptionNext_5: Console_Reports_Common_Hacking2
-  OptionExecute_5: "PlayerCapture = Random(0,15); SecurityCapture = Random(3,10)"
-  Option_6: dialogue_SG0iKi6
-  OptionNext_6: Console_Reports_Common_Menu
-  Execute_1: "SetNPCName('System Console - HACKING')"
+{ +Dialogue Name: Console_Common_Hacking1
+  Output: dialogue_e8OWuSi
+  Option_1: dialogue_SSKmOqS
+  OptionNext_1: Console_Common_Detection
+  OptionExecute_1: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_2: dialogue_Cmm5uqU
+  OptionNext_2: Console_Common_Detection
+  OptionExecute_2: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_3: dialogue_40aSGaC
+  OptionNext_3: Console_Common_Detection
+  OptionExecute_3: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_4: dialogue_eSuKOmm
+  OptionNext_4: Console_Common_Detection
+  OptionExecute_4: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_5: dialogue_iIiSaOV
+  OptionNext_5: Console_Common_Detection
+  OptionExecute_5: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_6: dialogue_8uOGccu
+  OptionNext_6: Console_Common_Menu
+  Execute: "SetNPCName('System Console - HACKING')"
 }
-{ +Dialogue Name: Console_Reports_Common_Hacking2
-  Execute_1: "SystemLockdown = 1"
-  Option_1: dialogue_aS4eoCC
-  OptionNext_1: Console_Reports_Common_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(5,20); SecurityAddCapture = Random(5,15)"
-  Option_2: dialogue_aKC8a0W
-  OptionNext_2: Console_Reports_Common_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_3: dialogue_qGec8C8
-  OptionNext_3: Console_Reports_Common_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(4,5); SecurityAddCapture = Random(0,15)"
-  Option_4: dialogue_eau0OKC
-  OptionNext_4: Console_Reports_Common_Hacking3
-  OptionExecute_4: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(5,15)"
-  Option_5: dialogue_aGiCmwu
-  OptionNext_5: Console_Reports_Common_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_6: dialogue_WC8GqWG
-  OptionIf_6: "HasItem('FireStickRed', 1)"
-  OptionNext_6: Console_Reports_Common_Hacking2
-  OptionExecute_6: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10"
-  Option_7: dialogue_0S4O0we
-  OptionIf_7: "HasItem('FireStickGreen', 1)"
-  OptionNext_7: Console_Reports_Common_Hacking2
-  OptionExecute_7: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20"
-  Option_8: dialogue_OmS8iGe
-  OptionIf_8: "HasItem('FireStickBlue', 1)"
-  OptionNext_8: Console_Reports_Common_Hacking2
-  OptionExecute_8: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20"
-  Output: dialogue_OK4SiqA
+{ +Dialogue Name: Console_Common_Detection
+  Next_1: Console_Common_Hacking2
+  Execute: "SecurityCapture = SecurityCapture + CoreSpeed;<nl>SystemLockdownCommon = 1;<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);"
+  Output: dialogue_Wu4GWS2
 }
-{ +Dialogue Name: Console_Reports_Common_Hacking3
-  Option_1: dialogue_SOKCMXK
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Common_Hacking4
-  OptionExecute_1: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_2: dialogue_8OCIHYa
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Common_Hacking4
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_3: dialogue_WGGKGWK
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Common_Hacking4
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_4: dialogue_NCOmWOS
-  OptionIf_4: "SecurityCapture < 80 && PlayerAddCapture < 13"
-  OptionNext_4: Console_Reports_Common_Hacking4
-  OptionExecute_4: "PlayerAddCapture = Random(0,5); SecurityAddCapture = Random(5,15)"
-  Option_5: dialogue_mDOeWKC
-  OptionIf_5: "SecurityCapture < 100"
-  OptionNext_5: Console_Reports_Common_Hacking4
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_6: dialogue_WCumSOS
-  OptionIf_6: "SecurityCapture < 80 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Common_Datavault1
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_G4iGaec
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_BS8OW0u
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Common_HackingSuccess
-  Option_9: dialogue_Keuqmem
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Common_Hacking3
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_OSuWO8q
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Common_Hacking3
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_uO4KF8i
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Common_Hacking3
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Output: dialogue_ewe2484
+{ +Dialogue Name: Console_Common_Hacking2
+  Option_1: dialogue_kw6KKmC
+  OptionIf_1: "Selector1 == 18 || Selector2 == 18 || Selector3 == 18 || Selector4 == 18 || Selector5 == 18"
+  OptionNext_1: Console_Hacking_Bridge3, param1: Console_Common_Hacking2
+  OptionExecute_1: "PlayerAddCapture = Random(5,12); SecurityAddCapture = Random(2,8)"
+  Option_2: dialogue_OWqGGu0
+  OptionIf_2: "Selector1 == 9 || Selector2 == 9 || Selector3 == 9 || Selector4 == 9 || Selector5 == 9"
+  OptionNext_2: Console_Hacking_Bridge2, param1: Console_Common_Hacking2
+  OptionExecute_2: "PlayerAddCapture = Random(3,10); SecurityAddCapture = Random(2,6)"
+  Option_3: dialogue_O4KiqOZ
+  OptionIf_3: "Selector2 == 2 || Selector3 == 2 || Selector4 == 2 || Selector5 == 2"
+  OptionNext_3: Console_Hacking_Bridge2, param1: Console_Common_Hacking2
+  OptionExecute_3: "PlayerAddCapture = Random(1,14); SecurityAddCapture = Random(8,11)"
+  Option_4: dialogue_KUC4KOC
+  OptionIf_4: "Selector1 == 4 || Selector2 == 4 || Selector3 == 4 || Selector4 == 4 || Selector5 == 4"
+  OptionNext_4: Console_Hacking_Bridge1, param1: Console_Common_Hacking2
+  OptionExecute_4: "PlayerAddCapture = Random(1,10); SecurityAddCapture = Random(4,7)"
+  Option_5: dialogue_iS48mW0
+  OptionIf_5: "Selector1 == 6 || Selector2 == 6"
+  OptionNext_5: Console_Hacking_Datavault01, param1: Console_Common_Hacking2
+  OptionExecute_5: "PlayerAddCapture = 0; SecurityAddCapture = Random(8,12)"
+  Option_6: dialogue_gaoeiqO
+  OptionIf_6: "Selector1 == 8 || Selector2 == 8 || Selector3 == 8 || Selector4 == 8 || Selector5 == 8"
+  OptionNext_6: Console_Hacking_Bridge1, param1: Console_Common_Hacking2
+  OptionExecute_6: "PlayerAddCapture = Random(3,12); SecurityAddCapture = Random(4,8)"
+  Option_7: dialogue_0TGNUGI
+  OptionIf_7: "Selector1 == 10 || Selector2 == 10"
+  OptionNext_7: Console_Hacking_Datavault02, param1: Console_Common_Hacking2
+  OptionExecute_7: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_8: dialogue_ew0uqRB
+  OptionIf_8: "Selector1 == 22 || Selector2 == 22 || Selector3 == 22 || Selector4 == 22 || Selector5 == 22"
+  OptionNext_8: Console_Hacking_Bridge2, param1: Console_Common_Hacking2
+  OptionExecute_8: "PlayerAddCapture = Random(6,15); SecurityAddCapture = Random(0,9)"
+  Option_9: dialogue_KC9KSWO
+  OptionIf_9: "Selector1 == 11 || Selector2 == 11 || Selector3 == 11 || Selector4 == 11 || Selector5 == 11"
+  OptionNext_9: Console_Hacking_Bridge3, param1: Console_Common_Hacking2
+  OptionExecute_9: "PlayerAddCapture = Random(4,16); SecurityAddCapture = Random(7,12)"
+  Option_10: dialogue_aSSaWGO
+  OptionIf_10: "Selector1 == 12 || Selector2 == 12 || Selector3 == 12 || Selector4 == 12 || Selector5 == 12"
+  OptionNext_10: Console_Hacking_Bridge1, param1: Console_Common_Hacking2
+  OptionExecute_10: "PlayerAddCapture = Random(4,14); SecurityAddCapture = Random(5,10)"
+  Option_11: dialogue_eS4m840
+  OptionIf_11: "Selector1 == 3 || Selector2 == 3 || Selector3 == 3 || Selector4 == 3 || Selector5 == 3"
+  OptionNext_11: Console_Hacking_Bridge3, param1: Console_Common_Hacking2
+  OptionExecute_11: "PlayerAddCapture = Random(1,12); SecurityAddCapture = Random(6,9)"
+  Option_12: dialogue_WWqqGd0
+  OptionIf_12: "Selector1 == 13 || Selector2 == 13 || Selector3 == 13 || Selector4 == 13 || Selector5 == 13"
+  OptionNext_12: Console_Hacking_Bridge2, param1: Console_Common_Hacking2
+  OptionExecute_12: "PlayerAddCapture = Random(4,12); SecurityAddCapture = Random(3,8)"
+  Option_13: dialogue_iKSuaGq
+  OptionIf_13: "Selector1 == 23 || Selector2 == 23 || Selector3 == 23 || Selector4 == 23 || Selector5 == 23"
+  OptionNext_13: Console_Hacking_Bridge3, param1: Console_Common_Hacking2
+  OptionExecute_13: "PlayerAddCapture = Random(6,13); SecurityAddCapture = Random(0,7)"
+  Option_14: dialogue_Gu4Ge8e
+  OptionIf_14: "Selector1 == 14 || Selector2 == 14 || Selector3 == 14 || Selector4 == 14 || Selector5 == 14"
+  OptionNext_14: Console_Hacking_Bridge3, param1: Console_Common_Hacking2
+  OptionExecute_14: "PlayerAddCapture = Random(4,10); SecurityAddCapture = Random(1,6)"
+  Option_15: dialogue_CO8Km0b
+  OptionIf_15: "Selector1 == 5 || Selector2 == 5 || Selector3 == 5 || Selector4 == 5 || Selector5 == 5"
+  OptionNext_15: Console_Hacking_Bridge2, param1: Console_Common_Hacking2
+  OptionExecute_15: "PlayerAddCapture = Random(1,9); SecurityAddCapture = Random(2,5)"
+  Option_16: dialogue_C0SaeWe
+  OptionIf_16: "Selector1 == 16 || Selector2 == 16 || Selector3 == 16 || Selector4 == 16 || Selector5 == 16"
+  OptionNext_16: Console_Hacking_Bridge1, param1: Console_Common_Hacking2
+  OptionExecute_16: "PlayerAddCapture = Random(5,16); SecurityAddCapture = Random(6,12)"
+  Option_17: dialogue_Waeu8De
+  OptionIf_17: "Selector1 == 24 || Selector2 == 24 || Selector3 == 24 || Selector4 == 24 || Selector5 == 24"
+  OptionNext_17: Console_Hacking_Bridge1, param1: Console_Common_Hacking2
+  OptionExecute_17: "PlayerAddCapture = Random(6,11); SecurityAddCapture = Random(0,5)"
+  Option_18: dialogue_WOmuquG
+  OptionIf_18: "Selector1 == 17 || Selector2 == 17 || Selector3 == 17 || Selector4 == 17 || Selector5 == 17"
+  OptionNext_18: Console_Hacking_Bridge2, param1: Console_Common_Hacking2
+  OptionExecute_18: "PlayerAddCapture = Random(5,14); SecurityAddCapture = Random(4,10)"
+  Option_19: dialogue_umm7m0a
+  OptionIf_19: "Selector2 == 1 || Selector3 == 1 || Selector4 == 1 || Selector5 == 1"
+  OptionNext_19: Console_Hacking_Bridge1, param1: Console_Common_Hacking2
+  OptionExecute_19: "PlayerAddCapture = Random(1,16); SecurityAddCapture = Random(9,12)"
+  Option_20: dialogue_4Om0KRn
+  OptionIf_20: "Selector1 == 19 || Selector2 == 19 || Selector3 == 19 || Selector4 == 19 || Selector5 == 19"
+  OptionNext_20: Console_Hacking_Bridge1, param1: Console_Common_Hacking2
+  OptionExecute_20: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,6)"
+  Option_21: dialogue_OSGG0Oe
+  OptionIf_21: "Selector1 == 20 || Selector4 == 20 || Selector5 == 20"
+  OptionNext_21: Console_Hacking_Datavault04, param1: Console_Common_Hacking2
+  OptionExecute_21: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_22: dialogue_c8qifKS
+  OptionIf_22: "Selector2 == 21 || Selector3 == 21 || Selector4 == 21 || Selector5 == 21"
+  OptionNext_22: Console_Hacking_Datavault05, param1: Console_Common_Hacking2
+  OptionExecute_22: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,12)"
+  Option_23: dialogue_K4viHKS
+  OptionIf_23: "Selector1 == 7 || Selector2 == 7 || Selector3 == 7 || Selector4 == 7 || Selector5 == 7"
+  OptionNext_23: Console_Hacking_Bridge3, param1: Console_Common_Hacking2
+  OptionExecute_23: "PlayerAddCapture = Random(3,14); SecurityAddCapture = Random(6,10)"
+  Option_24: dialogue_Gie8G8u
+  OptionIf_24: "Selector1 == 25 || Selector2 == 25 || Selector3 == 25 || Selector4 == 25"
+  OptionNext_24: Console_Hacking_Bridge2, param1: Console_Common_Hacking2
+  OptionExecute_24: "PlayerAddCapture = Random(6,9); SecurityAddCapture = Random(0,4)"
+  Option_25: dialogue_a00C4OO
+  OptionIf_25: "Selector1 == 15 || Selector2 == 15 || Selector3 == 15 || Selector4 == 15 || Selector5 == 15"
+  OptionNext_25: Console_Hacking_Datavault03, param1: Console_Common_Hacking2
+  OptionExecute_25: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_26: dialogue_8u0KuK8
+  OptionIf_26: "HasItem('FireStickRed', 1)"
+  OptionNext_26: Console_Hacking_Software, param1: Console_Common_Hacking2
+  OptionExecute_26: "RemoveItem('FireStickRed', 1); Selector1 = Random(15,25); Selector2 = Random(15,25); Selector3 = Random(15,25); Selector4 = Random(15,25); Selector5 = Random(15,25)"
+  Option_27: dialogue_m8O0jWe
+  OptionIf_27: "HasItem('FireStickGreen', 1)"
+  OptionNext_27: Console_Hacking_Software, param1: Console_Common_Hacking2
+  OptionExecute_27: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 15"
+  Option_28: dialogue_G0aSWdk
+  OptionIf_28: "HasItem('FireStickBlue', 1)"
+  OptionNext_28: Console_Hacking_Software, param1: Console_Common_Hacking2
+  OptionExecute_28: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 15"
+  Output: dialogue_04pWiMi
 }
-{ +Dialogue Name: Console_Reports_Common_Hacking4
-  Output: dialogue_aC0SGiW
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_Kq0COWa
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Common_Hacking5
-  OptionExecute_1: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_2: dialogue_Wq48qme
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Common_Hacking5
-  OptionExecute_2: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(0,15)"
-  Option_3: dialogue_SiOi44K
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Common_Hacking5
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_0WcK4mq
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Common_Hacking5
-  OptionExecute_4: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,15)"
-  Option_5: dialogue_4K0WKO4
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 13"
-  OptionNext_5: Console_Reports_Common_Hacking5
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,10)"
-  Option_6: dialogue_e2GaaiC
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Common_Datavault2
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_KeCeCK8
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_0OK3i8U
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Common_HackingSuccess
-  Option_9: dialogue_AuCe81a
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Common_Hacking4
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_hmOKW40
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Common_Hacking4
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_Wqm0ueg
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Common_Hacking4
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Common_Hacking5
-  Output: dialogue_GGOqeU0
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_0iKe8E7
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Common_Hacking6
-  OptionExecute_1: "PlayerAddCapture = Random(7,10); SecurityAddCapture = Random(0,15)"
-  Option_2: dialogue_i08qXu4
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Common_Hacking6
-  OptionExecute_2: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,15)"
-  Option_3: dialogue_Smiq0sC
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Common_Hacking6
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,10)"
-  Option_4: dialogue_KO4mGiV
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Common_Hacking6
-  OptionExecute_4: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(0,15)"
-  Option_5: dialogue_iOCigS0
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 13"
-  OptionNext_5: Console_Reports_Common_Hacking6
-  OptionExecute_5: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_6: dialogue_8uIGCsi
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Common_Datavault3
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_GgmiGee
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_Ke8uIit
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Common_HackingSuccess
-  Option_9: dialogue_uieuCW8
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Common_Hacking5
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_q4e0CYS
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Common_Hacking5
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_C0SSqqm
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Common_Hacking5
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Common_Hacking6
-  Output: dialogue_SKiWmKu
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_4eaO8ua
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Common_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(10,15)"
-  Option_2: dialogue_SuaSKcq
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Common_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_3: dialogue_CIOmGWC
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Common_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_4: dialogue_Ca4qi9C
-  OptionIf_4: "SecurityCapture < 100 && PlayerAddCapture > 12"
-  OptionNext_4: Console_Reports_Common_Datavault4
-  OptionExecute_4: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_5: dialogue_qOOLCWG
-  OptionIf_5: "SecurityCapture < 80"
-  OptionNext_5: Console_Reports_Common_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,15)"
-  Option_6: dialogue_eeKWCG8
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture < 13"
-  OptionNext_6: Console_Reports_Common_Hacking3
-  OptionExecute_6: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_7: dialogue_Ca8SCG0
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_Caqe8ES
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Common_HackingSuccess
-  Option_9: dialogue_KCa0qK8
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Common_Hacking6
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_mSGiWWU
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Common_Hacking6
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_q8qKeCG
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Common_Hacking6
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Common_Datavault1
-  Output: dialogue_u80qqWO
-  Option_1: dialogue_CcCaGqe
-  OptionNext_1: Console_Reports_Common_Hacking3
-  OptionExecute_1: "AddItem('MoneyCard', RandomMoney); SecurityAddCapture = 0"
-  Variable_1: "RandomMoney", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomMoney = Random(10,10000)"
-}
-{ +Dialogue Name: Console_Reports_Common_Datavault2
-  Output: dialogue_WmqeaGO
-  Variable_1: "RandomSkill", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomSkill = Random(1,10)"
-  Option_1: dialogue_8S4uuOu
-  OptionNext_1: Console_Reports_Common_Hacking4
-  OptionExecute_1: "SecurityAddCapture = 0; Player.UpgradePoints += RandomSkill"
-}
-{ +Dialogue Name: Console_Reports_Common_Datavault3
-  Output: dialogue_uKm0WS0
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_KqKGOe0
-  OptionNext_1: Console_Reports_Common_Hacking5
-  OptionExecute_1: "AddItem('FireStickRed', 1); SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Common_Datavault4
-  Option_1: dialogue_a8W8Kfe
-  OptionNext_1: Console_Reports_Common_Hacking6
-  OptionExecute_1: "AddItem('FireStickGreen', 1); SecurityAddCapture = 0"
-  Output: dialogue_K8J6GW0
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-}
-{ +Dialogue Name: Console_Reports_Common_HackingSuccess
-  Variable_1: "HackingReward", param1: int
-  Execute_1: "HackingReward = Random(1,5)"
-  Output: dialogue_iKVQKiu
-  Option_1: dialogue_KKyima8
+{ +Dialogue Name: Console_Common_HackingSuccess
+  Output: dialogue_iCSOqqW
+  Option_1: dialogue_ihsaWOi
   OptionIf_1: "HackingReward == 1"
   OptionNext_1: Console_Reports_HackingComplete
   OptionExecute_1: "AddItem('ReportMaintenanceData', 1)"
-  Option_2: dialogue_WC8iGaK
+  Option_2: dialogue_COOWGei
   OptionIf_2: "HackingReward == 2"
   OptionNext_2: Console_Reports_HackingComplete
   OptionExecute_2: "AddItem('ReportWorkShiftData', 1)"
-  Option_3: dialogue_qSmuu4K
+  Option_3: dialogue_iCmKKS4
   OptionIf_3: "HackingReward == 3"
   OptionNext_3: Console_Reports_HackingComplete
   OptionExecute_3: "AddItem('ReportTransportationData', 1)"
-  Option_4: dialogue_quae0i8
+  Option_4: dialogue_e8BSuGm
   OptionIf_4: "HackingReward == 4"
   OptionNext_4: Console_Reports_HackingComplete
   OptionExecute_4: "AddItem('ReportCommunicationData', 1)"
-  Option_5: dialogue_mhmiKmm
+  Option_5: dialogue_4WuObau
   OptionIf_5: "HackingReward == 5"
   OptionNext_5: Console_Reports_HackingComplete
   OptionExecute_5: "AddItem('ReportEconomicData', 1)"
+  Execute: "HackingReward = Random(1,5);"
 }
-{ +Dialogue Name: Console_Reports_Common_Keycard
-  Output: dialogue_iequ4Xp
-  Option_1: dialogue_uOYa5CG
-  OptionNext_1: Console_Reports_Common_Keycard2
+{ +Dialogue Name: Console_Common_Keycard
+  Output: dialogue_LW4e80k
+  Option_1: dialogue_C6WWqSe
+  OptionNext_1: Console_Common_Keycard2
 }
-{ +Dialogue Name: Console_Reports_Common_Keycard2
-  Output: dialogue_KWugmKO
-  Option_1: dialogue_euB0GiC
-  OptionNext_1: Console_Reports_Common_HackingSuccess
-  OptionExecute_1: "SystemLockdown = 1"
+{ +Dialogue Name: Console_Common_Keycard2
+  Output: dialogue_A880COs
+  Option_1: dialogue_Og4eiaG
+  OptionNext_1: Console_Common_HackingSuccess
+  OptionExecute_1: "SystemLockdownCommon = 1"
 }
 { +Dialogue Name: Console_Reports_Military_Start
   NPCName: dialogue_iAeu0O0
-  Variable_1: "SystemLockdown", param1: dbplayerpoi_int
+  Variable_1: "SystemLockdownMilitary", param1: dbplayerpoi_int
   Variable_2: "PlayerCapture", param1: int
   Variable_3: "SecurityCapture", param1: int
   Variable_4: "PlayerAddCapture", param1: int
   Variable_5: "SecurityAddCapture", param1: int
-  Next_1: Console_Reports_Blocked
-  NextIf_1: "SystemLockdown > 0"
-  Next_2: Console_Reports_Military_Menu
+  Variable_6: "Selector1", param1: int
+  Variable_7: "Selector2", param1: int
+  Variable_8: "Selector3", param1: int
+  Variable_9: "Selector4", param1: int
+  Variable_10: "Selector5", param1: int
+  Variable_11: "CoreSpeed", param1: dbplayerpoi_int
+  Next_1: Console_Military_Blocked
+  NextIf_1: "SystemLockdownMilitary > 0"
+  Next_2: Console_Military_Menu
 }
-{ +Dialogue Name: Console_Reports_Military_Menu
+{ +Dialogue Name: Console_Military_Blocked
+  Output: dialogue_0KuuqWq
+  Option_1: dialogue_OuuO288
+  OptionNext_1: End
+  Option_2: dialogue_rmGe4ia
+  OptionIf_2: "HasItem('AssaultRifleDebug', 1)"
+  OptionNext_2: End
+  OptionExecute_2: "SystemLockdownMilitary = 0"
+}
+{ +Dialogue Name: Console_Military_Menu
   Output: dialogue_OiSmZuG
   Option_1: dialogue_CmEmKa0
   OptionIf_1: "HasItem('KeyCardMilitary', 1) || HasItem('AssaultRifleDebug', 1)"
-  OptionNext_1: Console_Reports_Military_Keycard
+  OptionNext_1: Console_Military_Keycard
   OptionExecute_1: "RemoveItem('KeyCardMilitary', 1)"
   Option_2: dialogue_qKWemOO
-  OptionNext_2: Console_Reports_Military_Hacking1
-  Option_3: dialogue_iSqSGSm
-  OptionNext_3: Console_Reports_IDA_Help, param1: Console_Reports_Military_Menu
-  Option_4: dialogue_uCei8mB
-  OptionNext_4: End
+  OptionIf_2: "CoreSpeed > 0"
+  OptionNext_2: Console_Military_Hacking1
+  Option_3: dialogue_KCWqa14
+  OptionIf_3: "CoreSpeed == 0"
+  OptionNext_3: Console_Military_Hacking1
+  OptionExecute_3: "CoreSpeed = Random(2,5)"
+  Option_4: dialogue_iSqSGSm
+  OptionNext_4: Console_Reports_IDA_Help, param1: Console_Military_Menu
+  Option_5: dialogue_uCei8mB
+  OptionNext_5: End
   Execute_1: "SetNPCName('Military Console - Main Menu')"
+  Variable_1: "SystemCheck", param1: int
+  Variable_2: "HackingReward", param1: int
+  Execute: "SystemCheck = 2;"
 }
-{ +Dialogue Name: Console_Reports_Military_Hacking1
-  Output: dialogue_C0OSai0
-  Option_1: dialogue_AKSeWWO
-  OptionNext_1: Console_Reports_Military_Hacking2
-  OptionExecute_1: "PlayerCapture = Random(5,10); SecurityCapture = Random(0,15)"
-  Option_2: dialogue_OimAOCW
-  OptionNext_2: Console_Reports_Military_Hacking2
-  OptionExecute_2: "PlayerCapture = Random(5,15); SecurityCapture = Random(0,10)"
-  Option_3: dialogue_XqaKe06
-  OptionNext_3: Console_Reports_Military_Hacking2
-  OptionExecute_3: "PlayerCapture = Random(0,15); SecurityCapture = Random(5,15)"
-  Option_4: dialogue_CieCG8q
-  OptionNext_4: Console_Reports_Military_Hacking2
-  OptionExecute_4: "PlayerCapture = Random(5,10); SecurityCapture = Random(0,20)"
-  Option_5: dialogue_qGmOOCq
-  OptionNext_5: Console_Reports_Military_Hacking2
-  OptionExecute_5: "PlayerCapture = Random(0,15); SecurityCapture = Random(5,20)"
-  Option_6: dialogue_GeCe4Oa
-  OptionNext_6: Console_Reports_Military_Menu
-  Execute_1: "SetNPCName('Military Console - HACKING')"
+{ +Dialogue Name: Console_Military_Hacking1
+  Output: dialogue_WwKOKqO
+  Option_1: dialogue_SWK848u
+  OptionNext_1: Console_Military_Detection
+  OptionExecute_1: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_2: dialogue_GK6GqOG
+  OptionNext_2: Console_Military_Detection
+  OptionExecute_2: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_3: dialogue_8Wsqg8C
+  OptionNext_3: Console_Military_Detection
+  OptionExecute_3: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_4: dialogue_OWaqG1i
+  OptionNext_4: Console_Military_Detection
+  OptionExecute_4: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_5: dialogue_708CeaC
+  OptionNext_5: Console_Military_Detection
+  OptionExecute_5: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_6: dialogue_Xau6OG4
+  OptionNext_6: Console_Military_Menu
+  Execute: "SetNPCName('Military Console - HACKING')"
 }
-{ +Dialogue Name: Console_Reports_Military_Hacking2
-  Execute_1: "SystemLockdown = 1"
-  Option_1: dialogue_m84e4G4
-  OptionNext_1: Console_Reports_Military_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,10)"
-  Option_2: dialogue_8WOoOCL
-  OptionNext_2: Console_Reports_Military_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(5,20); SecurityAddCapture = Random(5,15)"
-  Option_3: dialogue_iKUFqqe
-  OptionNext_3: Console_Reports_Military_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_auWWa8i
-  OptionNext_4: Console_Reports_Military_Hacking3
-  OptionExecute_4: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,15)"
-  Option_5: dialogue_CCKSSWC
-  OptionNext_5: Console_Reports_Military_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_6: dialogue_88W4Ka8
-  OptionIf_6: "HasItem('FireStickRed', 1)"
-  OptionNext_6: Console_Reports_Military_Hacking2
-  OptionExecute_6: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10"
-  Option_7: dialogue_8meOhua
-  OptionIf_7: "HasItem('FireStickGreen', 1)"
-  OptionNext_7: Console_Reports_Military_Hacking2
-  OptionExecute_7: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20"
-  Option_8: dialogue_K8e40dS
-  OptionIf_8: "HasItem('FireStickBlue', 1)"
-  OptionNext_8: Console_Reports_Military_Hacking2
-  OptionExecute_8: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20"
-  Output: dialogue_CsIqbK5
+{ +Dialogue Name: Console_Military_Detection
+  Next_1: Console_Military_Hacking2
+  Execute: "SecurityCapture = SecurityCapture + CoreSpeed;<nl>SystemLockdownMilitary = 1;<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);"
+  Output: dialogue_uuriGua
 }
-{ +Dialogue Name: Console_Reports_Military_Hacking3
-  Option_1: dialogue_WWeWKeG
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Military_Hacking4
-  OptionExecute_1: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,10)"
-  Option_2: dialogue_mi0GuW0
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Military_Hacking4
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_3: dialogue_A0e4See
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Military_Hacking4
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_CCGF3aa
-  OptionIf_4: "SecurityCapture < 80 && PlayerAddCapture < 13"
-  OptionNext_4: Console_Reports_Military_Hacking4
-  OptionExecute_4: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_5: dialogue_SKaaaAV
-  OptionIf_5: "SecurityCapture < 100"
-  OptionNext_5: Console_Reports_Military_Hacking4
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_6: dialogue_O8KieCO
-  OptionIf_6: "SecurityCapture < 80 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Military_Datavault1
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_8rmK4Wq
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_lOa80Oa
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Military_HackingSuccess
-  Option_9: dialogue_GeWeCKK
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Military_Hacking3
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_0SNWG0W
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Military_Hacking3
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_0uiiHOG
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Military_Hacking3
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Output: dialogue_uWTq4Gu
+{ +Dialogue Name: Console_Military_Hacking2
+  Option_1: dialogue_2q8GOO0
+  OptionIf_1: "Selector1 == 25 || Selector2 == 25 || Selector3 == 25 || Selector4 == 25"
+  OptionNext_1: Console_Hacking_Bridge2, param1: Console_Military_Hacking2
+  OptionExecute_1: "PlayerAddCapture = Random(6,9); SecurityAddCapture = Random(0,4)"
+  Option_2: dialogue_LG4M000
+  OptionIf_2: "Selector1 == 3 || Selector2 == 3 || Selector3 == 3 || Selector4 == 3 || Selector5 == 3"
+  OptionNext_2: Console_Hacking_Bridge3, param1: Console_Military_Hacking2
+  OptionExecute_2: "PlayerAddCapture = Random(1,12); SecurityAddCapture = Random(6,9)"
+  Option_3: dialogue_JS444u0
+  OptionIf_3: "Selector1 == 5 || Selector2 == 5 || Selector3 == 5 || Selector4 == 5 || Selector5 == 5"
+  OptionNext_3: Console_Hacking_Bridge2, param1: Console_Military_Hacking2
+  OptionExecute_3: "PlayerAddCapture = Random(1,9); SecurityAddCapture = Random(2,5)"
+  Option_4: dialogue_wWK4iiO
+  OptionIf_4: "Selector1 == 23 || Selector2 == 23 || Selector3 == 23 || Selector4 == 23 || Selector5 == 23"
+  OptionNext_4: Console_Hacking_Bridge3, param1: Console_Military_Hacking2
+  OptionExecute_4: "PlayerAddCapture = Random(6,13); SecurityAddCapture = Random(0,7)"
+  Option_5: dialogue_WmqYSar
+  OptionIf_5: "Selector1 == 13 || Selector2 == 13 || Selector3 == 13 || Selector4 == 13 || Selector5 == 13"
+  OptionNext_5: Console_Hacking_Bridge2, param1: Console_Military_Hacking2
+  OptionExecute_5: "PlayerAddCapture = Random(4,12); SecurityAddCapture = Random(3,8)"
+  Option_6: dialogue_488KKWe
+  OptionIf_6: "Selector1 == 6 || Selector2 == 6"
+  OptionNext_6: Console_Hacking_Datavault01, param1: Console_Military_Hacking2
+  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(8,12)"
+  Option_7: dialogue_CamiY0e
+  OptionIf_7: "Selector1 == 7 || Selector2 == 7 || Selector3 == 7 || Selector4 == 7 || Selector5 == 7"
+  OptionNext_7: Console_Hacking_Bridge3, param1: Console_Military_Hacking2
+  OptionExecute_7: "PlayerAddCapture = Random(3,14); SecurityAddCapture = Random(6,10)"
+  Option_8: dialogue_mKOK8eo
+  OptionIf_8: "Selector2 == 1 || Selector3 == 1 || Selector4 == 1 || Selector5 == 1"
+  OptionNext_8: Console_Hacking_Bridge1, param1: Console_Military_Hacking2
+  OptionExecute_8: "PlayerAddCapture = Random(1,16); SecurityAddCapture = Random(9,12)"
+  Option_9: dialogue_OiiiStK
+  OptionIf_9: "Selector1 == 8 || Selector2 == 8 || Selector3 == 8 || Selector4 == 8 || Selector5 == 8"
+  OptionNext_9: Console_Hacking_Bridge1, param1: Console_Military_Hacking2
+  OptionExecute_9: "PlayerAddCapture = Random(3,12); SecurityAddCapture = Random(4,8)"
+  Option_10: dialogue_8eliWG0
+  OptionIf_10: "Selector1 == 9 || Selector2 == 9 || Selector3 == 9 || Selector4 == 9 || Selector5 == 9"
+  OptionNext_10: Console_Hacking_Bridge2, param1: Console_Military_Hacking2
+  OptionExecute_10: "PlayerAddCapture = Random(3,10); SecurityAddCapture = Random(2,6)"
+  Option_11: dialogue_C4O4Wu8
+  OptionIf_11: "Selector1 == 20 || Selector4 == 20 || Selector5 == 20"
+  OptionNext_11: Console_Hacking_Datavault04, param1: Console_Military_Hacking2
+  OptionExecute_11: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_12: dialogue_muKQKuK
+  OptionIf_12: "Selector1 == 10 || Selector2 == 10"
+  OptionNext_12: Console_Hacking_Datavault02, param1: Console_Military_Hacking2
+  OptionExecute_12: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_13: dialogue_mCuWqGQ
+  OptionIf_13: "Selector1 == 12 || Selector2 == 12 || Selector3 == 12 || Selector4 == 12 || Selector5 == 12"
+  OptionNext_13: Console_Hacking_Bridge1, param1: Console_Military_Hacking2
+  OptionExecute_13: "PlayerAddCapture = Random(4,14); SecurityAddCapture = Random(5,10)"
+  Option_14: dialogue_e4iSm7a
+  OptionIf_14: "Selector2 == 2 || Selector3 == 2 || Selector4 == 2 || Selector5 == 2"
+  OptionNext_14: Console_Hacking_Bridge2, param1: Console_Military_Hacking2
+  OptionExecute_14: "PlayerAddCapture = Random(1,14); SecurityAddCapture = Random(8,11)"
+  Option_15: dialogue_eGaaqeQ
+  OptionIf_15: "Selector1 == 14 || Selector2 == 14 || Selector3 == 14 || Selector4 == 14 || Selector5 == 14"
+  OptionNext_15: Console_Hacking_Bridge3, param1: Console_Military_Hacking2
+  OptionExecute_15: "PlayerAddCapture = Random(4,10); SecurityAddCapture = Random(1,6)"
+  Option_16: dialogue_GqW4GGO
+  OptionIf_16: "Selector1 == 4 || Selector2 == 4 || Selector3 == 4 || Selector4 == 4 || Selector5 == 4"
+  OptionNext_16: Console_Hacking_Bridge1, param1: Console_Military_Hacking2
+  OptionExecute_16: "PlayerAddCapture = Random(1,10); SecurityAddCapture = Random(4,7)"
+  Option_17: dialogue_iSSuCCi
+  OptionIf_17: "Selector1 == 15 || Selector2 == 15 || Selector3 == 15 || Selector4 == 15 || Selector5 == 15"
+  OptionNext_17: Console_Hacking_Datavault03, param1: Console_Military_Hacking2
+  OptionExecute_17: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_18: dialogue_SioCeCm
+  OptionIf_18: "Selector1 == 17 || Selector2 == 17 || Selector3 == 17 || Selector4 == 17 || Selector5 == 17"
+  OptionNext_18: Console_Hacking_Bridge2, param1: Console_Military_Hacking2
+  OptionExecute_18: "PlayerAddCapture = Random(5,14); SecurityAddCapture = Random(4,10)"
+  Option_19: dialogue_Ku04SC0
+  OptionIf_19: "Selector1 == 11 || Selector2 == 11 || Selector3 == 11 || Selector4 == 11 || Selector5 == 11"
+  OptionNext_19: Console_Hacking_Bridge3, param1: Console_Military_Hacking2
+  OptionExecute_19: "PlayerAddCapture = Random(4,16); SecurityAddCapture = Random(7,12)"
+  Option_20: dialogue_uSKKKC8
+  OptionIf_20: "Selector1 == 19 || Selector2 == 19 || Selector3 == 19 || Selector4 == 19 || Selector5 == 19"
+  OptionNext_20: Console_Hacking_Bridge1, param1: Console_Military_Hacking2
+  OptionExecute_20: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,6)"
+  Option_21: dialogue_9O0WS0K
+  OptionIf_21: "Selector2 == 21 || Selector3 == 21 || Selector4 == 21 || Selector5 == 21"
+  OptionNext_21: Console_Hacking_Datavault05, param1: Console_Military_Hacking2
+  OptionExecute_21: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,12)"
+  Option_22: dialogue_uCaWCIW
+  OptionIf_22: "Selector1 == 22 || Selector2 == 22 || Selector3 == 22 || Selector4 == 22 || Selector5 == 22"
+  OptionNext_22: Console_Hacking_Bridge2, param1: Console_Military_Hacking2
+  OptionExecute_22: "PlayerAddCapture = Random(6,15); SecurityAddCapture = Random(0,9)"
+  Option_23: dialogue_eeZ4OiO
+  OptionIf_23: "Selector1 == 18 || Selector2 == 18 || Selector3 == 18 || Selector4 == 18 || Selector5 == 18"
+  OptionNext_23: Console_Hacking_Bridge3, param1: Console_Military_Hacking2
+  OptionExecute_23: "PlayerAddCapture = Random(5,12); SecurityAddCapture = Random(2,8)"
+  Option_24: dialogue_6m8KmWa
+  OptionIf_24: "Selector1 == 16 || Selector2 == 16 || Selector3 == 16 || Selector4 == 16 || Selector5 == 16"
+  OptionNext_24: Console_Hacking_Bridge1, param1: Console_Military_Hacking2
+  OptionExecute_24: "PlayerAddCapture = Random(5,16); SecurityAddCapture = Random(6,12)"
+  Option_25: dialogue_mqsBWuu
+  OptionIf_25: "Selector1 == 24 || Selector2 == 24 || Selector3 == 24 || Selector4 == 24 || Selector5 == 24"
+  OptionNext_25: Console_Hacking_Bridge1, param1: Console_Military_Hacking2
+  OptionExecute_25: "PlayerAddCapture = Random(6,11); SecurityAddCapture = Random(0,5)"
+  Option_26: dialogue_Caiiq8O
+  OptionIf_26: "HasItem('FireStickRed', 1)"
+  OptionNext_26: Console_Hacking_Software, param1: Console_Military_Hacking2
+  OptionExecute_26: "RemoveItem('FireStickRed', 1); Selector1 = Random(15,25); Selector2 = Random(15,25); Selector3 = Random(15,25); Selector4 = Random(15,25); Selector5 = Random(15,25)"
+  Option_27: dialogue_EYOqqOi
+  OptionIf_27: "HasItem('FireStickGreen', 1)"
+  OptionNext_27: Console_Hacking_Software, param1: Console_Military_Hacking2
+  OptionExecute_27: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 15"
+  Option_28: dialogue_iiSieiX
+  OptionIf_28: "HasItem('FireStickBlue', 1)"
+  OptionNext_28: Console_Hacking_Software, param1: Console_Military_Hacking2
+  OptionExecute_28: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 15"
+  Output: dialogue_0quSeak
 }
-{ +Dialogue Name: Console_Reports_Military_Hacking4
-  Output: dialogue_uikCWWO
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_SuDaSWS
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Military_Hacking5
-  OptionExecute_1: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,10)"
-  Option_2: dialogue_mGq8C4G
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Military_Hacking5
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_3: dialogue_KZaC0KO
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Military_Hacking5
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_8amuC1i
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Military_Hacking5
-  OptionExecute_4: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,15)"
-  Option_5: dialogue_0KmaK4l
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 13"
-  OptionNext_5: Console_Reports_Military_Hacking5
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,10)"
-  Option_6: dialogue_OKnemGC
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Military_Datavault2
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_uiaqKei
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_C0CiIeO
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Military_HackingSuccess
-  Option_9: dialogue_iSWKeai
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Military_Hacking4
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_kW9GaPi
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Military_Hacking4
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_ueCtCSK
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Military_Hacking4
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Military_Hacking5
-  Output: dialogue_0OdDW0S
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_KGKi8LC
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Military_Hacking6
-  OptionExecute_1: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,15)"
-  Option_2: dialogue_OKeSW4a
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Military_Hacking6
-  OptionExecute_2: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_3: dialogue_Wl8mKG8
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Military_Hacking6
-  OptionExecute_3: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_G06i0aK
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Military_Hacking6
-  OptionExecute_4: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_5: dialogue_C8bSuWW
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 14"
-  OptionNext_5: Console_Reports_Military_Hacking6
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(8,15)"
-  Option_6: dialogue_ieIJmKC
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 13"
-  OptionNext_6: Console_Reports_Military_Datavault3
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_mK0OEWO
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_GZOKCCO
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Military_HackingSuccess
-  Option_9: dialogue_0WacGiu
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Military_Hacking5
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_SKauQDC
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Military_Hacking5
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_G0eEemO
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Military_Hacking5
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Military_Hacking6
-  Output: dialogue_qq4eqEq
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_WKCQmi8
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Military_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_2: dialogue_8Oq00OW
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Military_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(10,15)"
-  Option_3: dialogue_WWWW0uq
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Military_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_4: dialogue_iuSmGi8
-  OptionIf_4: "SecurityCapture < 100 && PlayerAddCapture > 13"
-  OptionNext_4: Console_Reports_Military_Hacking3
-  OptionExecute_4: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_5: dialogue_GuWqKSS
-  OptionIf_5: "SecurityCapture < 80"
-  OptionNext_5: Console_Reports_Military_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,15)"
-  Option_6: dialogue_qS4UWG6
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture < 14"
-  OptionNext_6: Console_Reports_Military_Hacking3
-  OptionExecute_6: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_7: dialogue_0GiG8WJ
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_aKua4GG
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Military_HackingSuccess
-  Option_9: dialogue_JWWSl4G
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Military_Hacking6
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_i8Cu4Oq
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Military_Hacking6
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_iSeCa04
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Military_Hacking6
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Military_Datavault1
-  Output: dialogue_484s4Cn
-  Option_1: dialogue_uOc00si
-  OptionNext_1: Console_Reports_Military_Hacking3
-  OptionExecute_1: "AddItem('MoneyCard', RandomMoney); SecurityAddCapture = 0"
-  Variable_1: "RandomMoney", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomMoney = Random(1000,25000)"
-}
-{ +Dialogue Name: Console_Reports_Military_Datavault2
-  Output: dialogue_8Oem0ie
-  Variable_1: "RandomSkill", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomSkill = Random(5,20)"
-  Option_1: dialogue_iGaeOZi
-  OptionNext_1: Console_Reports_Military_Hacking4
-  OptionExecute_1: "SecurityAddCapture = 0; Player.UpgradePoints += RandomSkill"
-}
-{ +Dialogue Name: Console_Reports_Military_Datavault3
-  Output: dialogue_qKC0GiG
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_CaCSqSS
-  OptionNext_1: Console_Reports_Military_Hacking5
-  OptionExecute_1: "AddItem('FireStickRed', 1); SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Military_Datavault4
-  Option_1: dialogue_E0KSiWi
-  OptionNext_1: Console_Reports_Military_Hacking6
-  OptionExecute_1: "AddItem('FireStickGreen', 1); SecurityAddCapture = 0"
-  Output: dialogue_C08p8c8
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-}
-{ +Dialogue Name: Console_Reports_Military_HackingSuccess
-  Variable_1: "HackingReward", param1: int
+{ +Dialogue Name: Console_Military_HackingSuccess
   Execute_1: "HackingReward = Random(1,5)"
   Output: dialogue_qmGe48K
   Option_1: dialogue_ui8qidm
@@ -6024,310 +5818,218 @@
   OptionNext_5: Console_Reports_HackingComplete
   OptionExecute_5: "AddItem('ReportMilitaryClassified', 1)"
 }
-{ +Dialogue Name: Console_Reports_Military_Keycard
+{ +Dialogue Name: Console_Military_Keycard
   Output: dialogue_Gq8ve0K
   Option_1: dialogue_WJa4eSi
-  OptionNext_1: Console_Reports_Military_Keycard2
+  OptionNext_1: Console_Military_Keycard2
 }
-{ +Dialogue Name: Console_Reports_Military_Keycard2
+{ +Dialogue Name: Console_Military_Keycard2
   Output: dialogue_WCuSSWq
   Option_1: dialogue_a4e48me
-  OptionNext_1: Console_Reports_Military_HackingSuccess
-  OptionExecute_1: "SystemLockdown = 1"
+  OptionNext_1: Console_Military_HackingSuccess
+  OptionExecute_1: "SystemLockdownMilitary = 1"
 }
 { +Dialogue Name: Console_Reports_Security_Start
   NPCName: dialogue_0uqqWKi
-  Variable_1: "SystemLockdown", param1: dbplayerpoi_int
+  Variable_1: "SystemLockdownSecurity", param1: dbplayerpoi_int
   Variable_2: "PlayerCapture", param1: int
   Variable_3: "SecurityCapture", param1: int
   Variable_4: "PlayerAddCapture", param1: int
   Variable_5: "SecurityAddCapture", param1: int
-  Next_1: Console_Reports_Blocked
-  NextIf_1: "SystemLockdown > 0"
-  Next_2: Console_Reports_Security_Menu
+  Variable_6: "Selector1", param1: int
+  Variable_7: "Selector2", param1: int
+  Variable_8: "Selector3", param1: int
+  Variable_9: "Selector4", param1: int
+  Variable_10: "Selector5", param1: int
+  Variable_11: "CoreSpeed", param1: dbplayerpoi_int
+  Next_1: Console_Security_Blocked
+  NextIf_1: "SystemLockdownSecurity > 0"
+  Next_2: Console_Security_Menu
 }
-{ +Dialogue Name: Console_Reports_Security_Menu
+{ +Dialogue Name: Console_Security_Blocked
+  Output: dialogue_C0uuOiK
+  Option_1: dialogue_C02vGVu
+  OptionNext_1: End
+  Option_2: dialogue_euiuuKu
+  OptionIf_2: "HasItem('AssaultRifleDebug', 1)"
+  OptionNext_2: End
+  OptionExecute_2: "SystemLockdownSecurity = 0"
+}
+{ +Dialogue Name: Console_Security_Menu
   Output: dialogue_qqKbaeu
   Option_1: dialogue_4aKGaWu
   OptionIf_1: "HasItem('KeyCardSecurity', 1) || HasItem('AssaultRifleDebug', 1)"
-  OptionNext_1: Console_Reports_Security_Keycard
+  OptionNext_1: Console_Security_Keycard
   OptionExecute_1: "RemoveItem('KeyCardSecurity', 1)"
   Option_2: dialogue_mOCWaqG
-  OptionNext_2: Console_Reports_Security_Hacking1
-  Option_3: dialogue_46iO8Cm
-  OptionNext_3: Console_Reports_IDA_Help, param1: Console_Reports_Security_Menu
-  Option_4: dialogue_aQCK00C
-  OptionNext_4: End
+  OptionIf_2: "CoreSpeed > 0"
+  OptionNext_2: Console_Security_Hacking1
+  Option_3: dialogue_4qi000m
+  OptionIf_3: "CoreSpeed == 0"
+  OptionNext_3: Console_Security_Hacking1
+  OptionExecute_3: "CoreSpeed = Random(1,4)"
+  Option_4: dialogue_46iO8Cm
+  OptionNext_4: Console_Reports_IDA_Help, param1: Console_Security_Menu
+  Option_5: dialogue_aQCK00C
+  OptionNext_5: End
   Execute_1: "SetNPCName('Security Console - Main Menu')"
+  Variable_1: "SystemCheck", param1: int
+  Variable_2: "HackingReward", param1: int
+  Execute: "SystemCheck = 3;"
 }
-{ +Dialogue Name: Console_Reports_Security_Hacking1
-  Output: dialogue_mmWWUWC
-  Option_1: dialogue_WGuLHuG
-  OptionNext_1: Console_Reports_Security_Hacking2
-  OptionExecute_1: "PlayerCapture = Random(5,10); SecurityCapture = Random(0,15)"
-  Option_2: dialogue_iSiu8iW
-  OptionNext_2: Console_Reports_Security_Hacking2
-  OptionExecute_2: "PlayerCapture = Random(0,15); SecurityCapture = Random(5,10)"
-  Option_3: dialogue_4aCu0WO
-  OptionNext_3: Console_Reports_Security_Hacking2
-  OptionExecute_3: "PlayerCapture = Random(0,15); SecurityCapture = Random(5,15)"
-  Option_4: dialogue_GaWKSZO
-  OptionNext_4: Console_Reports_Security_Hacking2
-  OptionExecute_4: "PlayerCapture = Random(5,10); SecurityCapture = Random(0,20)"
-  Option_5: dialogue_0WCCuD0
-  OptionNext_5: Console_Reports_Security_Hacking2
-  OptionExecute_5: "PlayerCapture = Random(10,15); SecurityCapture = Random(5,20)"
-  Option_6: dialogue_e8CSma4
-  OptionNext_6: Console_Reports_Security_Menu
-  Execute_1: "SetNPCName('Security Console - HACKING')"
+{ +Dialogue Name: Console_Security_Keycard
+  Output: dialogue_eWi4OWi
+  Option_1: dialogue_cGWK64a
+  OptionNext_1: Console_Security_Keycard2
 }
-{ +Dialogue Name: Console_Reports_Security_Hacking2
-  Execute_1: "SystemLockdown = 1"
-  Option_1: dialogue_8OqSmuQ
-  OptionNext_1: Console_Reports_Security_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_2: dialogue_O44eeOi
-  OptionNext_2: Console_Reports_Security_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(5,20); SecurityAddCapture = Random(5,15)"
-  Option_3: dialogue_E0eaKWq
-  OptionNext_3: Console_Reports_Security_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_uWOumiK
-  OptionNext_4: Console_Reports_Security_Hacking3
-  OptionExecute_4: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,15)"
-  Option_5: dialogue_ieOHuOG
-  OptionNext_5: Console_Reports_Security_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_6: dialogue_iVCOK8u
-  OptionIf_6: "HasItem('FireStickRed', 1)"
-  OptionNext_6: Console_Reports_Security_Hacking2
-  OptionExecute_6: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10"
-  Option_7: dialogue_0hmdFq8
-  OptionIf_7: "HasItem('FireStickGreen', 1)"
-  OptionNext_7: Console_Reports_Security_Hacking2
-  OptionExecute_7: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20"
-  Option_8: dialogue_WGauiSO
-  OptionIf_8: "HasItem('FireStickBlue', 1)"
-  OptionNext_8: Console_Reports_Security_Hacking2
-  OptionExecute_8: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20"
-  Output: dialogue_04Ci4aC
+{ +Dialogue Name: Console_Security_Keycard2
+  Output: dialogue_08vGwqu
+  Option_1: dialogue_4SGAiqK
+  OptionNext_1: Console_Security_HackingSuccess
+  OptionExecute_1: "SystemLockdownSecurity = 1"
 }
-{ +Dialogue Name: Console_Reports_Security_Hacking3
-  Option_1: dialogue_om0qajO
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Security_Hacking4
-  OptionExecute_1: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,10)"
-  Option_2: dialogue_8ug0MSi
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Security_Hacking4
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_3: dialogue_W0SQCGm
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Security_Hacking4
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_XG4aq00
-  OptionIf_4: "SecurityCapture < 80 && PlayerAddCapture < 13"
-  OptionNext_4: Console_Reports_Security_Hacking4
-  OptionExecute_4: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_5: dialogue_08im34O
-  OptionIf_5: "SecurityCapture < 100"
-  OptionNext_5: Console_Reports_Security_Hacking4
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_6: dialogue_ueOGi0K
-  OptionIf_6: "SecurityCapture < 80 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Security_Datavault1
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_KKGKQ4u
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_euL0WZ0
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Security_HackingSuccess
-  Option_9: dialogue_qee0m5s
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Security_Hacking3
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_Ca9KGuT
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Security_Hacking3
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_m4OKqG8
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Security_Hacking3
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Output: dialogue_0eq0iwS
+{ +Dialogue Name: Console_Security_Hacking1
+  Output: dialogue_WquiOWi
+  Option_1: dialogue_66C0i38
+  OptionNext_1: Console_Security_Detection
+  OptionExecute_1: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_2: dialogue_G8CW08G
+  OptionNext_2: Console_Security_Detection
+  OptionExecute_2: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_3: dialogue_88CGK0I
+  OptionNext_3: Console_Security_Detection
+  OptionExecute_3: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_4: dialogue_aGquaSG
+  OptionNext_4: Console_Security_Detection
+  OptionExecute_4: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_5: dialogue_GqqS0A2
+  OptionNext_5: Console_Security_Detection
+  OptionExecute_5: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_6: dialogue_aWqKCiO
+  OptionNext_6: Console_Security_Menu
+  Execute: "SetNPCName('Security Console - HACKING')"
 }
-{ +Dialogue Name: Console_Reports_Security_Hacking4
-  Output: dialogue_Se8S628
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_auCWCdW
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Security_Hacking5
-  OptionExecute_1: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_2: dialogue_OWQK8KC
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Security_Hacking5
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_3: dialogue_G1u0Sm4
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Security_Hacking5
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_4mGOukq
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Security_Hacking5
-  OptionExecute_4: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,15)"
-  Option_5: dialogue_S4mYejq
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 13"
-  OptionNext_5: Console_Reports_Security_Hacking5
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,10)"
-  Option_6: dialogue_4Im04cu
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Security_Datavault2
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_GmC5acK
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_aqOk08u
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Security_HackingSuccess
-  Option_9: dialogue_CWhaGu0
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Security_Hacking4
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_8uOuW4G
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Security_Hacking4
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_8Kq8WqS
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Security_Hacking4
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
+{ +Dialogue Name: Console_Security_Detection
+  Next_1: Console_Security_Hacking2
+  Execute: "SecurityCapture = SecurityCapture + CoreSpeed;<nl>SystemLockdownSecurity = 1;<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);"
+  Output: dialogue_mea8eqM
 }
-{ +Dialogue Name: Console_Reports_Security_Hacking5
-  Output: dialogue_480VOe0
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_u4IaA4u
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Security_Hacking6
-  OptionExecute_1: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,15)"
-  Option_2: dialogue_a0aO0e8
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Security_Hacking6
-  OptionExecute_2: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_3: dialogue_uC4ueO2
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Security_Hacking6
-  OptionExecute_3: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_O0O4m4u
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Security_Hacking6
-  OptionExecute_4: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_5: dialogue_0mq4iuO
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 14"
-  OptionNext_5: Console_Reports_Security_Hacking6
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_6: dialogue_eZa60i8
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 13"
-  OptionNext_6: Console_Reports_Security_Datavault3
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_E8q8uao
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_r84mCOS
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Security_HackingSuccess
-  Option_9: dialogue_mu04qqS
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Security_Hacking5
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_0qm8CYW
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Security_Hacking5
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_SoSWG8u
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Security_Hacking5
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
+{ +Dialogue Name: Console_Security_Hacking2
+  Option_1: dialogue_44IYiuO
+  OptionIf_1: "Selector2 == 2 || Selector3 == 2 || Selector4 == 2 || Selector5 == 2"
+  OptionNext_1: Console_Hacking_Bridge2, param1: Console_Security_Hacking2
+  OptionExecute_1: "PlayerAddCapture = Random(1,14); SecurityAddCapture = Random(8,11)"
+  Option_2: dialogue_uGai0iS
+  OptionIf_2: "Selector1 == 22 || Selector2 == 22 || Selector3 == 22 || Selector4 == 22 || Selector5 == 22"
+  OptionNext_2: Console_Hacking_Bridge2, param1: Console_Security_Hacking2
+  OptionExecute_2: "PlayerAddCapture = Random(6,15); SecurityAddCapture = Random(0,9)"
+  Option_3: dialogue_aauC0eW
+  OptionIf_3: "Selector1 == 11 || Selector2 == 11 || Selector3 == 11 || Selector4 == 11 || Selector5 == 11"
+  OptionNext_3: Console_Hacking_Bridge3, param1: Console_Security_Hacking2
+  OptionExecute_3: "PlayerAddCapture = Random(4,16); SecurityAddCapture = Random(7,12)"
+  Option_4: dialogue_2aoe8O8
+  OptionIf_4: "Selector1 == 3 || Selector2 == 3 || Selector3 == 3 || Selector4 == 3 || Selector5 == 3"
+  OptionNext_4: Console_Hacking_Bridge3, param1: Console_Security_Hacking2
+  OptionExecute_4: "PlayerAddCapture = Random(1,12); SecurityAddCapture = Random(6,9)"
+  Option_5: dialogue_e8aa0Oq
+  OptionIf_5: "Selector1 == 7 || Selector2 == 7 || Selector3 == 7 || Selector4 == 7 || Selector5 == 7"
+  OptionNext_5: Console_Hacking_Bridge3, param1: Console_Security_Hacking2
+  OptionExecute_5: "PlayerAddCapture = Random(3,14); SecurityAddCapture = Random(6,10)"
+  Option_6: dialogue_0K2OaOS
+  OptionIf_6: "Selector1 == 8 || Selector2 == 8 || Selector3 == 8 || Selector4 == 8 || Selector5 == 8"
+  OptionNext_6: Console_Hacking_Bridge1, param1: Console_Security_Hacking2
+  OptionExecute_6: "PlayerAddCapture = Random(3,12); SecurityAddCapture = Random(4,8)"
+  Option_7: dialogue_eSbiKu8
+  OptionIf_7: "Selector2 == 1 || Selector3 == 1 || Selector4 == 1 || Selector5 == 1"
+  OptionNext_7: Console_Hacking_Bridge1, param1: Console_Security_Hacking2
+  OptionExecute_7: "PlayerAddCapture = Random(1,16); SecurityAddCapture = Random(9,12)"
+  Option_8: dialogue_KuLQCmC
+  OptionIf_8: "Selector1 == 23 || Selector2 == 23 || Selector3 == 23 || Selector4 == 23 || Selector5 == 23"
+  OptionNext_8: Console_Hacking_Bridge3, param1: Console_Security_Hacking2
+  OptionExecute_8: "PlayerAddCapture = Random(6,13); SecurityAddCapture = Random(0,7)"
+  Option_9: dialogue_EKOSK8a
+  OptionIf_9: "Selector1 == 9 || Selector2 == 9 || Selector3 == 9 || Selector4 == 9 || Selector5 == 9"
+  OptionNext_9: Console_Hacking_Bridge2, param1: Console_Security_Hacking2
+  OptionExecute_9: "PlayerAddCapture = Random(3,10); SecurityAddCapture = Random(2,6)"
+  Option_10: dialogue_G04mOuC
+  OptionIf_10: "Selector1 == 12 || Selector2 == 12 || Selector3 == 12 || Selector4 == 12 || Selector5 == 12"
+  OptionNext_10: Console_Hacking_Bridge1, param1: Console_Security_Hacking2
+  OptionExecute_10: "PlayerAddCapture = Random(4,14); SecurityAddCapture = Random(5,10)"
+  Option_11: dialogue_SaGq4G8
+  OptionIf_11: "Selector1 == 4 || Selector2 == 4 || Selector3 == 4 || Selector4 == 4 || Selector5 == 4"
+  OptionNext_11: Console_Hacking_Bridge1, param1: Console_Security_Hacking2
+  OptionExecute_11: "PlayerAddCapture = Random(1,10); SecurityAddCapture = Random(4,7)"
+  Option_12: dialogue_0eSSqee
+  OptionIf_12: "Selector1 == 13 || Selector2 == 13 || Selector3 == 13 || Selector4 == 13 || Selector5 == 13"
+  OptionNext_12: Console_Hacking_Bridge2, param1: Console_Security_Hacking2
+  OptionExecute_12: "PlayerAddCapture = Random(4,12); SecurityAddCapture = Random(3,8)"
+  Option_13: dialogue_8SemCWG
+  OptionIf_13: "Selector1 == 6 || Selector2 == 6"
+  OptionNext_13: Console_Hacking_Datavault01, param1: Console_Security_Hacking2
+  OptionExecute_13: "PlayerAddCapture = 0; SecurityAddCapture = Random(8,12)"
+  Option_14: dialogue_G8qK8mW
+  OptionIf_14: "Selector1 == 15 || Selector2 == 15 || Selector3 == 15 || Selector5 == 15"
+  OptionNext_14: Console_Hacking_Datavault03, param1: Console_Security_Hacking2
+  OptionExecute_14: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_15: dialogue_Girq0Ga
+  OptionIf_15: "Selector1 == 16 || Selector2 == 16 || Selector3 == 16 || Selector4 == 16 || Selector5 == 16"
+  OptionNext_15: Console_Hacking_Bridge1, param1: Console_Security_Hacking2
+  OptionExecute_15: "PlayerAddCapture = Random(5,16); SecurityAddCapture = Random(6,12)"
+  Option_16: dialogue_Si4OGGE
+  OptionIf_16: "Selector1 == 5 || Selector2 == 5 || Selector3 == 5 || Selector4 == 5 || Selector5 == 5"
+  OptionNext_16: Console_Hacking_Bridge2, param1: Console_Security_Hacking2
+  OptionExecute_16: "PlayerAddCapture = Random(1,9); SecurityAddCapture = Random(2,5)"
+  Option_17: dialogue_4OSmKii
+  OptionIf_17: "Selector1 == 17 || Selector2 == 17 || Selector3 == 17 || Selector4 == 17 || Selector5 == 17"
+  OptionNext_17: Console_Hacking_Bridge2, param1: Console_Security_Hacking2
+  OptionExecute_17: "PlayerAddCapture = Random(5,14); SecurityAddCapture = Random(4,10)"
+  Option_18: dialogue_4S8GWiC
+  OptionIf_18: "Selector1 == 18 || Selector2 == 18 || Selector3 == 18 || Selector4 == 18 || Selector5 == 18"
+  OptionNext_18: Console_Hacking_Bridge3, param1: Console_Security_Hacking2
+  OptionExecute_18: "PlayerAddCapture = Random(5,12); SecurityAddCapture = Random(2,8)"
+  Option_19: dialogue_4aa4An4
+  OptionIf_19: "Selector1 == 25 || Selector2 == 25 || Selector3 == 25 || Selector4 == 25"
+  OptionNext_19: Console_Hacking_Bridge2, param1: Console_Security_Hacking2
+  OptionExecute_19: "PlayerAddCapture = Random(6,9); SecurityAddCapture = Random(0,4)"
+  Option_20: dialogue_mCGCe78
+  OptionIf_20: "Selector1 == 19 || Selector2 == 19 || Selector3 == 19 || Selector4 == 19 || Selector5 == 19"
+  OptionNext_20: Console_Hacking_Bridge1, param1: Console_Security_Hacking2
+  OptionExecute_20: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,6)"
+  Option_21: dialogue_GMaiiuq
+  OptionIf_21: "Selector1 == 20 || Selector4 == 20 || Selector5 == 20"
+  OptionNext_21: Console_Hacking_Datavault04, param1: Console_Security_Hacking2
+  OptionExecute_21: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_22: dialogue_mOS4Ga0
+  OptionIf_22: "Selector1 == 14 || Selector2 == 14 || Selector3 == 14 || Selector4 == 14 || Selector5 == 14"
+  OptionNext_22: Console_Hacking_Bridge3, param1: Console_Security_Hacking2
+  OptionExecute_22: "PlayerAddCapture = Random(4,10); SecurityAddCapture = Random(1,6)"
+  Option_23: dialogue_0a444a8
+  OptionIf_23: "Selector2 == 21 || Selector3 == 21 || Selector4 == 21 || Selector5 == 21"
+  OptionNext_23: Console_Hacking_Datavault05, param1: Console_Security_Hacking2
+  OptionExecute_23: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,12)"
+  Option_24: dialogue_08G8Wmu
+  OptionIf_24: "Selector1 == 24 || Selector2 == 24 || Selector3 == 24 || Selector4 == 24 || Selector5 == 24"
+  OptionNext_24: Console_Hacking_Bridge1, param1: Console_Security_Hacking2
+  OptionExecute_24: "PlayerAddCapture = Random(6,11); SecurityAddCapture = Random(0,5)"
+  Option_25: dialogue_Sao8K8G
+  OptionIf_25: "Selector1 == 10 || Selector2 == 10"
+  OptionNext_25: Console_Hacking_Datavault02, param1: Console_Security_Hacking2
+  OptionExecute_25: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_26: dialogue_e4a4Oau
+  OptionIf_26: "HasItem('FireStickRed', 1)"
+  OptionNext_26: Console_Hacking_Software, param1: Console_Security_Hacking2
+  OptionExecute_26: "RemoveItem('FireStickRed', 1); Selector1 = Random(15,25); Selector2 = Random(15,25); Selector3 = Random(15,25); Selector4 = Random(15,25); Selector5 = Random(15,25)"
+  Option_27: dialogue_mgmqKCa
+  OptionIf_27: "HasItem('FireStickGreen', 1)"
+  OptionNext_27: Console_Hacking_Software, param1: Console_Security_Hacking2
+  OptionExecute_27: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 15"
+  Option_28: dialogue_WeUiqCq
+  OptionIf_28: "HasItem('FireStickBlue', 1)"
+  OptionNext_28: Console_Hacking_Software, param1: Console_Security_Hacking2
+  OptionExecute_28: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 15"
+  Output: dialogue_4aSWWmS
 }
-{ +Dialogue Name: Console_Reports_Security_Hacking6
-  Output: dialogue_PiQCuKe
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_KWS4CKq
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Security_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_2: dialogue_eGuKGe4
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Security_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(10,15)"
-  Option_3: dialogue_4e4efNi
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Security_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_4: dialogue_e5GaWC0
-  OptionIf_4: "SecurityCapture < 100 && PlayerAddCapture > 13"
-  OptionNext_4: Console_Reports_Security_Hacking3
-  OptionExecute_4: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_5: dialogue_uGkOi0m
-  OptionIf_5: "SecurityCapture < 80"
-  OptionNext_5: Console_Reports_Security_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,15)"
-  Option_6: dialogue_4We4G8O
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture < 14"
-  OptionNext_6: Console_Reports_Security_Hacking3
-  OptionExecute_6: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_7: dialogue_0SW4La2
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_Ke4iKGu
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Security_HackingSuccess
-  Option_9: dialogue_DiWuu80
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Security_Hacking6
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_wGumWSe
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Security_Hacking6
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_0GoaOK8
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Security_Hacking6
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Security_Datavault1
-  Output: dialogue_qaSiuGC
-  Option_1: dialogue_cKSem8u
-  OptionNext_1: Console_Reports_Security_Hacking3
-  OptionExecute_1: "AddItem('MoneyCard', RandomMoney); SecurityAddCapture = 0"
-  Variable_1: "RandomMoney", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomMoney = Random(1000,25000)"
-}
-{ +Dialogue Name: Console_Reports_Security_Datavault2
-  Output: dialogue_iaiOm8v
-  Variable_1: "RandomSkill", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomSkill = Random(5,20)"
-  Option_1: dialogue_qmCOqWK
-  OptionNext_1: Console_Reports_Security_Hacking4
-  OptionExecute_1: "SecurityAddCapture = 0; Player.UpgradePoints += RandomSkill"
-}
-{ +Dialogue Name: Console_Reports_Security_Datavault3
-  Output: dialogue_qmOqfIG
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_uc4GuaW
-  OptionNext_1: Console_Reports_Security_Hacking5
-  OptionExecute_1: "AddItem('FireStickRed', 1); SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Security_Datavault4
-  Option_1: dialogue_qIOqS0W
-  OptionNext_1: Console_Reports_Security_Hacking6
-  OptionExecute_1: "AddItem('FireStickGreen', 1); SecurityAddCapture = 0"
-  Output: dialogue_e2aWK4i
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-}
-{ +Dialogue Name: Console_Reports_Security_HackingSuccess
-  Variable_1: "HackingReward", param1: int
+{ +Dialogue Name: Console_Security_HackingSuccess
   Execute_1: "HackingReward = Random(1,5)"
   Output: dialogue_ea48WM4
   Option_1: dialogue_Su84wKk
@@ -6351,310 +6053,325 @@
   OptionNext_5: Console_Reports_HackingComplete
   OptionExecute_5: "AddItem('ReportWeaponSignatures', 1)"
 }
-{ +Dialogue Name: Console_Reports_Security_Keycard
-  Output: dialogue_eWi4OWi
-  Option_1: dialogue_cGWK64a
-  OptionNext_1: Console_Reports_Security_Keycard2
+{ +Dialogue Name: Console_Hacking_Bridge1
+  Next_1: Console_Reports_HackingFailed
+  NextIf_1: "SecurityCapture > 99"
+  Next_2: Console_Common_HackingSuccess
+  NextIf_2: "PlayerCapture > 99 && SystemCheck == 1"
+  Next_3: Console_Military_HackingSuccess
+  NextIf_3: "PlayerCapture > 99 && SystemCheck == 2"
+  Next_4: Console_Security_HackingSuccess
+  NextIf_4: "PlayerCapture > 99 && SystemCheck == 3"
+  Next_5: Console_Exploration_HackingSuccess
+  NextIf_5: "PlayerCapture > 99 && SystemCheck == 4"
+  Next_6: Console_Science_HackingSuccess
+  NextIf_6: "PlayerCapture > 99 && SystemCheck == 5"
+  Next_7: Return
+  Execute: "PlayerCapture = PlayerCapture + PlayerAddCapture;<nl>SecurityCapture = SecurityCapture + SecurityAddCapture + CoreSpeed;<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);"
+  Output: dialogue_G4FOO0q
 }
-{ +Dialogue Name: Console_Reports_Security_Keycard2
-  Output: dialogue_08vGwqu
-  Option_1: dialogue_4SGAiqK
-  OptionNext_1: Console_Reports_Security_HackingSuccess
-  OptionExecute_1: "SystemLockdown = 1"
+{ +Dialogue Name: Console_Hacking_Bridge2
+  Next_1: Console_Reports_HackingFailed
+  NextIf_1: "SecurityCapture > 99"
+  Next_2: Console_Common_HackingSuccess
+  NextIf_2: "PlayerCapture > 99 && SystemCheck == 1"
+  Next_3: Console_Military_HackingSuccess
+  NextIf_3: "PlayerCapture > 99 && SystemCheck == 2"
+  Next_4: Console_Security_HackingSuccess
+  NextIf_4: "PlayerCapture > 99 && SystemCheck == 3"
+  Next_5: Console_Exploration_HackingSuccess
+  NextIf_5: "PlayerCapture > 99 && SystemCheck == 4"
+  Next_6: Console_Science_HackingSuccess
+  NextIf_6: "PlayerCapture > 99 && SystemCheck == 5"
+  Next_7: Return
+  Execute: "PlayerCapture = PlayerCapture + PlayerAddCapture;<nl>SecurityCapture = SecurityCapture + SecurityAddCapture + CoreSpeed;<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);"
+  Output: dialogue_aumSSSm
+}
+{ +Dialogue Name: Console_Hacking_Bridge3
+  Next_1: Console_Reports_HackingFailed
+  NextIf_1: "SecurityCapture > 99"
+  Next_2: Console_Common_HackingSuccess
+  NextIf_2: "PlayerCapture > 99 && SystemCheck == 1"
+  Next_3: Console_Military_HackingSuccess
+  NextIf_3: "PlayerCapture > 99 && SystemCheck == 2"
+  Next_4: Console_Security_HackingSuccess
+  NextIf_4: "PlayerCapture > 99 && SystemCheck == 3"
+  Next_5: Console_Exploration_HackingSuccess
+  NextIf_5: "PlayerCapture > 99 && SystemCheck == 4"
+  Next_6: Console_Science_HackingSuccess
+  NextIf_6: "PlayerCapture > 99 && SystemCheck == 5"
+  Next_7: Return
+  Execute: "PlayerCapture = PlayerCapture + PlayerAddCapture;<nl>SecurityCapture = SecurityCapture + SecurityAddCapture + CoreSpeed;<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);"
+  Output: dialogue_0Sm0S0K
+}
+{ +Dialogue Name: Console_Hacking_Software
+  Next_1: Console_Reports_HackingFailed
+  NextIf_1: "SecurityCapture > 99"
+  Next_2: Console_Common_HackingSuccess
+  NextIf_2: "PlayerCapture > 99 && SystemCheck == 1"
+  Next_3: Console_Military_HackingSuccess
+  NextIf_3: "PlayerCapture > 99 && SystemCheck == 2"
+  Next_4: Console_Security_HackingSuccess
+  NextIf_4: "PlayerCapture > 99 && SystemCheck == 3"
+  Next_5: Console_Exploration_HackingSuccess
+  NextIf_5: "PlayerCapture > 99 && SystemCheck == 4"
+  Next_6: Console_Science_HackingSuccess
+  NextIf_6: "PlayerCapture > 99 && SystemCheck == 5"
+  Next_7: Return
+  Output: dialogue_1uqOqim
+}
+{ +Dialogue Name: Console_Hacking_Datavault01
+  Option_1: dialogue_OmwTiG4
+  OptionIf_1: "SecurityCapture < 100"
+  OptionNext_1: Return
+  OptionExecute_1: "AddItem('FireStickGreen', 1)"
+  Option_2: dialogue_uWWrSmu
+  OptionIf_2: "SecurityCapture > 99"
+  OptionNext_2: Console_Reports_HackingFailed
+  OptionExecute_2: "AddItem('FireStickGreen', 1)"
+  Output: dialogue_CKGZiaW
+  Execute: "Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);<nl>SecurityCapture = SecurityCapture + SecurityAddCapture + CoreSpeed;"
+}
+{ +Dialogue Name: Console_Hacking_Datavault02
+  Output: dialogue_SCOS4eu
+  Option_1: dialogue_C0GCW4K
+  OptionIf_1: "SecurityCapture < 100"
+  OptionNext_1: Return
+  OptionExecute_1: "AddItem('FireStickBlue', 1)"
+  Option_2: dialogue_W8XCGee
+  OptionIf_2: "SecurityCapture > 99"
+  OptionNext_2: Console_Reports_HackingFailed
+  OptionExecute_2: "AddItem('FireStickBlue', 1)"
+  Execute: "Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);<nl>SecurityCapture = SecurityCapture + SecurityAddCapture + CoreSpeed;"
+}
+{ +Dialogue Name: Console_Hacking_Datavault03
+  Output: dialogue_UaGeCKG
+  Option_1: dialogue_q0eOee8
+  OptionIf_1: "SecurityCapture < 100"
+  OptionNext_1: Return
+  OptionExecute_1: "AddItem('FireStickRed', 1)"
+  Option_2: dialogue_KqWuiWm
+  OptionIf_2: "SecurityCapture > 99"
+  OptionNext_2: Console_Reports_HackingFailed
+  OptionExecute_2: "AddItem('FireStickRed', 1)"
+  Execute: "Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);<nl>SecurityCapture = SecurityCapture + SecurityAddCapture + CoreSpeed;"
+}
+{ +Dialogue Name: Console_Hacking_Datavault04
+  Output: dialogue_K0m8W4i
+  Option_1: dialogue_EG0aOiK
+  OptionIf_1: "SecurityCapture < 100"
+  OptionNext_1: Return
+  OptionExecute_1: "AddItem('MoneyCard', RandomMoney)"
+  Option_2: dialogue_OKaSqi7
+  OptionIf_2: "SecurityCapture > 99"
+  OptionNext_2: Console_Reports_HackingFailed
+  OptionExecute_2: "AddItem('MoneyCard', RandomMoney)"
+  Variable_1: "RandomMoney", param1: int
+  Execute: "RandomMoney = Random(10,25000);<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);<nl>SecurityCapture = SecurityCapture + SecurityAddCapture + CoreSpeed;"
+}
+{ +Dialogue Name: Console_Hacking_Datavault05
+  Output: dialogue_KeKOOmq
+  Variable_1: "RandomSkill", param1: int
+  Option_1: dialogue_Wmam0qu
+  OptionIf_1: "SecurityCapture < 100"
+  OptionNext_1: Return
+  OptionExecute_1: "Player.UpgradePoints += RandomSkill"
+  Option_2: dialogue_iOGKOiu
+  OptionIf_2: "SecurityCapture > 99"
+  OptionNext_2: Console_Reports_HackingFailed
+  OptionExecute_2: "Player.UpgradePoints += RandomSkill"
+  Execute: "RandomSkill = Random(1,20);<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);<nl>SecurityCapture = SecurityCapture + SecurityAddCapture + CoreSpeed;"
 }
 { +Dialogue Name: Console_Reports_Exploration_Start
   NPCName: dialogue_8C08uKa
-  Variable_1: "SystemLockdown", param1: dbplayerpoi_int
+  Variable_1: "SystemLockdownExploration", param1: dbplayerpoi_int
   Variable_2: "PlayerCapture", param1: int
   Variable_3: "SecurityCapture", param1: int
   Variable_4: "PlayerAddCapture", param1: int
   Variable_5: "SecurityAddCapture", param1: int
-  Next_1: Console_Reports_Blocked
-  NextIf_1: "SystemLockdown > 0"
-  Next_2: Console_Reports_Exploration_Menu
+  Variable_6: "Selector1", param1: int
+  Variable_7: "Selector2", param1: int
+  Variable_8: "Selector3", param1: int
+  Variable_9: "Selector4", param1: int
+  Variable_10: "Selector5", param1: int
+  Variable_11: "CoreSpeed", param1: dbplayerpoi_int
+  Next_1: Console_Exploration_Blocked
+  NextIf_1: "SystemLockdownExploration > 0"
+  Next_2: Console_Exploration_Menu
 }
-{ +Dialogue Name: Console_Reports_Exploration_Menu
+{ +Dialogue Name: Console_Exploration_Blocked
+  Output: dialogue_8qEe8CW
+  Option_1: dialogue_WEiOWei
+  OptionNext_1: End
+  Option_2: dialogue_qeSkWme
+  OptionIf_2: "HasItem('AssaultRifleDebug', 1)"
+  OptionNext_2: End
+  OptionExecute_2: "SystemLockdownExploration = 0"
+}
+{ +Dialogue Name: Console_Exploration_Menu
   Output: dialogue_4maWAeI
   Option_1: dialogue_SKia0iK
   OptionIf_1: "HasItem('KeyCardExploration', 1) || HasItem('AssaultRifleDebug', 1)"
-  OptionNext_1: Console_Reports_Exploration_Keycard
+  OptionNext_1: Console_Exploration_Keycard
   OptionExecute_1: "RemoveItem('KeyCardExploration', 1)"
   Option_2: dialogue_0KiWqOG
-  OptionNext_2: Console_Reports_Exploration_Hacking1
-  Option_3: dialogue_SeKESmq
-  OptionNext_3: Console_Reports_IDA_Help, param1: Console_Reports_Exploration_Menu
-  Option_4: dialogue_S0Oqiae
-  OptionNext_4: End
+  OptionIf_2: "CoreSpeed > 0"
+  OptionNext_2: Console_Exploration_Hacking1
+  Option_3: dialogue_0G46GYC
+  OptionIf_3: "CoreSpeed == 0"
+  OptionNext_3: Console_Exploration_Hacking1
+  OptionExecute_3: "CoreSpeed = Random(1,4)"
+  Option_4: dialogue_SeKESmq
+  OptionNext_4: Console_Reports_IDA_Help, param1: Console_Exploration_Menu
+  Option_5: dialogue_S0Oqiae
+  OptionNext_5: End
   Execute_1: "SetNPCName('System Console - Main Menu')"
+  Variable_1: "SystemCheck", param1: int
+  Variable_2: "HackingReward", param1: int
+  Execute: "SystemCheck = 4;"
 }
-{ +Dialogue Name: Console_Reports_Exploration_Hacking1
-  Output: dialogue_iO4KuGK
-  Option_1: dialogue_qd4q4GO
-  OptionNext_1: Console_Reports_Exploration_Hacking2
-  OptionExecute_1: "PlayerCapture = Random(0,15); SecurityCapture = Random(0,15)"
-  Option_2: dialogue_44eaLaS
-  OptionNext_2: Console_Reports_Exploration_Hacking2
-  OptionExecute_2: "PlayerCapture = Random(5,10); SecurityCapture = Random(0,15)"
-  Option_3: dialogue_GWhWOGG
-  OptionNext_3: Console_Reports_Exploration_Hacking2
-  OptionExecute_3: "PlayerCapture = Random(0,10); SecurityCapture = Random(5,15)"
-  Option_4: dialogue_auKCKiq
-  OptionNext_4: Console_Reports_Exploration_Hacking2
-  OptionExecute_4: "PlayerCapture = Random(0,15); SecurityCapture = Random(0,15)"
-  Option_5: dialogue_sauO4H0
-  OptionNext_5: Console_Reports_Exploration_Hacking2
-  OptionExecute_5: "PlayerCapture = Random(0,15); SecurityCapture = Random(0,15)"
-  Option_6: dialogue_eWG08C4
-  OptionNext_6: Console_Reports_Exploration_Menu
-  Execute_1: "SetNPCName('System Console - HACKING')"
+{ +Dialogue Name: Console_Exploration_Hacking1
+  Output: dialogue_S9OigqA
+  Option_1: dialogue_eOeeRaq
+  OptionNext_1: Console_Exploration_Detection
+  OptionExecute_1: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_2: dialogue_qoKOea0
+  OptionNext_2: Console_Exploration_Detection
+  OptionExecute_2: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_3: dialogue_mOY44Ca
+  OptionNext_3: Console_Exploration_Detection
+  OptionExecute_3: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_4: dialogue_ea0G8Om
+  OptionNext_4: Console_Exploration_Detection
+  OptionExecute_4: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_5: dialogue_amiSm8m
+  OptionNext_5: Console_Exploration_Detection
+  OptionExecute_5: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_6: dialogue_8ue0iSO
+  OptionNext_6: Console_Exploration_Menu
+  Execute: "SetNPCName('System Console - HACKING')"
 }
-{ +Dialogue Name: Console_Reports_Exploration_Hacking2
-  Execute_1: "SystemLockdown = 1"
-  Option_1: dialogue_0C4qm8a
-  OptionNext_1: Console_Reports_Exploration_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(5,15)"
-  Option_2: dialogue_ugC8mai
-  OptionNext_2: Console_Reports_Exploration_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,10)"
-  Option_3: dialogue_cuqaqqq
-  OptionNext_3: Console_Reports_Exploration_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_4: dialogue_9muiGSm
-  OptionNext_4: Console_Reports_Exploration_Hacking3
-  OptionExecute_4: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,15)"
-  Option_5: dialogue_Waaq6CC
-  OptionNext_5: Console_Reports_Exploration_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_6: dialogue_eG4mCmq
-  OptionIf_6: "HasItem('FireStickRed', 1)"
-  OptionNext_6: Console_Reports_Exploration_Hacking2
-  OptionExecute_6: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10"
-  Option_7: dialogue_8aG4eu4
-  OptionIf_7: "HasItem('FireStickGreen', 1)"
-  OptionNext_7: Console_Reports_Exploration_Hacking2
-  OptionExecute_7: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20"
-  Option_8: dialogue_i040bmq
-  OptionIf_8: "HasItem('FireStickBlue', 1)"
-  OptionNext_8: Console_Reports_Exploration_Hacking2
-  OptionExecute_8: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20"
-  Output: dialogue_eKO4W8C
+{ +Dialogue Name: Console_Exploration_Detection
+  Next_1: Console_Exploration_Hacking2
+  Execute: "SecurityCapture = SecurityCapture + CoreSpeed;<nl>SystemLockdownExploration = 1;<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);"
+  Output: dialogue_GC0GSW4
 }
-{ +Dialogue Name: Console_Reports_Exploration_Hacking3
-  Option_1: dialogue_meiCmMi
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Exploration_Hacking4
-  OptionExecute_1: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(2,15)"
-  Option_2: dialogue_sO4GeGu
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Exploration_Hacking4
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_3: dialogue_aO80G9N
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Exploration_Hacking4
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(3,15)"
-  Option_4: dialogue_08CuSeG
-  OptionIf_4: "SecurityCapture < 80 && PlayerAddCapture < 13"
-  OptionNext_4: Console_Reports_Exploration_Hacking4
-  OptionExecute_4: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(3,10)"
-  Option_5: dialogue_Cu8EWaw
-  OptionIf_5: "SecurityCapture < 100"
-  OptionNext_5: Console_Reports_Exploration_Hacking4
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,10)"
-  Option_6: dialogue_imefaAO
-  OptionIf_6: "SecurityCapture < 80 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Exploration_Datavault1
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,10)"
-  Option_7: dialogue_OGkqWui
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_W4riqCi
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Exploration_HackingSuccess
-  Option_9: dialogue_quKqKm0
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Exploration_Hacking3
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_aCGG4qW
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Exploration_Hacking3
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_m08qa0u
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Exploration_Hacking3
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Output: dialogue_aOumO0G
+{ +Dialogue Name: Console_Exploration_Hacking2
+  Option_1: dialogue_aK6K8Sm
+  OptionIf_1: "Selector1 == 23 || Selector2 == 23 || Selector3 == 23 || Selector4 == 23 || Selector5 == 23"
+  OptionNext_1: Console_Hacking_Bridge3, param1: Console_Exploration_Hacking2
+  OptionExecute_1: "PlayerAddCapture = Random(6,13); SecurityAddCapture = Random(0,7)"
+  Option_2: dialogue_mimSeOt
+  OptionIf_2: "Selector2 == 1 || Selector3 == 1 || Selector4 == 1 || Selector5 == 1"
+  OptionNext_2: Console_Hacking_Bridge1, param1: Console_Exploration_Hacking2
+  OptionExecute_2: "PlayerAddCapture = Random(1,16); SecurityAddCapture = Random(9,12)"
+  Option_3: dialogue_uCeGwqO
+  OptionIf_3: "Selector1 == 16 || Selector2 == 16 || Selector3 == 16 || Selector4 == 16 || Selector5 == 16"
+  OptionNext_3: Console_Hacking_Bridge1, param1: Console_Exploration_Hacking2
+  OptionExecute_3: "PlayerAddCapture = Random(5,16); SecurityAddCapture = Random(6,12)"
+  Option_4: dialogue_ieCOOaK
+  OptionIf_4: "Selector1 == 3 || Selector2 == 3 || Selector3 == 3 || Selector4 == 3 || Selector5 == 3"
+  OptionNext_4: Console_Hacking_Bridge3, param1: Console_Exploration_Hacking2
+  OptionExecute_4: "PlayerAddCapture = Random(1,12); SecurityAddCapture = Random(6,9)"
+  Option_5: dialogue_m40iIGG
+  OptionIf_5: "Selector1 == 17 || Selector2 == 17 || Selector3 == 17 || Selector4 == 17 || Selector5 == 17"
+  OptionNext_5: Console_Hacking_Bridge2, param1: Console_Exploration_Hacking2
+  OptionExecute_5: "PlayerAddCapture = Random(5,14); SecurityAddCapture = Random(4,10)"
+  Option_6: dialogue_uKi4PYq
+  OptionIf_6: "Selector1 == 4 || Selector2 == 4 || Selector3 == 4 || Selector4 == 4 || Selector5 == 4"
+  OptionNext_6: Console_Hacking_Bridge1, param1: Console_Exploration_Hacking2
+  OptionExecute_6: "PlayerAddCapture = Random(1,10); SecurityAddCapture = Random(4,7)"
+  Option_7: dialogue_UfOCsie
+  OptionIf_7: "Selector1 == 6 || Selector2 == 6"
+  OptionNext_7: Console_Hacking_Datavault01, param1: Console_Exploration_Hacking2
+  OptionExecute_7: "PlayerAddCapture = 0; SecurityAddCapture = Random(8,12)"
+  Option_8: dialogue_mm6WiWC
+  OptionIf_8: "Selector1 == 7 || Selector2 == 7 || Selector3 == 7 || Selector4 == 7 || Selector5 == 7"
+  OptionNext_8: Console_Hacking_Bridge3, param1: Console_Exploration_Hacking2
+  OptionExecute_8: "PlayerAddCapture = Random(3,14); SecurityAddCapture = Random(6,10)"
+  Option_9: dialogue_G0068Ei
+  OptionIf_9: "Selector1 == 25 || Selector2 == 25 || Selector3 == 25 || Selector4 == 25"
+  OptionNext_9: Console_Hacking_Bridge2, param1: Console_Exploration_Hacking2
+  OptionExecute_9: "PlayerAddCapture = Random(6,9); SecurityAddCapture = Random(0,4)"
+  Option_10: dialogue_0rle8ie
+  OptionIf_10: "Selector1 == 20 || Selector4 == 20 || Selector5 == 20"
+  OptionNext_10: Console_Hacking_Datavault04, param1: Console_Exploration_Hacking2
+  OptionExecute_10: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_11: dialogue_uBxWe0O
+  OptionIf_11: "Selector1 == 8 || Selector2 == 8 || Selector3 == 8 || Selector4 == 8 || Selector5 == 8"
+  OptionNext_11: Console_Hacking_Bridge1, param1: Console_Exploration_Hacking2
+  OptionExecute_11: "PlayerAddCapture = Random(3,12); SecurityAddCapture = Random(4,8)"
+  Option_12: dialogue_5qmiGua
+  OptionIf_12: "Selector1 == 9 || Selector2 == 9 || Selector3 == 9 || Selector4 == 9 || Selector5 == 9"
+  OptionNext_12: Console_Hacking_Bridge2, param1: Console_Exploration_Hacking2
+  OptionExecute_12: "PlayerAddCapture = Random(3,10); SecurityAddCapture = Random(2,6)"
+  Option_13: dialogue_eZiKeU8
+  OptionIf_13: "Selector1 == 10 || Selector2 == 10"
+  OptionNext_13: Console_Hacking_Datavault02, param1: Console_Exploration_Hacking2
+  OptionExecute_13: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_14: dialogue_4uKucaq
+  OptionIf_14: "Selector1 == 11 || Selector2 == 11 || Selector3 == 11 || Selector4 == 11 || Selector5 == 11"
+  OptionNext_14: Console_Hacking_Bridge3, param1: Console_Exploration_Hacking2
+  OptionExecute_14: "PlayerAddCapture = Random(4,16); SecurityAddCapture = Random(7,12)"
+  Option_15: dialogue_O0OCeKK
+  OptionIf_15: "Selector1 == 12 || Selector2 == 12 || Selector3 == 12 || Selector4 == 12 || Selector5 == 12"
+  OptionNext_15: Console_Hacking_Bridge1, param1: Console_Exploration_Hacking2
+  OptionExecute_15: "PlayerAddCapture = Random(4,14); SecurityAddCapture = Random(5,10)"
+  Option_16: dialogue_ueOaWC0
+  OptionIf_16: "Selector1 == 5 || Selector2 == 5 || Selector3 == 5 || Selector4 == 5 || Selector5 == 5"
+  OptionNext_16: Console_Hacking_Bridge2, param1: Console_Exploration_Hacking2
+  OptionExecute_16: "PlayerAddCapture = Random(1,9); SecurityAddCapture = Random(2,5)"
+  Option_17: dialogue_k4Gw64S
+  OptionIf_17: "Selector1 == 14 || Selector2 == 14 || Selector3 == 14 || Selector4 == 14 || Selector5 == 14"
+  OptionNext_17: Console_Hacking_Bridge3, param1: Console_Exploration_Hacking2
+  OptionExecute_17: "PlayerAddCapture = Random(4,10); SecurityAddCapture = Random(1,6)"
+  Option_18: dialogue_4O0WaK0
+  OptionIf_18: "Selector1 == 15 || Selector2 == 15 || Selector3 == 15 || Selector4 == 15 || Selector5 == 15"
+  OptionNext_18: Console_Hacking_Datavault03, param1: Console_Exploration_Hacking2
+  OptionExecute_18: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_19: dialogue_u2SKkOW
+  OptionIf_19: "Selector1 == 18 || Selector2 == 18 || Selector3 == 18 || Selector4 == 18 || Selector5 == 18"
+  OptionNext_19: Console_Hacking_Bridge3, param1: Console_Exploration_Hacking2
+  OptionExecute_19: "PlayerAddCapture = Random(5,12); SecurityAddCapture = Random(2,8)"
+  Option_20: dialogue_GSuuea8
+  OptionIf_20: "Selector1 == 19 || Selector2 == 19 || Selector3 == 19 || Selector4 == 19 || Selector5 == 19"
+  OptionNext_20: Console_Hacking_Bridge1, param1: Console_Exploration_Hacking2
+  OptionExecute_20: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,6)"
+  Option_21: dialogue_uOKsO8C
+  OptionIf_21: "Selector2 == 21 || Selector3 == 21 || Selector4 == 21 || Selector5 == 21"
+  OptionNext_21: Console_Hacking_Datavault05, param1: Console_Exploration_Hacking2
+  OptionExecute_21: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,12)"
+  Option_22: dialogue_OuSCWee
+  OptionIf_22: "Selector1 == 13 || Selector2 == 13 || Selector3 == 13 || Selector4 == 13 || Selector5 == 13"
+  OptionNext_22: Console_Hacking_Bridge2, param1: Console_Exploration_Hacking2
+  OptionExecute_22: "PlayerAddCapture = Random(4,12); SecurityAddCapture = Random(3,8)"
+  Option_23: dialogue_aeuSOqi
+  OptionIf_23: "Selector1 == 22 || Selector2 == 22 || Selector3 == 22 || Selector4 == 22 || Selector5 == 22"
+  OptionNext_23: Console_Hacking_Bridge2, param1: Console_Exploration_Hacking2
+  OptionExecute_23: "PlayerAddCapture = Random(6,15); SecurityAddCapture = Random(0,9)"
+  Option_24: dialogue_W80SGCq
+  OptionIf_24: "Selector2 == 2 || Selector3 == 2 || Selector4 == 2 || Selector5 == 2"
+  OptionNext_24: Console_Hacking_Bridge2, param1: Console_Exploration_Hacking2
+  OptionExecute_24: "PlayerAddCapture = Random(1,14); SecurityAddCapture = Random(8,11)"
+  Option_25: dialogue_GueGIKq
+  OptionIf_25: "Selector1 == 24 || Selector2 == 24 || Selector3 == 24 || Selector4 == 24 || Selector5 == 24"
+  OptionNext_25: Console_Hacking_Bridge1, param1: Console_Exploration_Hacking2
+  OptionExecute_25: "PlayerAddCapture = Random(6,11); SecurityAddCapture = Random(0,5)"
+  Option_26: dialogue_8quamu4
+  OptionIf_26: "HasItem('FireStickRed', 1)"
+  OptionNext_26: Console_Hacking_Software, param1: Console_Exploration_Hacking2
+  OptionExecute_26: "RemoveItem('FireStickRed', 1); Selector1 = Random(15,25); Selector2 = Random(15,25); Selector3 = Random(15,25); Selector4 = Random(15,25); Selector5 = Random(15,25)"
+  Option_27: dialogue_8qmCKH0
+  OptionIf_27: "HasItem('FireStickGreen', 1)"
+  OptionNext_27: Console_Hacking_Software, param1: Console_Exploration_Hacking2
+  OptionExecute_27: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 15"
+  Option_28: dialogue_W0mO2au
+  OptionIf_28: "HasItem('FireStickBlue', 1)"
+  OptionNext_28: Console_Hacking_Software, param1: Console_Exploration_Hacking2
+  OptionExecute_28: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 15"
+  Output: dialogue_u4OeZ8K
 }
-{ +Dialogue Name: Console_Reports_Exploration_Hacking4
-  Output: dialogue_OKaKq0e
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_OiUMo8e
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Exploration_Hacking5
-  OptionExecute_1: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(0,10)"
-  Option_2: dialogue_mOSeKqe
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Exploration_Hacking5
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_3: dialogue_maKSiGg
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Exploration_Hacking5
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_4: dialogue_OCFaiq0
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Exploration_Hacking5
-  OptionExecute_4: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_5: dialogue_G4e48mO
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 13"
-  OptionNext_5: Console_Reports_Exploration_Hacking5
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,10)"
-  Option_6: dialogue_e4QmWi4
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Exploration_Datavault2
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,10)"
-  Option_7: dialogue_OKWmqOJ
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_mqqul4W
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Exploration_HackingSuccess
-  Option_9: dialogue_0SaW8eC
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Exploration_Hacking4
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_u4a8bmO
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Exploration_Hacking4
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_Kim8Gi8
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Exploration_Hacking4
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Exploration_Hacking5
-  Output: dialogue_48qKOsm
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_aiW0qOm
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Exploration_Hacking6
-  OptionExecute_1: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(2,10)"
-  Option_2: dialogue_baOusmo
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Exploration_Hacking6
-  OptionExecute_2: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,15)"
-  Option_3: dialogue_eWueiC8
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Exploration_Hacking6
-  OptionExecute_3: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_d0S8eKG
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Exploration_Hacking6
-  OptionExecute_4: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(3,15)"
-  Option_5: dialogue_SmO4CG0
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 14"
-  OptionNext_5: Console_Reports_Exploration_Hacking6
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,10)"
-  Option_6: dialogue_WYaSuu1
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 13"
-  OptionNext_6: Console_Reports_Exploration_Datavault3
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,10)"
-  Option_7: dialogue_uaKCiS8
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_Ya0e000
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Exploration_HackingSuccess
-  Option_9: dialogue_5uWaS40
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Exploration_Hacking5
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_WuKOeWm
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Exploration_Hacking5
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_S8St4ai
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Exploration_Hacking5
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Exploration_Hacking6
-  Output: dialogue_kCEq4Gi
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_q00aKqG
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Exploration_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,15)"
-  Option_2: dialogue_CKMuKaC
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Exploration_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(3,10)"
-  Option_3: dialogue_uuKOWrK
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Exploration_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_4: dialogue_KW0GeGm
-  OptionIf_4: "SecurityCapture < 100 && PlayerAddCapture > 13"
-  OptionNext_4: Console_Reports_Exploration_Hacking3
-  OptionExecute_4: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_5: dialogue_qmCmCS0
-  OptionIf_5: "SecurityCapture < 80"
-  OptionNext_5: Console_Reports_Exploration_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,15)"
-  Option_6: dialogue_8SWqOOL
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture < 14"
-  OptionNext_6: Console_Reports_Exploration_Hacking3
-  OptionExecute_6: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(2,10)"
-  Option_7: dialogue_KSW4b4i
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_KieOmOq
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Exploration_HackingSuccess
-  Option_9: dialogue_aCKfmu8
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Exploration_Hacking6
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_GWK0T0q
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Exploration_Hacking6
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_q8m4Sua
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Exploration_Hacking6
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Exploration_Datavault1
-  Output: dialogue_SieG0Km
-  Option_1: dialogue_C8CWaWO
-  OptionNext_1: Console_Reports_Exploration_Hacking3
-  OptionExecute_1: "AddItem('MoneyCard', RandomMoney); SecurityAddCapture = 0"
-  Variable_1: "RandomMoney", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomMoney = Random(100,10000)"
-}
-{ +Dialogue Name: Console_Reports_Exploration_Datavault2
-  Output: dialogue_8GW0K8e
-  Variable_1: "RandomSkill", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomSkill = Random(1,10)"
-  Option_1: dialogue_iu4O8ag
-  OptionNext_1: Console_Reports_Exploration_Hacking4
-  OptionExecute_1: "SecurityAddCapture = 0; Player.UpgradePoints += RandomSkill"
-}
-{ +Dialogue Name: Console_Reports_Exploration_Datavault3
-  Output: dialogue_SUSqtKu
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_81SO0im
-  OptionNext_1: Console_Reports_Exploration_Hacking5
-  OptionExecute_1: "AddItem('FireStickRed', 1); SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Exploration_Datavault4
-  Option_1: dialogue_SS4qWiu
-  OptionNext_1: Console_Reports_Exploration_Hacking6
-  OptionExecute_1: "AddItem('FireStickGreen', 1); SecurityAddCapture = 0"
-  Output: dialogue_sneeKOD
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-}
-{ +Dialogue Name: Console_Reports_Exploration_HackingSuccess
-  Variable_1: "HackingReward", param1: int
+{ +Dialogue Name: Console_Exploration_HackingSuccess
   Execute_1: "HackingReward = Random(1,5)"
   Output: dialogue_GWCmSeK
   Option_1: dialogue_4Gimd2M
@@ -6678,310 +6395,207 @@
   OptionNext_5: Console_Reports_HackingComplete
   OptionExecute_5: "AddItem('ReportPlanetaryResourceData', 1)"
 }
-{ +Dialogue Name: Console_Reports_Exploration_Keycard
+{ +Dialogue Name: Console_Exploration_Keycard
   Output: dialogue_2S8WqOS
   Option_1: dialogue_4aG4aQ8
-  OptionNext_1: Console_Reports_Exploration_Keycard2
+  OptionNext_1: Console_Exploration_Keycard2
 }
-{ +Dialogue Name: Console_Reports_Exploration_Keycard2
+{ +Dialogue Name: Console_Exploration_Keycard2
   Output: dialogue_0WCK00i
   Option_1: dialogue_iq8sGmK
-  OptionNext_1: Console_Reports_Exploration_HackingSuccess
-  OptionExecute_1: "SystemLockdown = 1"
+  OptionNext_1: Console_Exploration_HackingSuccess
+  OptionExecute_1: "SystemLockdownExploration = 1"
 }
 { +Dialogue Name: Console_Reports_Science_Start
   NPCName: dialogue_SoaWimK
-  Variable_1: "SystemLockdown", param1: dbplayerpoi_int
+  Variable_1: "SystemLockdownScience", param1: dbplayerpoi_int
   Variable_2: "PlayerCapture", param1: int
   Variable_3: "SecurityCapture", param1: int
   Variable_4: "PlayerAddCapture", param1: int
   Variable_5: "SecurityAddCapture", param1: int
-  Next_1: Console_Reports_Blocked
-  NextIf_1: "SystemLockdown > 0"
-  Next_2: Console_Reports_Science_Menu
+  Variable_6: "Selector1", param1: int
+  Variable_7: "Selector2", param1: int
+  Variable_8: "Selector3", param1: int
+  Variable_9: "Selector4", param1: int
+  Variable_10: "Selector5", param1: int
+  Variable_11: "CoreSpeed", param1: dbplayerpoi_int
+  Next_1: Console_Science_Blocked
+  NextIf_1: "SystemLockdownScience > 0"
+  Next_2: Console_Science_Menu
 }
-{ +Dialogue Name: Console_Reports_Science_Menu
+{ +Dialogue Name: Console_Science_Blocked
+  Output: dialogue_qiwuOO4
+  Option_1: dialogue_hqAKOm4
+  OptionNext_1: End
+  Option_2: dialogue_aa0G2OK
+  OptionIf_2: "HasItem('AssaultRifleDebug', 1)"
+  OptionNext_2: End
+  OptionExecute_2: "SystemLockdownScience = 0"
+}
+{ +Dialogue Name: Console_Science_Menu
   Output: dialogue_iu0eWGi
   Option_1: dialogue_aWKCqaU
   OptionIf_1: "HasItem('KeyCardScience', 1) || HasItem('AssaultRifleDebug', 1)"
-  OptionNext_1: Console_Reports_Science_Keycard
+  OptionNext_1: Console_Science_Keycard
   OptionExecute_1: "RemoveItem('KeyCardScience', 1)"
   Option_2: dialogue_SgGJuSC
-  OptionNext_2: Console_Reports_Science_Hacking1
-  Option_3: dialogue_miOpimm
-  OptionNext_3: Console_Reports_IDA_Help, param1: Console_Reports_Science_Menu
-  Option_4: dialogue_WmecaiO
-  OptionNext_4: End
+  OptionIf_2: "CoreSpeed > 0"
+  OptionNext_2: Console_Science_Hacking1
+  Option_3: dialogue_008uCSZ
+  OptionIf_3: "CoreSpeed == 0"
+  OptionNext_3: Console_Science_Hacking1
+  OptionExecute_3: "CoreSpeed = Random(1,4)"
+  Option_4: dialogue_miOpimm
+  OptionNext_4: Console_Reports_IDA_Help, param1: Console_Science_Menu
+  Option_5: dialogue_WmecaiO
+  OptionNext_5: End
   Execute_1: "SetNPCName('Research Console - Main Menu')"
+  Variable_1: "SystemCheck", param1: int
+  Variable_2: "HackingReward", param1: int
+  Execute: "SystemCheck = 5;"
 }
-{ +Dialogue Name: Console_Reports_Science_Hacking1
-  Output: dialogue_W04O7e4
-  Option_1: dialogue_4ZO4qmG
-  OptionNext_1: Console_Reports_Science_Hacking2
-  OptionExecute_1: "PlayerCapture = Random(0,15); SecurityCapture = Random(0,15)"
-  Option_2: dialogue_A4WuCYG
-  OptionNext_2: Console_Reports_Science_Hacking2
-  OptionExecute_2: "PlayerCapture = Random(5,10); SecurityCapture = Random(5,10)"
-  Option_3: dialogue_up0jSKC
-  OptionNext_3: Console_Reports_Science_Hacking2
-  OptionExecute_3: "PlayerCapture = Random(0,15); SecurityCapture = Random(5,15)"
-  Option_4: dialogue_OmiOega
-  OptionNext_4: Console_Reports_Science_Hacking2
-  OptionExecute_4: "PlayerCapture = Random(0,10); SecurityCapture = Random(5,10)"
-  Option_5: dialogue_gaqi4eu
-  OptionNext_5: Console_Reports_Science_Hacking2
-  OptionExecute_5: "PlayerCapture = Random(0,10); SecurityCapture = Random(5,15)"
-  Option_6: dialogue_AuCeP44
-  OptionNext_6: Console_Reports_Science_Menu
-  Execute_1: "SetNPCName('Research Console - HACKING')"
+{ +Dialogue Name: Console_Science_Hacking1
+  Output: dialogue_ueCTCuO
+  Option_1: dialogue_GCae8mK
+  OptionNext_1: Console_Science_Detection
+  OptionExecute_1: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_2: dialogue_84OG8Se
+  OptionNext_2: Console_Science_Detection
+  OptionExecute_2: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_3: dialogue_mKG4QSm
+  OptionNext_3: Console_Science_Detection
+  OptionExecute_3: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_4: dialogue_qUWK4Ke
+  OptionNext_4: Console_Science_Detection
+  OptionExecute_4: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_5: dialogue_Aq8aCee
+  OptionNext_5: Console_Science_Detection
+  OptionExecute_5: "PlayerCapture = Random(0,5); SecurityCapture = Random(0,3)"
+  Option_6: dialogue_O4aGceS
+  OptionNext_6: Console_Science_Menu
+  Execute: "SetNPCName('Research Console - HACKING')"
 }
-{ +Dialogue Name: Console_Reports_Science_Hacking2
-  Execute_1: "SystemLockdown = 1"
-  Option_1: dialogue_Wi8uq0i
-  OptionNext_1: Console_Reports_Science_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_2: dialogue_qOCuImq
-  OptionNext_2: Console_Reports_Science_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_3: dialogue_SWJiaD0
-  OptionNext_3: Console_Reports_Science_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_4: dialogue_Smaeu8O
-  OptionNext_4: Console_Reports_Science_Hacking3
-  OptionExecute_4: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(0,15)"
-  Option_5: dialogue_eWa0va4
-  OptionNext_5: Console_Reports_Science_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,15)"
-  Option_6: dialogue_GMO08mg
-  OptionIf_6: "HasItem('FireStickRed', 1)"
-  OptionNext_6: Console_Reports_Science_Hacking2
-  OptionExecute_6: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10"
-  Option_7: dialogue_i4tWGuu
-  OptionIf_7: "HasItem('FireStickGreen', 1)"
-  OptionNext_7: Console_Reports_Science_Hacking2
-  OptionExecute_7: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20"
-  Option_8: dialogue_4qKOZ0i
-  OptionIf_8: "HasItem('FireStickBlue', 1)"
-  OptionNext_8: Console_Reports_Science_Hacking2
-  OptionExecute_8: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20"
-  Output: dialogue_uiu4884
+{ +Dialogue Name: Console_Science_Detection
+  Next_1: Console_Science_Hacking2
+  Execute: "SecurityCapture = SecurityCapture + CoreSpeed;<nl>SystemLockdownScience = 1;<nl>Selector1 = Random(1,25);<nl>Selector2 = Random(1,25);<nl>Selector3 = Random(1,25);<nl>Selector4 = Random(1,25);<nl>Selector5 = Random(1,25);"
+  Output: dialogue_WuimimW
 }
-{ +Dialogue Name: Console_Reports_Science_Hacking3
-  Option_1: dialogue_jKmeOSu
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Science_Hacking4
-  OptionExecute_1: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,15)"
-  Option_2: dialogue_WeAuGaK
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Science_Hacking4
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_3: dialogue_8GS60qO
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Science_Hacking4
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_8aOO48q
-  OptionIf_4: "SecurityCapture < 80 && PlayerAddCapture < 13"
-  OptionNext_4: Console_Reports_Science_Hacking4
-  OptionExecute_4: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_5: dialogue_AqSWKqe
-  OptionIf_5: "SecurityCapture < 100"
-  OptionNext_5: Console_Reports_Science_Hacking4
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,10)"
-  Option_6: dialogue_m4auOaS
-  OptionIf_6: "SecurityCapture < 80 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Science_Datavault1
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_4q4G84K
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_q40G4KW
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Science_HackingSuccess
-  Option_9: dialogue_JH4amWm
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Science_Hacking3
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_KmuCiSC
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Science_Hacking3
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_8a0mwmC
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Science_Hacking3
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Output: dialogue_Wiwe4iW
+{ +Dialogue Name: Console_Science_Hacking2
+  Option_1: dialogue_4Qam4GK
+  OptionIf_1: "Selector2 == 2 || Selector3 == 2 || Selector4 == 2 || Selector5 == 2"
+  OptionNext_1: Console_Hacking_Bridge2, param1: Console_Science_Hacking2
+  OptionExecute_1: "PlayerAddCapture = Random(1,14); SecurityAddCapture = Random(8,11)"
+  Option_2: dialogue_mGiuWWu
+  OptionIf_2: "Selector1 == 14 || Selector2 == 14 || Selector3 == 14 || Selector4 == 14 || Selector5 == 14"
+  OptionNext_2: Console_Hacking_Bridge3, param1: Console_Science_Hacking2
+  OptionExecute_2: "PlayerAddCapture = Random(4,10); SecurityAddCapture = Random(1,6)"
+  Option_3: dialogue_K4OGY0C
+  OptionIf_3: "Selector1 == 4 || Selector2 == 4 || Selector3 == 4 || Selector4 == 4 || Selector5 == 4"
+  OptionNext_3: Console_Hacking_Bridge1, param1: Console_Science_Hacking2
+  OptionExecute_3: "PlayerAddCapture = Random(1,10); SecurityAddCapture = Random(4,7)"
+  Option_4: dialogue_WOauWWO
+  OptionIf_4: "Selector1 == 24 || Selector2 == 24 || Selector3 == 24 || Selector4 == 24 || Selector5 == 24"
+  OptionNext_4: Console_Hacking_Bridge1, param1: Console_Exploration_Hacking2
+  OptionExecute_4: "PlayerAddCapture = Random(6,11); SecurityAddCapture = Random(0,5)"
+  Option_5: dialogue_40GmFa8
+  OptionIf_5: "Selector1 == 5 || Selector2 == 5 || Selector3 == 5 || Selector4 == 5 || Selector5 == 5"
+  OptionNext_5: Console_Hacking_Bridge2, param1: Console_Science_Hacking2
+  OptionExecute_5: "PlayerAddCapture = Random(1,9); SecurityAddCapture = Random(2,5)"
+  Option_6: dialogue_aSiWWOO
+  OptionIf_6: "Selector1 == 16 || Selector2 == 16 || Selector3 == 16 || Selector4 == 16 || Selector5 == 16"
+  OptionNext_6: Console_Hacking_Bridge1, param1: Console_Science_Hacking2
+  OptionExecute_6: "PlayerAddCapture = Random(5,16); SecurityAddCapture = Random(6,12)"
+  Option_7: dialogue_emWqgii
+  OptionIf_7: "Selector1 == 6 || Selector2 == 6"
+  OptionNext_7: Console_Hacking_Datavault01, param1: Console_Science_Hacking2
+  OptionExecute_7: "PlayerAddCapture = 0; SecurityAddCapture = Random(8,12)"
+  Option_8: dialogue_0EG1Cm4
+  OptionIf_8: "Selector1 == 8 || Selector2 == 8 || Selector3 == 8 || Selector4 == 8 || Selector5 == 8"
+  OptionNext_8: Console_Hacking_Bridge1, param1: Console_Science_Hacking2
+  OptionExecute_8: "PlayerAddCapture = Random(3,12); SecurityAddCapture = Random(4,8)"
+  Option_9: dialogue_pK0S4m8
+  OptionIf_9: "Selector1 == 25 || Selector2 == 25 || Selector3 == 25 || Selector4 == 25"
+  OptionNext_9: Console_Hacking_Bridge2, param1: Console_Science_Hacking2
+  OptionExecute_9: "PlayerAddCapture = Random(6,9); SecurityAddCapture = Random(0,4)"
+  Option_10: dialogue_WmCWGOg
+  OptionIf_10: "Selector1 == 9 || Selector2 == 9 || Selector3 == 9 || Selector4 == 9 || Selector5 == 9"
+  OptionNext_10: Console_Hacking_Bridge2, param1: Console_Science_Hacking2
+  OptionExecute_10: "PlayerAddCapture = Random(3,10); SecurityAddCapture = Random(2,6)"
+  Option_11: dialogue_Oaam8Wq
+  OptionIf_11: "Selector1 == 10 || Selector2 == 10"
+  OptionNext_11: Console_Hacking_Datavault02, param1: Console_Science_Hacking2
+  OptionExecute_11: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_12: dialogue_Wi0Ya0G
+  OptionIf_12: "Selector1 == 12 || Selector2 == 12 || Selector3 == 12 || Selector4 == 12 || Selector5 == 12"
+  OptionNext_12: Console_Hacking_Bridge1, param1: Console_Science_Hacking2
+  OptionExecute_12: "PlayerAddCapture = Random(4,14); SecurityAddCapture = Random(5,10)"
+  Option_13: dialogue_4qmCGwC
+  OptionIf_13: "Selector1 == 3 || Selector2 == 3 || Selector3 == 3 || Selector4 == 3 || Selector5 == 3"
+  OptionNext_13: Console_Hacking_Bridge3, param1: Console_Science_Hacking2
+  OptionExecute_13: "PlayerAddCapture = Random(1,12); SecurityAddCapture = Random(6,9)"
+  Option_14: dialogue_C2S4P40
+  OptionIf_14: "Selector1 == 13 || Selector2 == 13 || Selector3 == 13 || Selector4 == 13 || Selector5 == 13"
+  OptionNext_14: Console_Hacking_Bridge2, param1: Console_Science_Hacking2
+  OptionExecute_14: "PlayerAddCapture = Random(4,12); SecurityAddCapture = Random(3,8)"
+  Option_15: dialogue_qmiqiHm
+  OptionIf_15: "Selector1 == 15 || Selector2 == 15 || Selector3 == 15 || Selector4 == 15 || Selector5 == 15"
+  OptionNext_15: Console_Hacking_Datavault03, param1: Console_Science_Hacking2
+  OptionExecute_15: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_16: dialogue_GGGquaG
+  OptionIf_16: "Selector1 == 7 || Selector2 == 7 || Selector3 == 7 || Selector4 == 7 || Selector5 == 7"
+  OptionNext_16: Console_Hacking_Bridge3, param1: Console_Science_Hacking2
+  OptionExecute_16: "PlayerAddCapture = Random(3,14); SecurityAddCapture = Random(6,10)"
+  Option_17: dialogue_e0KCmSi
+  OptionIf_17: "Selector1 == 17 || Selector2 == 17 || Selector3 == 17 || Selector4 == 17 || Selector5 == 17"
+  OptionNext_17: Console_Hacking_Bridge2, param1: Console_Science_Hacking2
+  OptionExecute_17: "PlayerAddCapture = Random(5,14); SecurityAddCapture = Random(4,10)"
+  Option_18: dialogue_OW0SuNG
+  OptionIf_18: "Selector1 == 22 || Selector2 == 22 || Selector3 == 22 || Selector4 == 22 || Selector5 == 22"
+  OptionNext_18: Console_Hacking_Bridge2, param1: Console_Science_Hacking2
+  OptionExecute_18: "PlayerAddCapture = Random(6,15); SecurityAddCapture = Random(0,9)"
+  Option_19: dialogue_GuK84e0
+  OptionIf_19: "Selector1 == 18 || Selector2 == 18 || Selector3 == 18 || Selector4 == 18 || Selector5 == 18"
+  OptionNext_19: Console_Hacking_Bridge3, param1: Console_Science_Hacking2
+  OptionExecute_19: "PlayerAddCapture = Random(5,12); SecurityAddCapture = Random(2,8)"
+  Option_20: dialogue_G9eqgCm
+  OptionIf_20: "Selector1 == 19 || Selector2 == 19 || Selector3 == 19 || Selector4 == 19 || Selector5 == 19"
+  OptionNext_20: Console_Hacking_Bridge1, param1: Console_Science_Hacking2
+  OptionExecute_20: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(0,6)"
+  Option_21: dialogue_0meKOwG
+  OptionIf_21: "Selector1 == 20 || Selector4 == 20 || Selector5 == 20"
+  OptionNext_21: Console_Hacking_Datavault04, param1: Console_Science_Hacking2
+  OptionExecute_21: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,8)"
+  Option_22: dialogue_WTSKuSO
+  OptionIf_22: "Selector1 == 11 || Selector2 == 11 || Selector3 == 11 || Selector4 == 11 || Selector5 == 11"
+  OptionNext_22: Console_Hacking_Bridge3, param1: Console_Science_Hacking2
+  OptionExecute_22: "PlayerAddCapture = Random(4,16); SecurityAddCapture = Random(7,12)"
+  Option_23: dialogue_uCCaC8Z
+  OptionIf_23: "Selector2 == 21 || Selector3 == 21 || Selector4 == 21 || Selector5 == 21"
+  OptionNext_23: Console_Hacking_Datavault05, param1: Console_Science_Hacking2
+  OptionExecute_23: "PlayerAddCapture = 0; SecurityAddCapture = Random(0,12)"
+  Option_24: dialogue_0uqimmO
+  OptionIf_24: "Selector1 == 23 || Selector2 == 23 || Selector3 == 23 || Selector4 == 23 || Selector5 == 23"
+  OptionNext_24: Console_Hacking_Bridge3, param1: Console_Science_Hacking2
+  OptionExecute_24: "PlayerAddCapture = Random(6,13); SecurityAddCapture = Random(0,7)"
+  Option_25: dialogue_GBiqKC4
+  OptionIf_25: "Selector2 == 1 || Selector3 == 1 || Selector4 == 1 || Selector5 == 1"
+  OptionNext_25: Console_Hacking_Bridge1, param1: Console_Science_Hacking2
+  OptionExecute_25: "PlayerAddCapture = Random(1,16); SecurityAddCapture = Random(9,12)"
+  Option_26: dialogue_0KOYiOe
+  OptionIf_26: "HasItem('FireStickRed', 1)"
+  OptionNext_26: Console_Hacking_Software, param1: Console_Science_Hacking2
+  OptionExecute_26: "RemoveItem('FireStickRed', 1); Selector1 = Random(15,25); Selector2 = Random(15,25); Selector3 = Random(15,25); Selector4 = Random(15,25); Selector5 = Random(15,25)"
+  Option_27: dialogue_C440Oiq
+  OptionIf_27: "HasItem('FireStickGreen', 1)"
+  OptionNext_27: Console_Hacking_Software, param1: Console_Science_Hacking2
+  OptionExecute_27: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 15"
+  Option_28: dialogue_LS8WOG0
+  OptionIf_28: "HasItem('FireStickBlue', 1)"
+  OptionNext_28: Console_Hacking_Software, param1: Console_Science_Hacking2
+  OptionExecute_28: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 15"
+  Output: dialogue_KuSaueY
 }
-{ +Dialogue Name: Console_Reports_Science_Hacking4
-  Output: dialogue_S8maQiC
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_qCea800
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Science_Hacking5
-  OptionExecute_1: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_2: dialogue_QuqvOSm
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Science_Hacking5
-  OptionExecute_2: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,15)"
-  Option_3: dialogue_mSxqo84
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Science_Hacking5
-  OptionExecute_3: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(5,10)"
-  Option_4: dialogue_unqmeGK
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Science_Hacking5
-  OptionExecute_4: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(5,15)"
-  Option_5: dialogue_iaCm4au
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 13"
-  OptionNext_5: Console_Reports_Science_Hacking5
-  OptionExecute_5: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(5,10)"
-  Option_6: dialogue_iSaem0B
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Science_Datavault2
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_mCWG6Gi
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_qGS8aOm
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Science_HackingSuccess
-  Option_9: dialogue_OeWCCWG
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Science_Hacking4
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_mSi4s4C
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Science_Hacking4
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_G8aeOa8
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Science_Hacking4
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Science_Hacking5
-  Output: dialogue_GAiGu4e
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_WiGKKaq
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Science_Hacking6
-  OptionExecute_1: "PlayerAddCapture = Random(3,10); SecurityAddCapture = Random(0,15)"
-  Option_2: dialogue_KmSmOd0
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Science_Hacking6
-  OptionExecute_2: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(2,10)"
-  Option_3: dialogue_KSW4008
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Science_Hacking6
-  OptionExecute_3: "PlayerAddCapture = Random(5,10); SecurityAddCapture = Random(5,15)"
-  Option_4: dialogue_q4KimWo
-  OptionIf_4: "SecurityCapture < 80"
-  OptionNext_4: Console_Reports_Science_Hacking6
-  OptionExecute_4: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_5: dialogue_YaG0aq0
-  OptionIf_5: "SecurityCapture < 100 && PlayerAddCapture < 13"
-  OptionNext_5: Console_Reports_Science_Hacking6
-  OptionExecute_5: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,10)"
-  Option_6: dialogue_9qi0caK
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture > 12"
-  OptionNext_6: Console_Reports_Science_Datavault3
-  OptionExecute_6: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_7: dialogue_qiaeCeK
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_Y4emiaO
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Science_HackingSuccess
-  Option_9: dialogue_aGG4qi4
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Science_Hacking5
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_48uKiKc
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Science_Hacking5
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_Kmmiwae
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Science_Hacking5
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Science_Hacking6
-  Output: dialogue_KQWWTa4
-  Execute_1: "PlayerCapture = PlayerCapture + PlayerAddCapture; SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_48484Oe
-  OptionIf_1: "SecurityCapture < 20"
-  OptionNext_1: Console_Reports_Science_Hacking3
-  OptionExecute_1: "PlayerAddCapture = Random(5,15); SecurityAddCapture = Random(0,15)"
-  Option_2: dialogue_8WaOqKC
-  OptionIf_2: "SecurityCapture < 40"
-  OptionNext_2: Console_Reports_Science_Hacking3
-  OptionExecute_2: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,10)"
-  Option_3: dialogue_qSmmCu4
-  OptionIf_3: "SecurityCapture < 60"
-  OptionNext_3: Console_Reports_Science_Hacking3
-  OptionExecute_3: "PlayerAddCapture = Random(0,10); SecurityAddCapture = Random(0,15)"
-  Option_4: dialogue_KMWKqmq
-  OptionIf_4: "SecurityCapture < 100 && PlayerAddCapture > 13"
-  OptionNext_4: Console_Reports_Science_Hacking3
-  OptionExecute_4: "PlayerAddCapture = 0; SecurityAddCapture = Random(5,20)"
-  Option_5: dialogue_S4sm47O
-  OptionIf_5: "SecurityCapture < 80"
-  OptionNext_5: Console_Reports_Science_Hacking3
-  OptionExecute_5: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_6: dialogue_GnmWq8O
-  OptionIf_6: "SecurityCapture < 100 && PlayerAddCapture < 14"
-  OptionNext_6: Console_Reports_Science_Hacking3
-  OptionExecute_6: "PlayerAddCapture = Random(0,15); SecurityAddCapture = Random(0,15)"
-  Option_7: dialogue_048ieOu
-  OptionIf_7: "SecurityCapture > 99"
-  OptionNext_7: Console_Reports_HackingFailed
-  Option_8: dialogue_WqeWGam
-  OptionIf_8: "PlayerCapture > 99 && SecurityCapture < 100"
-  OptionNext_8: Console_Reports_Science_HackingSuccess
-  Option_9: dialogue_0uGKbSq
-  OptionIf_9: "HasItem('FireStickRed', 1) && SecurityCapture < 99"
-  OptionNext_9: Console_Reports_Science_Hacking6
-  OptionExecute_9: "RemoveItem('FireStickRed', 1); SecurityCapture = SecurityCapture - 10; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_10: dialogue_COW4WKK
-  OptionIf_10: "HasItem('FireStickGreen', 1) && SecurityCapture < 99"
-  OptionNext_10: Console_Reports_Science_Hacking6
-  OptionExecute_10: "RemoveItem('FireStickGreen', 1); PlayerCapture = PlayerCapture + 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-  Option_11: dialogue_0W4SOmO
-  OptionIf_11: "HasItem('FireStickBlue', 1) && SecurityCapture < 99"
-  OptionNext_11: Console_Reports_Science_Hacking6
-  OptionExecute_11: "RemoveItem('FireStickBlue', 1); SecurityCapture = SecurityCapture - 20; PlayerAddCapture = 0; SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Science_Datavault1
-  Output: dialogue_COCK0cq
-  Option_1: dialogue_OB4aC0u
-  OptionNext_1: Console_Reports_Science_Hacking3
-  OptionExecute_1: "AddItem('MoneyCard', RandomMoney); SecurityAddCapture = 0"
-  Variable_1: "RandomMoney", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomMoney = Random(1000,12500)"
-}
-{ +Dialogue Name: Console_Reports_Science_Datavault2
-  Output: dialogue_eKuuaaC
-  Variable_1: "RandomSkill", param1: int
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture; RandomSkill = Random(5,15)"
-  Option_1: dialogue_O8ue40u
-  OptionNext_1: Console_Reports_Science_Hacking4
-  OptionExecute_1: "SecurityAddCapture = 0; Player.UpgradePoints += RandomSkill"
-}
-{ +Dialogue Name: Console_Reports_Science_Datavault3
-  Output: dialogue_4Ou4X4O
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-  Option_1: dialogue_0mKf8S4
-  OptionNext_1: Console_Reports_Science_Hacking5
-  OptionExecute_1: "AddItem('FireStickRed', 1); SecurityAddCapture = 0"
-}
-{ +Dialogue Name: Console_Reports_Science_Datavault4
-  Option_1: dialogue_i0u8aGq
-  OptionNext_1: Console_Reports_Science_Hacking6
-  OptionExecute_1: "AddItem('FireStickGreen', 1); SecurityAddCapture = 0"
-  Output: dialogue_OO0WeO8
-  Execute_1: "SecurityCapture = SecurityCapture + SecurityAddCapture"
-}
-{ +Dialogue Name: Console_Reports_Science_HackingSuccess
-  Variable_1: "HackingReward", param1: int
+{ +Dialogue Name: Console_Science_HackingSuccess
   Execute_1: "HackingReward = Random(1,5)"
   Output: dialogue_4COieoW
   Option_1: dialogue_GWWqRi1
@@ -7005,16 +6619,16 @@
   OptionNext_5: Console_Reports_HackingComplete
   OptionExecute_5: "AddItem('ReportAnomalousData', 1)"
 }
-{ +Dialogue Name: Console_Reports_Science_Keycard
+{ +Dialogue Name: Console_Science_Keycard
   Output: dialogue_CmWmaiG
   Option_1: dialogue_KWuUGwK
-  OptionNext_1: Console_Reports_Science_Keycard2
+  OptionNext_1: Console_Science_Keycard2
 }
-{ +Dialogue Name: Console_Reports_Science_Keycard2
+{ +Dialogue Name: Console_Science_Keycard2
   Output: dialogue_WiCSKKV
   Option_1: dialogue_8COS08m
-  OptionNext_1: Console_Reports_Science_HackingSuccess
-  OptionExecute_1: "SystemLockdown = 1"
+  OptionNext_1: Console_Science_HackingSuccess
+  OptionExecute_1: "SystemLockdownScience = 1"
 }
 { +Dialogue Name: Class_System_Start
   NPCName: dialogue_Oiqie8q
@@ -12140,9 +11754,9 @@
 { +Dialogue Name: MN_MiningErestrum_Mission08
   Output: dialogue_S4uu4YK
   Option_1: dialogue_qIKe0Ou
-  OptionIf_1: "HasItem('AdvancedKit', 1) && HasItem('PowerCoil', 20) && HasItem('Oscillator', 50) && HasItem('Motor', 150)"
+  OptionIf_1: "HasItem('AdvancedUpgradeKit', 1) && HasItem('PowerCoil', 20) && HasItem('Oscillator', 50) && HasItem('Motor', 150)"
   OptionNext_1: MN_MiningErestrum_MissionComplete
-  OptionExecute_1: "RemoveItem('AdvancedKit', 1); RemoveItem('PowerCoil', 20); RemoveItem('Oscillator', 50); RemoveItem('Motor', 150); MiningMission = 0; Player.Credit += 350000; MoneyCounter = 350000"
+  OptionExecute_1: "RemoveItem('AdvancedUpgradeKit', 1); RemoveItem('PowerCoil', 20); RemoveItem('Oscillator', 50); RemoveItem('Motor', 150); MiningMission = 0; Player.Credit += 350000; MoneyCounter = 350000"
   Option_2: dialogue_uiqGO8n
   OptionNext_2: End
 }

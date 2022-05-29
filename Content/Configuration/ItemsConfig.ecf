@@ -123,6 +123,7 @@
   Volume: 1, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 1.0, type: float, display: false
+  RepairCount: 3, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/Pistol
   { Child 0
@@ -185,6 +186,7 @@
   Volume: 4.5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 1.0, type: float, display: false
+  RepairCount: 3, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/Shotgun
   { Child 0
@@ -250,6 +252,7 @@
   Volume: 30, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 0.1, type: float, display: false
+  RepairCount: 3, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire  
   Crosshair: @RG_crosshairs/Minigun
   # RadialMenu: true
@@ -345,6 +348,7 @@
   Volume: 5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 0.40, type: float, display: false
+  RepairCount: 3, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
   Crosshair: @RG_crosshairs/PulseRifle
   { Child 0
@@ -419,6 +423,7 @@
   Volume: 9, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 1.25, type: float, display: false
+  RepairCount: 3, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/SniperRifle
   { Child 0
@@ -487,6 +492,7 @@
   Info: bkiDrill, display: true
   Durability: 500, display: false
   DegradationProb: 0.12, type: float, display: false
+  RepairCount: 3, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
   # ShowUser: No
   Crosshair: @RG_crosshairs/Multitool
@@ -587,6 +593,7 @@
   Mass: 9.1, type: float, display: true, formatter: Kilogram
   Volume: 5.5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.75, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/Shotgun
@@ -656,6 +663,7 @@
   BlastRadius: 3, display: true
   BlastDamage: 500, display: true
   Durability: 100, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 1, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/RocketLauncher
@@ -707,6 +715,7 @@
   Volume: 5.5, type: float, display: true, formatter: Liter
   Info: bkiMultiTool, display: true
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.12, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   Crosshair: @RG_crosshairs/Multitool
@@ -1195,6 +1204,7 @@
   Mass: 2.5, type: float, display: true, formatter: Kilogram
   Volume: 1.6, type: float, display: true, formatter: Liter
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 1.0, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/LaserPistol
@@ -1259,6 +1269,7 @@
   Mass: 4, type: float, display: true, formatter: Kilogram
   Volume: 5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.40, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
   Crosshair: @RG_crosshairs/AssaultRifle
@@ -1328,6 +1339,7 @@
   Mass: 5, type: float, display: true, formatter: Kilogram
   Volume: 4, type: float, display: true, formatter: Liter
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.33, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   Crosshair: @RG_crosshairs/LaserRifle
@@ -1405,6 +1417,7 @@
   BlastDamage: 500, display: true
   # Explosion Radius: 3, display: true 
   Durability: 100, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 1, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/PlasmaCannon
@@ -1501,6 +1514,7 @@
   Mass: 10, type: float, display: true, formatter: Kilogram
   Volume: 12, type: float, display: true, formatter: Liter
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 1.5, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/SniperRifle
@@ -1570,6 +1584,7 @@
   Info: bkiDrill, display: true
   # Info: bkiDrillT2, display: true
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.1, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
   Crosshair: @RG_crosshairs/Multitool
@@ -1800,6 +1815,7 @@
   MarketPrice: 1950, display: true
   Info: itmPistolT2, display: true
   DegradationProb: 0.75, type: float, display: false
+  RepairCount: 3, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/Pistol
   { Child 0
@@ -1813,8 +1829,6 @@
     Damage: 80, display: true
     AmmoCapacity: 14, display: true
     ReloadDelay: 2.25, display: true
-    # Buff: "OpenWound"
-    # Buff_chance: 0.25
     SfxBegin: Weapons/Player/Sniper/desert_eagle
     # SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
 	
@@ -1941,6 +1955,7 @@
   Mass: 16, type: float, display: true, formatter: Kilogram
   Volume: 7, type: float, display: true, formatter: Liter
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.075, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
   { Child 0
@@ -1992,6 +2007,7 @@
   Durability: 500, display: false
   DegradationProb: 0.1, type: float, display: false
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
   { Child 0
     ROF: 0.170, type: float, display: true, formatter: ROF
@@ -2050,6 +2066,7 @@
   Durability: 500, display: false
   DegradationProb: 0.75, type: float, display: false
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
     ROF: 1.15, type: float, display: true, formatter: ROF
@@ -2112,6 +2129,7 @@
   Durability: 500, display: false
   DegradationProb: 0.05, type: float, display: false
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0
     Class: Ranged
@@ -2203,6 +2221,7 @@
   Durability: 500, display: false
   DegradationProb: 0.60, type: float, display: false
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
     Class: Ranged
@@ -2261,6 +2280,7 @@
   Durability: 500, display: false
   DegradationProb: 0.33, type: float, display: false
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
     Class: LauncherSS
@@ -2324,6 +2344,7 @@
   Durability: 500, display: false
   DegradationProb: 1.0, type: float, display: false
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   RadialMenu: true
   { Child 0
@@ -2409,6 +2430,7 @@
   Durability: 500, display: false
   DegradationProb: 0.75, type: float, display: false
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
     Class: Ranged
@@ -2459,6 +2481,7 @@
   Meshfile: Entities/Items/Weapons/MultiToolT2Prefab
   MarketPrice: 2447, display: true
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.1, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0 # "Retrieve Blocks" (= get complete blocks in own structure, do "Salvage" in others)
@@ -2554,6 +2577,7 @@
   PickupToToolbar: true
   MarketPrice: 14460, display: true
   Durability: 100, display: false
+  RepairCount: 3, type: int, display: false
   Info: itmRocketLauncherT2, display: true
   #just for display, see ammo "SlowRocketHoming"
   BlastRadius: 3, display: true
@@ -2599,6 +2623,7 @@
   Durability: 250, display: false
   DegradationProb: 0.65, type: float, display: false
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
     Class: LauncherSS
@@ -2639,6 +2664,7 @@
   # DamageMultiplier_1: 3.5, param1: head, display: DmgMultiplierHead
   # Damage: 100, display: true
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.25, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   { Child 0
@@ -2681,6 +2707,7 @@
   PickupToToolbar: true
   MarketPrice: 3654, display: true
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   Info: itmAssaultRifleT2, display: true
   DegradationProb: 0.25, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
@@ -2735,6 +2762,7 @@
   PickupToToolbar: true
   MarketPrice: 5998, display: true
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   Info: itmPulseRifleT2, display: true
   DegradationProb: 0.2, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
@@ -3021,6 +3049,7 @@
 { +Item Id: 40, Name: DrillEpic, Ref: DrillT2   
   Meshfile: Entities/Items/Weapons/DrillV2/DrillT2EpicPrefab
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   MarketPrice: 300000, display: true
   Crosshair: @RG_crosshairs/Multitool
   { Child 0   # Resource Mining 
@@ -3093,14 +3122,13 @@
   MarketPrice: 1855, display: true
   HoldType: 15
   StackSize: 1
-  # CustomIcon: Fillertool
   Category: Weapons/Items
   Mass: 28, type: float, display: false, formatter: Kilogram
   Volume: 40, type: float, display: true, formatter: Liter
   Info: bkiFlameThrower, display: true
-  # Info: A short-to-medium ranged weapon that fires and ignites a stream of biofuel to set targets on fire. Inflicts fire and dermal burns., display: true
   Durability: 500, display: false
   DegradationProb: 0.18, type: float, display: false
+  RepairCount: 3, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
   Crosshair: @RG_crosshairs/Flamethrower
   
@@ -3153,7 +3181,6 @@
   StackSize: 1
   Category: Weapons/Items
   Info: bkiPlasmaCannonAlien, display: true
-  # Info: Some kind of plasma cannon of alien origin. It fires electro-magnetically guided balls of exotic plasma at a target., display: true
   Mass: 45, type: float, display: true, formatter: Kilogram
   Volume: 50, type: float, display: true, formatter: Liter
   #just for display - BlastRadius and BlastDamage is controlled by "SciFiCannonPlasmaCharge"
@@ -3161,8 +3188,9 @@
   BlastRadius: 3, display: true
   BlastDamage: 500, display: true
   # Explosion Radius: 3, display: true 
-  Durability: 250, display: false
+  Durability: 175, display: false
   DegradationProb: 1, type: float, display: false
+  RepairCount: 1, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/PlasmaCannon
   { Child 0
@@ -4444,9 +4472,10 @@
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     # PfxMuzzle: turretMuzzleFire
     PfxMuzzle: rocketlauncherMSMuzzleFire
-    Tracer: @rg_projectiles/RG_ProjectileFlakDualOrange
+    # Tracer: @rg_projectiles/RG_ProjectileFlakDualOrange
+	Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 1
-	TracerSpeed: 600
+	TracerSpeed: 800
   }
 }
 { +Item Id: 106, Name: TurretBaseRocketWeapon
@@ -5295,9 +5324,10 @@
     # SfxNoAmmo: Weapons/Misc/weapon_outofammo_001
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: rocketlauncherMSMuzzleFire
-    Tracer: @rg_projectiles/RG_ProjectileFlakDualOrange
+    # Tracer: @rg_projectiles/RG_ProjectileFlakDualOrange
+	Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 1
-	TracerSpeed: 600
+	TracerSpeed: 800
   }
 }
 { +Item Id: 126, Name: TurretMSRocketWeapon
@@ -6223,7 +6253,7 @@
     AmmoType: TurretEnemyLaserChargeT2, display: true
     AutoReload: true
     Automatic: true
-    Damage: 360, display: true
+    Damage: 450, display: true
     NoiseStrength: 100, display: false
 	PenetrationDepth: 4, display: true
     UseSingleMagazine: true
@@ -6502,7 +6532,7 @@
   Material: metalweapon
   AllowPlacingAt: "Base,MS", display: false
   HoldType: 0
-  StackSize: 1500
+  StackSize: 2000
   Canhold: false
   Mass: 0.5, type: float, display: true, formatter: Kilogram
   Volume: 0.21, type: float, display: true, formatter: Liter
@@ -12294,6 +12324,7 @@
     
   Durability: 750, display: true
   DegradationFac: 0.08, type: float, display: false    # do not display anymore 
+  RepairCount: 5, type: int, display: false
   Oxygen: 375, type: int, display: true    # OxygenConsumptionPerMinute = 12.5f;  => consume 500 units of oxygen in 40 min
   Armor: 125, type: int, display: true
   Heat: 10, type: int, display: true
@@ -12332,6 +12363,7 @@
   
   Durability: 1000, display: true
   DegradationFac: 0.09, type: float, display: false    # do not display anymore 
+  RepairCount: 4, type: int, display: false
   Oxygen: 550, type: int, display: true
   Armor: 200, type: int, display: true
   Heat: 20, type: int, display: true
@@ -12371,6 +12403,7 @@
      
   Durability: 1250, display: true
   DegradationFac: 0.1, type: float, display: false    # do not display anymore 
+  RepairCount: 3, type: int, display: false
   Oxygen: 725, type: int, display: true
   Armor: 275, type: int, display: true
   Heat: 30, type: int, display: true
@@ -15067,6 +15100,7 @@
   Mass: 3.6, type: float, display: true, formatter: Kilogram
   Volume: 3, type: float, display: true, formatter: Liter
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 1.0, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/SMG
@@ -15447,11 +15481,9 @@
   MarketPrice: 13192, display: true
   HoldType: 15
   StackSize: 1
-  # CustomIcon: Fillertool
   Category: Weapons/Items
   Mass: 36, type: float, display: false, formatter: Kilogram
   Volume: 44, type: float, display: true, formatter: Liter
-  #Info: bkiFlameThrowerT2, display: true
   Info: itmFlamethrowerT2, display: true
   Durability: 500, display: false
   DegradationProb: 0.5, type: float, display: false
@@ -15503,6 +15535,7 @@
   Mass: 3.6, type: float, display: true, formatter: Kilogram
   Volume: 3.2, type: float, display: true, formatter: Liter
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.5, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/SMG
@@ -15775,6 +15808,7 @@
   Mass: 12.3, type: float, display: true, formatter: Kilogram
   Volume: 25, type: float, display: true, formatter: Liter
   Durability: 60, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 1, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/RocketLauncher
@@ -15824,6 +15858,7 @@
   Mass: 4.3, type: float, display: true, formatter: Kilogram
   Volume: 6.8, type: float, display: true, formatter: Liter
   Durability: 250, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 1.0, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
@@ -16008,6 +16043,7 @@
   Mass: 2.1, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
   Durability: 500, display: false
+  RepairCount: 3, type: int, display: false
   DegradationProb: 0.9, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/Pistol
@@ -16194,7 +16230,7 @@
     AddFood: 0
     AddOxygen: 0
     Buff: MedikitLarge
-    Debuff: "OpenWound,FractureClosed,FractureOpen,BrokenLeg,Mutilation", display: EffectiveAgainst
+    Debuff: "OpenWound,FractureClosed,FractureOpen,BrokenLeg,Mutilation,Bleeding", display: EffectiveAgainst
     SfxBegin: UseActions/exhale
   }
 }
@@ -16653,9 +16689,10 @@
     # SfxNoAmmo: Weapons/Misc/weapon_outofammo_001
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: rocketlauncherMSMuzzleFire
-    Tracer: @rg_projectiles/RG_ProjectileFlakDualWhite
+    #Tracer: @rg_projectiles/RG_ProjectileFlakDualWhite
+	Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 1
-	TracerSpeed: 700
+	TracerSpeed: 1000
   }
 }
 { Item Id: 2404, Name: TurretMSPulseLaserT2Weapon
@@ -16965,9 +17002,10 @@
     # SfxNoAmmo: Weapons/Misc/weapon_outofammo_001
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: rocketlauncherMSMuzzleFire
-    Tracer: @rg_projectiles/RG_ProjectileFlakDualWhite
+    # Tracer: @rg_projectiles/RG_ProjectileFlakDualWhite
+	Tracer: Weapons/Projectiles/TracerOrange1
     TracerPerBullet: 1
-	TracerSpeed: 700
+	TracerSpeed: 1000
   }
 }
 { Item Id: 2414, Name: TurretBAPulseLaserT2Weapon
@@ -17308,7 +17346,7 @@
   Material: metalweapon
   CustomIcon: 40mmBullet
   HoldType: 0
-  StackSize: 1500
+  StackSize: 2000
   Canhold: false
   Mass: 0.96, type: float, display: true, formatter: Kilogram
   Volume: 0.45, type: float, display: true, formatter: Liter
@@ -18541,7 +18579,7 @@
   MarketPrice: 50000, display: false
   { Child 0
     Class: Projectile
-    Damage: 2000, display: true
+    Damage: 2000, display: false
     BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenM1
     BlastParticleIndex: 0
     # BlastParticleIndex: 12
@@ -18644,7 +18682,7 @@
     AmmoType: DisruptorChargeLGC, display: true
     AutoReload: true
     Automatic: true
-    Damage: 360, display: false
+    Damage: 525, display: true
     NoiseStrength: 100, display: false
 	PenetrationDepth: 2, display: true
     UseSingleMagazine: true
@@ -19133,15 +19171,15 @@
     CameraShake: 1  
     Automatic: true
     BulletSpread: 0.15, display: false
-    Recoil: 0.80, display: true
+    Recoil: 0.70, display: true
     Damage: 89, display: true
     AmmoCapacity: 40, display: true
     AmmoType: 50Caliber, display: true
     ReloadDelay: 2.5, display: true
     ParticleTransform: Muzzle/Particle0
     # SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
-    # SfxBegin: Weapons/Player/Pistol/Baghira
-	SfxBegin: Weapons/Player/Misc/Single/ak47_fire
+    SfxBegin: Weapons/Player/Pistol/Baghira
+	# SfxBegin: Weapons/Player/Misc/Single/ak47_fire
     SfxNoAmmo: Weapons/Misc/MagnumDryFire
     SfxReload: Weapons/Player/Reload/PistolReloadNormal
     # PfxMuzzle: SMGAutoMuzzleFire
@@ -19180,8 +19218,9 @@
     ReloadDelay: 2.5, display: true
     ParticleTransform: Muzzle/Particle0
     # SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
-    # SfxBegin: Weapons/Player/Pistol/Baghira
-	SfxBegin: Weapons/Player/Misc/Single/ak47_fire
+    SfxBegin: Weapons/Player/Pistol/Baghira
+	# SfxBegin: Weapons/Player/Misc/Single/ak47_fire
+	# SfxBegin: Weapons/Player/AssaultRifle/M41APulseRifle-03_start
     SfxNoAmmo: Weapons/Misc/MagnumDryFire
     SfxReload: Weapons/Player/Reload/PistolReloadNormal
     PfxMuzzle: MuzzleFlash8
@@ -19324,10 +19363,10 @@
   { Child 0
     Class: Ranged
     AllowRemote: false  
-    ROF: 0.65, type: float, display: true, formatter: ROF
+    ROF: 1.3, type: float, display: true, formatter: ROF
     Range: 120, display: false
     Automatic: false, display: true  
-    BulletSpread: 0.03, display: true
+    BulletSpread: 0.08, display: true
     Recoil: 1.55, display: true
 	PenetrationDepth: 3, display: true
     IgnoreAtmo: true, display: true
@@ -19353,7 +19392,7 @@
 	
     DamageMultiplier_1: 2.0, param1: head, display: DmgMultiplierHead  
     DamageMultiplier_2: 0, param1: dirt|stone|rock|wood|hullarmored|hullcombat|concrete|alien
-    DamageMultiplier_3: 0.25, param1: shield 
+    DamageMultiplier_3: 0.65, param1: shield 
     DamageMultiplier_4: 3, param1: plastic|hull|metal|metalhard
     DamageMultiplier_5: 1.1, param1: DroneLight|HumanArmored
     DamageMultiplier_6: 1.2, param1: MechLight
@@ -19470,7 +19509,7 @@
     Range: 500, display: false
     RangeSpace: 675, display: false
     Automatic: true    
-    Damage: 135, display: true
+    Damage: 150, display: true
     AmmoCapacity: 12, display: true
     AmmoType: HeatSinkSmall, display: true
     BulletSpread: 0.04, display: true
@@ -19689,7 +19728,7 @@
     Range: 700, display: false
     RangeSpace: 995, display: false
     Automatic: true
-    Damage: 580, display: true
+    Damage: 650, display: true
     AmmoCapacity: 16, display: true
     AmmoType: HeatSinkLarge, display: true
     BulletSpread: 0.02, display: true
@@ -19743,7 +19782,7 @@
     Range: 350, display: false
     RangeSpace: 915, display: false
     Automatic: true    
-    Damage: 300, display: true
+    Damage: 500, display: true
     AmmoCapacity: 16, display: true
     AmmoType: HeatSinkLarge, display: true
     BulletSpread: 0.02, display: true
@@ -19797,7 +19836,7 @@
     Range: 500, display: false
     RangeSpace: 675, display: false
     Automatic: true    
-    Damage: 250, display: true
+    Damage: 275, display: true
     AmmoCapacity: 12, display: true
     AmmoType: HeatSinkSmall, display: true
     BulletSpread: 0.03, display: true
@@ -19851,7 +19890,7 @@
     Range: 700, display: false
     RangeSpace: 995, display: false
     Automatic: true    
-    Damage: 350, display: true
+    Damage: 550, display: true
     AmmoCapacity: 16, display: true
     AmmoType: HeatSinkLarge, display: true
     BulletSpread: 0.02, display: true
@@ -19914,6 +19953,15 @@
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: rocketlauncherMSMuzzleFire
   }
+}
+# CashCard
+{ +Item Id: 1899, Name: PlatinumCard, Ref: ComponentsTemplate
+  StackSize: 50000
+  Info: bkiCurrencyT2, display: true
+  Credits: 10000, display: true
+  Mass: 0, type: float, display: true, formatter: Kilogram
+  Volume: 0, type: float, display: true, formatter: Liter
+  ShowUser: Yes
 }
 # Special Components
 { Item Id: 1900, Name: Superconductor, Ref: ComponentsTemplate
@@ -20033,8 +20081,6 @@
   CustomIcon: DetectorHVT1
   Info: itmCommunicationEquipment, display: true
 }
-
-
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Items
 # ============================================================================================================================================================================
@@ -20710,7 +20756,7 @@
     AllowAt: Space
     ROF: 0.95, type: float, display: true, formatter: ROF
     Range: 400, display: false
-    RangeSpace: 550, display: false
+    RangeSpace: 500, display: false
     AmmoCapacity: 50, display: true
     AmmoType: Eden_TurretFlakClose_Ammo, display: true
     NoiseStrength: 150, display: false  
@@ -20744,7 +20790,7 @@
   ShowUser: Yes
   { Child 0
     Class: Projectile
-    Damage: 1250, display: true
+    Damage: 1000, display: true
     # BlastParticleIndex: 3
     BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL2New
     BlastParticleIndex: 0
@@ -20753,7 +20799,7 @@
     Speed: 750
     Range: 400
     SpeedSpace: 500
-    RangeSpace: 550
+    RangeSpace: 500
     HomingSpeed: 10
     Ballistic: false
 
@@ -25388,7 +25434,7 @@
     AllowAt: Space
     ROF: 15, type: float, display: true, formatter: ROF
     Range: 690, display: false
-    RangeSpace: 1050, display: false
+    RangeSpace: 1100, display: false
     AmmoCapacity: 5, display: true
     AmmoType: Eden_TurretMissileCruiseCV_Ammo, display: true
     NoiseStrength: 150, display: false  
@@ -25428,7 +25474,7 @@
     Speed: 145
     Range: 600
     SpeedSpace: 250
-    RangeSpace: 1050
+    RangeSpace: 1100
     HomingSpeed: 3
     Ballistic: false
 
@@ -25449,7 +25495,7 @@
   { Child 0
     ROF: 15, type: float, display: true, formatter: ROF
     Range: 600, display: false
-    RangeSpace: 1000, display: false
+    RangeSpace: 1050, display: false
     AmmoCapacity: 8, display: true
     AmmoType: Eden_TurretMissileCruiseEMPCV_Ammo, display: true
     ReloadDelay: 8, display: true
@@ -25467,7 +25513,7 @@
   MarketPrice: 2400, display: true
   { Child 0
     Class: Projectile
-    Damage: 2750
+    Damage: 3300
     # BlastParticleIndex: 10
     BlastParticleName: @rg_projectiles/RG_BlastEMP
     BlastParticleIndex: 0
@@ -25476,13 +25522,14 @@
     Speed: 145
     Range: 600
     SpeedSpace: 275
-    RangeSpace: 1000
+    RangeSpace: 1050
     HomingSpeed: 3
 	
 	DamageMultiplier_1: 0.025, param1: head|body
     DamageMultiplier_2: 0, param1: stone|dirt
     DamageMultiplier_3: 0,   param1: rock
     DamageMultiplier_4: 1,   param1: shield
+    DamageMultiplier_5: 1, param1: ShieldLargeT3
   }
 
   UnlockLevel: 1
@@ -25739,7 +25786,7 @@
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    Damage: 2000, display: true
+    Damage: 4000, display: true
     BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenM3
     BlastParticleIndex: 0
     Speed: 900
@@ -25887,7 +25934,7 @@
     RangeSpace: 650, display: false
     AmmoUnlimited: true
     Automatic: true
-    Damage: 2000, display: true
+    Damage: 5000, display: true
     AmmoCapacity: 60, display: false
     AutoReload: true
     AmmoType: Eden_TurretRaiderLaser_Ammo, display: true
@@ -25905,10 +25952,8 @@
 
     DamageMultiplier_1: 0.2, param1: head|body
     DamageMultiplier_2: 0, param1: stone|dirt|rock
-    DamageMultiplier_3: 0.75, param1: metallight|metal|metalhard
-    DamageMultiplier_4: 0.5, param1: plastic|hull|hullarmored|concrete
-    DamageMultiplier_5: 0.2, param1: hullcombat|alien|concretearmored
-    DamageMultiplier_6: 0.1, param1: shield
+    DamageMultiplier_3: 1.5, param1: metallight|metal|metalhard
+    DamageMultiplier_4: 0.1, param1: shield
 
   }
 }
@@ -26270,7 +26315,7 @@
     InfoPopup: true
     # ForceMuzzleAiming: true 
     ROF: 0.5, type: float
-    Damage: 25, display: true
+    Damage: 30, display: true
     Radius: 0
     Range: 200, display: false
     IgnoreAtmo: true
@@ -26293,7 +26338,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield
+    DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenice
   }
 }
@@ -26322,7 +26367,7 @@
     InfoPopup: true
     # ForceMuzzleAiming: true 
     ROF: 0.5, type: float
-    Damage: 15, display: true
+    Damage: 20, display: true
     Radius: 0
     Range: 450, display: true
     IgnoreAtmo: true
@@ -26345,7 +26390,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield
+    DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenice
     
     RadialText: Automatic
@@ -26410,7 +26455,7 @@
     InfoPopup: true
     # ForceMuzzleAiming: true 
     ROF: 0.5, type: float
-    Damage: 75, display: true
+    Damage: 60, display: true
     Radius: 0
     Range: 450, display: false
     IgnoreAtmo: true
@@ -26433,7 +26478,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield
+    DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenice
     
     RadialText: Manual
@@ -26466,7 +26511,7 @@
     InfoPopup: true
     # ForceMuzzleAiming: true 
     ROF: 0.5, type: float
-    Damage: 15, display: true
+    Damage: 20, display: true
     Radius: 0
     Range: 450, display: true
     IgnoreAtmo: true
@@ -26476,7 +26521,7 @@
     # AmmoCapacity: 0, display: false
     # AmmoType: AmmoInfinite, display: true
     # AmmoUnlimited: true
-    AmmoCapacity: 500, display: true
+    AmmoCapacity: 750, display: true
     # AmmoType: AmmoInfinite, display: true
     AmmoType: Eden_DeuteriumFuel, display: true
     UseSingleMagazine: true
@@ -26493,7 +26538,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield
+    DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenrich
     DamageMultiplier_4: 500, param1: edenice
     
@@ -26521,7 +26566,7 @@
     Automatic: true
     NoiseStrength: 30, display: false
     CameraShake: 0
-    AmmoCapacity: 500, display: true
+    AmmoCapacity: 750, display: true
     AmmoType: Eden_DeuteriumFuel, display: true
     UseSingleMagazine: true
     ReloadDelay: 3, display: false
@@ -26537,7 +26582,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield
+    DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenrich
     DamageMultiplier_4: 500, param1: edenice
     
@@ -26571,14 +26616,14 @@
     InfoPopup: true
     # ForceMuzzleAiming: true 
     ROF: 0.5, type: float
-    Damage: 75, display: true
+    Damage: 80, display: true
     Radius: 0
     Range: 1250, display: true
     IgnoreAtmo: true
     Automatic: true
     NoiseStrength: 30, display: false
     CameraShake: 0
-    AmmoCapacity: 250, display: true
+    AmmoCapacity: 500, display: true
     AmmoType: Eden_DeuteriumFuel, display: true
     UseSingleMagazine: true
     ReloadDelay: 3, display: false
@@ -26594,7 +26639,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield
+    DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenrich
     DamageMultiplier_4: 500, param1: edenice
     
@@ -26621,7 +26666,7 @@
     Automatic: true
     NoiseStrength: 30, display: false
     CameraShake: 0
-    AmmoCapacity: 250, display: true
+    AmmoCapacity: 500, display: true
     AmmoType: Eden_DeuteriumFuel, display: true
     UseSingleMagazine: true
     ReloadDelay: 3, display: false
@@ -26691,7 +26736,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield
+    DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenice
   }
 }
@@ -26724,7 +26769,7 @@
     Automatic: true
     NoiseStrength: 30, display: false
     CameraShake: 0
-    AmmoCapacity: 500, display: true
+    AmmoCapacity: 300, display: true
     AmmoType: Eden_DeuteriumFuel, display: true
     UseSingleMagazine: true
     ReloadDelay: 3, display: false
@@ -26740,7 +26785,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield
+    DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenrich
     DamageMultiplier_4: 500, param1: edenice
   }
@@ -26769,7 +26814,7 @@
     IsShootThroughCrosshair: true
     InfoPopup: true
     ROF: 0.5, type: float
-    Damage: 25, display: true
+    Damage: 30, display: true
     Radius: 0
     Range: 200, display: false
     IgnoreAtmo: true
@@ -26793,7 +26838,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield
+    DamageMultiplier_2: 0, param1: shield|head|body
     DamageMultiplier_3: 2000, param1: edenrich
     DamageMultiplier_4: 500, param1: edenice
   }
@@ -27361,10 +27406,10 @@
 }
 
 { +Item Id: 3251, Name: Eden_IndustrialFuel, Ref: ComponentsTemplate
-  Mass: 750, type: float, display: true, formatter: Kilogram
-  Volume: 1000, type: float, display: true, formatter: Liter
+  Mass: 375, type: float, display: true, formatter: Kilogram
+  Volume: 500, type: float, display: true, formatter: Liter
   FuelValue: 3000, type: int, display: true, formatter: WattHour
-  MarketPrice: 20000, display: true
+  MarketPrice: 10000, display: true
   ShowUser: Yes
   Info: Eden_IndustrialFuelinfo, display: true
   AutoFill: false
@@ -27405,7 +27450,7 @@
   Info: Eden_IceCerulianDustinfo, display: true
   Mass: 50, type: float, display: true, formatter: Kilogram
   Volume: 100, type: float, display: true, formatter: Liter
-  MarketPrice: 200, display: true
+  MarketPrice: 300, display: true
   ShowUser: Yes
 }
 
@@ -27427,7 +27472,7 @@
 
 { +Item Id: 3261, Name: Eden_Deuterium, Ref: ComponentsTemplate
   ShowUser: Yes
-  MarketPrice: 2500, display: true
+  MarketPrice: 3500, display: true
   Mass: 75, type: float, display: true, formatter: Kilogram
   Volume: 100, type: float, display: true, formatter: Liter
 }

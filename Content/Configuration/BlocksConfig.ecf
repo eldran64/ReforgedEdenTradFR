@@ -11280,8 +11280,8 @@ HullCombatSmallBlocks
   Material: device
   Shape: ModelEntity
   ShowBlockName: true
-  SymType: 4
   # IsColorable: true
+  SymType: 4
   Model: @reforgedcontent/AdvConstructorRG
   # Model: @models/Blocks/Mothership/ConstructorT2Prefab
   Mesh-Damage-1: D0
@@ -38578,7 +38578,7 @@ HullCombatSmallBlocks
   HitPoints: 25000, type: int, display: true
   RotSpeed: 50, type: int, display: true
   EnergyIn: 25000, type: int, display: true, formatter: Watt
-  CPUIn: 3000000, type: int, display: true
+  CPUIn: 300000, type: int, display: true
   Mass: 8500, type: float, display: true, formatter: Kilogram
   XpFactor: 2
   AboveTerrainCheck: false

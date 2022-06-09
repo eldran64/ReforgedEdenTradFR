@@ -23,3 +23,5 @@ Le mod Reforged Eden pour le jeu Empyrion est la propriété de Vermillion et de
 La branche du build 24 est terminée et peut être utilisée.
 
 La branche principale concerne le build 27: Utilisable en l'état mais il reste quelques clés à traduire
+
+edit du 09/06/2022: Le build 28 sera bientôt prêt et disponible ici :)

@@ -37079,7 +37079,7 @@ HullCombatSmallBlocks
   ForceMaxCount: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
   Volume: 800, type: float, display: true, formatter: Liter
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 125, type: int, display: true, formatter: Watt
   CPUIn: -330000, type: int, display: true
   # CPUOut: 500000, type: int, display: true  
   HitPoints: 500, type: int, display: true
@@ -37122,7 +37122,7 @@ HullCombatSmallBlocks
   ForceMaxCount: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
   Volume: 800, type: float, display: true, formatter: Liter
-  EnergyIn: -300, type: int, display: true, formatter: Watt
+  EnergyIn: -500, type: int, display: true, formatter: Watt
   CPUIn: 15000, type: int, display: true
   # CPUOut: 500000, type: int, display: true  
   HitPoints: 500, type: int, display: true
@@ -39800,7 +39800,14 @@ HullCombatSmallBlocks
   # ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   ChildShapes: "Cube, CutCornerE, CylinderThin, CylinderThinTJoint, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, Wall, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, Beam, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
 }
-# ChildShapes: "Wall, WallLShape, WallSloped, WallSloped3Corner, WallSlopedC, WallSlopedCMediumright, WallSlopedAright, WallSlopedCMediumleft, WallSlopedAleft, WallCornerRoundB, WallSlopedRound, WallEdgeRound, WallEdgeRound3Way, WallCornerRoundA, WallCornerRoundC, WallSloped3CornerLow, WallCorner, WallLow, CubeHalf, RampADouble, RampCLow, RampBMedium, RampD, CutCornerEMedium, Beam, CylinderThin, CylinderThinTJoint, CylinderL, PipesFence, FenceTop, RampCHalf, CornerHalfA3Medium"
+
+{ +Block Name: Eden_ShieldCapacitorPOIT0, Ref: Eden_ShieldCapacitorPOIT1
+  ShieldCapacityBonus: 1000, type: int, display: true
+  ShieldRechargeBonus: 0, type: int, display: true
+  PickupTarget: HullCombatFullLarge
+  TemplateRoot: HullCombatFullLarge
+}
+
 { +Block Name: Eden_ShieldCapacitorPOIT2, Ref: Eden_ShieldCapacitorPOIT1
   ShieldCapacityBonus: 250000, type: int, display: true
   ShieldRechargeBonus: 0, type: int, display: true
@@ -40872,7 +40879,7 @@ HullCombatSmallBlocks
   Model: @eden_blockmodels/Eden_ModelAsteroidIceT2L
   CustomIcon: Eden_IceAsteroid
   Info: Eden_ResourceGenericinfo, display: true
-  HitPoints: 9000, type: int, display: true
+  HitPoints: 6000, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_IceRich
     Count: "1,1"
@@ -40880,7 +40887,7 @@ HullCombatSmallBlocks
   }
   { Child DropOnDestroy_2
     Item: Eden_IceHeavy
-    Count: "3,4"
+    Count: "2,3"
     Prob: 1
   }
 }
@@ -40915,7 +40922,7 @@ HullCombatSmallBlocks
   ShowUser: Yes
   Volume: 500000, type: float, display: true, formatter: Liter
   Mass: 2500, type: float, display: true, formatter: Kilogram
-  HitPoints: 6000, type: int, display: true
+  HitPoints: 7500, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_OreDenseT1
     Count: "7,13"

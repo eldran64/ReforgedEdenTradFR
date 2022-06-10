@@ -1,0 +1,5 @@
+[b]Reforged Eden[/b] for [b]Empyrion 1.7[/b] (build 28)
+[c][ffff00]TRAVAUX EN COURS[-][/c] - De nombreuses fonctionnalités sont incomplètes.
+Ce scénario combine les scénarios Reforged Galaxy et Project Eden et contient une quantité massive de nouveau contenu.
+Il modifie considérablement le rythme et la difficulté du jeu.
+[i][c][ffffff]Veuillez consulter le Workshop ou la section Empyriopedia du PDA pour plus d'informations.[-][/c][/i]

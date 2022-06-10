@@ -18977,8 +18977,7 @@
 # ============================================================================================================================================================================================================
 
 
-
-/*  Created with eWCCT 3.30.0  */
+/*  Created with eWCCT 3.36.0  */
 /*  Website: https://empyrion-homeworld.net/tools/ewcct  */
 { +Dialogue Name: Eden_GlobalVariables
   Globals: "int Eden_G_DataChipT1R = 1; int Eden_G_DataChipT1C = 10000; int Eden_G_DataChipT1UP = 10; int Eden_G_DataChipT2R = 5; int Eden_G_DataChipT2C = 50000; int Eden_G_DataChipT2UP = 50; int Eden_G_DataChipT3R = 10; int Eden_G_DataChipT3C = 100000; int Eden_G_DataChipT3UP = 100;<nl>int Eden_G_BanditReward = 10000; int Eden_Global_DataPad = 50;"
@@ -21158,28 +21157,6 @@
   Next_10: Eden_UCHSupply_GiftT1
   Execute: "Eden_GiftType = Random(1,100); UCHGift += 1; Eden_UCHGiftCount += 1"
 }
-{ +Dialogue Name: Eden_UCHSupply_GiftCheckT1
-  Next_1: Eden_UCHSupply_GiftT1_1
-  NextIf_1: "Eden_GiftType <= 5"
-  Next_2: Eden_UCHSupply_GiftT1_2
-  NextIf_2: "Eden_GiftType <= 10"
-  Next_3: Eden_UCHSupply_GiftT1_3
-  NextIf_3: "Eden_GiftType <= 40"
-  Next_4: Eden_UCHSupply_GiftT1_4
-  NextIf_4: "Eden_GiftType <= 70"
-  Next_5: Eden_UCHSupply_GiftT1_5
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftCheckT2
-  Next_1: Eden_UCHSupply_GiftT2_1
-  NextIf_1: "Eden_GiftType <= 5"
-  Next_2: Eden_UCHSupply_GiftT2_2
-  NextIf_2: "Eden_GiftType <= 10"
-  Next_3: Eden_UCHSupply_GiftT2_3
-  NextIf_3: "Eden_GiftType <= 40"
-  Next_4: Eden_UCHSupply_GiftT2_4
-  NextIf_4: "Eden_GiftType <= 70"
-  Next_5: Eden_UCHSupply_GiftT2_5
-}
 { +Dialogue Name: Eden_UCHSupply_GiftT1
   Output: eden_dialogue_uOWKuOW
   Option_1: eden_dialogue_CquOKWi
@@ -21195,86 +21172,6 @@
   Option_2: eden_dialogue_CeuSKCm
   OptionNext_2: End
   Execute: "AddItemsFromContainer(648, 10)"
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT1_1
-  Output: eden_dialogue_mMqeGCG
-  Option_1: eden_dialogue_0ISmuWe
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_OKGsCWG
-  OptionNext_2: End
-  Execute: "AddItem('Eden_UnlockPoint', Random(1,2)); AddItem('PentaxidCrystal', Random(100,200)); AddItem('Eden_ProbeSystemT2', Random(2,4)); AddItem('Eden_ProbeSystemT3', Random(2,4))"
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT1_2
-  Output: eden_dialogue_0G0GWOq
-  Option_1: eden_dialogue_w8i8OK4
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_iGaOaa8
-  OptionNext_2: End
-  Execute: "AddItem('ErestumOre', Random(500,1000)); AddItem('ZascosiumOre', Random(350,750)); AddItem('SathiumOre', Random(500,1000)); AddItem('GoldOre', Random(50,200))"
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT1_3
-  Output: eden_dialogue_KuAG4mW
-  Option_1: eden_dialogue_emKWSiq
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_emG8quC
-  OptionNext_2: End
-  Execute: "AddItem('Electronics', Random(10,25)); AddItem('EnergyMatrix', Random(15,30)); AddItem('Motor', Random(10,15)); AddItem('Computer', Random(10,15)); AddItem('CapacitorComponent', Random(10,15)); AddItem('Oscillator', Random(10,15))"
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT1_4
-  Output: eden_dialogue_O4KmfS8
-  Option_1: eden_dialogue_H9a0Gum
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_WaCKueK
-  OptionNext_2: End
-  Execute: "AddItem('Bandages', Random(5,10)); AddItem('Medikit04', Random(2,4)); AddItem('AntiRadiationOintment', Random(1,2)); AddItem('AntiToxicInjection', Random(1,2))"
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT1_5
-  Output: eden_dialogue_aqCSmq8
-  Option_1: eden_dialogue_V0mSsqW
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_OWdISaC
-  OptionNext_2: End
-  Execute: "AddItem('PentaxidCrystal', Random(5,50)); AddItem('EnergyCell', Random(5,50)); AddItem('MoneyCard', Random(1000,7500))"
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT2_1
-  Output: eden_dialogue_COaWqWS
-  Option_1: eden_dialogue_SqX88mi
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_CiAOS8C
-  OptionNext_2: End
-  Execute: "AddItem('Eden_WarpUpgrade', 1); AddItem('PentaxidCrystal', Random(150,250)); AddItem('Eden_ProbeSystemT3', Random(2,4)); AddItem('Eden_ProbeSystemT4', Random(2,4))"
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT2_2
-  Output: eden_dialogue_GAeS0OK
-  Option_1: eden_dialogue_eoS0naG
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_SmuiG48
-  OptionNext_2: End
-  Execute: "AddItem('GoldOre', Random(100,250)); AddItem('PlatinOre', Random(25,50)); AddItem('Eden_TungstenOre', Random(100,250)); "
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT2_3
-  Output: eden_dialogue_4GQbOra
-  Option_1: eden_dialogue_OAi8S8e
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_0W4qOq4
-  OptionNext_2: End
-  Execute: "AddItem('PowerCoil', Random(2,4)); AddItem('FluxCoil', Random(3,6)); AddItem('CobaltAlloy', Random(10,15)); AddItem('Computer', Random(10,15)); AddItem('CapacitorComponent', Random(10,15)); AddItem('Oscillator', Random(10,15))"
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT2_4
-  Output: eden_dialogue_SiWu4Se
-  Option_1: eden_dialogue_QV0qeWa
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_W4Oieqa
-  OptionNext_2: End
-  Execute: "AddItem('Bandages', Random(5,10)); AddItem('Eden_RegenKit', Random(1,2)); AddItem('Eden_StaminaRegenKit', Random(1,2)); AddItem('Medikit04', Random(1,2)); AddItem('Medikit01', Random(1,2)); AddItem('Medikit02', Random(1,2))"
-}
-{ +Dialogue Name: Eden_UCHSupply_GiftT2_5
-  Output: eden_dialogue_amoiIS0
-  Option_1: eden_dialogue_Emqa4Ke
-  OptionNext_1: Eden_UCHSupply_Start
-  Option_2: eden_dialogue_iqS4iLW
-  OptionNext_2: End
-  Execute: "AddItem('EnergyCellLarge', Random(5,50)); AddItem('MoneyCard', Random(2500,10000))"
 }
 { +Dialogue Name: Eden_UCHSupply_Gift1
   Output: eden_dialogue_KeSOWGq
@@ -21353,10 +21250,13 @@
   Variable_10: "BonusComplete", param1: int
   Variable_11: "Randomize", param1: int
   Variable_12: "Eden_PlayerHackingSkill", param1: dbplayer_int
+  Variable_13: "Fail", param1: dbplayerpoi_int
+  Variable_14: "Success", param1: dbplayerpoi_int
+  Variable_15: "Progress", param1: dbplayerpoi_int
   Next_1: Eden_HackFrequency2_Deny
-  NextIf_1: "IsSignalSet('Fail')"
+  NextIf_1: "Fail == 1"
   Next_2: Eden_HackFrequency2_Deny2
-  NextIf_2: "IsSignalSet('Success') && !IsSignalSet('VaultPOI')"
+  NextIf_2: "Success == 1"
   Next_3: Eden_HackFrequency2_Init
 }
 { +Dialogue Name: Eden_HackFrequency2_Deny
@@ -21372,13 +21272,13 @@
 { +Dialogue Name: Eden_HackFrequency2_Init
   Execute: "CodeMin = Random(1,50000); CodeMax = CodeMin + Random(12000,15000) - Eden_PlayerHackingSkill; Code = Random(CodeMin,CodeMax)"
   Next_1: Eden_HackFrequency2_Greet
-  NextIf_1: "Tries >= 1 && IsSignalSet('Progress')"
+  NextIf_1: "Tries >= 1 && Progress == 1"
   Next_2: Eden_HackFrequency2_Deny
-  NextIf_2: "Tries < 1 && IsSignalSet('Progress')"
+  NextIf_2: "Tries < 1 && Progress == 1"
   Next_3: Eden_HackFrequency2_Init2
 }
 { +Dialogue Name: Eden_HackFrequency2_Init2
-  Execute: "Tries = 15; Score = 0; SetSignal('Progress', true)"
+  Execute: "Tries = 15; Score = 0; Progress = 1"
   Next_1: Eden_HackFrequency2_Greet
 }
 { +Dialogue Name: Eden_HackFrequency2_Greet
@@ -21459,7 +21359,7 @@
 }
 { +Dialogue Name: Eden_HackFrequency2_Fail
   Output: eden_dialogue_GmqueeO
-  Execute: "SetSignal('Fail', true)"
+  Execute: "Fail = 1"
   Option_1: eden_dialogue_MEWae4K
   OptionNext_1: End
 }
@@ -21522,26 +21422,26 @@
   OptionNext_1: End
 }
 { +Dialogue Name: Eden_HackFrequency2_Succeed
-  Execute: "SetSignal('Success', true); Score += 1; Tries += Random(11,13); Tries -= Score; Tries -= Score"
+  Execute: "Score += 1; Tries += Random(11,13); Tries -= Score; Tries -= Score"
   Output: eden_dialogue_Yeim4e8
   Next_1: Eden_HackFrequency2_Vault1
-  NextIf_1: "Score == 1 && IsSignalSet('VaultPOI')"
+  NextIf_1: "Score == 1"
   Next_2: Eden_HackFrequency2_Vault2
-  NextIf_2: "Score == 2 && IsSignalSet('VaultPOI')"
+  NextIf_2: "Score == 2"
   Next_3: Eden_HackFrequency2_Vault3
-  NextIf_3: "Score == 3 && IsSignalSet('VaultPOI')"
+  NextIf_3: "Score == 3"
   Next_4: Eden_HackFrequency2_Vault4
-  NextIf_4: "Score == 4 && IsSignalSet('VaultPOI')"
+  NextIf_4: "Score == 4"
   Next_5: Eden_HackFrequency2_Vault5
-  NextIf_5: "Score == 5 && IsSignalSet('VaultPOI')"
+  NextIf_5: "Score == 5"
   Next_6: Eden_HackFrequency2_Vault6
-  NextIf_6: "Score == 6 && IsSignalSet('VaultPOI')"
+  NextIf_6: "Score == 6"
   Next_7: Eden_HackFrequency2_End
 }
 { +Dialogue Name: Eden_HackFrequency2_Skillup
   Execute: "Eden_PlayerHackingSkill += Random(5,15)"
   Next_1: Eden_HackFrequency2_End
-  NextIf_1: "IsSignalSet('Vault6')"
+  NextIf_1: "Success == 1"
   Next_2: Eden_HackFrequency2_Init
 }
 { +Dialogue Name: Eden_HackFrequency2_BonusTry

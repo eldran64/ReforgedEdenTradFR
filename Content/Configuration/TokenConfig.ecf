@@ -305,7 +305,7 @@
 # ================================================================================================================================ Empyrion Shrine Tokens
 
 # Empyrion Shrine Key I
-{ Token Id: 6011, Name: [c][ff8000]Empyrion Shrine Key I[/c]
+{ Token Id: 6011, Name: [c][ff8000]Clé du sanctuaire d'Empyrion I[/c]
   DropOnDeath: false
   Description: This key will open a door in the Empyrion Shrine near the galactic core. NOT YET IN.
 }
@@ -315,7 +315,7 @@
 # --------------------------------------------------------- Solar System Surveys:
 
 # Alpha System Survey Report
-{ Token Id: 6012, Name: [c][ffffff]Alpha System Survey Report[-][/c]
+{ Token Id: 6012, Name: [c][ffffff]Rapport d'enquête sur le système Alpha[-][/c]
   DropOnDeath: false
   Description: A report detailing the planets and sectors of the Alpha system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
 }
@@ -358,7 +358,7 @@
 }
 
 # Progenitor Translation Matrix
-{ Token Id: 6104, Name: [c][ff8000]Progenitor Translation Matrix[/c]
+{ Token Id: 6104, Name: [c][ff8000]Matrice de traduction des progéniteurs[/c]
   CustomIcon: Eden_ProgenitorTranslationMatrix
   DropOnDeath: false
   Description: [c][ff8000]Story mission item.[-][/c] \n\nThis matrix grants access to Progenitor computer terminals. \n\nRequired to access the core system controls on Progenitor Cores and other Progenitor computer systems.
@@ -705,7 +705,7 @@
 # Savanth Greenzald's Insignia
 { Token Id: 6601, Name: [c][FFFFFF]Insigne de Savanth Greenzald[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
-  Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5]Savanth est une epine dans le pied des Colons Libres depuis plusieurs annees. Responsable d'un certain nombre d'attaques de bandits sur les voies de navigation, il a maintenant intensifie ses attaques pour inclure les stations et les avant-postes civils.\nLes Colonistes Libres paieront pour obtenir la preuve de sa mort, bien qu'il ne faille pas attendre longtemps avant qu'il ne revienne dans un corps fraîchement clone.\nIl dirige parfois ses operations depuis les avant-postes des bandits.[-][/c]"
+  Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c] \n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c] \nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense. \n\n[c][D5D5D5]Savanth est une epine dans le pied des Colons Libres depuis plusieurs annees. Responsable d'un certain nombre d'attaques de bandits sur les voies de navigation, il a maintenant intensifie ses attaques pour inclure les stations et les avant-postes civils.\nLes Colonistes Libres paieront pour obtenir la preuve de sa mort, bien qu'il ne faille pas attendre longtemps avant qu'il ne revienne dans un corps fraîchement clone. \nIl dirige parfois ses operations depuis les avant-postes des bandits.[-][/c]"
   MarketPrice: 25000, display: true
 }
 

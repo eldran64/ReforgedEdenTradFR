@@ -14900,7 +14900,7 @@
   OptionNext_1: End
   Option_2: "Au revoir."
   OptionNext_2: End
-  Option_3: "Seen any salami smugglers around?"
+  Option_3: "Vous avez vu des contrebandiers de salami dans le coin ?"
   OptionNext_3: Eden_UCHNOdyssey_Salami
   OptionIf_3: "PlayerName == 'DisturbedZ' && DisturbedZ == 0"
 }
@@ -18981,9 +18981,7 @@
 # ============================================================================================================================================================================================================
 # ===================================================================================================================================== Project Eden Custom Dialog eWCCT
 # ============================================================================================================================================================================================================
-
-
-/*  Created with eWCCT 3.36.0  */
+/*  Created with eWCCT 3.38.0  */
 /*  Website: https://empyrion-homeworld.net/tools/ewcct  */
 { +Dialogue Name: Eden_GlobalVariables
   Globals: "int Eden_G_DataChipT1R = 1; int Eden_G_DataChipT1C = 10000; int Eden_G_DataChipT1UP = 10; int Eden_G_DataChipT2R = 5; int Eden_G_DataChipT2C = 50000; int Eden_G_DataChipT2UP = 50; int Eden_G_DataChipT3R = 10; int Eden_G_DataChipT3C = 100000; int Eden_G_DataChipT3UP = 100;<nl>int Eden_G_BanditRewardT1 = 20000; int Eden_G_BanditRewardT2 = 40000; int Eden_G_BanditRewardT3 = 80000; int Eden_Global_DataPad = 50;"
@@ -22025,6 +22023,23 @@
   Option_2: eden_dialogue_8WGKIue
   OptionNext_2: End
   Execute: "AddItem('AutoMinerCore', 1); AddItem('Eden_WarpUpgrade', 1); AddItem('Eden_PosterSpace2', 1)"
+}
+{ +Dialogue Name: Eden_UCHSchematicTrader_Init
+  Output: eden_dialogue_4BKECCe
+  Option_1: eden_dialogue_qeaiSm4
+  OptionNext_1: Eden_Trader_OpenTrader
+  Option_2: eden_dialogue_g0Wu04e
+  OptionNext_2: End
+}
+{ +Dialogue Name: Eden_UCHResearcher_Init
+  Next_1: Eden_UCHResearcher_Greet
+}
+{ +Dialogue Name: Eden_UCHResearcher_Greet
+  Output: eden_dialogue_iAOKiOa
+  Option_1: eden_dialogue_OvLa88C
+  OptionNext_1: Eden_Trader_OpenTrader
+  Option_2: eden_dialogue_UGq4OOa
+  OptionNext_2: End
 }
 { +Dialogue Name: Eden_HackFrequency2_Start
   Variable_1: "Code", param1: int

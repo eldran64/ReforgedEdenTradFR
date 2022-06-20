@@ -188,7 +188,7 @@
 
 # =============================================== REFORGED TOKENS ============================================================
 # UCH Keycard (Offworld Grave)
-{ Token Id: 4001, Name: [c][F0F8FF]UCH Keycard[/c]
+{ Token Id: 4001, Name: [c][F0F8FF]Carte-cle UCH[/c]
   CustomIcon: UCHKeycard
   Description: Une carte cle personnelle du M.S Titan trouvee dans les quartiers de l'equipage. Elle autorise l'acces aux systemes securises du Titan.
 }
@@ -246,6 +246,9 @@
   CustomIcon: NavalCommendation
   Description: Une citation de l'UCH Naval pour des actes d'heroïsme distingues contre l'ennemi. \n\n[c][ffffff]Peut etre utilise pour augmenter d'un niveau le rang principal ou secondaire actuel du joueur.[-][/c]
 }
+
+
+
 
 # ======================================================================================================================================================================
 # =================================================================================================================================Project Eden Custom Tokens:
@@ -373,7 +376,7 @@
   CustomIcon: ProgenitorKeyI
   DropOnDeath: false
   RemoveOnUse: true
-  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nThis key grants access to one of the doors of Object 82 located near the starting solar systems. You must also have personally activated the Subspace Link at Object 1. \n\nCaptains of UCH Research Ships can tell you where Object 82 is. \n\n[i][c][A9A9A9]Once we were one. Once we had harmony...[-][/c][/i]
+  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette clé donne accès à l'une des portes de l'objet 82 situé près des systèmes solaires de départ. Vous devez également avoir personnellement activé le lien subspatial de l'objet 1. \n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer où se trouve l'objet 82. \n\n[i][c][A9A9A9]Autrefois nous ne faisions qu'un. Il fut un temps où nous étions en harmonie...[-][/c][/i]
 }
 
 # Progenitor Key II - Object 13
@@ -680,21 +683,21 @@
 
 # Reward from defeating a warlord attack. T2
 { Token Id: 6505, Name: Insigne du Raider
-  CustomIcon: KeyCardYellow
+  CustomIcon: Eden_InsigniaBanditT2
   Description: Un insigne d'un membre d'un gang de pillards. \nApportez-le a une ferraillerie ou a un bureau de chasseur de primes des Colonistes pour obtenir une recompense.
   MarketPrice: 20000, display: true
 }
 
 # Reward from taking out bandits. T1
 { Token Id: 6506, Name: Insigne de Bandit
-  CustomIcon: KeyCardRed
+  CustomIcon: Eden_InsigniaBanditT1
   Description: Un insigne d'un membre d'une gang de bandits. \nApportez-le a une ferraillerie ou a un bureau de chasseur de primes des Colonistes pour obtenir une recompense.
   MarketPrice: 10000, display: true
 }
 
 # Reward from defeating a death's hand cult member. T3
 { Token Id: 6507, Name: Insigne de la main de la mort
-  CustomIcon: KeyCardBlack
+  CustomIcon: Eden_InsigniaBanditT3
   Description: Un insigne de membre d'un gang de la Main de la Mort. \nApportez-le a une ferraillerie ou a un bureau de chasseur de primes des Colonistes pour obtenir une recompense.
   MarketPrice: 40000, display: true
 }
@@ -1127,76 +1130,76 @@
 # ================================================================================================================================ Bulk Trading Tokens
 
 # Free Colonists
-{ Token Id: 6700, Name: Small Sealed Package [c][4CA5FF](Colons)[-][/c]
+{ Token Id: 6700, Name: Petit paquet scellé [c][4CA5FF](Colons)[-][/c]
   CustomIcon: CargoContainerSV
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][4CA5FF]Colons[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Neutre\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 2500\n[c][FFFFFF][b]Paiement:[-][/c][/b] 7% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
   MarketPrice: 2500, display: true
 }
 
-{ Token Id: 6701, Name: Medium Sealed Package [c][4CA5FF](Colons)[-][/c]
+{ Token Id: 6701, Name: Paquet scellé moyen [c][4CA5FF](Colons)[-][/c]
   CustomIcon: ScifiContainer1Small
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][4CA5FF]Colons[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Amicale\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 20000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 11% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
   MarketPrice: 20000, display: true
 }
 
-{ Token Id: 6702, Name: Large Sealed Package [c][4CA5FF](Colons)[-][/c]
+{ Token Id: 6702, Name: Grand paquet scellé [c][4CA5FF](Colons)[-][/c]
   CustomIcon: ContainerMS02Large
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][4CA5FF]Colons[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Honore\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 100000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 15% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
   MarketPrice: 100000, display: true
 }
 
 # Polaris
-{ Token Id: 6703, Name: Small Sealed Package [c][E59933](Polaris)[-][/c]
+{ Token Id: 6703, Name: Petit boîtier scellé [c][E59933](Polaris)[-][/c]
   CustomIcon: CargoContainerSV
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Neutre\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 2500\n[c][FFFFFF][b]Paiement:[-][/c][/b] 7% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
   MarketPrice: 2500, display: true
 }
 
-{ Token Id: 6704, Name: Medium Sealed Package [c][E59933](Polaris)[-][/c]
+{ Token Id: 6704, Name: Paquet scellé moyen [c][E59933](Polaris)[-][/c]
   CustomIcon: ScifiContainer1Small
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Amicale\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 20000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 11% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
   MarketPrice: 20000, display: true
 }
 
-{ Token Id: 6705, Name: Large Sealed Package [c][E59933](Polaris)[-][/c]
+{ Token Id: 6705, Name: Grand paquet scellé [c][E59933](Polaris)[-][/c]
   CustomIcon: ContainerMS02Large
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Honore\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 100000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 15% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
   MarketPrice: 100000, display: true
 }
 
 # Zirax
-{ Token Id: 6706, Name: Small Sealed Package [c][FF0000](Zirax)[-][/c]
+{ Token Id: 6706, Name: Petit paquet scellé [c][FF0000](Zirax)[-][/c]
   CustomIcon: CargoContainerSV
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FF0000]Zirax[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Neutre\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 2500\n[c][FFFFFF][b]Paiement:[-][/c][/b] 10% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
   MarketPrice: 3000, display: true
 }
 
-{ Token Id: 6707, Name: Medium Sealed Package [c][FF0000](Zirax)[-][/c]
+{ Token Id: 6707, Name: Paquet scellé moyen [c][FF0000](Zirax)[-][/c]
   CustomIcon: ScifiContainer1Small
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FF0000]Zirax[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Amicale\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 20000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 15% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
   MarketPrice: 20000, display: true
 }
 
-{ Token Id: 6708, Name: Large Sealed Package [c][FF0000](Zirax)[-][/c]
+{ Token Id: 6708, Name: Grand paquet scellé [c][FF0000](Zirax)[-][/c]
   CustomIcon: ContainerMS02Large
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FF0000]Zirax[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Honore\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 100000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 20% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
   MarketPrice: 100000, display: true
 }
 
 # Pirates
-{ Token Id: 6709, Name: Small Sealed Package [c][FFFF00](Pirates)[-][/c]
+{ Token Id: 6709, Name: Petit paquet scellé [c][FFFF00](Pirates)[-][/c]
   CustomIcon: CargoContainerSV
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Neutre\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 2500\n[c][FFFFFF][b]Paiement:[-][/c][/b] 10% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
   MarketPrice: 2500, display: true
 }
 
-{ Token Id: 6710, Name: Medium Sealed Package [c][FFFF00](Pirates)[-][/c]
+{ Token Id: 6710, Name: Paquet scellé moyen [c][FFFF00](Pirates)[-][/c]
   CustomIcon: ScifiContainer1Small
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Amicale\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 20000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 15% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
   MarketPrice: 20000, display: true
 }
 
-{ Token Id: 6711, Name: Large Sealed Package [c][FFFF00](Pirates)[-][/c]
+{ Token Id: 6711, Name: Grand paquet scellé [c][FFFF00](Pirates)[-][/c]
   CustomIcon: ContainerMS02Large
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Honore\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 100000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 20% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
   MarketPrice: 100000, display: true
@@ -1572,13 +1575,13 @@
 
 
 # ================================================================================================================================ Project Eden Scenario Info Tokens
-{ Token Id: 6998, Name: [c][FFA500]Project Eden Support Guide[/c]
+{ Token Id: 6998, Name: [c][FFA500]Guide de soutien du projet Eden[/c]
   CustomIcon: Eden_Guide2
   DropOnDeath: false
   Description: "[c][FFA500]Il s'agit d'un scenario personnalise cree par un joueur et les developpeurs du jeu ne peuvent pas aider a resoudre les problemes rencontres en y jouant.[-][/c]\n\n[c][FFFF00][b]VEUILLEZ REPRODUIRE TOUT PROBLEME DE JEU DANS UNE SAUVEGARDE PAR DEFAUT, NON MODIFIEE, AVANT DE LE SIGNALER AUX DEVELOPPEURS DU JEU.[/b][-][/c]\n\nVeuillez toujours quitter completement Empyrion pour revenir au bureau Windows lorsque vous changez de sauvegarde ou de serveur.\n\nIl y a certains risques a jouer un scenario personnalise et il peut etre plus exigeant pour le materiel de votre PC. SAUVEGARDEZ SOUVENT VOS PLANS.\n\nVous pouvez trouver de l'aide et signaler des problemes sur la page de l'atelier du Projet Eden ou de Reforged Eden.\n\nSi vous jouez sur un serveur, parlez-en a l'administrateur de votre serveur.\nPour toute mise a jour du scenario, veuillez consulter la page de l'atelier.\n\n[i][c][A9A9A9]Reforged Eden v1.7 (Build 30)[-][/c][/i]\n[i][c][A9A9A9]Cet objet peut etre mis a la poubelle en toute securite.[-][/c][/i]"
 }
 
-{ Token Id: 6999, Name: [c][00FFFF]Project Eden Gameplay Guide[/c]
+{ Token Id: 6999, Name: [c][00FFFF]Guide de jeu de Project Eden[/c]
   CustomIcon: Eden_Guide
   DropOnDeath: false
   Description: "[c][FFA500]L'Empyriopedie du PDA contient des informations tres utiles. N'hesitez pas a la lire.[-][/c]\n\n[c][FFFF00]Infobulles:[-][/c] Les infobulles fournissent des informations utiles sur de nombreux objets et dispositifs. Passez la souris sur n'importe quel element de votre inventaire, de votre constructeur ou de votre arbre technique pour afficher des details importants.\n\n[c][FFFF00]PDA:[-][/c] Votre PDA contient des informations sur les missions et une section Empyriopedia avec des informations importantes.\n\nAccomplissez la mission [c][00FFFF]Entrer en contact avec les forces terriennes[-][/c] dans la section Histoire du projet Eden pour debloquer des missions supplementaires et des entrees dans l'Empyriopedie. L'Empyriopedie se remplit au fur et a mesure de votre progression.\n\nAccedez au PDA avec [c][FFFF00]F1[-][/c].\n\n[c][FFFF00]Planetes et secteurs: [-][/c]Les planetes et les secteurs du systeme solaire actuel sont scannes et une description de base de chacun d'eux peut etre visualisee sur la carte locale ou celle du systeme solaire.\n\n[c][FFFF00]Galaxie: [-][/c]Le projet Eden contient une grande galaxie visible sur la carte galactique. La classe d'etoiles et le territoire des factions changent ce que vous pouvez trouver dans un systeme stellaire.\n[i][c][A9A9A9]Cet objet peut etre mis a la poubelle en toute securite.[-][/c][/i]"

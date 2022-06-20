@@ -10888,6 +10888,76 @@ Chapters:
     ActivateChapterOnCompletion: eden_pda_OTK8m
     HideTasks: true
     Group: eden_pda_08GKE
+  - ChapterTitle: eden_pda_UuuGC
+    Category: SoloMission
+    NoSkip: true
+    PlayerLevel: 25
+    Activatable: ByLevel
+    Visibility: Always
+    Group: eden_pda_umS0uum
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 180
+      DelayAdd: 0
+    HideTasks: true
+    Description: eden_pda_iurO4
+    CompletedMessage: norm;30|eden_pda_uwOem
+    Tasks:
+      - TaskTitle: eden_pda_m404e
+        CompletedMessage: ''
+        StartMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_iai8O
+            Description: eden_pda_tkb4e
+            CompletedMessage: ''
+            Check: DialogOption
+            Names:
+              - Eden_UCHComputer_UPComplete
+            Value: 1
+          - ActionTitle: eden_pda_8euCiO0
+            Description: eden_pda_maCGSOK
+            CompletedMessage: norm;20|eden_pda_WOOBiQ0
+            IsOptional: 'true'
+            Check: InventoryContains
+            Names:
+              - Player
+            Types:
+              - Eden_ResearchBundle1
+              - Eden_ResearchBundle2
+              - Eden_ResearchBundle3
+              - Eden_ResearchBundle4
+              - Eden_ResearchBundle5
+    StartMessage: norm;60|eden_pda_aaKWK
+  - ChapterTitle: eden_pda_WqCi800
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_umS0uum
+    StartMessage: norm;0|eden_pda_eCuimeN
+    CompletedMessage: dlg;Eden_Science_Init|
+    Tasks:
+      - TaskTitle: eden_pda_i540k4S
+        Actions:
+          - ActionTitle: eden_pda_4Smo8Se
+            Description: eden_pda_mAaGqG4
+            CompletedMessage: ''
+            Check: WaitAction
+    RepeatConditions:
+      NumRepeats: 0
+      DelayAdd: 0
+      DelaySeconds: 1
+      NoReminder: 'true'
+    HideTasks: true
+    Description: eden_pda_QSGGGC6
+    PictureFile: Eden_ProbeSystemT1.png
+    ChapterActivation:
+      - Check: InventoryOpened
+        Names:
+          - Eden_ScienceStation
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
   - ChapterTitle: eden_pda_qa0uWuF
     Category: SoloMission
     NoSkip: true
@@ -10948,46 +11018,6 @@ Chapters:
       NumRepeats: 0
       Delay: 1
       DelayAdd: 0
-  - ChapterTitle: eden_pda_UuuGC
-    Category: SoloMission
-    NoSkip: true
-    PlayerLevel: 25
-    Activatable: ByLevel
-    Visibility: Always
-    Group: eden_pda_jW0ui
-    RepeatConditions:
-      NumRepeats: 0
-      Delay: 180
-      DelayAdd: 0
-    HideTasks: true
-    Description: eden_pda_iurO4
-    CompletedMessage: norm;30|eden_pda_uwOem
-    Tasks:
-      - TaskTitle: eden_pda_m404e
-        CompletedMessage: ''
-        StartMessage: ''
-        Actions:
-          - ActionTitle: eden_pda_iai8O
-            Description: eden_pda_tkb4e
-            CompletedMessage: ''
-            Check: DialogOption
-            Names:
-              - Eden_UCHComputer_UPComplete
-            Value: 1
-          - ActionTitle: eden_pda_8euCiO0
-            Description: eden_pda_maCGSOK
-            CompletedMessage: norm;20|eden_pda_WOOBiQ0
-            IsOptional: 'true'
-            Check: InventoryContains
-            Names:
-              - Player
-            Types:
-              - Eden_ResearchBundle1
-              - Eden_ResearchBundle2
-              - Eden_ResearchBundle3
-              - Eden_ResearchBundle4
-              - Eden_ResearchBundle5
-    StartMessage: norm;60|eden_pda_aaKWK
   - ChapterTitle: eden_pda_84qWSW8
     Category: SoloMission
     NoSkip: true
@@ -11008,10 +11038,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C1
+      - Exploration Site Class 1
     HideTasks: true
     Description: eden_pda_CSaICqK
     PictureFile: Eden_ProbeSystemT1.png
@@ -11035,10 +11065,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C1
+      - Exploration Site Class 1
     HideTasks: true
     Description: eden_pda_MtaKGG4
     PictureFile: Eden_ProbeSystemT1.png
@@ -11068,10 +11098,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C2
+      - Exploration Site Class 2
     HideTasks: true
     Description: eden_pda_aeD8aqe
     PictureFile: Eden_ProbeSystemT1.png
@@ -11095,10 +11125,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C2
+      - Exploration Site Class 2
     HideTasks: true
     Description: eden_pda_ee0S0C8
     PictureFile: Eden_ProbeSystemT1.png
@@ -11128,10 +11158,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C3
+      - Exploration Site Class 3
     HideTasks: true
     Description: eden_pda_Wa88SeV
     PictureFile: Eden_ProbeSystemT2.png
@@ -11155,10 +11185,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C3
+      - Exploration Site Class 3
     HideTasks: true
     Description: eden_pda_qucueOm
     PictureFile: Eden_ProbeSystemT2.png
@@ -11188,10 +11218,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C4
+      - Exploration Site Class 4
     HideTasks: true
     Description: eden_pda_KqASO0u
     PictureFile: Eden_ProbeSystemT2.png
@@ -11215,10 +11245,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C4
+      - Exploration Site Class 4
     HideTasks: true
     Description: eden_pda_CGeUakq
     PictureFile: Eden_ProbeSystemT2.png
@@ -11248,10 +11278,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C5
+      - Exploration Site Class 5
     HideTasks: true
     Description: eden_pda_KSGGm4W
     PictureFile: Eden_ProbeSystemT3.png
@@ -11275,10 +11305,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C5
+      - Exploration Site Class 5
     HideTasks: true
     Description: eden_pda_e8GmW0u
     PictureFile: Eden_ProbeSystemT3.png
@@ -11308,10 +11338,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C6
+      - Exploration Site Class 6
     HideTasks: true
     Description: eden_pda_xu4aCLG
     PictureFile: Eden_ProbeSystemT4.png
@@ -11335,10 +11365,10 @@ Chapters:
         CompletedMessage: ''
     RepeatConditions:
       NumRepeats: 0
-      Delay: 1
       DelayAdd: 0
+      DelaySeconds: 1
     PlayfieldTypes:
-      - Eden_ExplorationSite_C6
+      - Exploration Site Class 6
     HideTasks: true
     Description: eden_pda_aKiuOmm
     PictureFile: Eden_ProbeSystemT4.png
@@ -11457,37 +11487,240 @@ Chapters:
       DelayAdd: 1
     CompletedMessage: dlg;Eden_Expedition_InitT2|
     StartMessage: norm;45|eden_pda_eOWqWGS
-  - ChapterTitle: eden_pda_e8A2Sqe
+  - ChapterTitle: eden_pda_eiuOS8a
     Category: SoloMission
     NoSkip: true
-    Activatable: Always
-    Visibility: Never
+    Activatable: Never
+    Visibility: Always
     PlayerLevel: 1
-    Group: eden_pda_jW0ui
-    StartMessage: norm;0|eden_pda_mCimWs4
-    CompletedMessage: dlg;Eden_Science_Init|
     Tasks:
-      - TaskTitle: eden_pda_WeSifxe
+      - TaskTitle: eden_pda_OGmSaim
         Actions:
-          - ActionTitle: eden_pda_uGCuOO8
-            Description: eden_pda_4mWeOW4
-            CompletedMessage: ''
+          - ActionTitle: eden_pda_WnaSKmC
+            Description: eden_pda_OWiei4e
             Check: WaitAction
+            Amount: 1
+    Description: eden_pda_4KqeuKu
+    Group: eden_pda_eq4SCei
+    RepeatConditions:
+      NumRepeats: 1
+  - ChapterTitle: eden_pda_CCsYWuG
+    Category: SoloMission
+    NoSkip: true
+    Activatable: ByCredits
+    Visibility: WhenRewarded
+    PlayerLevel: 1
+    Group: eden_pda_eq4SCei
+    Description: eden_pda_eKiGaK4
+    StartMessage: norm;30|eden_pda_8aCqaK4
+    Tasks:
+      - TaskTitle: eden_pda_mYaWaQC
+        Actions:
+          - ActionTitle: eden_pda_8Ou4qOS
+            Description: eden_pda_iqu4uCI
+            Check: PlayfieldTypeEntered
+            Names:
+              - Trading Station
+            IsOptional: 'true'
+            CompletedMessage: norm;20|eden_pda_KmO8k4g
+          - ActionTitle: eden_pda_GeSm80S
+            Description: eden_pda_eeMa4ms
+            CompletedMessage: norm;10|eden_pda_O0aIOSG
+            IsOptional: 'true'
+            Check: NearPoi
+            GuidingDistance: 25000
+            TriggerDistance: 250
+            Names:
+              - Eden_TSO_PolBulk
+          - ActionTitle: eden_pda_eI0iuSW
+            Description: eden_pda_S0GGm0S
+            CompletedMessage: ''
+            IsOptional: 'true'
+            Check: NearUnit
+            GuidingDistance: 250
+            TriggerDistance: 5
+            Names:
+              - Distribution Center
+              - Contact
+          - ActionTitle: eden_pda_OCJKSCK
+            Description: eden_pda_uSuCCiK
+            Check: DialogOption
+            Names:
+              - Eden_PolarisDistCenter_Mission4
+            Value: 1
+            CompletedMessage: ''
         StartMessage: ''
         CompletedMessage: ''
-    RepeatConditions:
-      NumRepeats: 0
-      Delay: 1
-      DelayAdd: 0
+      - TaskTitle: eden_pda_SOKWK08
+        Actions:
+          - ActionTitle: eden_pda_CKq8SqP
+            Description: eden_pda_8MqmaNS
+            Check: StarClassEntered
+            Names:
+              - K2-7
+            IsOrdered: 'true'
+            CompletedMessage: norm;20|eden_pda_CWiOOm6
+            IsOptional: 'false'
+          - ActionTitle: eden_pda_0mSKO0m
+            Description: eden_pda_aKaumi4
+            IsOrdered: 'true'
+            Check: PlayfieldTypeEntered
+            Names:
+              - MoonPolarisTestingOrbit
+            CompletedMessage: ''
+        StartMessage: norm;60|eden_pda_COKGaKe
+        CompletedMessage: ''
+      - TaskTitle: eden_pda_8mCe0Wm
+        Actions:
+          - ActionTitle: eden_pda_qiqC8UK
+            Description: eden_pda_eG0VWpC
+            CompletedMessage: norm;20|eden_pda_SeuSui0
+            Check: NearPoi
+            Names:
+              - Eden_BAO_PirateThief
+            GuidingDistance: 50000
+            TriggerDistance: 250
+            IsOrdered: 'false'
+            IsOptional: 'true'
+          - ActionTitle: eden_pda_S0iuSq8
+            Description: eden_pda_miQN8e4
+            IsOptional: 'true'
+            Check: NearUnit
+            GuidingDistance: 250
+            TriggerDistance: 5
+            CompletedMessage: ''
+            Names:
+              - Pirate Thieves
+              - Bridge Console
+          - ActionTitle: eden_pda_Q0Ci4i0
+            Check: DialogOption
+            Names:
+              - Eden_PirateThief_Logs
+            Value: 1
+            Description: eden_pda_O4me6We
+            CompletedMessage: ''
+            IsOrdered: 'false'
+        StartMessage: norm;20|eden_pda_OWOqmrq
+        CompletedMessage: ''
+      - TaskTitle: eden_pda_aemC3WK
+        Actions:
+          - ActionTitle: eden_pda_GOS4mmi
+            Description: eden_pda_C8n0044
+            Check: WaitAction
+            CompletedMessage: norm;20|eden_pda_m4guHii
+            IsOrdered: 'true'
+            Amount: 20
+          - ActionTitle: eden_pda_em2CKie
+            Description: eden_pda_au4KG0C
+            Check: PlayfieldTypeEntered
+            Names:
+              - MoonPolarisTesting
+            CompletedMessage: norm;15|eden_pda_W4i0Wae
+            IsOrdered: 'true'
+        StartMessage: norm;20|eden_pda_SWCRGGK
+        CompletedMessage: ''
+      - TaskTitle: eden_pda_ua8eO2W
+        Actions:
+          - ActionTitle: eden_pda_Ksmm8Q4
+            Description: eden_pda_Oi8qKKO
+            Check: NearPoi
+            Names:
+              - Eden_PolarisAutoRig1
+            GuidingDistance: 25000
+            TriggerDistance: 50
+            CompletedMessage: norm;30|eden_pda_OCaim00
+            IsOrdered: 'true'
+          - ActionTitle: eden_pda_uCqm4SV
+            Description: eden_pda_XOmmue0
+            Check: NearPoi
+            Names:
+              - Eden_PolarisAutoRig2
+            GuidingDistance: 25000
+            TriggerDistance: 50
+            CompletedMessage: norm;30|eden_pda_8qEGem8
+            IsOrdered: 'true'
+          - ActionTitle: eden_pda_4080Aom
+            Description: eden_pda_0eKeSKW
+            Check: NearPoi
+            Names:
+              - Eden_PolarisAutoRig3
+            GuidingDistance: 25000
+            TriggerDistance: 50
+            CompletedMessage: norm;30|eden_pda_8qKeGWS
+            IsOrdered: 'true'
+          - ActionTitle: eden_pda_4a0Om4C
+            Description: eden_pda_eCKiuKC
+            Check: NearPoi
+            Names:
+              - Eden_PolarisAutoRig4
+            GuidingDistance: 25000
+            TriggerDistance: 50
+            CompletedMessage: norm;30|eden_pda_QiEG0Oq
+            IsOrdered: 'true'
+          - ActionTitle: eden_pda_e8g0mK0
+            Description: eden_pda_ui4SKK0
+            Check: NearPoi
+            Names:
+              - Eden_PolarisAutoRig5
+            GuidingDistance: 25000
+            TriggerDistance: 50
+            CompletedMessage: high;10|eden_pda_qdamKu0
+            IsOrdered: 'true'
+        StartMessage: norm;30|eden_pda_u0eeOYF
+        CompletedMessage: ''
+        StartDelay: 15
+      - TaskTitle: eden_pda_4vSu8Cm
+        Actions:
+          - ActionTitle: eden_pda_eeuaqdW
+            Check: WaitAction
+            Amount: 20
+            Description: eden_pda_iOKi4IO
+            CompletedMessage: ''
+            IsOrdered: 'true'
+        StartMessage: norm;15|eden_pda_a84qSAq
+        CompletedMessage: ''
+        StartDelay: 10
+      - TaskTitle: eden_pda_G8e8mWK
+        Actions:
+          - ActionTitle: eden_pda_GuOGmmC
+            Description: eden_pda_iiSLWa8
+            Check: PlayfieldTypeEntered
+            Names:
+              - Trading Station
+            IsOptional: 'true'
+            CompletedMessage: norm;20|eden_pda_iquW8G9
+          - ActionTitle: eden_pda_OKCGaSu
+            Description: eden_pda_abmCqaQ
+            CompletedMessage: ''
+            IsOptional: 'true'
+            Check: NearPoi
+            GuidingDistance: 25000
+            TriggerDistance: 250
+            Names:
+              - Eden_TSO_PolBulk
+          - ActionTitle: eden_pda_eSqmweW
+            Description: eden_pda_kauaaC8
+            CompletedMessage: ''
+            IsOptional: 'true'
+            Check: NearUnit
+            GuidingDistance: 250
+            TriggerDistance: 5
+            Names:
+              - Distribution Center
+              - Contact
+          - ActionTitle: eden_pda_8WG8WSC
+            Description: eden_pda_qeOaGmu
+            Check: DialogOption
+            Names:
+              - Eden_PolarisDistCenter_Complete3
+            Value: 1
+            CompletedMessage: ''
+            IsOrdered: 'true'
+        StartMessage: norm;30|eden_pda_JOqeqCm
+        CompletedMessage: ''
+        StartDelay: 20
     HideTasks: true
-    Description: eden_pda_iiK8uvS
-    PictureFile: Eden_ProbeSystemT1.png
-    ChapterActivation:
-      - Check: InventoryOpened
-        Names:
-          - Eden_ScienceStation
-        NoSkip: 'true'
-        PopupActivatesChapter: 'true'
+    PlayerCredits: '3000000'
   - ChapterTitle: eden_pda_OTK8m
     Category: SoloMission
     NoSkip: false
@@ -12529,240 +12762,6 @@ Chapters:
         Count: 2000
     CompletedMessage: norm;45|eden_pda_tQOm1
     Group: eden_pda_G44W8
-  - ChapterTitle: eden_pda_eiuOS8a
-    Category: SoloMission
-    NoSkip: true
-    Activatable: Never
-    Visibility: Always
-    PlayerLevel: 1
-    Tasks:
-      - TaskTitle: eden_pda_OGmSaim
-        Actions:
-          - ActionTitle: eden_pda_WnaSKmC
-            Description: eden_pda_OWiei4e
-            Check: WaitAction
-            Amount: 1
-    Description: eden_pda_4KqeuKu
-    Group: eden_pda_eq4SCei
-    RepeatConditions:
-      NumRepeats: 1
-  - ChapterTitle: eden_pda_CCsYWuG
-    Category: SoloMission
-    NoSkip: true
-    Activatable: ByCredits
-    Visibility: WhenRewarded
-    PlayerLevel: 1
-    Group: eden_pda_eq4SCei
-    Description: eden_pda_eKiGaK4
-    StartMessage: norm;30|eden_pda_8aCqaK4
-    Tasks:
-      - TaskTitle: eden_pda_mYaWaQC
-        Actions:
-          - ActionTitle: eden_pda_8Ou4qOS
-            Description: eden_pda_iqu4uCI
-            Check: PlayfieldTypeEntered
-            Names:
-              - Trading Station
-            IsOptional: 'true'
-            CompletedMessage: norm;20|eden_pda_KmO8k4g
-          - ActionTitle: eden_pda_GeSm80S
-            Description: eden_pda_eeMa4ms
-            CompletedMessage: norm;10|eden_pda_O0aIOSG
-            IsOptional: 'true'
-            Check: NearPoi
-            GuidingDistance: 25000
-            TriggerDistance: 250
-            Names:
-              - Eden_TSO_PolBulk
-          - ActionTitle: eden_pda_eI0iuSW
-            Description: eden_pda_S0GGm0S
-            CompletedMessage: ''
-            IsOptional: 'true'
-            Check: NearUnit
-            GuidingDistance: 250
-            TriggerDistance: 5
-            Names:
-              - Distribution Center
-              - Contact
-          - ActionTitle: eden_pda_OCJKSCK
-            Description: eden_pda_uSuCCiK
-            Check: DialogOption
-            Names:
-              - Eden_PolarisDistCenter_Mission4
-            Value: 1
-            CompletedMessage: ''
-        StartMessage: ''
-        CompletedMessage: ''
-      - TaskTitle: eden_pda_SOKWK08
-        Actions:
-          - ActionTitle: eden_pda_CKq8SqP
-            Description: eden_pda_8MqmaNS
-            Check: StarClassEntered
-            Names:
-              - K2-7
-            IsOrdered: 'true'
-            CompletedMessage: norm;20|eden_pda_CWiOOm6
-            IsOptional: 'false'
-          - ActionTitle: eden_pda_0mSKO0m
-            Description: eden_pda_aKaumi4
-            IsOrdered: 'true'
-            Check: PlayfieldTypeEntered
-            Names:
-              - MoonPolarisTestingOrbit
-            CompletedMessage: ''
-        StartMessage: norm;60|eden_pda_COKGaKe
-        CompletedMessage: ''
-      - TaskTitle: eden_pda_8mCe0Wm
-        Actions:
-          - ActionTitle: eden_pda_qiqC8UK
-            Description: eden_pda_eG0VWpC
-            CompletedMessage: norm;20|eden_pda_SeuSui0
-            Check: NearPoi
-            Names:
-              - Eden_BAO_PirateThief
-            GuidingDistance: 50000
-            TriggerDistance: 250
-            IsOrdered: 'false'
-            IsOptional: 'true'
-          - ActionTitle: eden_pda_S0iuSq8
-            Description: eden_pda_miQN8e4
-            IsOptional: 'true'
-            Check: NearUnit
-            GuidingDistance: 250
-            TriggerDistance: 5
-            CompletedMessage: ''
-            Names:
-              - Pirate Thieves
-              - Bridge Console
-          - ActionTitle: eden_pda_Q0Ci4i0
-            Check: DialogOption
-            Names:
-              - Eden_PirateThief_Logs
-            Value: 1
-            Description: eden_pda_O4me6We
-            CompletedMessage: ''
-            IsOrdered: 'false'
-        StartMessage: norm;20|eden_pda_OWOqmrq
-        CompletedMessage: ''
-      - TaskTitle: eden_pda_aemC3WK
-        Actions:
-          - ActionTitle: eden_pda_GOS4mmi
-            Description: eden_pda_C8n0044
-            Check: WaitAction
-            CompletedMessage: norm;20|eden_pda_m4guHii
-            IsOrdered: 'true'
-            Amount: 20
-          - ActionTitle: eden_pda_em2CKie
-            Description: eden_pda_au4KG0C
-            Check: PlayfieldTypeEntered
-            Names:
-              - MoonPolarisTesting
-            CompletedMessage: norm;15|eden_pda_W4i0Wae
-            IsOrdered: 'true'
-        StartMessage: norm;20|eden_pda_SWCRGGK
-        CompletedMessage: ''
-      - TaskTitle: eden_pda_ua8eO2W
-        Actions:
-          - ActionTitle: eden_pda_Ksmm8Q4
-            Description: eden_pda_Oi8qKKO
-            Check: NearPoi
-            Names:
-              - Eden_PolarisAutoRig1
-            GuidingDistance: 25000
-            TriggerDistance: 50
-            CompletedMessage: norm;30|eden_pda_OCaim00
-            IsOrdered: 'true'
-          - ActionTitle: eden_pda_uCqm4SV
-            Description: eden_pda_XOmmue0
-            Check: NearPoi
-            Names:
-              - Eden_PolarisAutoRig2
-            GuidingDistance: 25000
-            TriggerDistance: 50
-            CompletedMessage: norm;30|eden_pda_8qEGem8
-            IsOrdered: 'true'
-          - ActionTitle: eden_pda_4080Aom
-            Description: eden_pda_0eKeSKW
-            Check: NearPoi
-            Names:
-              - Eden_PolarisAutoRig3
-            GuidingDistance: 25000
-            TriggerDistance: 50
-            CompletedMessage: norm;30|eden_pda_8qKeGWS
-            IsOrdered: 'true'
-          - ActionTitle: eden_pda_4a0Om4C
-            Description: eden_pda_eCKiuKC
-            Check: NearPoi
-            Names:
-              - Eden_PolarisAutoRig4
-            GuidingDistance: 25000
-            TriggerDistance: 50
-            CompletedMessage: norm;30|eden_pda_QiEG0Oq
-            IsOrdered: 'true'
-          - ActionTitle: eden_pda_e8g0mK0
-            Description: eden_pda_ui4SKK0
-            Check: NearPoi
-            Names:
-              - Eden_PolarisAutoRig5
-            GuidingDistance: 25000
-            TriggerDistance: 50
-            CompletedMessage: high;10|eden_pda_qdamKu0
-            IsOrdered: 'true'
-        StartMessage: norm;30|eden_pda_u0eeOYF
-        CompletedMessage: ''
-        StartDelay: 15
-      - TaskTitle: eden_pda_4vSu8Cm
-        Actions:
-          - ActionTitle: eden_pda_eeuaqdW
-            Check: WaitAction
-            Amount: 20
-            Description: eden_pda_iOKi4IO
-            CompletedMessage: ''
-            IsOrdered: 'true'
-        StartMessage: norm;15|eden_pda_a84qSAq
-        CompletedMessage: ''
-        StartDelay: 10
-      - TaskTitle: eden_pda_G8e8mWK
-        Actions:
-          - ActionTitle: eden_pda_GuOGmmC
-            Description: eden_pda_iiSLWa8
-            Check: PlayfieldTypeEntered
-            Names:
-              - Trading Station
-            IsOptional: 'true'
-            CompletedMessage: norm;20|eden_pda_iquW8G9
-          - ActionTitle: eden_pda_OKCGaSu
-            Description: eden_pda_abmCqaQ
-            CompletedMessage: ''
-            IsOptional: 'true'
-            Check: NearPoi
-            GuidingDistance: 25000
-            TriggerDistance: 250
-            Names:
-              - Eden_TSO_PolBulk
-          - ActionTitle: eden_pda_eSqmweW
-            Description: eden_pda_kauaaC8
-            CompletedMessage: ''
-            IsOptional: 'true'
-            Check: NearUnit
-            GuidingDistance: 250
-            TriggerDistance: 5
-            Names:
-              - Distribution Center
-              - Contact
-          - ActionTitle: eden_pda_8WG8WSC
-            Description: eden_pda_qeOaGmu
-            Check: DialogOption
-            Names:
-              - Eden_PolarisDistCenter_Complete3
-            Value: 1
-            CompletedMessage: ''
-            IsOrdered: 'true'
-        StartMessage: norm;30|eden_pda_JOqeqCm
-        CompletedMessage: ''
-        StartDelay: 20
-    HideTasks: true
-    PlayerCredits: '3000000'
   - ChapterTitle: eden_pda_NaIe0
     Category: SoloMission
     NoSkip: false
@@ -15490,6 +15489,52 @@ Chapters:
         Count: 10000
     RewardedChapters:
       - eden_pda_EE8CO
+  - ChapterTitle: eden_pda_euma0Km
+    Category: Tutorial
+    NoSkip: true
+    Activatable: Never
+    Visibility: Never
+    PlayerLevel: 1
+    Tasks:
+      - TaskTitle: eden_pda_i8uW20q
+        Actions:
+          - ActionTitle: eden_pda_S40i0mu
+            Description: eden_pda_u0uSWD4
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 1
+        OnCompletePlayfieldOps:
+          - 'SpawnDrone: 10; SpaceDroneLaser; NearPlayer; dummy; Alien'
+          - 'SpawnDrone: 5; SpaceDronePlasma; NearPlayer; dummy; Alien'
+          - 'SpawnDrone: 10; SpaceDroneLaser; NearPlayer; dummy; Eden_Defender'
+      - TaskTitle: eden_pda_WSmGOq4
+        Actions:
+          - ActionTitle: eden_pda_04uuOG8
+            Description: eden_pda_sGOqYma
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 10
+        StartMessage: high;10|eden_pda_em08Sei
+        CompletedMessage: ''
+    CompletedMessage: ''
+    ChapterActivation:
+      - Check: BlockDestroyed
+        Names:
+          - Eden_OPV_Xenuan
+        Types:
+          - TurretEnemyLaser
+          - ShieldGeneratorBAT2
+          - ThrusterMSRoundArmored3x3
+          - TurretEnemyRocket
+          - ThrusterMSRoundSlant2x2
+        Amount: 3
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    RepeatConditions:
+      NumRepeats: 0
+      DelaySeconds: 30
+      DelayAdd: 0
+      NoReminder: 'true'
   - ChapterTitle: eden_pda_aK0Ii
     Category: Tutorial
     NoSkip: true
@@ -16154,6 +16199,7 @@ Chapters:
       NumRepeats: 7
       Delay: 1
       DelayAdd: 0
+      NoReminder: 'true'
     Tasks:
       - TaskTitle: eden_pda_W88a4K0
         Actions:
@@ -16196,6 +16242,7 @@ Chapters:
       NumRepeats: 0
       Delay: 30
       DelayAdd: 0
+      NoReminder: 'true'
   - ChapterTitle: eden_pda_qGamSe0
     Category: Tutorial
     NoSkip: true
@@ -16227,6 +16274,7 @@ Chapters:
       NumRepeats: 0
       Delay: 30
       DelayAdd: 0
+      NoReminder: 'true'
   - ChapterTitle: eden_pda_aWa0uqW
     Category: Tutorial
     NoSkip: true
@@ -16245,6 +16293,7 @@ Chapters:
       NumRepeats: 5
       Delay: 1
       DelayAdd: 0
+      NoReminder: 'true'
     Tasks:
       - TaskTitle: eden_pda_7S84SGO
         Actions:
@@ -16274,6 +16323,7 @@ Chapters:
       NumRepeats: 7
       Delay: 1
       DelayAdd: 0
+      NoReminder: 'true'
     Tasks:
       - TaskTitle: eden_pda_vSE8que
         Actions:
@@ -16309,6 +16359,7 @@ Chapters:
       NumRepeats: 5
       Delay: 1
       DelayAdd: 0
+      NoReminder: 'true'
     Tasks:
       - TaskTitle: eden_pda_mmSCOak
         Actions:
@@ -16338,6 +16389,7 @@ Chapters:
       NumRepeats: 0
       Delay: 1
       DelayAdd: 0
+      NoReminder: 'true'
     CompletedMessage: ''
     Tasks:
       - TaskTitle: eden_pda_q0muFCS
@@ -16911,7 +16963,7 @@ Chapters:
         CompletedMessage: ''
         StartMessage: high;10|eden_pda_4umGC8O
         OnActivatePlayfieldOps:
-          - 'SpawnDrone: 10; SpaceDroneLaser; NearPlayer'
+          - 'SpawnDrone: 10; SpaceDroneLaser; NearPlayer; dummy; Warlord'
     ChapterActivation:
       - Check: BlockDestroyed
         Types:
@@ -16925,6 +16977,7 @@ Chapters:
       NumRepeats: 10
       Delay: 30
       DelayAdd: 15
+      NoReminder: 'true'
     HideTasks: true
     Rewards:
       - Type: UP
@@ -16953,8 +17006,12 @@ Chapters:
             Amount: 10
         StartMessage: high;10|eden_pda_OW3maaK
         OnActivatePlayfieldOps:
-          - 'SpawnDrone: 5; Eden_RogueDroneSwarmerLaser; NearPlayer'
-          - 'SpawnDrone: 5; Eden_RogueDroneSwarmerIon; NearPlayer'
+          - >-
+            SpawnDrone: 5; Eden_RogueDroneSwarmerLaser; NearPlayer; dummy;
+            Eden_DroneHome
+          - >-
+            SpawnDrone: 5; Eden_RogueDroneSwarmerIon; NearPlayer; dummy;
+            Eden_DroneHome
     ChapterActivation:
       - Check: BlockDestroyed
         Types:
@@ -16967,6 +17024,7 @@ Chapters:
       NumRepeats: 0
       Delay: 20
       DelayAdd: 0
+      NoReminder: 'true'
     HideTasks: true
     Rewards:
       - Type: UP

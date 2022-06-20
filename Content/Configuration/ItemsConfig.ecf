@@ -26661,7 +26661,8 @@
     
     
     TracerPerBullet: 1
-    Tracer: @rg_projectiles/RG_ProjectileBeamDrillTurret
+    # Tracer: @rg_projectiles/RG_ProjectileBeamDrillTurret
+    Tracer: @rg_projectiles/RG_ProjectileBeamDrillTurretv2
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
@@ -26762,7 +26763,7 @@
     
     
     TracerPerBullet: 1
-    Tracer: @rg_projectiles/RG_ProjectileBeamDrillTurretT2
+    Tracer: @rg_projectiles/RG_ProjectileBeamDrillTurretT2v2
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
@@ -26908,7 +26909,7 @@
     
     
     TracerPerBullet: 1
-    Tracer: @rg_projectiles/RG_ProjectileBeamDrillTurret
+    Tracer: @rg_projectiles/RG_ProjectileBeamDrillTurretv2
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat

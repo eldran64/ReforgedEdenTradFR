@@ -40963,7 +40963,7 @@ HullCombatSmallBlocks
   EnergyInIdle: 25, type: int, display: true, formatter: Watt
   HitPoints: 1000, type: int, display: true
   StackSize: 1000
-  MaxCount: 8, type: int, display: true
+  MaxCount: 10, type: int, display: true
   BlastParticleIndex: 4
   RepairToTemplate: false, display: true
 
@@ -41011,7 +41011,7 @@ HullCombatSmallBlocks
   EnergyInIdle: 25, type: int, display: true, formatter: Watt
   HitPoints: 1000, type: int, display: true
   StackSize: 1000
-  MaxCount: 8, type: int, display: true
+  MaxCount: 10, type: int, display: true
   BlastParticleIndex: 4
   RepairToTemplate: false, display: true
 
@@ -41054,7 +41054,7 @@ HullCombatSmallBlocks
   Category: Weapons/Items
   BlockColor: "110,110,110"
   StackSize: 500
-  MaxCount: 6, type: int, display: true
+  MaxCount: 12, type: int, display: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
@@ -41108,7 +41108,7 @@ HullCombatSmallBlocks
   Category: Weapons/Items
   BlockColor: "110,110,110"
   StackSize: 500
-  MaxCount: 6, type: int, display: true
+  MaxCount: 12, type: int, display: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
@@ -41162,7 +41162,7 @@ HullCombatSmallBlocks
   Category: Weapons/Items
   BlockColor: "110,110,110"
   StackSize: 500
-  MaxCount: 4, type: int, display: true
+  MaxCount: 6, type: int, display: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
@@ -42621,7 +42621,7 @@ HullCombatSmallBlocks
 
   WeaponItem: Eden_TurretLaserBeamCVT2_Weapon
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 7500, type: int, display: true
+  CPUIn: 25000, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 4000, type: int, display: true
@@ -42646,7 +42646,7 @@ HullCombatSmallBlocks
 
   WeaponItem: Eden_TurretLaserBeamCVT3_Weapon
   EnergyIn: 500, type: int, display: true, formatter: Watt
-  CPUIn: 7500, type: int, display: true
+  CPUIn: 25000, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 4500, type: int, display: true
@@ -42729,7 +42729,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 80
   EnergyIn: 10, type: int, display: true, formatter: Watt
-  CPUIn: 29100, type: int, display: true #  CPUIn: 75000, type: int, display: true
+  CPUIn: 75000, type: int, display: true
   Mass: 23108, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
   HitPoints: 9000, type: int, display: true
@@ -42755,7 +42755,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 80
   EnergyIn: 40, type: int, display: true, formatter: Watt
-  CPUIn: 40100, type: int, display: true #  CPUIn: 90000, type: int, display: true
+  CPUIn: 90000, type: int, display: true
   Mass: 23108, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
   HitPoints: 6500, type: int, display: true
@@ -43064,7 +43064,7 @@ HullCombatSmallBlocks
   StackSize: 1000
   XpFactor: 20
   AllowWander: true
-
+  TurretTargetIgnore: true
   
 }
 
@@ -43102,6 +43102,7 @@ HullCombatSmallBlocks
   Category: Devices
   HitPoints: 5000, type: int, display: true
   IsActivateable: true
+  TurretTargetIgnore: true
 }
 
 { +Block Name: Eden_FuelTankInvisible
@@ -43141,7 +43142,8 @@ HullCombatSmallBlocks
   CPUIn: 300, type: int, display: true
   HitPoints: 5000, type: int, display: true
   FuelAccept: "EnergyCell, EnergyCellLarge, EnergyCellHydrogen, FusionCell, BioFuel"
-  FuelCapacity: 1200, type: int, display: true    
+  FuelCapacity: 1200, type: int, display: true
+  TurretTargetIgnore: true
 }
 
 # ========================================================================================================================== PDC sentry
@@ -43851,7 +43853,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 80
   EnergyIn: 2500, type: int, display: true, formatter: Watt
-  CPUIn: 75000, type: int, display: true
+  CPUIn: 150000, type: int, display: true
   Volume: 10000, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 3450, type: int, display: true

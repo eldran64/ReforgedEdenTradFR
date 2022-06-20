@@ -2027,7 +2027,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 { GalaxyConfig, Name: K Type Star
@@ -2058,7 +2058,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 { GalaxyConfig, Name: K Type Star
@@ -2089,7 +2089,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 { GalaxyConfig, Name: K Type Star
@@ -2119,7 +2119,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 # Type K
@@ -2149,7 +2149,7 @@
   HabitableTemperate: "64, 89"
   HabitableCold: "90, 104"
   OuterSystem: "105, 132"
-  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 # Type M
@@ -4288,7 +4288,7 @@
   HabitableTemperate: "54, 59" 
   HabitableCold: "60, 64" 
   OuterSystem: "65, 112"
-  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
+  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
   GalaxySpawnAmount: 0
 }
 
@@ -4311,7 +4311,7 @@
   HabitableTemperate: "54, 59" 
   HabitableCold: "60, 64" 
   OuterSystem: "65, 112"
-  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
+  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
   GalaxySpawnAmount: 0
 }
 
@@ -4366,7 +4366,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
+  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 # Test2 star
@@ -4435,7 +4435,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
   GalaxySpawnAmount: 0
 }
 

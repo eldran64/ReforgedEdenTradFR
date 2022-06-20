@@ -114,6 +114,7 @@ HullCombatSmallBlocks
   Material: air
   Shape: Invisible
   Texture: 250
+  IsColorable: false
 }
 { Block Id: 1, Name: Stone
   Material: stone
@@ -1615,6 +1616,25 @@ HullCombatSmallBlocks
     Prob: 0.3
   }
 }
+{ +Block Id: 135, Name: CarbonResource
+  Material: resourcesoft
+  Shape: Terrain
+  Mesh: terrain
+  Texture: 219   
+  ShowUser: No
+  Group: resource
+  { Child DropOnDestroy_1
+    Item: PlasticMaterial
+    Count: "3,5"
+    Prob: 0.4
+  }
+  { Child DropOnDestroy_2
+    Item: Graphite
+    Count: "0,2"
+    Prob: 0.2
+  }
+}
+
 /* 131 - 255 available free */
 
 /* Block Entity start at id=256 */
@@ -3519,6 +3539,7 @@ HullCombatSmallBlocks
 { +Block Id: 339, Name: SurvivalTent
   Class: Sleeping
   Material: woodblock
+  LifetimeOnDrop: 1200
   Shape: Invisible
   MarketPrice: 43, display: true
   # Model: @models/Blocks/Terrain/SurvivalTent01Prefab
@@ -3545,6 +3566,11 @@ HullCombatSmallBlocks
   CanDecorateOnSlopes: false
   Model: @models2/Environment/Rocks/Misc/RockFormationOPrefab
   ShowUser: No
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "10,25"
+    Prob: 1
+  }
 }
 
 { +Block Id: 341, Name: RadarTracker
@@ -4620,8 +4646,27 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,1,1", display: true
 }
 
-# 415 available free BUILDING MATERIALS
-
+{ Block Id: 415, Name: RockResourceCarbon
+  Material: rockhard
+  Shape: Deco
+  IsDeco: true
+  Model: @models2/Environment/Rocks/Resources/RockResourceCarbonPrefab 
+  SizeInBlocks: "2,1,2"
+  BlockColor: "180,180,180"
+  # ShowBlockName: true
+  HitPoints: 20, type: int, display: true
+  ShowUser: No
+  { Child DropOnDestroy_1
+    Item: PlasticMaterial
+    Count: "6,12"
+    Prob: 1
+  }
+  { Child DropOnDestroy_2
+    Item: Graphite
+    Count: "2,5"
+    Prob: 0.5
+  }
+}
 
 { +Block Id: 416, Name: TrussCube
   Material: hullsteel
@@ -6490,7 +6535,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,2,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   Mass: 17000, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
@@ -10192,7 +10237,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   Mass: 200, type: float, display: true, formatter: Kilogram
   IsActivateable: true
   IsAccessible: true, type: bool
@@ -12065,7 +12110,7 @@ HullCombatSmallBlocks
 { Block Id: 742, Name: RealRock8, Ref: RealRock1
   Model: @models2/Environment/Rocks/RealRockVol1/RealRock8Prefab
   SizeInBlocks: "13,10,13"
-  XpFactor: 40.0
+  XpFactor: 20.0
   HitPoints: 1332, type: int, display: true
   # DecoParticle: rocks
   { Child DropOnDestroy_1
@@ -12387,7 +12432,7 @@ HullCombatSmallBlocks
 { Block Id: 760, Name: RealRock8Snow, Ref: RealRock2Snow
   Model: @models2/Environment/Rocks/RealRockVol1/RealRock8SnowPrefab
   SizeInBlocks: "13,10,13"
-  XpFactor: 38.0
+  XpFactor: 19.0
   HitPoints: 1332, type: int, display: true
   # DecoParticle: rocks
   { Child DropOnDestroy_1
@@ -13333,8 +13378,38 @@ HullCombatSmallBlocks
   TechTreeNames: Small Vessel
 }
 
-# available free 853, 854
-
+{ Block Id: 853, Name: RockResourcePlatinum
+  Material: rockhard
+  Shape: Deco
+  IsDeco: true
+  Model: @models2/Environment/Rocks/Resources/RockResourcePlatinPrefab 
+  SizeInBlocks: "2,1,2"
+  BlockColor: "180,180,180"
+  # ShowBlockName: true
+  HitPoints: 45, type: int, display: true
+  ShowUser: No
+  { Child DropOnDestroy_1
+    Item: PlatinOre
+    Count: "3,5"
+    Prob: 1
+  }
+}
+{ Block Id: 854, Name: RockResourceAluminium
+  Material: rockhard
+  Shape: Deco
+  IsDeco: true
+  Model: @models2/Environment/Rocks/Resources/RockResourceAluminiumPrefab 
+  SizeInBlocks: "2,1,2"
+  BlockColor: "180,180,180"
+  # ShowBlockName: true
+  HitPoints: 50, type: int, display: true
+  ShowUser: No
+  { Child DropOnDestroy_1
+    Item: AluminiumOre
+    Count: "6,12"
+    Prob: 1
+  }
+}
 { Block Id: 855, Name: Butte1
   Material: rockhard
   Shape: Deco
@@ -13418,7 +13493,7 @@ HullCombatSmallBlocks
 { Block Id: 868, Name: DesertRockMedium1
   Material: rockhard
   Shape: Deco
-  XpFactor: 58.0
+  XpFactor: 27.0
   IsTerrainDecoration: true
   IsDeco: true
   CanDecorateOnSlopes: false
@@ -13451,7 +13526,7 @@ HullCombatSmallBlocks
 { Block Id: 869, Name: DesertRockMedium2, Ref: DesertRockMedium1
   Model: @models2/Environment/Rocks/DesertRocks/DesertRockMedium2Prefab
   SizeInBlocks: "14,14,14"     # reality: "14,30,14"
-  XpFactor: 80.0
+  XpFactor: 40.0
   HitPoints: 5206, type: int, display: false  
   { Child DropOnDestroy_1
     Item: CrushedStone
@@ -13477,7 +13552,7 @@ HullCombatSmallBlocks
 { Block Id: 870, Name: DesertRockLarge, Ref: DesertRockMedium1
   Model: @models2/Environment/Rocks/DesertRocks/DesertRockLargePrefab
   SizeInBlocks: "14,14,14"     # reality: "14,40,14"
-  XpFactor: 110.0
+  XpFactor: 55.0
   HitPoints: 7053, type: int, display: false  
   { Child DropOnDestroy_1
     Item: CrushedStone
@@ -13778,7 +13853,7 @@ HullCombatSmallBlocks
   Material: rockhard
   Shape: Deco
   IsDeco: true
-  XpFactor: 96.0
+  XpFactor: 48.0
   Model: @models2/Environment/Rocks/AridRocks/AridRock01Prefab
   SizeInBlocks: "14,14,14"     # reality: "14,40,14"
   HitPoints: 7053, type: int, display: false  
@@ -13808,7 +13883,7 @@ HullCombatSmallBlocks
   Material: rockhard
   Shape: Deco
   IsDeco: true
-  XpFactor: 65.0
+  XpFactor: 32.0
   Model: @models2/Environment/Rocks/AridRocks/AridRock02Prefab
   SizeInBlocks: "12,14,12"     # reality: "12,20,12"
   HitPoints: 2411, type: int, display: false  
@@ -13838,7 +13913,7 @@ HullCombatSmallBlocks
   Material: rockhard
   Shape: Deco
   IsDeco: true
-  XpFactor: 68.0
+  XpFactor: 34.0
   Model: @models2/Environment/Rocks/AridRocks/AridRock03Prefab
   SizeInBlocks: "12,14,12"     # reality: "12,18,12"
   HitPoints: 2147, type: int, display: false  
@@ -14305,7 +14380,7 @@ HullCombatSmallBlocks
 { Block Id: 937, Name: RealRock8Water, Ref: RealRock1Water
   Model: @models2/Environment/Rocks/RealRockVol1/RealRock8Prefab
 # SizeInBlocks: "13,10,13"
-  XpFactor: 24.0
+  XpFactor: 16.0
   HitPoints: 1332, type: int, display: true
   # DecoParticle: rocks
   { Child DropOnDestroy_1
@@ -14510,7 +14585,7 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Rocks/DesertRockFormations/Pillar1Prefab
   SizeInBlocks: "7,13,7"
   ShowUser: No
-  XpFactor: 16.0
+  XpFactor: 12.0
   HitPoints: 435, type: int, display: true
   # DecoParticle: rocks
   { Child DropOnDestroy_1
@@ -18585,7 +18660,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: false
   Info: bkiBlockGroup, display: true
   Mass: 1, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   EnergyIn: 1, type: int, display: false, formatter: Watt
   Category: Devices 
   ChildBlocks: "CoreNPC, CoreNPCAdmin, TurretIONCannon, TurretIONCannon2, TurretEnemyLaser, TurretEnemyRocket, TurretEnemyArtillery, TurretEnemyEMP, SentryGun01, SentryGun01Retract, SentryGun02, SentryGun02Retract, SentryGun04, AlienContainer, AlienContainerRare, AlienContainerVeryRare, AlienContainerUltraRare, EntitySpawner1, EntitySpawnerPlateThin, DroneSpawner, DroneSpawner2, Trader, StandingAlienAssassin, StandingHexapod, ZiraxCommander, HoverEngineSmallDeco, HoverEngineLargeDeco, DancingAlien3, DancingAlien4, TalonChief, StandingTalon, ControlFieldGenerator, Foundation, JumpSeat, ShieldCapacitorPOI"
@@ -19365,7 +19440,7 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   IsAccessible: true, type: bool
   Mass: 80, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   AllowPlacingAt: Base, display: true
   HitPoints: 100, type: int, display: true
   SizeInBlocks: "1,1,1", display: true
@@ -24202,7 +24277,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   Mass: 8500, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
@@ -24271,7 +24346,7 @@ HullCombatSmallBlocks
   Volume: 40, type: float, display: true, formatter: Liter
   StackSize: 1000
   VolumeCapacity: 8000, type: float, display: true, formatter: Liter  
-  MaxVolumeCapacity: 320000, type: float, display: true, formatter: Liter     # 40 Containers
+  MaxVolumeCapacity: 640000, type: float, display: true, formatter: Liter     # 40 Containers
   Info: bkiContainerController, display: true                                      # adapt 
   ShowBlockName: true
   IsActivateableInCP: true
@@ -24346,7 +24421,7 @@ HullCombatSmallBlocks
   StackSize: 2000
   VolumeCapacity: 125, type: float, display: true, formatter: Liter
   CPUIn: 25, type: int, display: true  
-  MaxVolumeCapacity: 32000, type: float, display: true, formatter: Liter        # 128 Containers
+  MaxVolumeCapacity: 64000, type: float, display: true, formatter: Liter        # 128 Containers
   EnergyIn: 3, type: int, display: true, formatter: Watt
   AllowPlacingAt: "SS,GV", display: true
   
@@ -24404,6 +24479,7 @@ HullCombatSmallBlocks
   MarketPrice: 707, display: true
   Model: @models/Blocks/Mothership/ContainerHarvestControllerLargePrefab
   BlockColor: "62,30,10"
+  MaxVolumeCapacity: 320000, type: float, display: true, formatter: Liter
   Info: bkiContainerHarvest, display: true                                      # adapt 
   EnergyIn: 10, type: int, display: true, formatter: Watt
   AllowPlacingAt: "MS", display: true
@@ -24447,6 +24523,7 @@ HullCombatSmallBlocks
   MarketPrice: 1820, display: true
   Model: @models/Blocks/Mothership/ContainerAmmoControllerLargePrefab
   BlockColor: "0,40,0"
+  MaxVolumeCapacity: 320000, type: float, display: true, formatter: Liter
   Info: bkiContainerAmmo, display: true                                      # adapt 
   EnergyIn: 10, type: int, display: true, formatter: Watt
   AllowPlacingAt: "Base,MS", display: true
@@ -25087,6 +25164,11 @@ HullCombatSmallBlocks
 { +Block Id: 1740, Name: TribalBarrels, Ref: DecoTemplate
   Material: woodblock
   Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
   DropInventoryEntity: DropContainer
   LootList: 56
   VolumeCapacity: 750, type: float, display: true, formatter: Liter
@@ -25103,8 +25185,13 @@ HullCombatSmallBlocks
 { +Block Id: 1742, Name: TribalBaskets, Ref: DecoTemplate
   Material: woodblock
   Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
   DropInventoryEntity: DropContainer
-  LootList: 55
+  LootList: 203
   VolumeCapacity: 500, type: float, display: true, formatter: Liter
   Model: @models2/Entities/Decorations/TribalAssets/TribalBasketsPrefab
   SizeInBlocks: "1,1,1", display: true
@@ -25135,6 +25222,11 @@ HullCombatSmallBlocks
 { +Block Id: 1745, Name: TribalBookcase1, Ref: DecoTemplate
   Material: woodblock
   Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
   DropInventoryEntity: DropContainer
   LootList: 62
   VolumeCapacity: 800, type: float, display: true, formatter: Liter
@@ -25145,6 +25237,11 @@ HullCombatSmallBlocks
 { +Block Id: 1746, Name: TribalBookcase2, Ref: DecoTemplate
   Material: woodblock
   Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
   DropInventoryEntity: DropContainer
   LootList: 63
   VolumeCapacity: 400, type: float, display: true, formatter: Liter
@@ -25155,8 +25252,13 @@ HullCombatSmallBlocks
 { +Block Id: 1747, Name: TribalBuckets, Ref: DecoTemplate
   Material: woodblock
   Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
   DropInventoryEntity: DropContainer
-  LootList: 55
+  LootList: 204
   VolumeCapacity: 350, type: float, display: true, formatter: Liter
   Model: @models2/Entities/Decorations/TribalAssets/TribalBucketsPrefab
   SizeInBlocks: "1,1,1", display: true
@@ -25165,6 +25267,11 @@ HullCombatSmallBlocks
 { +Block Id: 1748, Name: TribalCabinet1, Ref: DecoTemplate
   Material: woodblock
   Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
   DropInventoryEntity: DropContainer
   LootList: 56
   VolumeCapacity: 500, type: float, display: true, formatter: Liter
@@ -25175,6 +25282,11 @@ HullCombatSmallBlocks
 { +Block Id: 1749, Name: TribalCabinet2, Ref: DecoTemplate
   Material: woodblock
   Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
   DropInventoryEntity: DropContainer
   LootList: 56
   VolumeCapacity: 500, type: float, display: true, formatter: Liter
@@ -25184,6 +25296,15 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1750, Name: TribalCauldron, Ref: DecoTemplate
   Material: woodblock
+  Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
+  DropInventoryEntity: DropContainer  
+  VolumeCapacity: 500, type: float, display: true, formatter: Liter  
+  LootList: 200
   Model: @models2/Entities/Decorations/TribalAssets/TribalCauldronPrefab
   SizeInBlocks: "1,1,1", display: true
   TemplateRoot: DecoTribalBlocks
@@ -25209,8 +25330,13 @@ HullCombatSmallBlocks
 { +Block Id: 1754, Name: TribalSacks, Ref: DecoTemplate
   Material: woodblock
   Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true 
   DropInventoryEntity: DropContainer
-  LootList: 54
+  LootList: 202
   VolumeCapacity: 500, type: float, display: true, formatter: Liter
   Model: @models2/Entities/Decorations/TribalAssets/TribalSacksPrefab
   SizeInBlocks: "1,1,1", display: true
@@ -25288,6 +25414,15 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1765, Name: TribalCauldron2, Ref: DecoTemplate
   Material: woodblock
+  Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
+  DropInventoryEntity: DropContainer  
+  VolumeCapacity: 500, type: float, display: true, formatter: Liter  
+  LootList: 200
   Model: @models2/Entities/Decorations/TribalAssets/TribalCauldron2Prefab
   SizeInBlocks: "1,1,1", display: true
   TemplateRoot: DecoTribalBlocks
@@ -25300,6 +25435,15 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1767, Name: TribalTub, Ref: DecoTemplate
   Material: woodblock
+  Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
+  DropInventoryEntity: DropContainer  
+  VolumeCapacity: 500, type: float, display: true, formatter: Liter  
+  LootList: 201
   Model: @models2/Entities/Decorations/TribalAssets/TribalTubPrefab
   SizeInBlocks: "1,1,1", display: true
   TemplateRoot: DecoTribalBlocks
@@ -25307,6 +25451,11 @@ HullCombatSmallBlocks
 { +Block Id: 1768, Name: TribalBox, Ref: DecoTemplate
   Material: woodblock
   Class: Container
+  IsAccessible: true, type: bool
+  IndexName: Container
+  Group: cpgCargoBox
+  Category: Devices 
+  IsLockable: true  
   DropInventoryEntity: DropContainer
   LootList: 56
   VolumeCapacity: 100, type: float, display: true, formatter: Liter
@@ -25806,7 +25955,7 @@ HullCombatSmallBlocks
   EnergyIn: 600, type: int, display: true, formatter: Watt
   CPUIn: 3000, type: int, display: true  
   EnergyInIdle: 75, type: int, display: true, formatter: Watt
-  ShieldCapacity: 1000, type: int, display: true
+  ShieldCapacity: 1500, type: int, display: true
   ShieldRecharge: 100, type: int, display: true     # recharge rate per sec
   ShieldCooldown: 16, type: int, display: true   # in seconds
   ShieldPerCrystal: 200, type: int, display: true
@@ -30660,7 +30809,7 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   HitPoints: 1500, type: int, display: true
   Mass: 22920, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   EnergyIn: 75000, type: int, display: true, formatter: Watt
   CPUIn: 500000, type: int, display: true  
   EnergyInIdle: 1000, type: int, display: true, formatter: Watt
@@ -30713,7 +30862,7 @@ HullCombatSmallBlocks
   EnergyIn: 300, type: int, display: true, formatter: Watt
   CPUIn: 1250, type: int, display: true  
   EnergyInIdle: 50, type: int, display: true, formatter: Watt
-  ShieldCapacity: 500, type: int, display: true
+  ShieldCapacity: 750, type: int, display: true
   ShieldRecharge: 75, type: int, display: true     # recharge rate per sec
   ShieldCooldown: 22, type: int, display: true   # in seconds
   ShieldPerCrystal: 150, type: int, display: true
@@ -30750,7 +30899,7 @@ HullCombatSmallBlocks
   EnergyIn: 1000, type: int, display: true, formatter: Watt
   CPUIn: 6000, type: int, display: true  
   EnergyInIdle: 100, type: int, display: true, formatter: Watt
-  ShieldCapacity: 1500, type: int, display: true
+  ShieldCapacity: 2250, type: int, display: true
   ShieldRecharge: 175, type: int, display: true     # recharge rate per sec
   ShieldCooldown: 12, type: int, display: true   # in seconds
   ShieldPerCrystal: 300, type: int, display: true
@@ -32071,7 +32220,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,2,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   Mass: 88000, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
@@ -32113,7 +32262,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   Mass: 5500, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
@@ -32171,7 +32320,7 @@ HullCombatSmallBlocks
   BlastDamage: 3000
   EnergyIn: 150, type: int, display: true, formatter: Watt
   CPUIn: 36000, type: int, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   Mass: 23520, type: float, display: true, formatter: Kilogram
   HitPoints: 7500, type: int, display: true
   OccupySizeInBlocks: true
@@ -32209,7 +32358,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,1,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter  
+  Volume: 1000000, type: float, display: true, formatter: Liter  
   Mass: 53960, type: float, display: true, formatter: Kilogram
   IsActivateable: true
   IsActivateableInCP: true
@@ -32272,7 +32421,7 @@ HullCombatSmallBlocks
   BlastRadius: 8
   BlastDamage: 15000
   Mass: 43208, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   EnergyIn: 155, type: int, display: true, formatter: Watt
   HitPoints: 7500, type: int, display: true 
   OccupySizeInBlocks: true
@@ -32317,7 +32466,7 @@ HullCombatSmallBlocks
   
   HitPoints: 3250, type: int, display: true
   RotSpeed: 120, type: int, display: true
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 2500, type: int, display: true, formatter: Watt
   CPUIn: 50000, type: int, display: true
   AboveTerrainCheck: true
   MarketPrice: 420920, display: false
@@ -32512,7 +32661,7 @@ HullCombatSmallBlocks
   HitPoints: 4000, type: int, display: false
   Info: Foundation Blocks. Indestructible., display: true
   Mass: 1000, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   CPUIn: 0, type: int, display: false
   Category: BuildingBlocks
   StackSize: 500
@@ -32550,7 +32699,7 @@ HullCombatSmallBlocks
   Mass: 150, type: float, display: true, formatter: Kilogram
   EnergyIn: 2500, type: int, display: true, formatter: Watt
   CPUIn: 50000, type: int, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   HitPoints: 350, type: int, display: true
   BlastParticleIndex: 10
   BlastRadius: 0
@@ -33149,10 +33298,10 @@ HullCombatSmallBlocks
   BlockColor: "220,220,220"
   Category: Devices
   HitPoints: 150, type: int, display: true
-  Mass: 980, type: float, display: true, formatter: Kilogram
+  Mass: 680, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
   EnergyIn: 250, type: int, display: true, formatter: Watt
-  CPUIn: 1450, type: int, display: true  
+  CPUIn: 1250, type: int, display: true  
   EnergyInIdle: 8, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: 500, type: int, display: true
   ShieldRechargeBonus: -25, type: int, display: true
@@ -33192,10 +33341,10 @@ HullCombatSmallBlocks
   BlockColor: "220,220,220"
   Category: Devices
   HitPoints: 150, type: int, display: true
-  Mass: 920, type: float, display: true, formatter: Kilogram
+  Mass: 620, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 1450, type: int, display: true  
+  CPUIn: 1250, type: int, display: true  
   EnergyInIdle: 3, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: -250, type: int, display: true
   ShieldRechargeBonus: 50, type: int, display: true
@@ -33238,7 +33387,7 @@ HullCombatSmallBlocks
   Category: Devices
   HitPoints: 250, type: int, display: true
   Mass: 1000, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   EnergyIn: 2000, type: int, display: true, formatter: Watt
   CPUIn: 0, type: int, display: false
   ShieldCapacityBonus: 5500, type: int, display: true
@@ -33268,7 +33417,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   HitPoints: 300, type: int, display: true
   Mass: 12850, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   EnergyIn: 15000, type: int, display: true, formatter: Watt
   CPUIn: 25000, type: int, display: true  
   EnergyInIdle: 100, type: int, display: true, formatter: Watt
@@ -33610,8 +33759,8 @@ HullCombatSmallBlocks
   SoundOnEnter: UseActions/DOOROpen02
   SoundRotate: Weapons/Turret/TurretRotateFast
   WeaponItem: TurretZiraxBeamWeaponT2
-  TemplateRoot: TurretBABeamLaserBlocks
-  PickupTarget: TurretBABeamLaserBlocks
+  TemplateRoot: TurretMSBeamLaserBlocksT2
+  PickupTarget: TurretMSBeamLaserBlocksT2
   AllowedInBlueprint: false, display: true
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,1,3", display: true
@@ -33631,7 +33780,7 @@ HullCombatSmallBlocks
   # EnergyInIdle: 35, type: int, display: true, formatter: Watt
   CPUIn: 75000, type: int, display: true
   Mass: 23520, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   HitPoints: 5200, type: int, display: true
   OccupySizeInBlocks: true
   RepairToTemplate: false, display: true
@@ -34775,6 +34924,8 @@ HullCombatSmallBlocks
   Info: bkiSteelRampBlocks, display: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
   Volume: 32, type: float, display: true, formatter: Liter
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   CPUIn: 0, type: int, display: false
   MarketPrice: 432, display: true
   UpgradeTo: HardenedRampBlocksL, display: true
@@ -34796,6 +34947,8 @@ HullCombatSmallBlocks
   Place: Free
   Texture: 50
   SymType: 1
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   IsTextureable: true
   IsGPUInstance: false
   SizeInBlocks: "1,1,3", display: true
@@ -34918,6 +35071,8 @@ HullCombatSmallBlocks
   Mass: 4000, type: float, display: true, formatter: Kilogram
   Volume: 32, type: float, display: true, formatter: Liter
   CPUIn: 0, type: int, display: false
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   MarketPrice: 1440, display: true
   UpgradeTo: CombatRampBlocksL, display: true
   Category: BuildingBlocks
@@ -34938,6 +35093,8 @@ HullCombatSmallBlocks
   Place: Free
   Texture: 50
   SymType: 1
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   IsTextureable: true
   IsGPUInstance: false
   SizeInBlocks: "1,1,3", display: true
@@ -35072,6 +35229,8 @@ HullCombatSmallBlocks
   Volume: 32, type: float, display: true, formatter: Liter
   CPUIn: 0, type: int, display: false
   MarketPrice: 1548, display: true
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   Category: BuildingBlocks
   ChildBlocks: "CombatRamp1x3L, CombatRamp1x2L, CombatRampEdge3x3L, CombatRampConnector3x3L, CombatRampConnector1x3L, CombatRampEdge1x3L, CombatRampEdge3x2RL, CombatRampEdge3x2LL, CombatRampConnector3x2RL, CombatRampConnector3x2LL, CombatRampEdge2x2L, CombatRampConnector2x2L"
   StackSize: 1000
@@ -35090,6 +35249,8 @@ HullCombatSmallBlocks
   Place: Free
   Texture: 50
   SymType: 1
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   IsTextureable: true
   IsGPUInstance: false
   SizeInBlocks: "1,1,3", display: true
@@ -35211,6 +35372,8 @@ HullCombatSmallBlocks
   Volume: 8, type: float, display: true, formatter: Liter
   CPUIn: 0, type: int, display: false
   MarketPrice: 96, display: true
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   UpgradeTo: HardenedRampBlocksS, display: true
   Category: BuildingBlocks
   ChildBlocks: "SteelRamp1x3S, SteelRamp1x2S, SteelRampEdge3x3S, SteelRampConnector3x3S, SteelRampConnector1x3S, SteelRampEdge1x3S, SteelRampEdge3x2RS, SteelRampEdge3x2LS, SteelRampConnector3x2RS, SteelRampConnector3x2LS, SteelRampEdge2x2S, SteelRampConnector2x2S"
@@ -35231,6 +35394,8 @@ HullCombatSmallBlocks
   Place: Free
   Texture: 50
   SymType: 1
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   IsTextureable: true
   IsGPUInstance: false
   SizeInBlocks: "1,1,3", display: true
@@ -35364,6 +35529,8 @@ HullCombatSmallBlocks
   Volume: 8, type: float, display: true, formatter: Liter
   CPUIn: 0, type: int, display: false
   MarketPrice: 320, display: true
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   UpgradeTo: CombatRampBlocksS, display: true
   Category: BuildingBlocks
   ChildBlocks: "HardenedRamp1x3S, HardenedRamp1x2S, HardenedRampEdge3x3S, HardenedRampConnector3x3S, HardenedRampConnector1x3S, HardenedRampEdge1x3S, HardenedRampEdge3x2RS, HardenedRampEdge3x2LS, HardenedRampConnector3x2RS, HardenedRampConnector3x2LS, HardenedRampEdge2x2S, HardenedRampConnector2x2S"
@@ -35388,6 +35555,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,1,3", display: true
   StackSize: 1000
   SymType: 1
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   OccupySizeInBlocks: true
   AllowPlacingAt: "SS,GV", display: true
   HitPoints: 350, type: int, display: true
@@ -35517,6 +35686,8 @@ HullCombatSmallBlocks
   Volume: 8, type: float, display: true, formatter: Liter
   CPUIn: 0, type: int, display: false
   MarketPrice: 344, display: true
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   Category: BuildingBlocks
   ChildBlocks: "CombatRamp1x3S, CombatRamp1x2S, CombatRampEdge3x3S, CombatRampConnector3x3S, CombatRampConnector1x3S, CombatRampEdge1x3S, CombatRampEdge3x2RS, CombatRampEdge3x2LS, CombatRampConnector3x2RS, CombatRampConnector3x2LS, CombatRampEdge2x2S, CombatRampConnector2x2S"
   StackSize: 1000
@@ -35540,6 +35711,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,1,3", display: true
   StackSize: 1000
   SymType: 1
+  IsAccessible: false, type: bool
+  IsDuplicateable: true
   OccupySizeInBlocks: true
   AllowPlacingAt: "SS,GV", display: true
   HitPoints: 700, type: int, display: true
@@ -35641,6 +35814,4117 @@ HullCombatSmallBlocks
   HitPoints: 360, type: int, display: true
   Mass: 80, type: float, display: true, formatter: Kilogram
 }
+# ============== New Trees and Deco 1.8 ====================
+{ Block Name: Alien_Dead_trunk_01
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Dead_trunk_01
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "8, 15"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Dead_trunk_02
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Dead_trunk_02
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "8, 15"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Fern1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Fern1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Flower1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Flower1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Flower2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Flower2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Flower3
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Flower3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Ground_Cover1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Ground_Cover1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 10"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Ground_Cover2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Ground_Cover2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 10"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Liana1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Liana1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 8"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Liana2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Liana2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 8"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Liana3
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Liana3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 8"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Mushroom_Big1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Mushroom_Big1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: MushroomBrown
+    Count: "3, 5"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Mushroom_Big2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Mushroom_Big2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: MushroomBrown
+    Count: "4, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Mushroom_Big3
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Mushroom_Big3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: MushroomBrown
+    Count: "3, 5"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Mushroom_Big4
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Mushroom_Big4
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: MushroomBrown
+    Count: "3, 5"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Mushroom_Big5
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Mushroom_Big5
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: MushroomBrown
+    Count: "3, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Nephente1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Nephente1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 9"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Nephente2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Nephente2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 9"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_01_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_01_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_01_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_01_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_02_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_02_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_02_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_02_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_03_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_03_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_03_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_03_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_03_3
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_03_3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_04
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_04
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_5_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_5_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_5_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_5_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 8"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_06_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_06_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_06_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_06_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_07
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_07
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_8_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_8_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_8_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_8_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_8_3
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_8_3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_8_4
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_8_4
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_9
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_9
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_10_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_10_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_10_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_10_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_11_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_11_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_11_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_11_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_12
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_12
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_13A
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_13A
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_13B
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_13B
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_14
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_14
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_15A
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_15A
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_15B
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_15B
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_15C
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_15C
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Plant_16
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Plant_16
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Roots Cover
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Roots Cover
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "3, 5"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Roots_01
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Roots_01
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "3, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Shroom_plant1_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Shroom_plant1_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Shroom_plant1_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Shroom_plant1_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Shroom_plant1_3
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Shroom_plant1_3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Shroom_plant2_1
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Shroom_plant2_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Shroom_plant2_2
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Shroom_plant2_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Shroom_plant2_3
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Shroom_plant2_3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Shroom_plant2_4
+  Material: woodsoft
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Shroom_plant2_4
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "5, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_ShroomTree_01_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_ShroomTree_01_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "4, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_ShroomTree_01_2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_ShroomTree_01_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "3, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_ShroomTree_01_3
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_ShroomTree_01_3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 8"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Shroomtree_02_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Shroomtree_02_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "3, 6"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Shroomtree_02_2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Shroomtree_02_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "3, 7"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_01_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_01_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 9"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_01_2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_01_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 8"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_02_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_02_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 8"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_03_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_03_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_03_2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_03_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 10"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_04_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_04_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 10"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_04_2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_04_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 10"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_04_3
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_04_3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 9"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_05_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_05_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 8"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_05_2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_05_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_06_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_06_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_06_2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_06_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_06_3
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_06_3
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_07
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_07
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_08
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_08
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_09_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_09_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_09_2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_09_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_Small_07_1
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_Small_07_1
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: Alien_Tree_Small_07_2
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Alien/Alien_Tree_Small_07_2
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Redwood_Sierra_Seedling
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Seedling
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Redwood_Sierra_Sapling
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Sapling
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Redwood_Sierra_Hero_Forest
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Hero_Forest
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Redwood_Sierra_Hero_Field
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Hero_Field
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Redwood_Sierra_Desktop_Forest
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Desktop_Forest
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Redwood_Sierra_Desktop_Field
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Redwood_Sierra_Desktop_Field
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Moss_Club_Desktop_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Moss_Club_Desktop_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Fern_Rock_Hero_2_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Fern_Rock_Hero_2_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Fern_Rock_Desktop_2_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Fern_Rock_Desktop_2_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Fern_Rock_Desktop_2_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Fern_Rock_Desktop_2_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Fern_Rock_Desktop_1_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Fern_Rock_Desktop_1_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Fern_Rock_Desktop_1_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Fern_Rock_Desktop_1_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Fern_Cinnamon_Hero_1_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Fern_Cinnamon_Hero_1_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Fern_Cinnamon_Hero_1_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/WestCoast/_Fern_Cinnamon_Hero_1_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Palmetto_Sabal_Desktop_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Palmetto_Sabal_Desktop_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Palmetto_Sabal_Desktop_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Palmetto_Sabal_Desktop_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Palm_Coconut_Hero_1_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Palm_Coconut_Hero_1_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Palm_Coconut_Hero_1_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Palm_Coconut_Hero_1_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Palm_Coconut_Desktop_Sapling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Palm_Coconut_Desktop_Sapling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Palm_Coconut_Desktop_Sapling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Palm_Coconut_Desktop_Sapling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Palm_Coconut_Desktop_2_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Palm_Coconut_Desktop_2_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Palm_Coconut_Desktop_2_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Palm_Coconut_Desktop_2_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Dracaena_Sapling_Desktop_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Dracaena_Sapling_Desktop_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Almond_Tropical_Sapling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Almond_Tropical_Sapling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Almond_Tropical_Sapling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Almond_Tropical_Sapling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Almond_Tropical_Desktop_2_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Almond_Tropical_Desktop_2_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Almond_Tropical_Desktop_2_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Almond_Tropical_Desktop_2_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Acacia_Sapling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Acacia_Sapling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Acacia_Sapling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Tropical/_Acacia_Sapling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Vine_Balloon_Desktop_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Vine_Balloon_Desktop_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Vine_Balloon_Desktop_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Vine_Balloon_Desktop_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Vine_Balloon_Desktop_2_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Vine_Balloon_Desktop_2_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Vine_Balloon_Desktop_2_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Vine_Balloon_Desktop_2_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Hero_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Sycamore_American_Hero_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Hero_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Sycamore_American_Hero_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _SweetGum_Sapling_Desktop_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_SweetGum_Sapling_Desktop_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _SweetGum_Sapling_Desktop_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_SweetGum_Sapling_Desktop_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Pine_Eastern_White_Desktop_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Pine_Eastern_White_Desktop_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Pine_Eastern_White_Desktop_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Pine_Eastern_White_Desktop_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_Willow_Seedling_Desktop_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Oak_Willow_Seedling_Desktop_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_Willow_Seedling_Desktop_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Oak_Willow_Seedling_Desktop_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_Willow_Sapling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Oak_Willow_Sapling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_Willow_Sapling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Oak_Willow_Sapling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Maple_Red_Hero_Field_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Maple_Red_Hero_Field_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Maple_Red_Hero_Field_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Maple_Red_Hero_Field_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Hickory_Pignut_Undergrowth_1_Hero
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Hickory_Pignut_Undergrowth_1_Hero
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Hickory_Pignut_Sapling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Hickory_Pignut_Sapling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Hickory_Pignut_Sapling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Temperate/_Hickory_Pignut_Sapling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Sapling_3_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Sapling_3_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Sapling_3_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Sapling_3_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Sapling_2_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Sapling_2_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Sapling_2_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Sapling_2_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Sapling_1_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Sapling_1_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Sapling_1_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Sapling_1_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Desktop_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Desktop_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Desktop_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Desktop_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Desktop_Field_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Desktop_Field_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Sycamore_American_Desktop_Field_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Sycamore/_Sycamore_American_Desktop_Field_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Sapling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Sapling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Sapling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Sapling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Field_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Field_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Field_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Field_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Field_3_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Field_3_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Field_3_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Field_3_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Field_2_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Field_2_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Field_2_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Field_2_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Field_1_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Field_1_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Oak_White_Desktop_Field_1_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Oak/_Oak_White_Desktop_Field_1_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Shagbark_Hickory_Seedling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Hickory/_Shagbark_Hickory_Seedling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Shagbark_Hickory_Seedling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Hickory/_Shagbark_Hickory_Seedling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Shagbark_Hickory_Sapling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Hickory/_Shagbark_Hickory_Sapling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Shagbark_Hickory_Sapling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Hickory/_Shagbark_Hickory_Sapling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Shagbark_Hickory_Desktop_2_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Hickory/_Shagbark_Hickory_Desktop_2_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Shagbark_Hickory_Desktop_2_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Hickory/_Shagbark_Hickory_Desktop_2_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Shagbark_Hickory_Desktop_1_Field_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Hickory/_Shagbark_Hickory_Desktop_1_Field_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Shagbark_Hickory_Desktop_1_Field_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Hickory/_Shagbark_Hickory_Desktop_1_Field_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_River_Desktop_2_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_River_Desktop_2_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_River_Desktop_2_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_River_Desktop_2_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_Paper_Sapling_Spring'
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_Paper_Sapling_Spring'
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_Paper_Sapling_Small_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_Paper_Sapling_Small_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_Paper_Sapling_Small_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_Paper_Sapling_Small_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_Paper_Sapling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_Paper_Sapling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_Paper_Desktop_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_Paper_Desktop_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_Paper_Desktop_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_Paper_Desktop_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_Paper_Desktop_Field_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_Paper_Desktop_Field_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Birch_Paper_Desktop_Field_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Birch/_Birch_Paper_Desktop_Field_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Desktop_1_Field_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Desktop_1_Field_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Desktop_1_Field_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Desktop_1_Field_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Desktop_1_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Desktop_1_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Desktop_1_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Desktop_1_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Desktop_2_Forest_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Desktop_2_Forest_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Desktop_2_Forest_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Desktop_2_Forest_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Sapling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Sapling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Sapling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Sapling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Seedling_Fall
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Seedling_Fall
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+{ Block Name: _Spruce_Norway_Seedling_Spring
+  Material: woodhard
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  Model: @models2/EnvironmentNew/Speedtree/Spruce/_Spruce_Norway_Seedling_Spring
+  DecoParticle: chinesebanyan
+  ShowUser: No
+  
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "5, 12"
+    Prob: 1
+  }
+}
+
+{ Block Name: Rock_small_2_4
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_small_2_4
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_small_2_3
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_small_2_3
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_small_2_2
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_small_2_2
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_small_2_1
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_small_2_1
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_small_1_5
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_small_1_5
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_small_1_4
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_small_1_4
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_small_1_3
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_small_1_3
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_small_1_2
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_small_1_2
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_small_1_1
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_small_1_1
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_22_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_22_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_21_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_21_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_20_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_20_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_19_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_19_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_18_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_18_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_17_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_17_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_16_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_16_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_15_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_15_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_14_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_14_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_13_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_13_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_12_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_12_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_11_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_11_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "200,750"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_10_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_10_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_09_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_09_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_08_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_08_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_07_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_07_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_06_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_06_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_05_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_05_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_04_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_04_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_03_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_03_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_02_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_02_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_Group_01_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_Group_01_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_16_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_16_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_15_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_15_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_14_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_14_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_13_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_13_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_12_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_12_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_11_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_11_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_10_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_10_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_09_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_09_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_08_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_08_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_07_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_07_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_06_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_06_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_05_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_05_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_04_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_04_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_03_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_03_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_02_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_02_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: Rock_01_LoDed
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/Rock_01_LoDed
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Stone_Group_3
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Stone_Group_3
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Stone_Group_2
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Stone_Group_2
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Stone_Group_1
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Stone_Group_1
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Stone_4
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Stone_4
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Stone_3
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Stone_3
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Stone_2
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Stone_2
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Stone_1
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Stone_1
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Soil_Cliff_5
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Soil_Cliff_5
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Soil_Cliff_4
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Soil_Cliff_4
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Soil_Cliff_3
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Soil_Cliff_3
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Soil_Cliff_2
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Soil_Cliff_2
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Soil_Cliff_1
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Soil_Cliff_1
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Rock_4
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Rock_4
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Rock_3
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Rock_3
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Rock_2
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Rock_2
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Rock_1
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Rock_1
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Pebble_Group_4
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Pebble_Group_4
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Pebble_Group_3
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Pebble_Group_3
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Pebble_Group_2
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Pebble_Group_2
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Pebble_Group_1
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Pebble_Group_1
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Pebble_4
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Pebble_4
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Pebble_3
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Pebble_3
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Pebble_2
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Pebble_2
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+{ Block Name: P_Pebble_1
+  Material: rock
+  Shape: Deco
+  IsTerrainDecoration: true
+  IsDeco: true
+  IsPlant: true
+  BigDecorationRadius: 10
+  ShowUser: No
+  Model: @models2/EnvironmentNew/Rocks/P_Pebble_1
+  { Child DropOnDestroy_1
+    Item: CrushedStone
+    Count: "5,12"
+    Prob: 1
+  }
+}
+
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Blocks
 # ============================================================================================================================================================================
@@ -36325,7 +40609,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 80
   EnergyIn: 10, type: int, display: true, formatter: Watt # 5
-  CPUIn: 24000, type: int, display: true # 5250
+  CPUIn: 24000, type: int, display: true
   Mass: 11554, type: float, display: true, formatter: Kilogram # 5777
   HitPoints: 6900, type: int, display: true # 3450
   MarketPrice: 60000, display: true
@@ -36878,7 +41162,7 @@ HullCombatSmallBlocks
   Category: Weapons/Items
   BlockColor: "110,110,110"
   StackSize: 500
-  MaxCount: 6, type: int, display: true
+  MaxCount: 4, type: int, display: true
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
@@ -37260,7 +41544,7 @@ HullCombatSmallBlocks
 
 # ========================================================================================================================== Antimatter Tank for the antimatter warp drive.
 { +Block Name: Eden_AntimatterTank, Ref: PentaxidTank
-  Info: Un grand réservoir Pentaxid permettant une plus grande portée de distorsion maximale lorsqu'il est utilisé avec un moteur de distorsion antimatière. [c][ff8000]C'est un dispositif extrêmement rare et cher. Gardez votre gabarit de réparation de vaisseau sans lui. Limité à 1 et ne s'empile pas avec des dispositifs similaires.[-][/c] \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
+  Info: Un grand réservoir Pentaxid permettant une plus grande portée de distorsion maximale lorsqu'il est utilisé avec un moteur de distorsion antimatière. [c][ff8000]C'est un dispositif extrêmement rare et cher. Enregistrer votre gabarit de réparation de vaisseau sans lui. Limité à 1 et ne s'empile pas avec des dispositifs similaires.[-][/c] \n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c], display: true
   Volume: 2250, type: float, display: true, formatter: Liter    
   VolumeCapacity: 9600, type: float, display: true, formatter: Liter #600 or 500 Refined Pentaxid
   HitPoints: 10000, type: int, display: true
@@ -37403,7 +41687,7 @@ HullCombatSmallBlocks
   Radiation: 25, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 40, display: true
 
-  UnlockCost: 0, display: true
+  UnlockCost: 1, display: true
   UnlockLevel: 4, display: true
   TechTreeParent: Eden_WarpDriveAntimatterSV
   TechTreeNames: Eden_TechTreeProgenitor
@@ -38285,7 +42569,6 @@ HullCombatSmallBlocks
   Info: Eden_GuardSpawnerAssaultCyborginfo, display: true
 }
 
-# Pirate Beam Laser Turret Infrared
 { +Block Name: Eden_TurretLaserBeamCV
   Class: TurretManual
   IndexName: Turret
@@ -38338,7 +42621,7 @@ HullCombatSmallBlocks
 
   WeaponItem: Eden_TurretLaserBeamCVT2_Weapon
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 25000, type: int, display: true
+  CPUIn: 7500, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 4000, type: int, display: true
@@ -38363,7 +42646,7 @@ HullCombatSmallBlocks
 
   WeaponItem: Eden_TurretLaserBeamCVT3_Weapon
   EnergyIn: 500, type: int, display: true, formatter: Watt
-  CPUIn: 25000, type: int, display: true
+  CPUIn: 7500, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 4500, type: int, display: true
@@ -38446,7 +42729,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 80
   EnergyIn: 10, type: int, display: true, formatter: Watt
-  CPUIn: 75000, type: int, display: true
+  CPUIn: 29100, type: int, display: true #  CPUIn: 75000, type: int, display: true
   Mass: 23108, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
   HitPoints: 9000, type: int, display: true
@@ -38472,7 +42755,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 80
   EnergyIn: 40, type: int, display: true, formatter: Watt
-  CPUIn: 90000, type: int, display: true
+  CPUIn: 40100, type: int, display: true #  CPUIn: 90000, type: int, display: true
   Mass: 23108, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
   HitPoints: 6500, type: int, display: true
@@ -38592,6 +42875,86 @@ HullCombatSmallBlocks
   TechTreeNames: "Base,Capital Vessel"
 }
 
+# Exploration Scanner
+{ +Block Name: Eden_ExplorationScannerCV
+  # CustomIcon: StationConsole
+  CustomIcon: ScifiComputerTable
+  Class: Container
+  IndexName: Container
+  Group: cpgEquipment
+  LootList: 800
+  Material: metal
+  Shape: ModelEntity
+  ShowBlockName: true
+  # Model: @models2/Entities/Decorations/HolographicAIConsole/HolographicAIConsolePrefab
+  Model: @models2/Entities/Decorations/Sci-Fi_InteriorPack/ScifiComputerTablePrefab
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab             #Large container box; Available variants: see start of this document!  
+  DropInventoryEntity: DropContainer
+  Place: Free
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"      # scaled small on SV, GV
+  Mass: 50, type: float, display: true, formatter: Kilogram
+  Volume: 20, type: float, display: true, formatter: Liter
+  VolumeCapacity: 0, type: float, display: true, formatter: Liter       # low value since placed on Base,MS,SS,GV
+  BlockColor: "75,75,75"
+  Info: Eden_ExplorationScannerCVinfo, display: true
+  # ModelOffset: "0,0.5,0"
+  StackSize: 1000
+  #  IsAccessible: false, type: bool
+  # IsActivateableInCP: true
+  IsLockable: true
+  # IsOxygenTight: true, display: true
+  IsAccessible: false, type: bool
+  Category: Devices
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  CPUIn: 50000, type: int, display: true
+  HitPoints: 500, type: int, display: true
+  BlastParticleIndex: 4
+}
+
+# Exploration Scanner
+{ +Block Name: Eden_ScienceStation
+  # CustomIcon: StationConsole
+  CustomIcon: ConsoleMapMS01
+  Class: Container
+  IndexName: Container
+  Group: cpgEquipment
+  LootList: 800
+  Material: metal
+  Shape: ModelEntity
+  ShowBlockName: true
+  # Model: @models2/Entities/Decorations/HolographicAIConsole/HolographicAIConsolePrefab
+  Model: @models/Blocks/Mothership/ConsoleMapMS01Prefab
+  # Model: @eden_blockmodels/Eden_ModelScienceStation
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab             #Large container box; Available variants: see start of this document!  
+  DropInventoryEntity: DropContainer
+  Place: Free
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"      # scaled small on SV, GV
+  IsActivateable: true
+  IsActivateableInCP: true
+  Mass: 50, type: float, display: true, formatter: Kilogram
+  Volume: 20, type: float, display: true, formatter: Liter
+  VolumeCapacity: 0, type: float, display: true, formatter: Liter       # low value since placed on Base,MS,SS,GV
+  BlockColor: "110,110,110"
+  IsColorable: true
+  IsTextureable: false
+  Info: Eden_ScienceStationinfo, display: true
+  # ModelOffset: "0,0.5,0"
+  StackSize: 1000
+  #  IsAccessible: false, type: bool     
+  # IsActivateableInCP: true
+  IsLockable: true
+  # IsOxygenTight: true, display: true
+  IsAccessible: false, type: bool
+  Category: Devices
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  CPUIn: 50000, type: int, display: true
+  HitPoints: 500, type: int, display: true
+  BlastParticleIndex: 4
+}
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------------------------------------- Player Deco and Misc
@@ -38614,9 +42977,10 @@ HullCombatSmallBlocks
   Info: Un groupe de blocs pour placer les dispositifs POI par défaut et Project Eden en mode créatif. Clic droit pour changer de type. Non autorisé dans les plans. \n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c], display: true
   Mass: 1, type: float, display: true, formatter: Kilogram
   EnergyIn: 1, type: int, display: false, formatter: Watt
+  Volume: 800000, type: float, display: true, formatter: Liter
   Category: Devices
   # ChildBlocks: "CoreNPC, CoreNPCAdmin, TurretIONCannon, TurretIONCannon2, TurretEnemyLaser, TurretEnemyRocket, TurretEnemyArtillery, TurretEnemyEMP, SentryGun01, SentryGun01Retract, SentryGun02, SentryGun02Retract, AlienContainer, AlienContainerRare, AlienContainerVeryRare, AlienContainerUltraRare, EntitySpawner1, EntitySpawnerPlateThin, DroneSpawner, DroneSpawner2, Trader, "
-  ChildBlocks: "Eden_CoreNPCSpecial, Eden_CoreNPCFake, Eden_CoreNPCInvisible, Eden_GeneratorInvisible, Eden_FuelTankInvisible, Eden_SpawnerOrganic, Eden_DroneSpawnerInvisible, Eden_TurretPlasmaSmall, Eden_TurretAlienPDCT1, Eden_TurretAlienPDCT1_2, Eden_TurretAlienBlaster, Eden_TurretAlienBlasterT2, Eden_TurretRocketRapid, Eden_TurretAlienMissileSwarm, Eden_TurretMissileCruisePOI, Eden_TurretMissileCruisePOIT2, Eden_TurretTorpedo, Eden_PlasmaTurretAugmented, Eden_TurretAlienDisruptor, Eden_TurretAlienLaserT4, Eden_TurretRaiderLaser, Eden_TurretRaiderLaserT2, Eden_TurretRaiderLaserT3, Eden_TurretRaiderLaserT4, Eden_TurretBeamHeavyPOIT1, Eden_CargoContainerReinforcedS, Eden_CargoContainerReinforcedL, Eden_CargoContainerReinforcedL2, Eden_StatueDialog, Eden_ShieldGeneratorPOILightT0, Eden_ShieldGeneratorPOILightT1, Eden_ShieldGeneratorPOILightT2, Eden_ShieldGeneratorPOILightT3, Eden_ShieldGeneratorRegenerate, Eden_ShieldGeneratorRegenerateT2, Eden_ShieldGeneratorRegenerateT3, Eden_ShieldGeneratorRegenerateT4, Eden_ShieldGeneratorBastionT0, Eden_ShieldGeneratorBastion, Eden_ShieldGeneratorBastionT2, Eden_ShieldGeneratorBastionT3, Eden_ShieldGeneratorBastionT4, Eden_DecoyAlienTurretSmall, Eden_DecoyAlienTurretLarge, Eden_DecoyAlienGenSmall, Eden_DecoyAlienGenLarge, Eden_ECMAlienTurretLarge, Eden_ECMAlienGenLarge, Eden_RadioPirates, Eden_RadioColonists, Eden_RadioDroneSwarm, Eden_DecoMiningLaserYellow, Eden_DecoMiningLaserYellow2, Eden_DecoMiningLaserBlue, Eden_DecoMiningLaserBlue2"
+  ChildBlocks: "Eden_CoreNPCSpecial, Eden_CoreNPCFake, Eden_CoreNPCInvisible, Eden_GeneratorInvisible, Eden_FuelTankInvisible, Eden_SpawnerOrganic, Eden_DroneSpawnerInvisible, Eden_TurretPlasmaSmall, Eden_TurretAlienPDCT1, Eden_TurretAlienPDCT1_2, Eden_TurretAlienBlaster, Eden_TurretAlienBlasterT2, Eden_TurretRocketRapid, Eden_TurretAlienMissileSwarm, Eden_TurretMissileCruisePOI, Eden_TurretMissileCruisePOIT2, Eden_TurretTorpedo, Eden_PlasmaTurretAugmented, Eden_TurretAlienDisruptor, Eden_TurretAlienLaserT4, Eden_TurretBeamHeavyPOIT1, Eden_TurretAlienShieldBooster, Eden_CargoContainerReinforcedS, Eden_CargoContainerReinforcedL, Eden_CargoContainerReinforcedL2, Eden_StatueDialog, Eden_ShieldGeneratorPOILightT0, Eden_ShieldGeneratorPOILightT1, Eden_ShieldGeneratorPOILightT2, Eden_ShieldGeneratorPOILightT3, Eden_ShieldGeneratorRegenerate, Eden_ShieldGeneratorRegenerateT2, Eden_ShieldGeneratorRegenerateT3, Eden_ShieldGeneratorRegenerateT4, Eden_ShieldGeneratorBastionT0, Eden_ShieldGeneratorBastion, Eden_ShieldGeneratorBastionT2, Eden_ShieldGeneratorBastionT3, Eden_ShieldGeneratorBastionT4, Eden_DecoyAlienTurretSmall, Eden_DecoyAlienTurretLarge, Eden_DecoyAlienGenSmall, Eden_DecoyAlienGenLarge, Eden_ECMAlienTurretLarge, Eden_ECMAlienGenLarge, Eden_RadioPirates, Eden_RadioColonists, Eden_RadioDroneSwarm, Eden_DecoMiningLaserYellow, Eden_DecoMiningLaserYellow2, Eden_DecoMiningLaserBlue, Eden_DecoMiningLaserBlue2"
 }
 
 { +Block Name: Eden_CoreNPCSpecial, Ref: CoreNPC
@@ -38624,7 +42988,7 @@ HullCombatSmallBlocks
   Material: edenadmin
   Model: @models/Blocks/Misc/CoreBlockNPCAdminPrefab
   BlockColor: "171,32,161"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   HitPoints: 20000, type: int, display: true
 }
 
@@ -38653,7 +43017,7 @@ HullCombatSmallBlocks
   HitPoints: 25, type: int, display: false
   CPUIn: 1, type: int, display: true
   Mass: 500, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Category: Devices
   
   BlastParticleIndex: 4
@@ -38696,7 +43060,7 @@ HullCombatSmallBlocks
   #CPUOut: 7500, type: int, display: true
   HitPoints: 5000, type: int, display: true
   Mass: 313, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   StackSize: 1000
   XpFactor: 20
   AllowWander: true
@@ -38723,7 +43087,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 1480, type: float, display: true, formatter: Kilogram
   TemplateRoot: GeneratorBA
   PickupTarget: GeneratorBA
@@ -38770,7 +43134,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   Mass: 1386, type: float, display: true, formatter: Kilogram    # should be dynamic
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Info: Eden_FuelTankInvisibleinfo, display: true
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
@@ -38791,7 +43155,7 @@ HullCombatSmallBlocks
   WeaponItem: Eden_TurretAlienPDCT1_Weapon
   HitPoints: 300, type: int, display: true
   MarketPrice: 10000, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
 
   UnlockLevel: 1
   TechTreeNames: Hidden
@@ -38837,6 +43201,7 @@ HullCombatSmallBlocks
   HitPoints: 4000, type: int, display: true
   MarketPrice: 50000, display: true
   Volume: 10000, type: float, display: true, formatter: Liter
+  RepairToTemplate: false, display: true
   
   RotSpeed: 50, type: int, display: true
   Zoom: 3, type: float
@@ -38869,7 +43234,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 8500, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
@@ -38916,7 +43281,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,1,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 8490, type: float, display: true, formatter: Kilogram
   IsActivateable: true
   IsActivateableInCP: true
@@ -39237,7 +43602,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 80
   Mass: 5777, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   EnergyIn: 25, type: int, display: true, formatter: Watt
   HitPoints: 3450, type: int, display: true
   MarketPrice: 100000, display: true
@@ -39289,7 +43654,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 80
   Mass: 5777, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   EnergyIn: 25, type: int, display: true, formatter: Watt
   HitPoints: 3450, type: int, display: true
   MarketPrice: 500000, display: true
@@ -39325,7 +43690,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,2,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 8500, type: float, display: true, formatter: Kilogram
   StackSize: 250
   MaxCount: 4, type: int, display: true
@@ -39377,7 +43742,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,2,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   StackSize: 1000
   MaxCount: 1, type: int, display: true
   ForceMaxCount: true
@@ -39410,7 +43775,7 @@ HullCombatSmallBlocks
   BlastRadius: 3
   BlastDamage: 100
   MarketPrice: 50000, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   
   HitPoints: 5000, type: int, display: true
   RotSpeed: 160, type: int, display: true
@@ -39418,7 +43783,8 @@ HullCombatSmallBlocks
 
 
 # ========================================================================================================================== Syndicate Blasters
-{ +Block Name: Eden_TurretAlienBlaster, Ref: TurretEnemyLaser
+# { +Block Name: Eden_TurretAlienBlaster, Ref: TurretEnemyLaser
+{ +Block Name: Eden_TurretAlienBlaster, Ref: TurretZiraxMSPlasma
   CustomIcon: TurretZiraxMSPlasma
   AllowedInBlueprint: false, display: true
   Model: @models/Blocks/Turrets/TurretZiraxSpherical_PlasmaPrefab
@@ -39428,7 +43794,7 @@ HullCombatSmallBlocks
   TemplateRoot: TurretMSProjectileBlocks
   WeaponItem: Eden_TurretAlienBlaster_Weapon
   RotSpeed: 150, type: int, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   CPUIn: 8100, type: int, display: true
   AboveTerrainCheck: false
   HitPoints: 3750, type: int, display: true
@@ -39445,7 +43811,7 @@ HullCombatSmallBlocks
   TemplateRoot: TurretMSProjectileBlocks
   WeaponItem: Eden_TurretAlienBlasterT2_Weapon
   RotSpeed: 75, type: int, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   CPUIn: 8100, type: int, display: true
   AboveTerrainCheck: false
   HitPoints: 7500, type: int, display: true
@@ -39461,8 +43827,8 @@ HullCombatSmallBlocks
   MarketPrice: 65000, display: true
   Category: Weapons/Items
   Info: Eden_TurretRaiderLaserinfo, display: true
-  PickupTarget: Eden_TurretLaserBeamCV
-  TemplateRoot: Eden_TurretLaserBeamCV
+  # PickupTarget: Eden_TurretRaiderLaser
+  # TemplateRoot: Eden_TurretRaiderLaser
   AllowedInBlueprint: false, display: true
   Material: metalhard
   Shape: Turret
@@ -39484,9 +43850,9 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 3
   BlastDamage: 80
-  EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 15100, type: int, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  EnergyIn: 2500, type: int, display: true, formatter: Watt
+  CPUIn: 75000, type: int, display: true
+  Volume: 10000, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 3450, type: int, display: true
 
@@ -39498,14 +43864,12 @@ HullCombatSmallBlocks
   CustomIcon: TurretZiraxMSLaser
   MarketPrice: 65000, display: true
   Info: Eden_TurretRaiderLaserinfo, display: true
-  PickupTarget: Eden_TurretLaserBeamCV
-  TemplateRoot: Eden_TurretLaserBeamCV
+  # PickupTarget: Eden_TurretRaiderLaserT2
+  # TemplateRoot: Eden_TurretRaiderLaserT2
 
   WeaponItem: Eden_TurretRaiderLaserT2_Weapon
 
-  EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 15100, type: int, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  EnergyIn: 2500, type: int, display: true, formatter: Watt
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 3450, type: int, display: true
 
@@ -39517,14 +43881,12 @@ HullCombatSmallBlocks
   CustomIcon: TurretZiraxMSLaser
   MarketPrice: 65000, display: true
   Info: Eden_TurretRaiderLaserinfo, display: true
-  PickupTarget: Eden_TurretLaserBeamCV
-  TemplateRoot: Eden_TurretLaserBeamCV
+  # PickupTarget: Eden_TurretRaiderLaserT3
+  # TemplateRoot: Eden_TurretRaiderLaserT3
 
   WeaponItem: Eden_TurretRaiderLaserT3_Weapon
 
   EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 15100, type: int, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 6900, type: int, display: true
 
@@ -39541,9 +43903,7 @@ HullCombatSmallBlocks
 
   WeaponItem: Eden_TurretRaiderLaserT4_Weapon
 
-  EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 15100, type: int, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  EnergyIn: 2500, type: int, display: true, formatter: Watt
   Mass: 11760, type: float, display: true, formatter: Kilogram
   HitPoints: 6900, type: int, display: true
 
@@ -39576,7 +43936,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,2,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 8500, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
@@ -39643,7 +44003,7 @@ HullCombatSmallBlocks
   EnergyIn: 5, type: int, display: true, formatter: Watt
   CPUIn: 10500, type: int, display: true
   Mass: 5777, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   HitPoints: 3450, type: int, display: true
   MarketPrice: 500000, display: true
 
@@ -39778,6 +44138,45 @@ HullCombatSmallBlocks
   # TechTreeNames: "Hidden"
 }
 
+# ========================================================================================================================== Alien Remote Shield Booster Turret
+{ +Block Name: Eden_TurretAlienShieldBooster
+  CustomIcon: TurretIONCannon2
+  AllowedInBlueprint: false, display: true
+  Info: Eden_TurretAlienShieldBoosterinfo, display: true
+  Class: TurretAuto
+  Group: Eden_GroupShieldBoost
+  IndexName: Turret
+  Material: metalhard
+  Shape: Turret
+  TemplateRoot: Eden_AuxillaryCPUSV
+  PickupTarget: Eden_AuxillaryCPUSV
+  Place: Face
+  Model: @models/Blocks/Turrets/TurretsEnemy/turretIONcannon2Prefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  SoundOnEnter: UseActions/DOOROpen02
+  WeaponItem: Eden_TurretAlienShieldBooster_Weapon
+  BlockColor: "15,10,10"
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "3,2,3", display: true
+  SizeInBlocksLocked: "Base,MS"
+  Volume: 800000, type: float, display: true, formatter: Liter
+  StackSize: 1000
+  MaxCount: 16, type: int, display: true
+  IsActivateable: true
+  Category: Weapons/Items
+  BlastParticleName: @rg_projectiles/RG_BlastDroneMissile
+  BlastParticleIndex: 0
+  BlastRadius: 4
+  BlastDamage: 40000
+  HitPoints: 5000, type: int, display: true
+  RotSpeed: 250, type: int, display: true
+  EnergyIn: 25000, type: int, display: true, formatter: Watt
+  CPUIn: 500000, type: int, display: true
+  Mass: 8500, type: float, display: true, formatter: Kilogram
+  XpFactor: 2
+  AboveTerrainCheck: false
+  MarketPrice: 5000000, display: true
+}
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------------------------------------- POI Blocks and Devices
@@ -39790,7 +44189,7 @@ HullCombatSmallBlocks
   ShowUser: Yes
   IsAccessible: true, type: bool
   AllowedInBlueprint: false, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   ShieldCapacityBonus: 25000, type: int, display: true
   ShieldRechargeBonus: 0, type: int, display: true
   PickupTarget: HullCombatFullLarge
@@ -39836,7 +44235,7 @@ HullCombatSmallBlocks
   AllowedInBlueprint: false, display: true     
   AllowPlacingAt: "Base,MS", display: true
 
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   EnergyIn: 5000000, type: int, display: true, formatter: Watt
   CPUIn: 5000000, type: int, display: true  
   EnergyInIdle: 5000000, type: int, display: true, formatter: Watt
@@ -39898,7 +44297,7 @@ HullCombatSmallBlocks
   AllowedInBlueprint: false, display: true
   AllowPlacingAt: "Base,MS", display: true
 
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   EnergyIn: 5000000, type: int, display: true, formatter: Watt
   CPUIn: 5000000, type: int, display: true
   EnergyInIdle: 5000000, type: int, display: true, formatter: Watt
@@ -39944,7 +44343,7 @@ HullCombatSmallBlocks
   AllowedInBlueprint: false, display: true     
   AllowPlacingAt: "Base,MS", display: true
 
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   HitPoints: 250, type: int, display: true
   ShieldCapacity: 5000, type: int, display: true
   ShieldRecharge: 50, type: int, display: true # per second
@@ -40061,7 +44460,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   IsDuplicateable: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   StackSize: 500
   TemplateRoot: AntennaBlocks
   PickupTarget: AntennaBlocks
@@ -40124,7 +44523,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   StackSize: 500
   TemplateRoot: AntennaBlocks
   PickupTarget: AntennaBlocks
@@ -40157,7 +44556,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,6,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   StackSize: 500
   TemplateRoot: AntennaBlocks
   PickupTarget: AntennaBlocks
@@ -40193,7 +44592,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,19,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   StackSize: 500
   TemplateRoot: AntennaBlocks
   PickupTarget: AntennaBlocks
@@ -40226,7 +44625,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   StackSize: 500
   TemplateRoot: AntennaBlocks
   PickupTarget: AntennaBlocks
@@ -40259,7 +44658,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,6,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   StackSize: 500
   TemplateRoot: AntennaBlocks
   PickupTarget: AntennaBlocks
@@ -40294,7 +44693,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "3,19,3", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   StackSize: 500
   TemplateRoot: AntennaBlocks
   PickupTarget: AntennaBlocks
@@ -40330,7 +44729,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"      
   Mass: 600, type: float, display: true, formatter: Kilogram
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   VolumeCapacity: 8000, type: float, display: true, formatter: Liter      
   BlockColor: "110,110,110"
   Info: Eden_CargoContainerReinforcedSinfo, display: true
@@ -40353,7 +44752,7 @@ HullCombatSmallBlocks
   LootList: 76        # 128 slots
   Mass: 1000, type: float, display: true, formatter: Kilogram
 
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   VolumeCapacity: 16000, type: float, display: true, formatter: Liter  
   HitPoints: 20000, type: int, display: true # High chance of surviving a battle
   IsOxygenTight: false, display: true    
@@ -40368,7 +44767,7 @@ HullCombatSmallBlocks
   LootList: 76        # 128 slots
   Mass: 1000, type: float, display: true, formatter: Kilogram
 
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   VolumeCapacity: 16000, type: float, display: true, formatter: Liter  
   HitPoints: 20000, type: int, display: true
   IsOxygenTight: false, display: true    
@@ -40385,7 +44784,7 @@ HullCombatSmallBlocks
   Mass: 1000, type: float, display: true, formatter: Kilogram
   BlockColor: "220,160,40"
 
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   VolumeCapacity: 16000, type: float, display: true, formatter: Liter  
   HitPoints: 500, type: int, display: true # High chance of surviving a battle
   IsOxygenTight: false, display: true    
@@ -40523,7 +44922,7 @@ HullCombatSmallBlocks
   AllowedInBlueprint: false, display: true
   TemplateRoot: DecoStoneBlocks
   PickupTarget: DecoStoneBlocks
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Info: Un bloc décoratif pour les POIs. Dialogue activé. \n[c][A9A9A9][i]Nécessite le projet Eden.[/i][-][/c], display: true
 }
 
@@ -40544,7 +44943,7 @@ HullCombatSmallBlocks
   TemplateRoot: Eden_WaterBlock
   PickupTarget: Eden_WaterBlock
   HitPoints: 100, type: int, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   # BlockColor: "27,44,65,255"
   ChildShapes: "Cube, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, Wall, CylinderThin, CubeHalf"
   Collide: "bullet,rocket,melee,sight"
@@ -40571,7 +44970,7 @@ HullCombatSmallBlocks
   AllowedInBlueprint: false, display: true
   TemplateRoot: DecoStoneBlocks
   PickupTarget: DecoStoneBlocks
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   # { Child Map
     # Color: "255,220,70"
     # Color2: "255,0,0"
@@ -40603,7 +45002,7 @@ HullCombatSmallBlocks
   AllowPlacingAt: Base, display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 200, type: float, display: true, formatter: Kilogram
   IsActivateable: true
   IsAccessible: true, type: bool
@@ -40860,17 +45259,17 @@ HullCombatSmallBlocks
   Voxelize: false
   BlockColor: "180,180,180"
   ShowUser: Yes
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 2500, type: float, display: true, formatter: Kilogram
-  HitPoints: 6000, type: int, display: true
+  HitPoints: 9000, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_IceDense
-    Count: "1,1"
+    Count: "1,2"
     Prob: 1
   }
   { Child DropOnDestroy_2
     Item: Eden_IceHeavy
-    Count: "2,3"
+    Count: "2,4"
     Prob: 1
   }
 }
@@ -40879,15 +45278,15 @@ HullCombatSmallBlocks
   Model: @eden_blockmodels/Eden_ModelAsteroidIceT2L
   CustomIcon: Eden_IceAsteroid
   Info: Eden_ResourceGenericinfo, display: true
-  HitPoints: 6000, type: int, display: true
+  HitPoints: 9000, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_IceRich
-    Count: "1,1"
+    Count: "1,2"
     Prob: 1
   }
   { Child DropOnDestroy_2
     Item: Eden_IceHeavy
-    Count: "2,3"
+    Count: "2,5"
     Prob: 1
   }
 }
@@ -40920,12 +45319,12 @@ HullCombatSmallBlocks
   Voxelize: false
   BlockColor: "180,180,180"
   ShowUser: Yes
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 2500, type: float, display: true, formatter: Kilogram
-  HitPoints: 7500, type: int, display: true
+  HitPoints: 9375, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_OreDenseT1
-    Count: "7,13"
+    Count: "9,16"
     Prob: 1
   }
 }
@@ -40934,10 +45333,10 @@ HullCombatSmallBlocks
   Model: @eden_blockmodels/Eden_ModelAsteroidRichT2
   CustomIcon: Eden_OreDenseT2
   Info: Eden_ResourceGenericinfo, display: true
-  HitPoints: 7500, type: int, display: true
+  HitPoints: 9375, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_OreDenseT2
-    Count: "7,13"
+    Count: "9,16"
     Prob: 1
   }
 }
@@ -40946,10 +45345,10 @@ HullCombatSmallBlocks
   Model: @eden_blockmodels/Eden_ModelAsteroidRichT3
   CustomIcon: Eden_OreDenseT3
   Info: Eden_ResourceGenericinfo, display: true
-  HitPoints: 9000, type: int, display: true
+  HitPoints: 11250, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_OreDenseT3
-    Count: "7,13"
+    Count: "9,16"
     Prob: 1
   }
 }
@@ -40958,10 +45357,10 @@ HullCombatSmallBlocks
   Model: @eden_blockmodels/Eden_ModelAsteroidRichT4
   CustomIcon: Eden_OreDenseT4
   Info: Eden_ResourceGenericinfo, display: true
-  HitPoints: 10000, type: int, display: true
+  HitPoints: 12500, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_OreDenseT4
-    Count: "7,13"
+    Count: "9,16"
     Prob: 1
   }
 }
@@ -40970,10 +45369,10 @@ HullCombatSmallBlocks
   Model: @eden_blockmodels/Eden_ModelAsteroidRichT5
   CustomIcon: Eden_OreDenseT5
   Info: Eden_ResourceGenericinfo, display: true
-  HitPoints: 10000, type: int, display: true
+  HitPoints: 12500, type: int, display: true
   { Child DropOnDestroy_1
     Item: Eden_OreDenseT5
-    Count: "7,13"
+    Count: "9,16"
     Prob: 1
   }
 }
@@ -41021,7 +45420,7 @@ HullCombatSmallBlocks
   BlockColor: "180,180,180"
   ShowUser: Yes
   AllowedInBlueprint: false, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 10000, type: float, display: true, formatter: Kilogram
   HitPoints: 250, type: int, display: true
   { Child DropOnDestroy_1
@@ -41072,7 +45471,7 @@ HullCombatSmallBlocks
   BlockColor: "180,180,180"
   ShowUser: Yes
   AllowedInBlueprint: false, display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 10000, type: float, display: true, formatter: Kilogram
   HitPoints: 75, type: int, display: true
   { Child DropOnDestroy_1
@@ -41288,7 +45687,7 @@ HullCombatSmallBlocks
   ShowUser: No
   AllowedInBlueprint: false, display: true
   AllowPlacingAt: "Base,MS", display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 10000, type: float, display: true, formatter: Kilogram
   HitPoints: 50000, type: int, display: true # Experimental
   Group: resource
@@ -41315,7 +45714,7 @@ HullCombatSmallBlocks
   ShowUser: No
   AllowedInBlueprint: false, display: true
   AllowPlacingAt: "Base,MS", display: true
-  Volume: 500000, type: float, display: true, formatter: Liter
+  Volume: 800000, type: float, display: true, formatter: Liter
   Mass: 10000, type: float, display: true, formatter: Kilogram
   HitPoints: 50000, type: int, display: true # Experimental
   Group: resource
@@ -42308,3 +46707,47 @@ HullCombatSmallBlocks
   # # TechTreeParent: PentaxidTank
   # TechTreeNames: Capital Vessel
 }
+
+
+
+# { Block Name: Eden_TerrainDecoTest
+  # Material: rockhard
+  # Shape: Deco
+  # # Shape: ModelEntity
+  # IsTerrainDecoration: true
+  # IsDeco: true
+  # IsPlant: true
+  # BigDecorationRadius: 10
+  # ShowUser: No
+  # # Model: @models2/EnvironmentNew/Rocks/P_Pebble_1
+  # Model: @eden_blockmodels/Eden_ModelVoidium
+  # { Child DropOnDestroy_1
+    # Item: CrushedStone
+    # Count: "200,750"
+    # Prob: 1
+  # }
+# }
+
+
+# Works sort of
+# { Block Name: Eden_TerrainDecoTest2
+  # Class: CropsGrown
+  # { Child DropOnHarvest
+    # Item: PentaxidOre
+    # Count: 1
+  # }
+  # { Child CropsGrown   
+    # OnHarvest: CrystalStraightHarvested
+    # OnDeath: PlantDead 
+  # }
+  # Material: rock
+  # Shape: Deco
+  # # Shape: ModelEntity
+  # IsTerrainDecoration: true
+  # IsDeco: true
+  # IsPlant: true
+  # BigDecorationRadius: 1
+  # # Model: @models2/Environment/Rocks/Crystals/CrystalStraightPrefab
+  # Model: @eden_blockmodels/Eden_ModelVoidiumT2
+  # ShowUser: No
+# }

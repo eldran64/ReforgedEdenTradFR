@@ -95,7 +95,7 @@
 { +Item Id: 2, Name: Flashlight
   Meshfile: Entities/Items/Tools/flashlight01Prefab
   # DropMeshfile: Entities/Misc/BagSmallPrefab
-  LifetimeOnDrop: 720
+  LifetimeOnDrop: 1200
   MarketPrice: 32, display: true
   Material: metalweapon
   HoldType: 14
@@ -2883,7 +2883,7 @@
   Meshfile: Entities/Items/Weapons/SurvivalToolPrefab
   PickupToToolbar: true
   Material: metalweapon
-  LifetimeOnDrop: 720
+  LifetimeOnDrop: 1200
   HoldType: 16           # no weapon shaking animation
   StackSize: 1
   Category: Weapons/Items
@@ -4400,7 +4400,7 @@
   { Child 1
     Class: LauncherSS
     AllowAt: Space
-    ROF: 24.0, type: float, display: true, formatter: ROF
+    ROF: 16.0, type: float, display: true, formatter: ROF
     Range: 375, display: false
     RangeSpace: 550, display: false
     AmmoCapacity: 1, display: true
@@ -5450,7 +5450,7 @@
   { Child 1
     Class: LauncherSS
     AllowAt: "Space,Planet"
-    ROF: 24, type: float, display: true, formatter: ROF
+    ROF: 16, type: float, display: true, formatter: ROF
     Range: 375, display: false
     RangeSpace: 550, display: false
     AmmoCapacity: 1, display: true
@@ -5520,8 +5520,8 @@
     HarvestSupport: true
     # AllowAt: "Planet"
     ForceMuzzleAiming: true 
-    ROF: 0.5, type: float
-    Damage: 450
+    ROF: 1.0, type: float
+    Damage: 900
     Radius: 2.5
     Range: 3, display: false
     NoiseStrength: 30, display: false   
@@ -5750,7 +5750,7 @@
 	DrillMode: 3
     TerrainMode: true
     # AllowAt: "Planet,Space"
-    Damage: 625
+    Damage: 1250
     Radius: 2.75
     Range: 15, display: false
     IgnoreAtmo: true
@@ -6150,8 +6150,8 @@
     HarvestSupport: true
     AllowAt: "Space"
     ForceMuzzleAiming: true 
-    ROF: 0.5, type: float
-    Damage: 400
+    ROF: 1.0, type: float
+    Damage: 800
     Radius: 3.25
     Range: 100, display: false
     IgnoreAtmo: true
@@ -6340,8 +6340,8 @@
     HarvestSupport: true
     # AllowAt: "Planet,Space"
     ForceMuzzleAiming: true
-    ROF: 0.5, type: float
-    Damage: 550
+    ROF: 1.0, type: float
+    Damage: 1100
     Radius: 2.25
     Range: 20, display: false
     CameraShake: 0
@@ -7589,8 +7589,8 @@
   # RadialMenu: true
   { Child 0
 	DrillMode: 3
-    ROF: 0.5, type: float
-    Damage: 530
+    ROF: 1.0, type: float
+    Damage: 1160
     Radius: 3.25
     Range: 4, display: false
 
@@ -8060,6 +8060,7 @@
   ShowUser: Yes
 }
 { +Item Id: 235, Name: PlasticMaterial, Ref: ComponentsTemplate
+  Meshfile: Entities/Items/Ores/CarbonOrePrefab
   Mass: 0.18, type: float, display: true, formatter: Kilogram
   Volume: 0.12, type: float, display: true, formatter: Liter
   Info: itmPlasticMaterial, display: true
@@ -12320,7 +12321,7 @@
   StackSize: 1
   Canhold: false
   Category: Weapons/Items
-  Info: bkiPlayerArmor, display: true
+  Info: bkiPlayerArmorLight, display: true
     
   Durability: 750, display: true
   DegradationFac: 0.08, type: float, display: false    # do not display anymore 
@@ -12343,6 +12344,8 @@
   UnlockCost: 2, display: true
   UnlockLevel: 5, display: true
   TechTreeNames: Weapons
+  IsEquippableWithoutLocker: true
+  # IsBoostEquippableWithoutLocker: true
 }
 ## Please do not rename - referenced in code
 { +Item Id: 601, Name: ArmorMedium
@@ -12721,6 +12724,7 @@
   # Class: ArmorBoost
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
+  PickupToToolbar: true
   Material: metal
   Volume: 2.5, type: float, display: true, formatter: Liter
   Mass: 1.3, type: float, display: true, formatter: Kilogram
@@ -12737,6 +12741,7 @@
   Info: bkiOreScanner, display: true
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
+  PickupToToolbar: true
   Material: metal
   Mass: 0.78, type: float, display: true, formatter: Kilogram 
   Volume: 1.25, type: float, display: true, formatter: Liter
@@ -12755,9 +12760,12 @@
 
 { +Item Id: 702, Name: RadarSuitT1  
   Info: bkiDetector, display: true
-  Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol2BluePrefab
+  Meshfile: Entities/Items/Tools/DetectorToolPrefab
+  # Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol2BluePrefab
   # Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
+  PickupToToolbar: true  
+  LifetimeOnDrop: 1200
   Material: metalweapon
   Mass: 1.3, type: float, display: true, formatter: Kilogram
   Volume: 1.7, type: float, display: true, formatter: Liter
@@ -14344,6 +14352,11 @@
   ShowUser: Yes
   Mass: 0.8, type: float, display: true, formatter: Kilogram
   Volume: 1.2, type: float, display: true, formatter: Liter
+}
+{ +Item Id: 1022, Name: FishMeat, Ref: TradingGoodsTemplate
+  CustomIcon: Meat
+  ShowUser: Yes
+  MarketPrice: 15, display: true
 }
 # == Reports Common
 { +Item Id: 1049, Name: ReportsTemplate
@@ -16733,7 +16746,7 @@
     TracerPerBullet: 1
     TracerSpeed: 500
 	BulletSpread: 0.01, display: true
-    Damage: 1875, display: true
+    Damage: 1000, display: true
     BlastParticleIndex: 12
     Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
     Buff_chance: "0.5,0.2,0.3"
@@ -16751,7 +16764,7 @@
     DamageMultiplier_11: 0.05, param1: ShieldSmallT0
     DamageMultiplier_12: 0.0375, param1: ShieldSmallT1
     DamageMultiplier_13: 0.025, param1: ShieldSmallT2
-    DamageMultiplier_14: 1.25, param1: hullarmored
+    DamageMultiplier_14: 1.25, param1: hullarmored|hullcombat
   }
 }
 { Item Id: 2405, Name: TurretMSPlasmaT2Weapon
@@ -16817,7 +16830,7 @@
   { Child 1
     Class: LauncherSS
     AllowAt: Space
-    ROF: 12, type: float, display: true, formatter: ROF
+    ROF: 8, type: float, display: true, formatter: ROF
     Range: 375, display: false
     RangeSpace: 550, display: false
     AmmoCapacity: 1, display: true
@@ -17047,7 +17060,7 @@
     TracerPerBullet: 1
     TracerSpeed: 500
 	BulletSpread: 0.01, display: true
-    Damage: 1875, display: true   # new: because we removed explosion damage
+    Damage: 1000, display: true   # new: because we removed explosion damage
     BlastParticleIndex: 12
     Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
     Buff_chance: "0.5,0.2,0.3"
@@ -17294,7 +17307,7 @@
   { Child 1
     Class: LauncherSS
     AllowAt: "Space,Planet"
-    ROF: 20, type: float, display: true, formatter: ROF
+    ROF: 16, type: float, display: true, formatter: ROF
     Range: 335, display: false
     RangeSpace: 550, display: false
     AmmoCapacity: 1, display: true
@@ -18636,8 +18649,8 @@
     HarvestSupport: true
     AllowAt: "Space"
     ForceMuzzleAiming: true 
-    ROF: 0.5, type: float
-    Damage: 250
+    ROF: 1.0, type: float
+    Damage: 500
     Radius: 4.0
     Range: 6, display: false
     IgnoreAtmo: true
@@ -19480,11 +19493,11 @@
     DamageMultiplier_3: 5,   param1: rock    # can destroy rocks 
     DamageMultiplier_4: 0.055,   param1: shield
     DamageMultiplier_5: 2.5, param1: plastic
-    DamageMultiplier_6: 1.5, param1: concrete|hullarmored|alien
-    DamageMultiplier_7: 0.075, param1: ShieldLargeT0
-    DamageMultiplier_8: 0.065, param1: ShieldLargeT1
-    DamageMultiplier_9: 0.055, param1: ShieldLargeT2
-    DamageMultiplier_10: 0.045, param1: ShieldLargeT3
+    DamageMultiplier_6: 1.5, param1: concrete|hullarmored|hullcombat|alien
+    DamageMultiplier_7: 0.06, param1: ShieldLargeT0
+    DamageMultiplier_8: 0.05, param1: ShieldLargeT1
+    DamageMultiplier_9: 0.04, param1: ShieldLargeT2
+    DamageMultiplier_10: 0.03, param1: ShieldLargeT3
     DamageMultiplier_11: 0.038, param1: ShieldSmallT0
     DamageMultiplier_12: 0.03, param1: ShieldSmallT1
     DamageMultiplier_13: 0.022, param1: ShieldSmallT2
@@ -19534,7 +19547,7 @@
     DamageMultiplier_1: 0.8, param1: body 
     DamageMultiplier_2: 0, param1: dirt|stone|rock|wood 
     DamageMultiplier_3: 0.055, param1: shield 
-    DamageMultiplier_4: 1.25, param1: head|alien|metalhard
+    DamageMultiplier_4: 1.25, param1: head|alien|hullcombat|metalhard
     DamageMultiplier_5: 2.5, param1: plastic
     DamageMultiplier_6: 1.75, param1: concrete|hullarmored
     DamageMultiplier_7: 0.125, param1: ShieldLargeT0
@@ -19590,11 +19603,11 @@
     DamageMultiplier_3: 5,   param1: rock    # can destroy rocks 
     DamageMultiplier_4: 0.055,   param1: shield
     DamageMultiplier_5: 2.5, param1: plastic
-    DamageMultiplier_6: 1.5, param1: concrete|hullarmored|alien
-    DamageMultiplier_7: 0.082, param1: ShieldLargeT0
-    DamageMultiplier_8: 0.072, param1: ShieldLargeT1
-    DamageMultiplier_9: 0.062, param1: ShieldLargeT2
-    DamageMultiplier_10: 0.052, param1: ShieldLargeT3
+    DamageMultiplier_6: 1.5, param1: concrete|hullarmored|hullcombat|alien
+    DamageMultiplier_7: 0.072, param1: ShieldLargeT0
+    DamageMultiplier_8: 0.062, param1: ShieldLargeT1
+    DamageMultiplier_9: 0.052, param1: ShieldLargeT2
+    DamageMultiplier_10: 0.042, param1: ShieldLargeT3
     DamageMultiplier_11: 0.038, param1: ShieldSmallT0
     DamageMultiplier_12: 0.03, param1: ShieldSmallT1
     DamageMultiplier_13: 0.022, param1: ShieldSmallT2
@@ -19807,11 +19820,11 @@
     DamageMultiplier_3: 5,   param1: rock    # can destroy rocks 
     DamageMultiplier_4: 0.055,   param1: shield
     DamageMultiplier_5: 3.0, param1: plastic
-    DamageMultiplier_6: 1.5, param1: concrete|hullarmored|alien
-    DamageMultiplier_7: 0.077, param1: ShieldLargeT0
-    DamageMultiplier_8: 0.067, param1: ShieldLargeT1
-    DamageMultiplier_9: 0.057, param1: ShieldLargeT2
-    DamageMultiplier_10: 0.047, param1: ShieldLargeT3
+    DamageMultiplier_6: 1.5, param1: concrete|hullarmored|hullcombat|alien
+    DamageMultiplier_7: 0.065, param1: ShieldLargeT0
+    DamageMultiplier_8: 0.055, param1: ShieldLargeT1
+    DamageMultiplier_9: 0.045, param1: ShieldLargeT2
+    DamageMultiplier_10: 0.035, param1: ShieldLargeT3
     DamageMultiplier_11: 0.037, param1: ShieldSmallT0
     DamageMultiplier_12: 0.032, param1: ShieldSmallT1
     DamageMultiplier_13: 0.025, param1: ShieldSmallT2
@@ -19861,7 +19874,7 @@
     DamageMultiplier_3: 0.065, param1: shield 
     DamageMultiplier_4: 1.65, param1: head|alien
     DamageMultiplier_5: 1.25, param1: plastic|concrete
-    DamageMultiplier_6: 1.5, param1: hullarmored
+    DamageMultiplier_6: 1.5, param1: hullarmored|hullcombat
     DamageMultiplier_7: 0.125, param1: ShieldLargeT0
     DamageMultiplier_8: 0.100, param1: ShieldLargeT1
     DamageMultiplier_9: 0.075, param1: ShieldLargeT2
@@ -19915,11 +19928,11 @@
     DamageMultiplier_3: 5,   param1: rock    # can destroy rocks 
     DamageMultiplier_4: 0.04,   param1: shield
     DamageMultiplier_5: 3.25, param1: plastic
-    DamageMultiplier_6: 1.75, param1: concrete|hullarmored|alien
-    DamageMultiplier_7: 0.077, param1: ShieldLargeT0
-    DamageMultiplier_8: 0.065, param1: ShieldLargeT1
-    DamageMultiplier_9: 0.053, param1: ShieldLargeT2
-    DamageMultiplier_10: 0.041, param1: ShieldLargeT3
+    DamageMultiplier_6: 1.75, param1: concrete|hullarmored|hullcombat|alien
+    DamageMultiplier_7: 0.065, param1: ShieldLargeT0
+    DamageMultiplier_8: 0.055, param1: ShieldLargeT1
+    DamageMultiplier_9: 0.045, param1: ShieldLargeT2
+    DamageMultiplier_10: 0.035, param1: ShieldLargeT3
     DamageMultiplier_11: 0.039, param1: ShieldSmallT0
     DamageMultiplier_12: 0.029, param1: ShieldSmallT1
     DamageMultiplier_13: 0.024, param1: ShieldSmallT2
@@ -20081,6 +20094,7 @@
   CustomIcon: DetectorHVT1
   Info: itmCommunicationEquipment, display: true
 }
+
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Items
 # ============================================================================================================================================================================
@@ -21816,7 +21830,7 @@
     AllowAt: "Space,Planet"
     ROF: 2.35, type: float, display: true, formatter: ROF
     Range: 400, display: false
-    RangeSpace: 1200, display: false
+    RangeSpace: 1350, display: false
     AmmoCapacity: 5, display: true
     AmmoType: Eden_TurretAlienMissileSwarm_Ammo, display: true
     NoiseStrength: 150, display: false
@@ -21844,7 +21858,7 @@
     Speed: 175
     Range: 400
     SpeedSpace: 175
-    RangeSpace: 1200
+    RangeSpace: 1350
     HomingSpeed: 5
     Ballistic: false
 
@@ -22370,10 +22384,10 @@
     ROF: 1.2, type: float, display: true, formatter: ROF
     Range: 650, display: false
     RangeSpace: 1000, display: false
-    AmmoUnlimited: true
+    # AmmoUnlimited: true
     Automatic: true
     Damage: 1000, display: true
-    AmmoCapacity: 60, display: true
+    AmmoCapacity: 10, display: true
     AutoReload: true
     AmmoType: Eden_TurretRaiderLaser_Ammo, display: true
     NoiseStrength: 100, display: false
@@ -22418,7 +22432,7 @@
   Material: metalweapon
   AllowPlacingAt: "Base,MS", display: false
   HoldType: 0
-  MarketPrice: 5, display: true
+  # MarketPrice: 5, display: true
   StackSize: 1000
   Canhold: false
   ShowUser: No
@@ -22451,7 +22465,7 @@
     Range: 450, display: false
     RangeSpace: 650, display: false
     Damage: 1300, display: true
-    AmmoCapacity: 60, display: false
+    AmmoCapacity: 10, display: false
     AmmoType: Eden_TurretRaiderLaser_Ammo, display: true
     AmmoUnlimited: true
     PfxMuzzle: SniperMuzzleLaserRed
@@ -22491,7 +22505,7 @@
     Range: 500, display: false
     RangeSpace: 1250, display: false
     Damage: 2000, display: true
-    AmmoCapacity: 60, display: false
+    AmmoCapacity: 10, display: false
     AmmoType: Eden_TurretRaiderLaser_Ammo, display: true
     AmmoUnlimited: true
     SfxBegin: Weapons/SS/LaserSS/weapon_blaster_002
@@ -22531,7 +22545,7 @@
     Range: 650, display: false
     RangeSpace: 850, display: false
     Damage: 2500, display: true
-    AmmoCapacity: 60, display: false
+    AmmoCapacity: 10, display: false
     AmmoType: Eden_TurretRaiderLaser_Ammo, display: true
     AmmoUnlimited: true
     SfxBegin: Weapons/SS/LaserSS/weapon_blaster_002
@@ -22912,6 +22926,117 @@
     SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
   }
 }
+
+# Alien Remote Shield Booster Turret
+{ +Item Id: 3077, Name: Eden_TurretAlienShieldBooster_Weapon
+  Model: Entities/Blocks/Turrets/TurretsEnemy/TurretEnemyLaserPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  ShowUser: NoButCSV  # reported by HWS
+  Canhold: false
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 500
+  Mass: 8500, type: float, display: false, formatter: Kilogram
+  Category: Weapons/Items
+  { Child 0
+    Class: Ranged
+    IsShootThroughCrosshair: true
+    AllowAt: "Space,Planet"
+    # ROF: 1.2, type: float, display: true, formatter: ROF
+    ROF: 0.5, type: float, display: true, formatter: ROF
+    Range: 1000, display: false
+    RangeSpace: 1500, display: false
+    AmmoUnlimited: true
+    Automatic: true
+    Damage: 5, display: true
+    AmmoCapacity: 60, display: true
+    AutoReload: true
+    AmmoType: Eden_TurretRaiderLaser_Ammo, display: true
+    NoiseStrength: 100, display: false
+    ReloadDelay: 0.6, display: true # adapt sound
+    SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
+    SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    
+    TracerPerBullet: 1
+    Tracer: @rg_projectiles/RG_ProjectileBeamRepairShield3
+    TracerIsBeam: true
+    
+    DamageMultiplier_1: 0, param1: dirt|stone|wood|concrete|concretearmored|plastic|woodblock
+    DamageMultiplier_2: 0, param1: metallight|metal|metalhard|hull|hullarmored|hullcombat
+    DamageMultiplier_3: -100, param1: shield
+
+  }
+}
+
+{ +Item Id: 3078, Name: Eden_SpaceDroneLaserIR_Weapon
+  Meshfile: Entities/Enemies/Drones/Weapons/rocketlauncherDronePrefab
+  # Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
+  ShowUser: No
+  # Canhold: false
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Mass: 1645, type: float, display: false, formatter: Kilogram
+  Category: Weapons/Items
+  { Child 0
+    Class: Ranged
+    IsShootThroughCrosshair: true
+    # ROF: 0.35, type: float, display: true, formatter: ROF
+    ROF: 0.5, type: float, display: true, formatter: ROF
+    Range: 600, display: false
+    RangeSpace: 1000, display: false
+    Automatic: true
+    # Damage: 1000, display: true
+    Damage: 3000, display: true
+    AmmoCapacity: 16, display: true
+    AmmoType: Eden_ModularPulseLaserSVIR_Ammo, display: true
+    UseSingleMagazine: true
+    NoiseStrength: 100, display: false   
+    AutoReload: true
+    ReloadDelay: 2, display: true # adapt sound
+    SfxBegin: Weapons/SS/LaserSS/weapon_blaster_002
+    /* SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease   */
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
+    # SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    SfxReload: Weapons/Enemies/Zirax/mute
+    PfxMuzzle: SniperMuzzleLaserRed
+    # Tracer: @rg_projectiles/RG_ProjectileBeamThermalLance
+    Tracer: @rg_projectiles/RG_ProjectileBeamModulatedIR
+    TracerPerBullet: 1
+    TracerIsBeam: true, display: true
+
+    DamageMultiplier_1: 0.5, param1: head|body
+    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood
+    DamageMultiplier_3: 1.25, param1: metallight|metal|metalhard
+    DamageMultiplier_4: 1.25, param1: hull|hullarmored|hullcombat
+    DamageMultiplier_5: 0.05, param1: shield
+  }
+}
+
+{ +Item Id: 3079, Name: Eden_SpaceDroneLaserGamma_Weapon, Ref: Eden_SpaceDroneLaserIR_Weapon
+  { Child 0
+    # Class: LauncherSS
+    Damage: 1000, display: true
+    ROF: 0.1, type: float, display: true, formatter: ROF
+    Range: 500, display: false
+    RangeSpace: 750, display: false
+    AmmoCapacity: 8, display: true
+    ReloadDelay: 0.6, display: true
+    SfxBegin: Weapons/SS/LaserSS/weapon_blaster_002
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
+    SfxReload: Weapons/Enemies/Zirax/mute
+    PfxMuzzle: SniperMuzzleLaserGreen
+    Tracer: @rg_projectiles/RG_ProjectileBeamModulatedGamma
+    
+    DamageMultiplier_1: 0.5, param1: head|body
+    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood
+    DamageMultiplier_3: 0.75, param1: metallight|metal|metalhard
+    DamageMultiplier_4: 0.5, param1: hull|hullarmored|hullcombat
+    DamageMultiplier_5: 0.2, param1: shield
+  }
+}
+
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------------------------------------- Player Weapons and Ammo 3100-3199
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -24499,7 +24624,7 @@
   StackSize: 8000
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.05, type: float, display: true, formatter: Liter
-  MarketPrice: 2
+  MarketPrice: 4
 
   UnlockCost: 0
   UnlockLevel: 1 
@@ -25450,7 +25575,8 @@
 { +Item Id: 3161, Name: Eden_TurretMissileCruiseCV_Ammo
   # Meshfile: Entities/Items/Weapons/Projectiles/rocket01Prefab
   Meshfile: @eden_projectiles/Eden_ProjectileMissileCruiseSide
-  # Meshfile: @eden_projectiles/Eden_ProjectileMissileCruise
+  # Meshfile: @eden_projectiles/Eden_ProjectileMissileCruiseVert # TEST
+
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
   AllowPlacingAt: MS, display: false
@@ -25653,9 +25779,9 @@
   Info: Eden_PlasmaRifleXCorpinfo, display: true
   Mass: 5, type: float, display: true, formatter: Kilogram
   Volume: 4, type: float, display: true, formatter: Liter
-  # Damage: 105
+  Damage: 125
   BlastRadius: 2, display: true
-  BlastDamage: 50, display: true
+  BlastDamage: 125, display: true
   Durability: 500, display: false
   DegradationProb: 0.05, type: float, display: false
   RepairDisabled: true, display: true
@@ -25716,19 +25842,20 @@
     BlastParticleName: @rg_projectiles/RG_BlastLightningGreenHand
     BlastParticleIndex: 0
     BlastRadius: 2, display: true
-    BlastDamage: 75, display: true
+    BlastDamage: 125, display: true
     Speed: 35
     Range: 200
     NoiseStrength: 100, display: false
     Ballistic: false
 
-    DamageMultiplier_1: 1.25, param1: head, display: DmgMultiplierHead 
+    DamageMultiplier_1: 1.25, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 0, param1: dirt|stone|rock|wood|hullarmored|hullcombat
-    DamageMultiplier_3: 0.2, param1: shield
+    DamageMultiplier_3: 0.2, param1: shield, display: DmgMultiplierShield
+    DamageMultiplier_4: 25, param1: human
     BlastDamageMultiplier_1: 0, param1: wood|plants
     BlastDamageMultiplier_2: 0, param1: concrete|hull|hullarmored|hullcombat|metal|metalhard
     BlastDamageMultiplier_3: 0, param1: dirt|stone|rock
-    BlastDamageMultiplier_4: 0, param1: shield
+    BlastDamageMultiplier_4: 0, param1: human
   }
 
   UnlockLevel: 1
@@ -26246,7 +26373,7 @@
   Volume: 2, type: float, display: true, formatter: Liter
   Info: Eden_TurretVulcanCV_Ammoinfo, display: true
   Category: Weapons/Items
-  MarketPrice: 5, display: true
+  MarketPrice: 20, display: true
 }
 
 # CV Ice Mining Drill
@@ -26478,7 +26605,7 @@
     TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: wood|woodblock|concrete|metal|metalhard|hull|hullarmored|hullcombat
-    DamageMultiplier_2: 0, param1: shield|head|body
+    DamageMultiplier_2: 0, param1: shield
     DamageMultiplier_3: 2000, param1: edenice
     
     RadialText: Manual
@@ -26616,7 +26743,7 @@
     InfoPopup: true
     # ForceMuzzleAiming: true 
     ROF: 0.5, type: float
-    Damage: 80, display: true
+    Damage: 120, display: true
     Radius: 0
     Range: 1500, display: true
     IgnoreAtmo: true
@@ -28314,6 +28441,15 @@
   }
 }
 
+# { +Item Id: 3438, Name: Eden_ExploreDataT1, Ref: TradingGoodsTemplate
+  # CustomIcon: KeyCardBlue
+  # Mass: 0.1, type: float, display: true, formatter: Kilogram
+  # Volume: 0.1, type: float, display: true, formatter: Liter
+  # ShowUser: Yes
+  # MarketPrice: 10000, display: true
+  # Info: Eden_ExploreDataT1info, display: true
+  # StackSize: 1000
+# }
 
 
 # { +Item Id: 3438, Name: Eden_DrillTurretAutoCV_Weapon

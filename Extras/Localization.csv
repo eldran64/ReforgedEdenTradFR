@@ -2424,13 +2424,41 @@ bkiCurrencyT2,"A high-value Platinum Credit Card issued by Trade Federation Bank
 bkiPlayerGuard,Security Contract for a single security guard for static structures.\nPlaces the crewmember's bed from which they will be deployed.\nWill patrol the area and engage hostile targets.,,Contrat de sécurité pour un seul agent de sécurité pour les structures statiques.\nIl place le lit du membre d'équipage à partir duquel il sera déployé.\nIl patrouillera la zone et engagera des cibles hostiles.,,,,,,,,,,,,,,
 bkiPlayerAndroid,A portable Security Android for static structures.\nPlaces the android's charging pad from which they will be deployed.\nWill patrol the area and engage hostile targets.,,Un androïde de sécurité portable pour les structures statiques. Place le socle de chargement de l'androïde à partir duquel il sera déployé.\nIl patrouillera dans la zone et attaquera les cibles hostiles.,,,,,,,,,,,,,,
 bkiPlayerMech,A Type-22 Deployable Heavy Mechanoid for militarized structures.\nPlaces the Mechanoid's charging pad from which they will be deployed.\nWill patrol the area and engage hostile targets.,,Un méchanoïde lourd déployable de type 22 pour les structures militarisées.\nPlace le socle de chargement du méchanoïde à partir duquel il sera déployé.\nIl patrouillera la zone et attaquera les cibles hostiles.,,,,,,,,,,,,,,
+mapCarbonResource,Graphite,Kohlenstoff,Carbone,Carbonio,Carbono,,,,Carbon,,,,,,,,
+AsteroidCarbon,Graphite Meteorite,Kohlenstoff Meteorit,Météorite en carbone,Meteorite di carbonio,Meteorito de carbono,,,,Углеродный метеорит,,,,,,,,
+RockResourceCarbon,Graphite bearing,Kohlenstoff-Lager,Palier en carbone,Cuscinetto di carbonio,Cojinete de carbono,,,,Углеродный подшипник,,,,,,,,
+RockResourcePlatinum,Platinum bearing,Platin-Lager,Palier en platine,Cuscinetto di platino,Cojinete de platino,,,,Платиновый подшипник,,,,,,,,
+RockResourceAluminium,Aluminium bearing,Aluminium-Lager,Palier en aluminium,Cuscinetto di alluminio,Cojinete de aluminio,,,,Алюминиевый подшипник,,,,,,,,
+RockResourceTitan,Titanium bearing,Titan-Lager,Palier de titane,Cuscinetto di titanio,Cojinete de titanio,,,,Титановый подшипник,,,,,,,,
+CarbonResource,Graphite Ore,Kohlenstoff-Erz,Minerai de carbone,Minerale di carbonio,Mineral de carbono,,,,Углеродная руда,,,,,,,,
+ScraperDrone_Blue,Salvage Drone,Bergungsdrohne,Drone de récupération,Drone di recupero,Drone de salvamento,,,,Спасательный дрон,,,,,,,,
+ScraperDrone_Army,Salvage Drone,Bergungsdrohne,Drone de sauvetage,Drone di salvataggio,Drone de salvamento,,,,Спасательный дрон,,,,,,,,
+Fish,Fish,Fisch,Poisson,Pesce,Pescado,,,,Рыба,,,,,,,,
+AnnoyingMosquito_Primitive,Lancetfly,Lanzettfliege,Lancette,Lancetta,mosca lanceta,,,,Москит,,,,,,,,
+AnnoyingMosquito_Gray,Lancetfly,Lanzettfliege,Lancette,Lancetta,mosca lanceta,,,,Москит,,,,,,,,
+AnnoyingMosquito_Red,Lancetfly,Lanzettfliege,Lancette,Lancetta,mosca lanceta,,,,Москит,,,,,,,,
+AnnoyingMosquito_Green,Lancetfly,Lanzettfliege,Lancette,Lancetta,mosca lanceta,,,,Москит,,,,,,,,
+Butterfly_01,Crimson Swallowtail,Schmetterling,Papillon,Farfalla,Mariposa,,,,Бабочка,,,,,,,,
+Butterfly_02,Crimson Swallowtail,Schmetterling,Papillon,Farfalla,Mariposa,,,,Бабочка,,,,,,,,
+GlidingOverseer,Skywhale,Himmelswhal,Baleine Céleste,Balena Celeste,Ballena Celeste,,,,Скользящий надзиратель,,,,,,,,
+MosquitoBite,Lifedrain,,,,,,,,,,,,,,,,
+igmEffectMosquitoBite,You're being bitten by Lancetflies\nSwat the little buggers or use some Bug Spray!,,,,,,,,,,,,,,,,
+ButterflyToxin,Toxic Dust,,,,,,,,,,,,,,,,
+igmEffectToxicButterfly,The dust spread by the Butterfly's wings is toxic to humans\nAvoid exposure or inhalation!,,,,,,,,,,,,,,,,
 Eden_Oldinfo,[c][FFFF00]This block ID is no longer valid. Please update your blueprints with the new version of this block as soon as possible.[-][/c] \n\n[c][FF0000]This block will be removed from the scenario and your blueprints in a future update.[-][/c] \nIf this is a player block you can pick it up via multitool to obtain the new block version. For POI blocks you will need to manually replace. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c],,"[c][FFFF00]L'ID de ce bloc n'est plus valide. Veuillez mettre à jour vos plans avec la nouvelle version de ce bloc dès que possible.[-][/c] \n\n[c][FF0000]Ce bloc sera supprimé du scénario et de vos plans dans une prochaine mise à jour.[-][/c] \nS'il s'agit d'un bloc de joueur, vous pouvez le récupérer via le multitool pour obtenir la nouvelle version du bloc. Pour les blocs POI, vous devrez les remplacer manuellement. \n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c]",,,,,,,,,,,,,,
 ttwEden_TechTreeProgenitor,[c][69F5CD]Research & Schematics[-][/c],,[c][69F5CD]Recherche et schémas[-][/c],,,,,,,,,,,,,,
 Eden_GroupAuxCPU,[c][FF9A01]Auxiliary Cores[-][/c],,[c][FF9A01]Noyaux auxiliaires[-][/c],,,,,,,,,,,,,,
+Eden_GroupShieldBoost,"Remote Shield Boosters"
 RepairToTemplate,[ffff00]Repair To Template[-][/c],,[ffff00]Réparer au modèle[-][/c],,,,,,,,,,,,,,
 ShieldCapacityBonus,[c][00FFFF]Shield Capacity,,[c][00FFFF]Capacité du bouclier,,,,,,,,,,,,,,
 ShieldRechargeBonus,[c][00FFFF]Shield Recharge,,[c][00FFFF]Recharge du bouclier,,,,,,,,,,,,,,
 EdenAsteroidFieldRichT1,Rich Asteroid Field,,Riche champ d'astéroïdes,,,,,,,,,,,,,,
+Eden_ExplorationSite_C1,"Class 1 Exploration Site"
+Eden_ExplorationSite_C2,"Class 2 Exploration Site"
+Eden_ExplorationSite_C3,"Class 3 Exploration Site"
+Eden_ExplorationSite_C4,"Class 4 Exploration Site"
+Eden_ExplorationSite_C5,"Class 5 Exploration Site"
+Eden_ExplorationSite_C6,"Class 6 Exploration Site"
 Eden_Wreck,Unknown Faction,,Faction inconnue,,,,,,,,,,,,,,
 Eden_Syndicate,The Syndicate,,Le Syndicat,,,,,,,,,,,,,,
 Eden_Ravagers,Ravagers,,Ravageurs,,,,,,,,,,,,,,
@@ -2595,7 +2623,7 @@ Eden_DrillIceTurretCV,Automated Ice Harvester Drill Turret,,Tourelle de forage a
 Eden_DrillIceTurretCVinfo,"Modulated for dense or rich ice asteroids. Not effective versus other targets.\nAlternative manual firing mode available via RMB.\n[c][FFA500]Will automatically mine out any dense or rich asteroids within range when set to target the following: [b]NPC Factions[/b] and [b]Prey[/b], [b]Bases[/b], [b]Warp Drives[/b].[-][/c]\nDoes not work on servers if you are in the pilot seat.\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]",,"Modulé pour les astéroïdes de glace denses ou riches. N'est pas efficace contre les autres cibles.\nUn mode de tir manuel alternatif est disponible via le clique droit.\n[c][FFA500]Détruira automatiquement tous les astéroïdes denses ou riches à portée lorsqu'il est réglé pour cibler les éléments suivants : [b]Factions PNJ[/b] et [b]Proies[/b], [b]Bases[/b], [b]Hyperpropulsion[/b].[-][/c]\nNe fonctionne pas sur les serveurs si vous êtes dans le siège du pilote.\n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c]",,,,,,,,,,,,,,
 Eden_DrillIceTurretCV_Weapon,Automated Ice Harvester Drill Turret,,Tourelle de forage automatisée pour la récolte de la glace,,,,,,,,,,,,,,
 Eden_DrillTurretAutoCV,Automated Asteroid Harvester Drill Turret,,Tourelle de forage automatisée pour la récolte d'astéroïdes,,,,,,,,,,,,,,
-Eden_DrillTurretAutoCVinfo,"Modulated for dense or rich asteroids. Not effective versus other targets.\nAlternative manual firing mode available via RMB.\n[c][FFA500]Will automatically mine out any dense or rich asteroids within range when set to target the following: [b]NPC Factions[/b] and [b]Prey[/b], [b]Bases[/b], [b]Warp Drives[/b].[-][/c]\nDoes not work on servers if you are in the pilot seat.\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]",,"Modulé pour les astéroïdes denses ou riches. N'est pas efficace contre d'autres cibles.\nUn mode de tir manuel alternatif est disponible via le clique droit.[c][FFA500]Détruit automatiquement tous les astéroïdes denses ou riches à portée lorsqu'il est réglé pour cibler les éléments suivants : [b]Factions PNJ[/b] et [b]Proies[/b], [b]Bases[/b], [b]Hyperpropulsion[/b].[-][/c]\nNe fonctionne pas sur les serveurs si vous êtes dans le siège du pilote.\n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c]",,,,,,,,,,,,,,
+Eden_DrillTurretAutoCVinfo,"Modulated for dense or rich asteroids. Not effective versus other targets.\nAlternative manual firing mode available via RMB.\n[c][FFA500]Will automatically mine out any dense or rich asteroids within range when set to target the following: [b]NPC Factions[/b] and [b]Prey[/b], [b]Bases[/b], [b]Warp Drives[/b].[-][/c]\nDoes not work on servers if you are in the pilot seat.\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]",,"Modulé pour les astéroïdes denses ou riches. N'est pas efficace contre d'autres cibles.\nUn mode de tir manuel alternatif est disponible via le clique droit.\n[c][FFA500]Détruit automatiquement tous les astéroïdes denses ou riches à portée lorsqu'il est réglé pour cibler les éléments suivants : [b]Factions PNJ[/b] et [b]Proies[/b], [b]Bases[/b], [b]Hyperpropulsion[/b].[-][/c]\nNe fonctionne pas sur les serveurs si vous êtes dans le siège du pilote.\n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c]",,,,,,,,,,,,,,
 Eden_DrillTurretAutoCV_Weapon,Automated Asteroid Harvester Drill Turret,,Tourelle de forage automatisée pour la récolte d'astéroïdes,,,,,,,,,,,,,,
 Eden_DrillTurretAutoCVT2,Asteroid Excavator Turret,,Tourelle d'excavation pour astéroïdes,,,,,,,,,,,,,,
 Eden_DrillTurretAutoCVT2info,"Modulated for dense or rich asteroids. Not effective versus other targets.\nAlternative manual firing mode available via RMB.\n[c][FFA500]Will automatically mine out any dense or rich asteroids within range when set to target the following: [b]NPC Factions[/b] and [b]Prey[/b], [b]Bases[/b], [b]Warp Drives[/b].[-][/c]\nDoes not work on servers if you are in the pilot seat.\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]",,"Modulé pour les astéroïdes denses ou riches. N'est pas efficace contre d'autres cibles.\nUn mode de tir manuel alternatif est disponible via le clique droit.\n[c][FFA500]Détruit automatiquement tous les astéroïdes denses ou riches à portée lorsqu'il est réglé pour cibler les éléments suivants : [b]Factions PNJ[/b] et [b]Proies[/b], [b]Bases[/b], [b]Hyperpropulsion[/b].[-][/c]\nNe fonctionne pas sur les serveurs si vous êtes dans le siège du pilote.\n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c]",,,,,,,,,,,,,,
@@ -2606,6 +2634,9 @@ Eden_DrillIceTurretCVAlien_Weapon,Inefficient Automated Ice Harvester Drill,,For
 Eden_DrillTurretAutoCVAlien,Inefficient Automated Asteroid Harvester Drill,,Foreuse automatisée inefficace pour la récolte d'astéroïdes,,,,,,,,,,,,,,
 Eden_DrillTurretAutoCVAlieninfo,"Modulated for dense or rich asteroids. Not effective versus other targets.\nAlternative manual firing mode available via RMB.\n[c][FFA500]Will automatically mine out any dense or rich asteroids within range when set to target the following: [b]NPC Factions[/b] and [b]Prey[/b], [b]Bases[/b], [b]Warp Drives[/b].[-][/c]\nDoes not work on servers if you are in the pilot seat.\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]",,"Modulé pour les astéroïdes denses ou riches. N'est pas efficace contre d'autres cibles.\nUn mode de tir manuel alternatif est disponible via le clique droit.\n[c][FFA500]Détruit automatiquement tous les astéroïdes denses ou riches à portée lorsqu'il est réglé pour cibler les éléments suivants : [b]Factions PNJ[/b] et [b]Proies[/b], [b]Bases[/b], [b]Hyperpropulsion[/b].[-][/c]\nNe fonctionne pas sur les serveurs si vous êtes dans le siège du pilote.\n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c]",,,,,,,,,,,,,,
 Eden_DrillTurretAutoCVAlien_Weapon,Inefficient Automated Asteroid Harvester Drill,,Foreuse automatisée inefficace pour la récolte d'astéroïdes,,,,,,,,,,,,,,
+Eden_TurretAlienShieldBooster,Remote Shield Booster (POI)
+Eden_TurretAlienShieldBoosterinfo,"A turret for POIs that will restore the shield capacitor of the target."
+Eden_TurretAlienShieldBooster_Weapon,Remote Shield Booster (POI)
 Eden_FarrPlasmaCrossbow,[c][FFD700]The Golden Rule[-][/c],,[c][FFD700]La règle d'or[-][/c],,,,,,,,,,,,,,
 Eden_FarrPlasmaCrossbowinfo,"A plasma cannon of Farr design.\nCan be recharged from the Archivist in the Farr Archives on Parthix for a fee of 100,000 credits.\n\n[c][A9A9A9][i]Do unto others.[/i][-][/c]",,Un canon à plasma de conception Farr. \nPeut être rechargé auprès de l'archiviste des archives Farr sur Parthix pour un montant de 100 000 crédits.\n\n[c][A9A9A9][i]Fais-le pour les autres[/i][-][/c],,,,,,,,,,,,,,
 Eden_FarrPlasmaCrossbow_Ammo,[c][00FFCD]Internal Capacitor[-][/c],,[c][00FFCD]Condensateurs internes[-][/c],,,,,,,,,,,,,,
@@ -2628,10 +2659,14 @@ Eden_TurretMissileSwarmCV_Ammoinfo,Ammunition for the Swarm Launcher.,,Munitions
 Eden_TurretLaserT4,[c][FF9A01]Thermal Lance,,[c][FF9A01]Lance thermique,,,,,,,,,,,,,,
 Eden_TurretLaserT4info,Projects a powerful beam of thermal energy burning away devices and hull. Requires an extreme amount of energy to be active. Has a reduced effect against heavy armor.\n[c][FFFF00]AI control only.[-][/c]\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c],,Projette un puissant faisceau d'énergie thermique qui brûle les appareils et la coque. Nécessite une quantité extrême d'énergie pour être actif. A un effet réduit contre les armures lourdes. \n[c][FFFF00]Contrôle IA uniquement.[-][/c]\n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c],,,,,,,,,,,,,,
 Eden_TurretLaserT4_Weapon,[c][FF9A01]Thermal Lance,,[c][FF9A01]Lance thermique,,,,,,,,,,,,,,
+Eden_ExplorationScannerCV,Scanning Station
+Eden_ExplorationScannerCVinfo,"A station used for the launching of probes and scanning for various anomalies.\n\nUsed for science and scanning missions. Available scanning missions will appear under the Science and Scanning section in the PDA when you are in a sector that can be scanned and can be started either in the PDA or by accessing this device.\nAccessing this device without an available mission does nothing.\n\n[c][FFFF00]Do not place items into the inventory of this device.[-][/c]\nNOTICE: THIS DEVICE IS UNDERGOING TESTING AND MAY NOT WORK AS EXPECTED."
+Eden_ScienceStation,Science Station
+Eden_ScienceStationinfo,"Used for managing expeditions and scientific research.\n\nCURRENTLY IN TESTING.\n\n[c][FFFF00]Do not place items into the inventory of this device.[-][/c]NOTICE: THIS DEVICE IS UNDERGOING TESTING AND DOES NOT YET FUNCTION PROPERLY."
 Eden_TurretMissileCruisePOI,Cruise Missile Launcher (POI),,Lanceur de missiles de croisière (POI),,,,,,,,,,,,,,
 Eden_TurretMissileCruisePOIT2,EMP Cruise Missile Launcher (POI),,Lanceur de missiles de croisière EMP (POI),,,,,,,,,,,,,,
 Eden_TurretRaiderLaser,Light Beam Laser Turret (POI),,Tourelle à rayon laser (POI),,,,,,,,,,,,,,
-Eden_TurretRaiderLaserinfo,A beam turret for POIs.\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c],,Une tourelle à rayons pour les POI.\n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c][/c],,,,,,,,,,,,,,
+Eden_TurretRaiderLaserinfo,"A beam turret for POIs. Can be salvaged or deconstructed for components.\n\n[c][FFFF00]This device cannot be used by players.[-][/c]\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]"
 Eden_TurretRaiderLaserT2,Light Beam Laser Turret T2 (POI),,Tourelle à rayon laser T2 (POI),,,,,,,,,,,,,,
 Eden_TurretRaiderLaserT3,Light Beam Laser Turret T3 (POI),,Tourelle à rayon laser T3 (POI),,,,,,,,,,,,,,
 Eden_TurretRaiderLaserT4,Light Beam Laser Turret T4 (POI),,Tourelle à rayon laser T4 (POI),,,,,,,,,,,,,,
@@ -2764,7 +2799,7 @@ Eden_TungstenIngotinfo,Tungsten Ingot,,Lingot de tungstène,,,,,,,,,,,,,,
 Eden_AsteroidSilver,Silver Deposit,,Dépôt d'argent,,,,,,,,,,,,,,
 Eden_SilverResource,Silver Deposit,,Dépôt d'argent,,,,,,,,,,,,,,
 Eden_SilverOre,Silver Ore,,Minerai d'argent,,,,,,,,,,,,,,
-Eden_SilverOreinfo,The purification process of this ore requires a Small Constructor and water.,,Le processus de purification de ce minerai nécessite un Petit Constructeur et de l'eau.,,,,,,,,,,,,,,
+Eden_SilverOreinfo,"The purification process of this ore requires water."
 Eden_SilverIngot,Silver Powder,,Poudre d'argent,,,,,,,,,,,,,,
 Eden_SilverIngotinfo,A fine powder of highly processed silver.,,Une fine poudre d'argent hautement traitée.,,,,,,,,,,,,,,
 Eden_MagmaciteResourceNew,Magmacite Nugget.,,Pépite de Magmacite.,,,,,,,,,,,,,,
@@ -2933,9 +2968,9 @@ Eden_DataChipT3info,[c][ffffff]Value[-][/c] 100000 Credits\n[c][ffffff]Research[
 Eden_RegenKit,Health Nanite Injector,,Injecteur de nanites de santé,,,,,,,,,,,,,,
 Eden_RegenKitT2,[c][FF00FF]Advanced Health Nanite Injector[-][/c],,[c][FF00FF]Injecteur de nanites de santé avancé[-][/c],,,,,,,,,,,,,,
 Eden_StaminaRegenKit,Stamina Nanite Injector,,Injecteur de nanites d'endurance,,,,,,,,,,,,,,
-Eden_StaminaRegenKitinfo,A medical injector that injects nanites directly into the bloodstream to stimulate stamina recovery. \n\nGrants slow stamina regeneration for 15 minutes.,,Un injecteur médical qui injecte des nanites directement dans le sang pour stimuler la récupération d'endurance. \n\nDonne une régénération lente de l'endurance pendant 15 minutes.,,,,,,,,,,,,,,
+Eden_StaminaRegenKitinfo,A medical injector that injects nanites directly into the bloodstream to stimulate stamina recovery. \n\nGrants slow stamina regeneration for 15 minutes.\n[c][FFFFFF]Unlocked via schematic.[-][/c]
 Eden_StaminaRegenKitT2,[c][FF00FF]Advanced Stamina Nanite Injector[-][/c],,[c][FF00FF]Injecteur de nanites d'endurance avancée[-][/c],,,,,,,,,,,,,,
-Eden_StaminaRegenKitT2info,A medical injector that injects nanites directly into the bloodstream to stimulate stamina recovery. \n\nGrants fast stamina regeneration for 2 minutes.,,Un injecteur médical qui injecte des nanites directement dans le sang pour stimuler la récupération d'endurance.  \n\nGarantit une régénération rapide de l'endurance pendant 2 minutes.,,,,,,,,,,,,,,
+Eden_StaminaRegenKitT2info,A medical injector that injects nanites directly into the bloodstream to stimulate stamina recovery. \n\nGrants fast stamina regeneration for 2 minutes.\n[c][FFFFFF]Unlocked via schematic.[-][/c]
 Eden_RadiationRegenKit,Radiation Cleansing Nanite Injector,,Injecteur de nanites nettoyant les radiations,,,,,,,,,,,,,,
 Eden_ImmunityShield,[c][FF00FF]Personal Shield Generator[-][/c],,[c][FF00FF]Générateur de bouclier personnel[-][/c],,,,,,,,,,,,,,
 Eden_WarpCoreMoonshine,Warp Core Moonshine,,Noyau de distorsion Moonshine,,,,,,,,,,,,,,
@@ -3249,7 +3284,9 @@ Eden_NPCBountyTrader2,Xor (Bounty),,Xor (Prime),,,,,,,,,,,,,,
 Eden_NPCBountyTrader3,TBD (Bounty),,TBD (Prime),,,,,,,,,,,,,,
 Eden_NPCBountyTrader4,TBD (Bounty),,TBD (Prime),,,,,,,,,,,,,,
 Eden_NPCBountyTrader5,Sansa Kuvera (Bounty),,Sansa Kuvera (Prime),,,,,,,,,,,,,,
-Eden_NPCBountyTrader6,TBD (Bounty),,TBD (Prime),,,,,,,,,,,,,,
+Eden_NPCBountyTrader6Trigger,Captain Xorchek (Bounty)
+Eden_NPCBountyTrader6,Captain Xorchek (Bounty)
+Eden_NPCBountyTrader6Guard,Xorchek's Escort
 Eden_NPCBountyTrader7,TBD (Bounty),,TBD (Prime),,,,,,,,,,,,,,
 Eden_NPCBountyTrader8,TBD (Bounty),,TBD (Prime),,,,,,,,,,,,,,
 Eden_NPCBountyTrader9,TBD (Bounty),,TBD (Prime),,,,,,,,,,,,,,

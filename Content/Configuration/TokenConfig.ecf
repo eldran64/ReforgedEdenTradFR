@@ -305,7 +305,7 @@
 # ================================================================================================================================ Empyrion Shrine Tokens
 
 # Empyrion Shrine Key I
-{ Token Id: 6011, Name: [c][ff8000]Empyrion Shrine Key I[/c]
+{ Token Id: 6011, Name: [c][ff8000]Clé du sanctuaire d'Empyrion I[/c]
   DropOnDeath: false
   Description: This key will open a door in the Empyrion Shrine near the galactic core. NOT YET IN.
 }
@@ -315,7 +315,7 @@
 # --------------------------------------------------------- Solar System Surveys:
 
 # Alpha System Survey Report
-{ Token Id: 6012, Name: [c][ffffff]Alpha System Survey Report[-][/c]
+{ Token Id: 6012, Name: [c][ffffff]Rapport d'enquete sur le systeme Alpha[-][/c]
   DropOnDeath: false
   Description: A report detailing the planets and sectors of the Alpha system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
 }
@@ -358,7 +358,7 @@
 }
 
 # Progenitor Translation Matrix
-{ Token Id: 6104, Name: [c][ff8000]Progenitor Translation Matrix[/c]
+{ Token Id: 6104, Name: [c][ff8000]Matrice de traduction des progeniteurs[/c]
   CustomIcon: Eden_ProgenitorTranslationMatrix
   DropOnDeath: false
   Description: [c][ff8000]Story mission item.[-][/c] \n\nThis matrix grants access to Progenitor computer terminals. \n\nRequired to access the core system controls on Progenitor Cores and other Progenitor computer systems.
@@ -369,7 +369,7 @@
 # ================================================================================================================================ Object 82 Keys. Unused
 
 # Progenitor Key I - Object 1
-{ Token Id: 6105, Name: [c][FF00FF]Progenitor Key I[/c]
+{ Token Id: 6105, Name: [c][FF00FF]Cle des progeniteurs I[/c]
   CustomIcon: ProgenitorKeyI
   DropOnDeath: false
   RemoveOnUse: true
@@ -377,7 +377,7 @@
 }
 
 # Progenitor Key II - Object 13
-{ Token Id: 6106, Name: [c][FF00FF]Progenitor Key II[/c]
+{ Token Id: 6106, Name: [c][FF00FF]Cle des progeniteurs II[/c]
   CustomIcon: ProgenitorKeyII
   DropOnDeath: false
   RemoveOnUse: true
@@ -385,7 +385,7 @@
 }
 
 # Progenitor Key III - Object 42
-{ Token Id: 6107, Name: [c][FF00FF]Progenitor Key III[/c]
+{ Token Id: 6107, Name: [c][FF00FF]Cle des progeniteurs III[/c]
   CustomIcon: ProgenitorKeyIII
   DropOnDeath: false
   RemoveOnUse: true
@@ -393,7 +393,7 @@
 }
 
 # Progenitor Key IV - Object 276
-{ Token Id: 6108, Name: [c][FF00FF]Progenitor Key IV[/c]
+{ Token Id: 6108, Name: [c][FF00FF]Cle des progeniteurs IV[/c]
   CustomIcon: ProgenitorKeyIV
   DropOnDeath: false
   RemoveOnUse: true
@@ -456,23 +456,23 @@
 # ================================================================================================================================ Licenses and Rewards
 
 # Polaris Refinery License
-{ Token Id: 6201, Name: [c][00FFFF]Polaris Refinery License[/c]
-  Description: This license allows use of the furnaces on board [c][FFA500]Polaris orbital refineries.[/c][-] \n\n[c][FFFFFF][i]Place ores in the furnace input cargo container in the upper hangar. \nPick up refined ingots from the bottom hangar.[/i]
+{ Token Id: 6201, Name: [c][00FFFF]Licence de la raffinerie de Polaris[/c]
+  Description: Cette licence permet d'utiliser les fourneaux a bord des [c][FFA500]raffineries orbitales Polaris.[/c][-] \n\n[c][FFFFFF][i]Placez les minerais dans le conteneur d'entree du fourneau dans le hangar supérieur. \Recuperez les lingots raffines dans le hangar inferieur.[/i]
   # Description: Eden_PolarisRefineryLicenseinfo
   MarketPrice: 500000, display: true
 }
 
 # Colonists Refinery License
-{ Token Id: 6202, Name: Colonists Salvage License
-  Description: This license grants the user access to remove a single core lock on a Salvaged Wreck in Colonists Scrapyards and allowing you to freely loot and salvage it without penalty. One use only.
+{ Token Id: 6202, Name: Licence de récupération des colons
+  Description: Cette licence donne à l'utilisateur l'acces au retrait au verrou entourant le noyau d'une epave à recuperer dans les parcs à ferrailles des colons, ce qui vous permet de la piller et de la recuperer librement sans penalite. Utilisation unique.
   # Description: Eden_PolarisRefineryLicenseinfo
   MarketPrice: 50000, display: true
   RemoveOnUse: true
 }
 
 # Colonists Refinery License
-{ Token Id: 6203, Name: Stolen Polaris Supply Cache Access Card
-  Description: "Opens the door of a Polaris supply cache, allowing you to break into it without reputation penalty. Single use only."
+{ Token Id: 6203, Name: Carte volee d'acces à la cachette d'approvisionnement de Polaris
+  Description: "Ouvre la porte d'une cache d'approvisionnement Polaris, vous permettant de vous y introduire sans penalite de reputation. Utilisation unique."
   # Description: Eden_PolarisRefineryLicenseinfo
   MarketPrice: 50000, display: true
   RemoveOnUse: true
@@ -489,31 +489,31 @@
 # ================================================================================================================================ Keycards
 
 # Syndicate Access Card
-{ Token Id: 6301, Name: [c][8FFF8F]Syndicate Security Access Card[/c]
-  Description: This key card allows access to sensitive areas of Syndicate facilities.
+{ Token Id: 6301, Name: [c][8FFF8F]Carte d'acces au service de securite du syndicat[/c]
+  Description: Cette carte-cle permet d'acceder aux zones sensibles des installations du Syndicat.
 }
 
-{ Token Id: 6302, Name: [c][8FFF8F]Suspicious Package[/c]
-  Description: A small package to be delivered to Room 4 in the Syndicate Casino. \n\n[i][c][A9A9A9]It's ticking...[-][/c][/i]
+{ Token Id: 6302, Name: [c][8FFF8F]Paquet suspect[/c]
+  Description: Un petit paquet a livrer à la chambre 4 du Casino du Syndicat. \n\n[i][c][A9A9A9]Ca fait tic-tac...[-][/c][/i]
 }
 
 
-{ Token Id: 6303, Name: Smuggler Key Card
+{ Token Id: 6303, Name: Carte cle de contrebandier
   CustomIcon: KeyCardYellow
   RemoveOnUse: true
-  Description: Unlocks a Reinforced Smuggler Stash. \n\n[c][FF0000]Consomme a l'utilisation.[-][/c]
+  Description: Déverrouille une cache renforcee pour les contrebandiers. \n\n[c][FF0000]Consomme a l'utilisation.[-][/c]
   MarketPrice: 25000, display: true
 }
 
-{ Token Id: 6304, Name: [c][A9A9A9]Flying for Dummies[-][/c]
+{ Token Id: 6304, Name: [c][A9A9A9]Voler pour les nuls[-][/c]
   CustomIcon: Tablet
-  Description: \n\n[c][A9A9A9]A collection of flying lessons for novice pilots. \nWritten by Captain Pang.[-][/c]
+  Description: \n\n[c][A9A9A9]Une collection de leçons de vol pour les pilotes débutants. \nEcrit par le Capitaine Pang.[-][/c]
   MarketPrice: 25, display: true
 }
 
-{ Token Id: 6305, Name: [c][A9A9A9]Advanced Dogfighting Techniques[-][/c]
+{ Token Id: 6305, Name: [c][A9A9A9]Techniques avancees de combat de chiens[-][/c]
   CustomIcon: Tablet
-  Description: \n\n[c][A9A9A9]A collection of flying lessons for advanced pilots and signed by the author. \nWritten by Captain Pang.[-][/c]
+  Description: \n\n[c][A9A9A9]Une collection de leçons de vol pour les pilotes avances et signee par l'auteur. \nEcrit par le Capitaine Pang.[-][/c]
   MarketPrice: 25, display: true
 }
 
@@ -699,77 +699,137 @@
   MarketPrice: 40000, display: true
 }
 
+# ----------------------------------------------------------------------------------------- Exploration reports
+
+# Subspace Anomalies
+{ Token Id: 6550, Name: "Rapport d'anomalie de classe 1"
+  CustomIcon: Eden_DataExplorationT1
+  Description: "Cet objet n'a actuellement aucune utilite. Il pourra avoir une utilite plus tard. Le systeme d'exploration est actuellement en phase de test."
+  MarketPrice: 5000, display: true
+}
+
+{ Token Id: 6551, Name: "Rapport d'anomalie de classe 2"
+  CustomIcon: Eden_DataExplorationT2
+  Description: "Cet objet n'a actuellement aucune utilite. Il pourra avoir une utilite plus tard. Le systeme d'exploration est actuellement en phase de test."
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6552, Name: "Rapport d'anomalie de classe 3"
+  CustomIcon: Eden_DataExplorationT3
+  Description: "Cet objet n'a actuellement aucune utilite. Il pourra avoir une utilite plus tard. Le systeme d'exploration est actuellement en phase de test."
+  MarketPrice: 20000, display: true
+}
+
+{ Token Id: 6553, Name: "Rapport d'anomalie de classe 4"
+  CustomIcon: Eden_DataExplorationT4
+  Description: "Cet objet n'a actuellement aucune utilite. Il pourra avoir une utilite plus tard. Le systeme d'exploration est actuellement en phase de test."
+  MarketPrice: 30000, display: true
+}
+
+{ Token Id: 6554, Name: "Rapport d'anomalie de classe 5"
+  CustomIcon: Eden_DataExplorationT5
+  Description: "Cet objet n'a actuellement aucune utilite. Il pourra avoir une utilite plus tard. Le systeme d'exploration est actuellement en phase de test."
+  MarketPrice: 40000, display: true
+}
+
+{ Token Id: 6555, Name: "Rapport d'anomalie de classe 6"
+  CustomIcon: Eden_DataExplorationT6
+  Description: "Cet objet n'a actuellement aucune utilite. Il pourra avoir une utilite plus tard. Le systeme d'exploration est actuellement en phase de test."
+  MarketPrice: 50000, display: true
+}
+
+{ Token Id: 6556, Name: "Expedition d'exploration de niveau 1"
+  CustomIcon: Eden_DataExplorationEndT1
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 50000, display: true
+}
+
+{ Token Id: 6557, Name: "Expedition d'exploration de niveau 2"
+  CustomIcon: Eden_DataExplorationEndT2
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 50000, display: true
+}
+
+{ Token Id: 6558, Name: "Expedition d'exploration de niveau 3"
+  CustomIcon: Eden_DataExplorationEndT3
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 50000, display: true
+}
+
+
+
+
 # ================================================================================================================================ Bounty tokens
 
 # -------------------------------------------------------------------------- Wanted by Colonists
 # Savanth Greenzald's Insignia
 { Token Id: 6601, Name: [c][FFFFFF]Insigne de Savanth Greenzald[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
-  Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5]Savanth est une epine dans le pied des Colons Libres depuis plusieurs annees. Responsable d'un certain nombre d'attaques de bandits sur les voies de navigation, il a maintenant intensifie ses attaques pour inclure les stations et les avant-postes civils.\nLes Colonistes Libres paieront pour obtenir la preuve de sa mort, bien qu'il ne faille pas attendre longtemps avant qu'il ne revienne dans un corps fraîchement clone.\nIl dirige parfois ses operations depuis les avant-postes des bandits.[-][/c]"
-  MarketPrice: 25000, display: true
+  Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c] \n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c] \nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense. \n\n[c][D5D5D5]Savanth est une epine dans le pied des Colons Libres depuis plusieurs annees. Responsable d'un certain nombre d'attaques de bandits sur les voies de navigation, il a maintenant intensifie ses attaques pour inclure les stations et les avant-postes civils.\nLes Colonistes Libres paieront pour obtenir la preuve de sa mort, bien qu'il ne faille pas attendre longtemps avant qu'il ne revienne dans un corps fraîchement clone. \nIl dirige parfois ses operations depuis les avant-postes des bandits.[-][/c]"
+  MarketPrice: 50000, display: true
 }
 
 # Marko Inero's Insignia - Pirate Battlestation
 { Token Id: 6602, Name: [c][FFFFFF]Insigne de Marko Inero[-][/c] (Prime)
   CustomIcon: Eden_InsigniaPirates
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][FFFF00]Pirates[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5]Soupçonne d'être un chef terroriste au sein du gang de pirates connu sous le nom de Bloodhunters, Marko s'est fait un nom pour ses tactiques extrêmes.\nIl est recherche pour son implication dans le bombardement d'asteroïdes sur Intrazia Prime.\nIl a ete vu pour la derniere fois a la tête d'une battlestation pirate.[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # Small Tony's Insignia - Large Wrecks
 { Token Id: 6603, Name: [c][FFFFFF]Insigne de Petit Tony[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5]Le petit Tony dirige un gang de bandits local et a souvent ete aperçu se cachant dans des stations spatiales abandonnees.\nOn pense qu'il a ete tue plus souvent que n'importe quel autre bandit, mais il revient toujours grâce a sa chambre a clones que personne n'a pu trouver.\nLes Colons Libres paieraient bien celui qui peut ajouter un mort de plus a son nom.[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # Greeza Zeerzhi's Insignia
 { Token Id: 6604, Name: [c][FFFFFF]Insigne de Greeza Zeerzhi[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+  MarketPrice: 100000, display: true
 }
 
 # The Steel Hammer's Insignia
 { Token Id: 6605, Name: [c][FFFFFF]Insigne du marteau d'acier[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+  MarketPrice: 100000, display: true
 }
 
 # Captain Pang's Insignia - Polaris Freighter Attacks
 { Token Id: 6606, Name: [c][FFFFFF]Insigne du Capitaine Pang[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5]Personne ne sait pourquoi le capitaine a quitte sa vie de service dans la marine de Xenu. Tout ce que nos sources savent, c'est que son dossier a ete efface de la base de donnees centrale de Zirax apres son depart.\nIl a ete aperçu a la tête d'escadrons de chasseurs attaquant des cargos Polaris.[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 # Yerzhu the Smuggler's Insignia
 { Token Id: 6607, Name: [c][FFFFFF]Insigne de Yerzhu le contrebandier[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 # Warlord Khrang's Insignia
 { Token Id: 6608, Name: [c][FFFFFF]Insigne du seigneur de guerre Khrang[-][/c] (Prime)
   CustomIcon: Eden_InsigniaZirax
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][FF0000]L'empire Zirax[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 # 
 { Token Id: 6609, Name: [c][FFFFFF]Insigne de Kreenah Pitoli[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 # 
 { Token Id: 6610, Name: [c][FFFFFF]Insigne de Painbringer Xerxas[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][4CA5FF]Colons libre[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des colons pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 # -------------------------------------------------------------------------- Wanted by Zirax
@@ -777,70 +837,70 @@
 { Token Id: 6611, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5][-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # 
 { Token Id: 6612, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # 
 { Token Id: 6613, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # 
 { Token Id: 6614, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+  MarketPrice: 100000, display: true
 }
 
 # 
 { Token Id: 6615, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+  MarketPrice: 100000, display: true
 }
 
 # 
 { Token Id: 6616, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6617, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6618, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6619, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6620, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 # -------------------------------------------------------------------------- Wanted by Polaris
@@ -848,70 +908,70 @@
 { Token Id: 6621, Name: [c][FFFFFF]Insignia of Groktan Klous[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Raiders[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5]Groktan a souvent ete aperçu en train de diriger les operations quotidiennes du quartier general des Raiders.\nSa reputation de maltraitance envers ses subordonnes est bien connue des Raiders et il est souvent denonce aux autorites par ses propres hommes, pour qu'il revienne dans un nouveau corps de clone et se venge de ceux qui l'ont trahi.[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # Smuggler Gorn - Smuggler Outpost
 { Token Id: 6622, Name: [c][FFFFFF]Insignia of Smuggler Gorn[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5]Gorn est recherche par Polaris pour une longue liste de crimes, dont la vente de panneaux solaires defectueux aux avant-postes de Polaris, la vente de boulons de tige auto-obturants qui n'etaient pas auto-obturants, et le fait d'avoir marche sur un ver en voie de disparition.\nIl a ete aperçu pour la derniere fois se cachant dans un avant-poste de contrebandiers.[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # Korne the Outcast
 { Token Id: 6623, Name: [c][FFFFFF]Insignia of Korne the Outcast[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5]Il est connu pour attaquer des mineurs civils dans des sites miniers de bas etage et pour demander une rançon au mineur.\nIl s'enfuira de son vaisseau s'il est desactive, mais Polaris paiera bien pour une preuve de la destruction de son vaisseau.\nLa prise de son vaisseau aidera a maintenir la circulation des ressources dans tout le secteur.\nSachez qu'il a ete signale qu'il a mis la main sur une tourelle laser a faisceau lourd et qu'il l'a montee au sommet de son vaisseau d'attaque.[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
-# 
-{ Token Id: 6624, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
-  CustomIcon: Eden_InsigniaBandits
-  Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+# Director Crennek
+{ Token Id: 6624, Name: [c][FFFFFF]Insigne du Directeur Crennek[-][/c] (Prime)
+  CustomIcon: Eden_InsigniaZirax
+  Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][FF0000]X-Corp (Empire Zirax)[-][/c]\nApportez-la à un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de Polaris pour une recompense.\n\n[c][D5D5D5]Le directeur Crennek a dirige les efforts de recherche de XCorp sur la nouvelle technologie d'armement pour l'empire Zirax. Nous ne pouvons pas leur permettre de prendre le dessus. Nos renseignements rapportent que le directeur peut parfois etre trouvé dans les locaux des serveurs de XCorp, situes sur certains types de lunes cristallines.\nArretez leurs efforts de recherche en l'eliminant, au moins jusqu'a ce qu'ils puissent faire pousser un nouveau clone.\n\nAttention, le directeur abandonnera l'installation si vous détruisez le noyau ou les generateurs.[-][/c]"
+  MarketPrice: 200000, display: true
 }
 
 # 
 { Token Id: 6625, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+  MarketPrice: 100000, display: true
 }
 
 # 
 { Token Id: 6626, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6627, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6628, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6629, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6630, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Polaris pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 # -------------------------------------------------------------------------- Wanted by Trader
@@ -919,70 +979,70 @@
 { Token Id: 6631, Name: [c][FFFFFF]Insigne de Faeru Leksha[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5]Faeru a vole un heritage familial inestimable a un riche membre du conseil d'administration de la guilde commerciale. Apres avoir vu leur tête mise a prix, ils se sont caches et ont travaille pour un gang de bandits qui dirigeait un avant-poste de surveillance.\na ce jour, personne n'a retrouve l'heritage familial qu'il a vole.[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # Pirate Drug Farm
 { Token Id: 6632, Name: [c][FFFFFF]Insigne de Xor[-][/c] (Prime)
   CustomIcon: Eden_InsigniaPirates
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][FFFF00]Pirates[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5]Xor est un trafiquant de drogue specialise dans les drogues dangereuses et illegales.\nPour la stabilite de tout le secteur, la Guilde du commerce paiera cher pour obtenir la preuve de sa disparition.\nXor a acces a une chambre a clones et reviendra bientôt, mais chaque mort ralentit ses operations de drogue.[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # Class 3 SV Mining Sites
 { Token Id: 6633, Name: [c][FFFFFF]Insigne du trappeur[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5]Il y en a peu d'aussi impitoyables que le Trappeur. On dit qu'il est a l'affût dans les sites miniers de classe 3 avec des anomalies empêchant les vaisseaux capitaux de s'y rendre.\nPersonne ne sait comment il peut amener ses propres vaisseaux capitaux dans ces secteurs, mais il doit être arrête.\nLa Guilde du Commerce paiera bien pour le retrait de son vaisseau.[-][/c]"
-  MarketPrice: 250000, display: true
+  MarketPrice: 500000, display: true
 }
 
 # 
 { Token Id: 6634, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+  MarketPrice: 100000, display: true
 }
 
 # Sansa Kuvera
 { Token Id: 6635, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Raiders[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+  MarketPrice: 100000, display: true
 }
 
-# 
-{ Token Id: 6636, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
-  CustomIcon: Eden_InsigniaBandits
-  Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+# Captain Xorchek - Patrolling hot orbits.
+{ Token Id: 6636, Name: [c][FFFFFF]Insigne du Capitaine Xorchek[-][/c] (Prime)
+  CustomIcon: Eden_InsigniaZirax
+  Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Trading Guild[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][FF0000]Empire Zirax[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire des commerçants pour une recompense.\n\n[c][D5D5D5]Recherche par la Guilde du Commerce pour violation du traite entre Zirax et la Guilde. Xorchek a attaque des vaisseaux commerciaux autour d'orbites planetaires dans des systemes chauds. Arretez ce Zirax renegat avant qu'il ne declenche une autre guerre.[-][/c]"
+  MarketPrice: 200000, display: true
 }
 
 #
 { Token Id: 6637, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6638, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6639, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6640, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 # -------------------------------------------------------------------------- Wanted by Pirates
@@ -990,77 +1050,77 @@
 { Token Id: 6641, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # 
 { Token Id: 6642, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # 
 { Token Id: 6643, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 25000, display: true
+  MarketPrice: 50000, display: true
 }
 
 # 
 { Token Id: 6644, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+  MarketPrice: 100000, display: true
 }
 
 # 
 { Token Id: 6645, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 50000, display: true
+  MarketPrice: 100000, display: true
 }
 
 # 
 { Token Id: 6646, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6647, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6648, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6649, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6650, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales en territoire pirate pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
-  MarketPrice: 75000, display: true
+  MarketPrice: 150000, display: true
 }
 
 #
 { Token Id: 6651, Name: [c][FFFFFF]Insigne de Capitaine Xenu[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][0025FF]UCH[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Warlord[-][/c]\nApportez-les a un quartier-maître de l'UCH aux vaisseaux de recherche de l'UCH pour une recompense.\n\n[c][D5D5D5]Certains officiers de Zirax prennent l'initiative de traquer les navires de l'UCH, même contre les ordres du commandement de Zirax. L'UCH paiera bien pour avoir elimine de tels officiers.[-][/c]"
-  MarketPrice: 100000, display: true
+  MarketPrice: 200000, display: true
 }
 
 
@@ -1515,7 +1575,7 @@
 { Token Id: 6998, Name: [c][FFA500]Project Eden Support Guide[/c]
   CustomIcon: Eden_Guide2
   DropOnDeath: false
-  Description: "[c][FFA500]Il s'agit d'un scenario personnalise cree par un joueur et les developpeurs du jeu ne peuvent pas aider a resoudre les problemes rencontres en y jouant.[-][/c]\n\n[c][FFFF00][b]VEUILLEZ REPRODUIRE TOUT PROBLEME DE JEU DANS UNE SAUVEGARDE PAR DEFAUT, NON MODIFIEE, AVANT DE LE SIGNALER AUX DEVELOPPEURS DU JEU.[/b][-][/c]\n\nVeuillez toujours quitter completement Empyrion pour revenir au bureau Windows lorsque vous changez de sauvegarde ou de serveur.\n\nIl y a certains risques a jouer un scenario personnalise et il peut etre plus exigeant pour le materiel de votre PC. SAUVEGARDEZ SOUVENT VOS PLANS.\n\nVous pouvez trouver de l'aide et signaler des problemes sur la page de l'atelier du Projet Eden ou de Reforged Eden.\n\nSi vous jouez sur un serveur, parlez-en a l'administrateur de votre serveur.\nPour toute mise a jour du scenario, veuillez consulter la page de l'atelier.\n\n[i][c][A9A9A9]Reforged Eden Test v1.7 (Build 28)[-][/c][/i]\n[i][c][A9A9A9]Cet objet peut etre mis a la poubelle en toute securite.[-][/c][/i]"
+  Description: "[c][FFA500]Il s'agit d'un scenario personnalise cree par un joueur et les developpeurs du jeu ne peuvent pas aider a resoudre les problemes rencontres en y jouant.[-][/c]\n\n[c][FFFF00][b]VEUILLEZ REPRODUIRE TOUT PROBLEME DE JEU DANS UNE SAUVEGARDE PAR DEFAUT, NON MODIFIEE, AVANT DE LE SIGNALER AUX DEVELOPPEURS DU JEU.[/b][-][/c]\n\nVeuillez toujours quitter completement Empyrion pour revenir au bureau Windows lorsque vous changez de sauvegarde ou de serveur.\n\nIl y a certains risques a jouer un scenario personnalise et il peut etre plus exigeant pour le materiel de votre PC. SAUVEGARDEZ SOUVENT VOS PLANS.\n\nVous pouvez trouver de l'aide et signaler des problemes sur la page de l'atelier du Projet Eden ou de Reforged Eden.\n\nSi vous jouez sur un serveur, parlez-en a l'administrateur de votre serveur.\nPour toute mise a jour du scenario, veuillez consulter la page de l'atelier.\n\n[i][c][A9A9A9]Reforged Eden v1.7 (Build 30)[-][/c][/i]\n[i][c][A9A9A9]Cet objet peut etre mis a la poubelle en toute securite.[-][/c][/i]"
 }
 
 { Token Id: 6999, Name: [c][00FFFF]Project Eden Gameplay Guide[/c]

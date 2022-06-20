@@ -2779,6 +2779,23 @@ Chapters:
     RepeatConditions:
       NumRepeats: 1
     PictureFile: ClassSystem.png
+  - ChapterTitle: pda_oS40Cau
+    Category: FAQ
+    NoSkip: true
+    PlayerLevel: 1
+    Activatable: Never
+    Visibility: Always
+    HideTasks: true
+    Tasks:
+      - TaskTitle: pda_i8CqqKa
+        Actions:
+          - ActionTitle: pda_GeCmKCe
+            Check: WaitAction
+            Description: pda_GKeWqaJ
+    Description: pda_GOKSeWu
+    CompletedMessage: norm;10|pda_caaK4u0
+    RepeatConditions:
+      NumRepeats: 1
   - ChapterTitle: pda_aq0mOGS
     Category: FAQ
     NoSkip: true
@@ -8006,7 +8023,7 @@ Chapters:
               - AlienExtended4
               - AlienExtended5
               - AlienExtended6
-            Amount: 10000
+            Amount: 5000
       - TaskTitle: pda_eau8mKm
         StartMessage: norm;20|pda_mCmuCOe
         Actions:
@@ -9853,7 +9870,7 @@ Chapters:
               - AlienExtended4
               - AlienExtended5
               - AlienExtended6
-            Amount: 15000
+            Amount: 7500
       - TaskTitle: pda_Ha4iGG4
         StartMessage: norm;20|pda_i4kqUqK
         Actions:
@@ -10971,6 +10988,506 @@ Chapters:
               - Eden_ResearchBundle4
               - Eden_ResearchBundle5
     StartMessage: norm;60|eden_pda_aaKWK
+  - ChapterTitle: eden_pda_84qWSW8
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Always
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_WG4Wu00
+    CompletedMessage: dlg;Eden_ExplorationSiteC1_Init|
+    Tasks:
+      - TaskTitle: eden_pda_GLi0SaG
+        Actions:
+          - ActionTitle: eden_pda_mgGqi8O
+            Description: eden_pda_eSuqaau
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C1
+    HideTasks: true
+    Description: eden_pda_CSaICqK
+    PictureFile: Eden_ProbeSystemT1.png
+  - ChapterTitle: eden_pda_UeuQeLC
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_iq4iOim
+    CompletedMessage: dlg;Eden_ExplorationSiteC1_Init|
+    Tasks:
+      - TaskTitle: eden_pda_uLtOie0
+        Actions:
+          - ActionTitle: eden_pda_iO00R74
+            Description: eden_pda_wiCCK8S
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C1
+    HideTasks: true
+    Description: eden_pda_MtaKGG4
+    PictureFile: Eden_ProbeSystemT1.png
+    ChapterActivation:
+      - Check: InventoryOpened
+        Names:
+          - Eden_ExplorationScannerCV
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+  - ChapterTitle: eden_pda_Cuanjeu
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Always
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_aqevGGM
+    CompletedMessage: dlg;Eden_ExplorationSiteC2_Init|
+    Tasks:
+      - TaskTitle: eden_pda_OeOiSG4
+        Actions:
+          - ActionTitle: eden_pda_WqCuaim
+            Description: eden_pda_gimWaSu
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C2
+    HideTasks: true
+    Description: eden_pda_aeD8aqe
+    PictureFile: Eden_ProbeSystemT1.png
+  - ChapterTitle: eden_pda_qGWG0SC
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_O8u4qqS
+    CompletedMessage: dlg;Eden_ExplorationSiteC2_Init|
+    Tasks:
+      - TaskTitle: eden_pda_YmScmmT
+        Actions:
+          - ActionTitle: eden_pda_0O0Kmkc
+            Description: eden_pda_80a8KS0
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C2
+    HideTasks: true
+    Description: eden_pda_ee0S0C8
+    PictureFile: Eden_ProbeSystemT1.png
+    ChapterActivation:
+      - Check: InventoryOpened
+        Names:
+          - Eden_ExplorationScannerCV
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+  - ChapterTitle: eden_pda_2CW0uae
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Always
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_4GG8uKA
+    CompletedMessage: dlg;Eden_ExplorationSiteC3_Init|
+    Tasks:
+      - TaskTitle: eden_pda_GCCW0uU
+        Actions:
+          - ActionTitle: eden_pda_SKe4W8u
+            Description: eden_pda_seSeKi8
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C3
+    HideTasks: true
+    Description: eden_pda_Wa88SeV
+    PictureFile: Eden_ProbeSystemT2.png
+  - ChapterTitle: eden_pda_GqaK48q
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_C8a4W4W
+    CompletedMessage: dlg;Eden_ExplorationSiteC3_Init|
+    Tasks:
+      - TaskTitle: eden_pda_aKKGnu8
+        Actions:
+          - ActionTitle: eden_pda_CKGKqC8
+            Description: eden_pda_KC4K0Sm
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C3
+    HideTasks: true
+    Description: eden_pda_qucueOm
+    PictureFile: Eden_ProbeSystemT2.png
+    ChapterActivation:
+      - Check: InventoryOpened
+        Names:
+          - Eden_ExplorationScannerCV
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+  - ChapterTitle: eden_pda_mRue4mC
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Always
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_eKm4ki8
+    CompletedMessage: dlg;Eden_ExplorationSiteC4_Init|
+    Tasks:
+      - TaskTitle: eden_pda_Ya6S8qC
+        Actions:
+          - ActionTitle: eden_pda_Oe8au4O
+            Description: eden_pda_aGe4Kse
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C4
+    HideTasks: true
+    Description: eden_pda_KqASO0u
+    PictureFile: Eden_ProbeSystemT2.png
+  - ChapterTitle: eden_pda_OaSmCiC
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_SuiSaWm
+    CompletedMessage: dlg;Eden_ExplorationSiteC4_Init|
+    Tasks:
+      - TaskTitle: eden_pda_KuuKeKS
+        Actions:
+          - ActionTitle: eden_pda_qm80COa
+            Description: eden_pda_O0uu88d
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C4
+    HideTasks: true
+    Description: eden_pda_CGeUakq
+    PictureFile: Eden_ProbeSystemT2.png
+    ChapterActivation:
+      - Check: InventoryOpened
+        Names:
+          - Eden_ExplorationScannerCV
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+  - ChapterTitle: eden_pda_qG08S8q
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Always
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_WCKe0Gi
+    CompletedMessage: dlg;Eden_ExplorationSiteC5_Init|
+    Tasks:
+      - TaskTitle: eden_pda_aWqBu0q
+        Actions:
+          - ActionTitle: eden_pda_KW8ueQ4
+            Description: eden_pda_i8Swaim
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C5
+    HideTasks: true
+    Description: eden_pda_KSGGm4W
+    PictureFile: Eden_ProbeSystemT3.png
+  - ChapterTitle: eden_pda_Ca0aQWa
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_cKKuaS0
+    CompletedMessage: dlg;Eden_ExplorationSiteC5_Init|
+    Tasks:
+      - TaskTitle: eden_pda_0GCuaWu
+        Actions:
+          - ActionTitle: eden_pda_WmC0uWq
+            Description: eden_pda_K0daOwc
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C5
+    HideTasks: true
+    Description: eden_pda_e8GmW0u
+    PictureFile: Eden_ProbeSystemT3.png
+    ChapterActivation:
+      - Check: InventoryOpened
+        Names:
+          - Eden_ExplorationScannerCV
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+  - ChapterTitle: eden_pda_aaCH4Ku
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Always
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_4Ou8AtS
+    CompletedMessage: dlg;Eden_ExplorationSiteC6_Init|
+    Tasks:
+      - TaskTitle: eden_pda_W8ecmkK
+        Actions:
+          - ActionTitle: eden_pda_aSmeaei
+            Description: eden_pda_GGkWuGi
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C6
+    HideTasks: true
+    Description: eden_pda_xu4aCLG
+    PictureFile: Eden_ProbeSystemT4.png
+  - ChapterTitle: eden_pda_iAue0MS
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_uOq48W0
+    CompletedMessage: dlg;Eden_ExplorationSiteC6_Init|
+    Tasks:
+      - TaskTitle: eden_pda_eAeKiqO
+        Actions:
+          - ActionTitle: eden_pda_O8WiW48
+            Description: eden_pda_KCmaGGm
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    PlayfieldTypes:
+      - Eden_ExplorationSite_C6
+    HideTasks: true
+    Description: eden_pda_aKiuOmm
+    PictureFile: Eden_ProbeSystemT4.png
+    ChapterActivation:
+      - Check: InventoryOpened
+        Names:
+          - Eden_ExplorationScannerCV
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+  - ChapterTitle: eden_pda_44CK4Ku
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    ChapterActivation:
+      - Check: DialogOption
+        Names:
+          - Eden_Expedition_ExploreStage1
+        Value: 1
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    Tasks:
+      - TaskTitle: eden_pda_CSOk8m4
+        Actions:
+          - ActionTitle: eden_pda_S0a04eC
+            Description: eden_pda_C8Gm0mc
+            Check: NearPoi
+            Names:
+              - Eden_SpaceJunkT1
+              - Eden_SpaceJunkT2
+            GuidingDistance: 75000
+            TriggerDistance: 250
+        StartMessage: ''
+        CompletedMessage: ''
+      - TaskTitle: eden_pda_m0W8KqU
+        Actions:
+          - ActionTitle: eden_pda_mmGDiS0
+            CompletedMessage: ''
+            Description: eden_pda_ySmuC8W
+            Check: InventoryOpened
+            Names:
+              - Eden_ExplorationScannerCV
+        StartMessage: ''
+        CompletedMessage: ''
+    Rewards:
+      - Type: UP
+        Count: 10
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 1
+    StartMessage: norm;45|eden_pda_0LNK88S
+    CompletedMessage: dlg;Eden_Expedition_InitT1|
+  - ChapterTitle: eden_pda_i4Gm800
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    ChapterActivation:
+      - Check: DialogOption
+        Names:
+          - Eden_Expedition_ExploreStage1
+        Value: 2
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    Tasks:
+      - TaskTitle: eden_pda_uGO0X0q
+        Actions:
+          - ActionTitle: eden_pda_WSOimGO
+            Description: eden_pda_8KK88O0
+            Check: PoiDiscovered
+            Names:
+              - Eden_HackSpaceT1
+              - Eden_HackSpaceT2
+            GuidingDistance: 75000
+            TriggerDistance: 250
+            IsOrdered: 'true'
+          - ActionTitle: eden_pda_eO0CSKC
+            Description: eden_pda_uieO0CO
+            Check: PoiDiscovered
+            Names:
+              - Eden_HackSpaceT1
+              - Eden_HackSpaceT2
+            GuidingDistance: 75000
+            TriggerDistance: 250
+            IsOrdered: 'true'
+          - ActionTitle: eden_pda_4amWCWW
+            Description: eden_pda_mW9qeWe
+            Check: PoiDiscovered
+            Names:
+              - Eden_HackSpaceT1
+              - Eden_HackSpaceT2
+            GuidingDistance: 75000
+            TriggerDistance: 250
+            IsOrdered: 'true'
+      - TaskTitle: eden_pda_moqiSGC
+        Actions:
+          - ActionTitle: eden_pda_4NXaCia
+            CompletedMessage: ''
+            Description: eden_pda_uKi8mai
+            Check: InventoryOpened
+            Names:
+              - Eden_ExplorationScannerCV
+        StartMessage: ''
+        CompletedMessage: ''
+    Rewards:
+      - Type: UP
+        Count: 10
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 1
+    CompletedMessage: dlg;Eden_Expedition_InitT2|
+    StartMessage: norm;45|eden_pda_eOWqWGS
+  - ChapterTitle: eden_pda_e8A2Sqe
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    Group: eden_pda_jW0ui
+    StartMessage: norm;0|eden_pda_mCimWs4
+    CompletedMessage: dlg;Eden_Science_Init|
+    Tasks:
+      - TaskTitle: eden_pda_WeSifxe
+        Actions:
+          - ActionTitle: eden_pda_uGCuOO8
+            Description: eden_pda_4mWeOW4
+            CompletedMessage: ''
+            Check: WaitAction
+        StartMessage: ''
+        CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    HideTasks: true
+    Description: eden_pda_iiK8uvS
+    PictureFile: Eden_ProbeSystemT1.png
+    ChapterActivation:
+      - Check: InventoryOpened
+        Names:
+          - Eden_ScienceStation
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
   - ChapterTitle: eden_pda_OTK8m
     Category: SoloMission
     NoSkip: false
@@ -15648,6 +16165,68 @@ Chapters:
               - Pda
         StartMessage: norm;60|eden_pda_8umue4X
     CompletedMessage: dlg;Eden_BountyCol1_Start|
+  - ChapterTitle: eden_pda_OqmWSeC
+    Category: Tutorial
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    CompletedMessage: dlg;Eden_BountyBanditT1_Init|
+    HideTasks: true
+    ChapterActivation:
+      - Check: BlockDestroyed
+        Names:
+          - Eden_OPVBanditT1
+        Types:
+          - CoreNPC
+        Amount: 15
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    Tasks:
+      - TaskTitle: eden_pda_ekKiagC
+        Actions:
+          - ActionTitle: eden_pda_uW2WOCW
+            Description: eden_pda_uO0uuWM
+            CompletedMessage: ''
+            Check: WindowOpened
+            Names:
+              - Pda
+        StartMessage: norm;60|eden_pda_0iG818u
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 30
+      DelayAdd: 0
+  - ChapterTitle: eden_pda_qGamSe0
+    Category: Tutorial
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    CompletedMessage: dlg;Eden_BountyBanditT2_Init|
+    HideTasks: true
+    ChapterActivation:
+      - Check: BlockDestroyed
+        Names:
+          - Eden_OPVRaiderT1
+        Types:
+          - CoreNPC
+        Amount: 15
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    Tasks:
+      - TaskTitle: eden_pda_OOW4aOK
+        Actions:
+          - ActionTitle: eden_pda_0u4OuaG
+            Description: eden_pda_8WCSCWO
+            CompletedMessage: ''
+            Check: WindowOpened
+            Names:
+              - Pda
+        StartMessage: norm;60|eden_pda_GOeqe8q
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 30
+      DelayAdd: 0
   - ChapterTitle: eden_pda_aWa0uqW
     Category: Tutorial
     NoSkip: true
@@ -15741,6 +16320,63 @@ Chapters:
               - Pda
         StartMessage: norm;60|eden_pda_8GSiGGa
     CompletedMessage: dlg;Eden_BountyCol6_Start|
+  - ChapterTitle: eden_pda_mae848K
+    Category: Tutorial
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    HideTasks: true
+    ChapterActivation:
+      - Check: SubjectKilled
+        Names:
+          - Eden_NPCBountyTrader6Trigger
+        Amount: 1
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 1
+      DelayAdd: 0
+    CompletedMessage: ''
+    Tasks:
+      - TaskTitle: eden_pda_q0muFCS
+        StartMessage: high;15|eden_pda_qGCG8Oi
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_Oa0WGSu
+            Description: eden_pda_KGGGWuu
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 15
+        OnCompletePlayfieldOps:
+          - 'SpawnDrone: 1; Eden_NPCBountyTrader6; NearPlayer'
+          - 'SpawnDrone: 4; Eden_NPCBountyTrader6Guard; NearPlayer'
+      - TaskTitle: eden_pda_D8aEO4S
+        Actions:
+          - ActionTitle: eden_pda_oe0qKGO
+            Description: eden_pda_emmqu8q
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 30
+          - ActionTitle: eden_pda_OC4qeqa
+            CompletedMessage: ''
+            Description: eden_pda_KqaGq0A
+            Check: SubjectKilled
+            Names:
+              - Eden_NPCBountyTrader6
+            Amount: 1
+            IsOptional: 'true'
+          - ActionTitle: eden_pda_8eq8sqi
+            Description: eden_pda_SamaNiS
+            CompletedMessage: ''
+            IsOptional: 'true'
+            Check: SubjectKilled
+            Names:
+              - Eden_NPCBountyTrader6Guard
+            Amount: 4
+        StartMessage: norm;30|eden_pda_4WeOI8C
+        CompletedMessage: ''
   - ChapterTitle: eden_pda_uOSKWiu
     Category: Tutorial
     NoSkip: true
@@ -16262,7 +16898,7 @@ Chapters:
           - ActionTitle: eden_pda_8eWWhFn
             Description: eden_pda_ca8O4aG
             Check: WaitAction
-            Amount: 30
+            Amount: 10
             CompletedMessage: ''
           - ActionTitle: eden_pda_uiW0uuW
             Description: eden_pda_G0aaGSi
@@ -16293,6 +16929,48 @@ Chapters:
     Rewards:
       - Type: UP
         Count: 10
+  - ChapterTitle: eden_pda_K4aCCSW
+    Category: Tutorial
+    NoSkip: true
+    PlayerLevel: 1
+    Activatable: Always
+    Visibility: Never
+    Tasks:
+      - TaskTitle: eden_pda_aWuDSqq
+        Actions:
+          - ActionTitle: eden_pda_eOKW8Gc
+            Description: eden_pda_SiCWqaX
+            Check: WaitAction
+            Amount: 10
+          - ActionTitle: eden_pda_4CmKGud
+            Description: eden_pda_OKu6E84
+            CompletedMessage: ''
+            IsOptional: 'true'
+            Check: SubjectKilled
+            Names:
+              - Eden_RogueDroneSwarmerLaser
+              - Eden_RogueDroneSwarmerIon
+            Amount: 10
+        StartMessage: high;10|eden_pda_OW3maaK
+        OnActivatePlayfieldOps:
+          - 'SpawnDrone: 5; Eden_RogueDroneSwarmerLaser; NearPlayer'
+          - 'SpawnDrone: 5; Eden_RogueDroneSwarmerIon; NearPlayer'
+    ChapterActivation:
+      - Check: BlockDestroyed
+        Types:
+          - Eden_AsteroidRichT4
+        Amount: 20
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    CompletedMessage: ''
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 20
+      DelayAdd: 0
+    HideTasks: true
+    Rewards:
+      - Type: UP
+        Count: 25
   - ChapterTitle: eden_pda_GEW08a8
     Category: Tutorial
     NoSkip: true

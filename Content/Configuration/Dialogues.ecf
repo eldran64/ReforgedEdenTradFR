@@ -1,4 +1,4 @@
-/*  Created with eWCCT 3.30.0  */
+/*  Created with eWCCT 3.36.0  */
 /*  Website: https://empyrion-homeworld.net/tools/ewcct  */
 { +Dialogue Name: Trader_DialogueSwitch_Start
   NPCName: Trader
@@ -7084,13 +7084,19 @@
 { +Dialogue Name: MG_Blazar_Start
   NPCName: dialogue_m4C0OCC
   Output: dialogue_ie64mCu
-  Option_1: dialogue_sSO1WuG
+  Option_1: dialogue_4u0mOue
+  OptionNext_1: End
+}
+{ +Dialogue Name: MG_Blazar_Start2
+  NPCName: dialogue_sa8neT7
+  Output: dialogue_emmqC0O
+  Option_1: dialogue_GuI4SO0
   OptionNext_1: MG_Blazar_PlaceBet
-  Option_2: dialogue_q4Cma8O
+  Option_2: dialogue_u08uiAq
   OptionNext_2: MG_Blazar_Help
-  Option_3: dialogue_4u0mOue
+  Option_3: dialogue_K0uuGC0
   OptionNext_3: End
-  Variable_1: "BlazarBet", param1: int
+  Variable_1: "BlazarBet", param1: float
   Variable_2: "GameCount", param1: int
 }
 { +Dialogue Name: MG_Blazar_Help
@@ -7160,19 +7166,19 @@
   Option_5: dialogue_sqgGG0W
   OptionIf_5: "GameCount == 17"
   OptionNext_5: MG_Blazar_CashOut
-  OptionExecute_5: "BlazarBet = BlazarBet * 1.25"
+  OptionExecute_5: "(int)BlazarBet = BlazarBet * 1.25"
   Option_6: dialogue_pSgq8bH
   OptionIf_6: "GameCount == 18"
   OptionNext_6: MG_Blazar_CashOut
-  OptionExecute_6: "BlazarBet = BlazarBet * 1.5"
+  OptionExecute_6: "(int)BlazarBet = BlazarBet * 1.5"
   Option_7: dialogue_2mp4qK0
   OptionIf_7: "GameCount == 19"
   OptionNext_7: MG_Blazar_CashOut
-  OptionExecute_7: "BlazarBet = BlazarBet * 1.75"
+  OptionExecute_7: "(int)BlazarBet = BlazarBet * 1.75"
   Option_8: dialogue_G804aqi
   OptionIf_8: "GameCount == 20"
   OptionNext_8: MG_Blazar_Win
-  OptionExecute_8: "BlazarBet = BlazarBet * 2"
+  OptionExecute_8: "(int)BlazarBet = BlazarBet * 2"
   Option_9: dialogue_muaS0ae
   OptionIf_9: "GameCount > 20"
   OptionNext_9: MG_Blazar_Lose
@@ -15205,7 +15211,7 @@
 # Engineering log
 { +Dialogue Name: Eden_Mission_NewHorizons_EngineerStart
   NPCName: Chief Engineer's Log
-  Output: "@d0<color=#f67a12><b>Log 147-2:</b>       <size=100><#ff0000>ACCESS log 2754524323.   3411343   808088123 49339   444AAF-7.   YTTT53434.  7-FF7  JPN107</color></size>  <line-height=0.9em>\n────────────────────────────────────────────────────────\n</line-height><size=250>Nous avons pris en charge un docteur Weston de la colonie qui était tombé malade dans des circonstances mystérieuses. Nous avions récupéré les pièces détachées du vaisseau pour continuer à construire la colonie, mais nous n'avions pas encore récupéré la baie médicale, alors ils nous l'ont envoyé pour le soigner. @p9@d0<color=#f67a12><size=250>Tout ce que je sais, c'est que l'alerte rouge a été lancée et que le capitaine a isolé le pont avec son code de commande personnel et a lancé la séquence d'autodestruction. \nQuelque chose a mal tourné et seulement 2 des générateurs secondaires ont explosé. Il y a eu des surtensions mais la plupart du vaisseau est intact. Si des officiers de l'U.C.H. lisent ceci, vous pourriez être en mesure de rendre certains systèmes opérationnels. @p9@d0<color=#f67a12><size=250>Vous avez sans doute déjà allumé les générateurs auxiliaires. Les commandes de gravité sont de l'autre côté de cette pièce. Mets les deux interrupteurs sur la position "on", mais pour activer complètement la gravité, tu devras trouver la dérivation du conduit plus profondément dans le vaisseau. \nVous pourrez peut-être accéder au pont si vous fouillez les quartiers du capitaine pour trouver sa commande personnelle. \nJ'entends des cris maintenant. Des cris cauchemardesques. Je n'en veux même pas au capitaine de vouloir détruire le vaisseau. Que les autres vaisseaux du Projet Eden trouvent des endroits plus cléments...</color>"
+  Output: "@d0<color=orange><b>Log 147-2:</b>       <size=100><#ff0000>ACCESS log 2754524323.   3411343   808088123 49339   444AAF-7.   YTTT53434.  7-FF7  JPN107</color></size>  <line-height=0.9em>\n────────────────────────────────────────────────────────\n</line-height><size=250>Nous avons pris en charge un docteur Weston de la colonie qui était tombé malade dans des circonstances mystérieuses. Nous avions récupéré les pièces détachées du vaisseau pour continuer à construire la colonie, mais nous n'avions pas encore récupéré la baie médicale, alors ils nous l'ont envoyé pour le soigner. @p9@d0<color=#f67a12><size=250>Tout ce que je sais, c'est que l'alerte rouge a été lancée et que le capitaine a isolé le pont avec son code de commande personnel et a lancé la séquence d'autodestruction. \nQuelque chose a mal tourné et seulement 2 des générateurs secondaires ont explosé. Il y a eu des surtensions mais la plupart du vaisseau est intact. Si des officiers de l'U.C.H. lisent ceci, vous pourriez être en mesure de rendre certains systèmes opérationnels. @p9@d0<color=#f67a12><size=250>Vous avez sans doute déjà allumé les générateurs auxiliaires. Les commandes de gravité sont de l'autre côté de cette pièce. Mets les deux interrupteurs sur la position "on", mais pour activer complètement la gravité, tu devras trouver la dérivation du conduit plus profondément dans le vaisseau. \nVous pourrez peut-être accéder au pont si vous fouillez les quartiers du capitaine pour trouver sa commande personnelle. \nJ'entends des cris maintenant. Des cris cauchemardesques. Je n'en veux même pas au capitaine de vouloir détruire le vaisseau. Que les autres vaisseaux du Projet Eden trouvent des endroits plus cléments...</color>"
   Option_1: "Quitter."
   OptionNext_1: End
 }
@@ -15421,7 +15427,7 @@
 }
 
 { +Dialogue Name: Eden_RogueStarter_Slayer
-  Output: "@d0Now playing:\n<color=#f67a12>═══════════════════════════════════════════════════════════</color>\n<size=200%><#ff0000>       Déchirement et déchirure</color></size>                                     <#ff2500><b>Par Morden Gick</color>\n                                      De l'album <#ff0000>Eternal Doom</color>\n<color=#f67a12>═══════════════════════════════════════════════════════════</color>\n<#A9A9A9><i>La musique heavy metal commence à jouer.</i></color>"
+  Output: "@d0Now playing:\n<color=orange>═══════════════════════════════════════════════════════════</color>\n<size=200%><#ff0000>       Déchirement et déchirure</color></size>                                     <#ff2500><b>Par Morden Gick</color>\n                                      De l'album <#ff0000>Eternal Doom</color>\n<color=#f67a12>═══════════════════════════════════════════════════════════</color>\n<#A9A9A9><i>La musique heavy metal commence à jouer.</i></color>"
   Execute_1: "RemoveItem('Token', 1, 666)"
   Option_1: "Voir le rapport tactique."
   OptionNext_1: Eden_RogueStarter_BridgeTactical
@@ -16352,7 +16358,7 @@
 { +Dialogue Name: Eden_DataResearcher_TurninAskFlawed
   Output: "@d0Combien voulez-vous en rendre ?"
 
-  Option_1: "1 Puce de données défectueuse <color=#00ff00>(+25,000 credits)</color>" 
+  Option_1: "1 Flawed Data Chip <color=#00ff00>(+25,000 credits)</color>" 
   OptionNext_1: Eden_DataResearcher_TurninFlawed
   OptionIf_1: "HasItem('Eden_DataChipT2', 1)"
   OptionExecute_1: "RemoveItem('Eden_DataChipT2', 1); Player.Credit += 25000; Eden_UCHResearch = Eden_UCHResearch + 5; Player.UpgradePoints += 50"
@@ -17653,7 +17659,7 @@
 
 { +Dialogue Name: Eden_TheDead_Triangulation_Wrong3
   Output: "Scannage... @w4Scannage... @w4Scannage... @p4<#00ffff>Correspondance de signal détectée ! Force 57.0. Distance 743y. Direction 177.1, 18.4.</color> \n\n<i>Hé bébé, tu veux aller chez moi pour regarder Spaceflix ?</i> \nScan terminé. \nCe ne sont ABSOLUMENT pas les résultats du scanner que tu cherches."
-  Option_1: "Sélectionner une autre fréquence. Quickly."
+  Option_1: "Sélectionner une autre fréquence. Rapidement."
   OptionNext_1: Eden_TheDead_Triangulation_Select
 }
 
@@ -18980,7 +18986,7 @@
 /*  Created with eWCCT 3.36.0  */
 /*  Website: https://empyrion-homeworld.net/tools/ewcct  */
 { +Dialogue Name: Eden_GlobalVariables
-  Globals: "int Eden_G_DataChipT1R = 1; int Eden_G_DataChipT1C = 10000; int Eden_G_DataChipT1UP = 10; int Eden_G_DataChipT2R = 5; int Eden_G_DataChipT2C = 50000; int Eden_G_DataChipT2UP = 50; int Eden_G_DataChipT3R = 10; int Eden_G_DataChipT3C = 100000; int Eden_G_DataChipT3UP = 100;<nl>int Eden_G_BanditReward = 10000; int Eden_Global_DataPad = 50;"
+  Globals: "int Eden_G_DataChipT1R = 1; int Eden_G_DataChipT1C = 10000; int Eden_G_DataChipT1UP = 10; int Eden_G_DataChipT2R = 5; int Eden_G_DataChipT2C = 50000; int Eden_G_DataChipT2UP = 50; int Eden_G_DataChipT3R = 10; int Eden_G_DataChipT3C = 100000; int Eden_G_DataChipT3UP = 100;<nl>int Eden_G_BanditRewardT1 = 20000; int Eden_G_BanditRewardT2 = 40000; int Eden_G_BanditRewardT3 = 80000; int Eden_Global_DataPad = 50;"
 }
 { +Dialogue Name: Eden_ScenarioIntro_Start
   NPCName: eden_dialogue_Wi8m4gW
@@ -19745,17 +19751,17 @@
 { +Dialogue Name: Eden_ColScrapyard_RewardT1
   Output: eden_dialogue_qq0eamq
   Next_1: Eden_ColScrapyard_RewardSelect
-  Execute: "RemoveItem('Token', 1, 6506); Player.Credit += Random(9000,11000);<nl>AddReputation(Faction.Colonists, Random(350,650))"
+  Execute: "RemoveItem('Token', 1, 6506); Player.Credit += Eden_G_BanditRewardT1;<nl>AddReputation(Faction.Colonists, Random(350,650))"
 }
 { +Dialogue Name: Eden_ColScrapyard_RewardT2
   Output: eden_dialogue_q8fS4mK
   Next_1: Eden_ColScrapyard_RewardSelect
-  Execute: "RemoveItem('Token', 1, 6505); Player.Credit += Random(18000,22000);<nl>AddReputation(Faction.Colonists, Random(500,800))"
+  Execute: "RemoveItem('Token', 1, 6505); Player.Credit += Eden_G_BanditRewardT2;<nl>AddReputation(Faction.Colonists, Random(500,800))"
 }
 { +Dialogue Name: Eden_ColScrapyard_RewardT3
   Output: eden_dialogue_0mm8i8G
   Next_1: Eden_ColScrapyard_RewardSelect
-  Execute: "RemoveItem('Token', 1, 6507); Player.Credit += Random(36000,46000);<nl>AddReputation(Faction.Colonists, Random(750,1250))"
+  Execute: "RemoveItem('Token', 1, 6507); Player.Credit += Eden_G_BanditRewardT3;<nl>AddReputation(Faction.Colonists, Random(750,1250))"
 }
 { +Dialogue Name: Eden_Distress_Completed
   Output: eden_dialogue_0WCKGOC
@@ -20003,6 +20009,79 @@
   OptionNext_1: Eden_BountyOffice_Start
   Option_2: eden_dialogue_qiaCSWe
   OptionNext_2: End
+}
+{ +Dialogue Name: Eden_BountyBanditT1_Init
+  Variable_1: "Eden_RewardCredit", param1: int
+  Variable_2: "Eden_RewardRep", param1: int
+  Variable_3: "Eden_Randomize", param1: int
+  Execute: "Eden_RewardCredit = Eden_G_BanditRewardT1 * 5; Eden_RewardRep = 750; Eden_Randomize = Random(1,5)"
+  Next_1: Eden_BountyBandit_Greet
+  NPCName: eden_dialogue_CaSSqe0
+}
+{ +Dialogue Name: Eden_BountyBanditT2_Init
+  Variable_1: "Eden_RewardCredit", param1: int
+  Variable_2: "Eden_RewardRep", param1: int
+  Variable_3: "Eden_Randomize", param1: int
+  Execute: "Eden_RewardCredit = Eden_G_BanditRewardT2 * 5; Eden_RewardRep = 1500; Eden_Randomize = Random(1,5)"
+  Next_1: Eden_BountyBandit_Greet
+  NPCName: eden_dialogue_448KpGi
+}
+{ +Dialogue Name: Eden_BountyBandit_Greet
+  Output: eden_dialogue_WSQS4qG
+  Option_1: eden_dialogue_Saum8OO
+  OptionNext_1: Eden_BountyBandit_Randomize
+  Option_2: eden_dialogue_uqumuOC
+  OptionNext_2: Eden_BountyBandit_Exit
+}
+{ +Dialogue Name: Eden_BountyBandit_Randomize
+  Next_1: Eden_BountyBandit_Polaris
+  NextIf_1: "Eden_Randomize == 1"
+  Next_2: Eden_BountyBandit_Col
+  NextIf_2: "Eden_Randomize == 2"
+  Next_3: Eden_BountyBandit_Trader
+  NextIf_3: "Eden_Randomize == 3"
+  Next_4: Eden_BountyBandit_Pirates
+  NextIf_4: "Eden_Randomize == 4"
+  Next_5: Eden_BountyBandit_Zirax
+  NextIf_5: "Eden_Randomize == 5"
+  Next_6: End
+}
+{ +Dialogue Name: Eden_BountyBandit_Polaris
+  Output: eden_dialogue_uc0KC08
+  Execute: "Player.Credit += Eden_RewardCredit; AddReputation(Faction.Polaris, Eden_RewardRep)"
+  Option_1: eden_dialogue_mqO8WCi
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_BountyBandit_Col
+  Output: eden_dialogue_uKaKaeW
+  Execute: "Player.Credit += Eden_RewardCredit; AddReputation(Faction.Colonists, Eden_RewardRep)"
+  Option_1: eden_dialogue_aGiOmeW
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_BountyBandit_Trader
+  Output: eden_dialogue_8ae44SC
+  Execute: "Player.Credit += Eden_RewardCredit; AddReputation(Faction.Polaris, Eden_RewardRep)"
+  Option_1: eden_dialogue_uW5SSeS
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_BountyBandit_Pirates
+  Output: eden_dialogue_OwSCiSa
+  Execute: "Player.Credit += Eden_RewardCredit; AddReputation(Faction.Pirates, Eden_RewardRep)"
+  Option_1: eden_dialogue_04KCm8S
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_BountyBandit_Zirax
+  Output: eden_dialogue_94qqeaG
+  Execute: "Player.Credit += Eden_RewardCredit; AddReputation(Faction.Zirax, Eden_RewardRep); AddReputation(Faction.Xenu, Eden_RewardRep); AddReputation(Faction.Rados, Eden_RewardRep)"
+  Option_1: eden_dialogue_8GKSmOa
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_BountyBandit_Exit
+  Output: eden_dialogue_8QKq4mi
+  Option_1: eden_dialogue_GSWGO6u
+  OptionNext_1: End
+  Option_2: eden_dialogue_q82OSS6
+  OptionNext_2: Eden_BountyBandit_Greet
 }
 { +Dialogue Name: Eden_BountyCol1_Start
   NPCName: eden_dialogue_qG308Gm
@@ -20346,6 +20425,716 @@
   Option_1: eden_dialogue_WGYuuee
   OptionNext_1: End
   Output: eden_dialogue_aO0Oum0
+}
+{ +Dialogue Name: Eden_ExplorationSiteC1_Init
+  NPCName: eden_dialogue_Qm80Cue
+  Variable_1: "Eden_RewardCount", param1: int
+  Variable_2: "Eden_Complete", param1: dbplayerpf_int
+  Variable_3: "Eden_ProbeType", param1: string
+  Variable_4: "Eden_ProbeTypeLoc", param1: string
+  Variable_5: "Eden_SiteDifficulty", param1: dbplayerpf_int
+  Variable_6: "Eden_ScanDate", param1: dbplayerpf_int
+  Variable_7: "Eden_SiteType", param1: string
+  Variable_8: "Eden_ContainerID", param1: int
+  Variable_9: "Eden_PlayfieldName", param1: string
+  Variable_10: "Eden_ProbeCount", param1: dbplayerpf_int
+  Variable_11: "Eden_ProbePositionX", param1: int
+  Variable_12: "Eden_ProbePositionY", param1: int
+  Variable_13: "Eden_ProbePositionZ", param1: int
+  Variable_14: "Eden_AnomalyPositionX", param1: int
+  Variable_15: "Eden_AnomalyPositionY", param1: int
+  Variable_16: "Eden_AnomalyPositionZ", param1: int
+  Variable_17: "Eden_ProbeDifferenceX", param1: int
+  Variable_18: "Eden_ProbeDifferenceY", param1: int
+  Variable_19: "Eden_ProbeDifferenceZ", param1: int
+  Variable_20: "Eden_ProbeDifference", param1: int
+  Execute: "Eden_RewardCount = 1; Eden_ProbeType = 'Eden_ProbeSystemT1'; Eden_ProbeTypeLoc = Loc('Eden_ProbeSystemT1');<nl>Eden_SiteType = 'Class 1 Exploration Site'; Eden_ContainerID = 649; Eden_PlayfieldName = Player.PlayfieldName"
+  Next_1: Eden_ExplorationSite_Deny
+  NextIf_1: "Eden_Complete == 1"
+  Next_2: Eden_ExplorationSite_Randomize
+  NextIf_2: "Eden_SiteDifficulty == 0"
+  Next_3: Eden_ExplorationSite_Greet
+}
+{ +Dialogue Name: Eden_ExplorationSiteC2_Init
+  NPCName: eden_dialogue_qm4KKCG
+  Variable_1: "Eden_RewardCount", param1: int
+  Variable_2: "Eden_Complete", param1: dbplayerpf_int
+  Variable_3: "Eden_ProbeType", param1: string
+  Variable_4: "Eden_ProbeTypeLoc", param1: string
+  Variable_5: "Eden_SiteDifficulty", param1: dbplayerpf_int
+  Variable_6: "Eden_ScanDate", param1: dbplayerpf_int
+  Variable_7: "Eden_SiteType", param1: string
+  Variable_8: "Eden_ContainerID", param1: int
+  Variable_9: "Eden_PlayfieldName", param1: string
+  Variable_10: "Eden_ProbeCount", param1: dbplayerpf_int
+  Variable_11: "Eden_ProbePositionX", param1: int
+  Variable_12: "Eden_ProbePositionY", param1: int
+  Variable_13: "Eden_ProbePositionZ", param1: int
+  Variable_14: "Eden_AnomalyPositionX", param1: int
+  Variable_15: "Eden_AnomalyPositionY", param1: int
+  Variable_16: "Eden_AnomalyPositionZ", param1: int
+  Variable_17: "Eden_ProbeDifferenceX", param1: int
+  Variable_18: "Eden_ProbeDifferenceY", param1: int
+  Variable_19: "Eden_ProbeDifferenceZ", param1: int
+  Variable_20: "Eden_ProbeDifference", param1: int
+  Execute: "Eden_RewardCount = 1; Eden_ProbeType = 'Eden_ProbeSystemT1'; Eden_ProbeTypeLoc = Loc('Eden_ProbeSystemT1');<nl>Eden_SiteType = 'Class 2 Exploration Site'; Eden_ContainerID = 650; Eden_PlayfieldName = Player.PlayfieldName"
+  Next_1: Eden_ExplorationSite_Deny
+  NextIf_1: "Eden_Complete == 1"
+  Next_2: Eden_ExplorationSite_Randomize
+  NextIf_2: "Eden_SiteDifficulty == 0"
+  Next_3: Eden_ExplorationSite_Greet
+}
+{ +Dialogue Name: Eden_ExplorationSiteC3_Init
+  NPCName: eden_dialogue_u0S0SKG
+  Variable_1: "Eden_RewardCount", param1: int
+  Variable_2: "Eden_Complete", param1: dbplayerpf_int
+  Variable_3: "Eden_ProbeType", param1: string
+  Variable_4: "Eden_ProbeTypeLoc", param1: string
+  Variable_5: "Eden_SiteDifficulty", param1: dbplayerpf_int
+  Variable_6: "Eden_ScanDate", param1: dbplayerpf_int
+  Variable_7: "Eden_SiteType", param1: string
+  Variable_8: "Eden_ContainerID", param1: int
+  Variable_9: "Eden_PlayfieldName", param1: string
+  Variable_10: "Eden_ProbeCount", param1: dbplayerpf_int
+  Variable_11: "Eden_ProbePositionX", param1: int
+  Variable_12: "Eden_ProbePositionY", param1: int
+  Variable_13: "Eden_ProbePositionZ", param1: int
+  Variable_14: "Eden_AnomalyPositionX", param1: int
+  Variable_15: "Eden_AnomalyPositionY", param1: int
+  Variable_16: "Eden_AnomalyPositionZ", param1: int
+  Variable_17: "Eden_ProbeDifferenceX", param1: int
+  Variable_18: "Eden_ProbeDifferenceY", param1: int
+  Variable_19: "Eden_ProbeDifferenceZ", param1: int
+  Variable_20: "Eden_ProbeDifference", param1: int
+  Execute: "Eden_RewardCount = 0; Eden_ProbeType = 'Eden_ProbeSystemT2'; Eden_ProbeTypeLoc = Loc('Eden_ProbeSystemT2');<nl>Eden_SiteType = 'Class 3 Exploration Site'; Eden_ContainerID = 651; Eden_PlayfieldName = Player.PlayfieldName"
+  Next_1: Eden_ExplorationSite_Deny
+  NextIf_1: "Eden_Complete == 1"
+  Next_2: Eden_ExplorationSite_Randomize
+  NextIf_2: "Eden_SiteDifficulty == 0"
+  Next_3: Eden_ExplorationSite_Greet
+}
+{ +Dialogue Name: Eden_ExplorationSiteC4_Init
+  NPCName: eden_dialogue_K4l8iOK
+  Variable_1: "Eden_RewardCount", param1: int
+  Variable_2: "Eden_Complete", param1: dbplayerpf_int
+  Variable_3: "Eden_ProbeType", param1: string
+  Variable_4: "Eden_ProbeTypeLoc", param1: string
+  Variable_5: "Eden_SiteDifficulty", param1: dbplayerpf_int
+  Variable_6: "Eden_ScanDate", param1: dbplayerpf_int
+  Variable_7: "Eden_SiteType", param1: string
+  Variable_8: "Eden_ContainerID", param1: int
+  Variable_9: "Eden_PlayfieldName", param1: string
+  Variable_10: "Eden_ProbeCount", param1: dbplayerpf_int
+  Variable_11: "Eden_ProbePositionX", param1: int
+  Variable_12: "Eden_ProbePositionY", param1: int
+  Variable_13: "Eden_ProbePositionZ", param1: int
+  Variable_14: "Eden_AnomalyPositionX", param1: int
+  Variable_15: "Eden_AnomalyPositionY", param1: int
+  Variable_16: "Eden_AnomalyPositionZ", param1: int
+  Variable_17: "Eden_ProbeDifferenceX", param1: int
+  Variable_18: "Eden_ProbeDifferenceY", param1: int
+  Variable_19: "Eden_ProbeDifferenceZ", param1: int
+  Variable_20: "Eden_ProbeDifference", param1: int
+  Execute: "Eden_RewardCount = 1; Eden_ProbeType = 'Eden_ProbeSystemT3'; Eden_ProbeTypeLoc = Loc('Eden_ProbeSystemT3');<nl>Eden_SiteType = 'Class 4 Exploration Site'; Eden_ContainerID = 652; Eden_PlayfieldName = Player.PlayfieldName"
+  Next_1: Eden_ExplorationSite_Deny
+  NextIf_1: "Eden_Complete == 1"
+  Next_2: Eden_ExplorationSite_Randomize
+  NextIf_2: "Eden_SiteDifficulty == 0"
+  Next_3: Eden_ExplorationSite_Greet
+}
+{ +Dialogue Name: Eden_ExplorationSiteC5_Init
+  NPCName: eden_dialogue_eeC44ut
+  Variable_1: "Eden_RewardCount", param1: int
+  Variable_2: "Eden_Complete", param1: dbplayerpf_int
+  Variable_3: "Eden_ProbeType", param1: string
+  Variable_4: "Eden_ProbeTypeLoc", param1: string
+  Variable_5: "Eden_SiteDifficulty", param1: dbplayerpf_int
+  Variable_6: "Eden_ScanDate", param1: dbplayerpf_int
+  Variable_7: "Eden_SiteType", param1: string
+  Variable_8: "Eden_ContainerID", param1: int
+  Variable_9: "Eden_PlayfieldName", param1: string
+  Variable_10: "Eden_ProbeCount", param1: dbplayerpf_int
+  Variable_11: "Eden_ProbePositionX", param1: int
+  Variable_12: "Eden_ProbePositionY", param1: int
+  Variable_13: "Eden_ProbePositionZ", param1: int
+  Variable_14: "Eden_AnomalyPositionX", param1: int
+  Variable_15: "Eden_AnomalyPositionY", param1: int
+  Variable_16: "Eden_AnomalyPositionZ", param1: int
+  Variable_17: "Eden_ProbeDifferenceX", param1: int
+  Variable_18: "Eden_ProbeDifferenceY", param1: int
+  Variable_19: "Eden_ProbeDifferenceZ", param1: int
+  Variable_20: "Eden_ProbeDifference", param1: int
+  Execute: "Eden_RewardCount = 2; Eden_ProbeType = 'Eden_ProbeSystemT3'; Eden_ProbeTypeLoc = Loc('Eden_ProbeSystemT3');<nl>Eden_SiteType = 'Class 5 Exploration Site'; Eden_ContainerID = 653; Eden_PlayfieldName = Player.PlayfieldName"
+  Next_1: Eden_ExplorationSite_Deny
+  NextIf_1: "Eden_Complete == 1"
+  Next_2: Eden_ExplorationSite_Randomize
+  NextIf_2: "Eden_SiteDifficulty == 0"
+  Next_3: Eden_ExplorationSite_Greet
+}
+{ +Dialogue Name: Eden_ExplorationSiteC6_Init
+  NPCName: eden_dialogue_SIKoCu8
+  Variable_1: "Eden_RewardCount", param1: int
+  Variable_2: "Eden_Complete", param1: dbplayerpf_int
+  Variable_3: "Eden_ProbeType", param1: string
+  Variable_4: "Eden_ProbeTypeLoc", param1: string
+  Variable_5: "Eden_SiteDifficulty", param1: dbplayerpf_int
+  Variable_6: "Eden_ScanDate", param1: dbplayerpf_int
+  Variable_7: "Eden_SiteType", param1: string
+  Variable_8: "Eden_ContainerID", param1: int
+  Variable_9: "Eden_PlayfieldName", param1: string
+  Variable_10: "Eden_ProbeCount", param1: dbplayerpf_int
+  Variable_11: "Eden_ProbePositionX", param1: int
+  Variable_12: "Eden_ProbePositionY", param1: int
+  Variable_13: "Eden_ProbePositionZ", param1: int
+  Variable_14: "Eden_AnomalyPositionX", param1: int
+  Variable_15: "Eden_AnomalyPositionY", param1: int
+  Variable_16: "Eden_AnomalyPositionZ", param1: int
+  Variable_17: "Eden_ProbeDifferenceX", param1: int
+  Variable_18: "Eden_ProbeDifferenceY", param1: int
+  Variable_19: "Eden_ProbeDifferenceZ", param1: int
+  Variable_20: "Eden_ProbeDifference", param1: int
+  Execute: "Eden_RewardCount = 1; Eden_ProbeType = 'Eden_ProbeSystemT4'; Eden_ProbeTypeLoc = Loc('Eden_ProbeSystemT4');<nl>Eden_SiteType = 'Class 6 Exploration Site'; Eden_ContainerID = 654; Eden_PlayfieldName = Player.PlayfieldName"
+  Next_1: Eden_ExplorationSite_Deny
+  NextIf_1: "Eden_Complete == 1"
+  Next_2: Eden_ExplorationSite_Randomize
+  NextIf_2: "Eden_SiteDifficulty == 0"
+  Next_3: Eden_ExplorationSite_Greet
+}
+{ +Dialogue Name: Eden_ExplorationSite_Deny
+  Output: eden_dialogue_SD4uu8M
+  Option_1: eden_dialogue_SOqGKuq
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_ExplorationSite_Randomize
+  Execute: "Eden_SiteDifficulty = Random(1,4); Eden_RewardCount = Eden_RewardCount + Eden_SiteDifficulty; Eden_ProbeCount = 1 * Eden_SiteDifficulty + Random(0,2);"
+  Next_1: Eden_ExplorationSite_Greet
+}
+{ +Dialogue Name: Eden_ExplorationSite_Greet
+  Output: eden_dialogue_8weii44
+  Option_1: eden_dialogue_Si40GIi
+  OptionIf_1: "HasItem(Eden_ProbeType,Eden_ProbeCount)"
+  OptionNext_1: Eden_ExplorationSite_Scan
+  Option_2: eden_dialogue_GO4wmae
+  OptionIf_2: "!HasItem(Eden_ProbeType,Eden_ProbeCount)"
+  OptionNext_2: End
+  Option_3: eden_dialogue_im4KC0d
+  OptionIf_3: "HasItem(Eden_ProbeType,Eden_ProbeCount)"
+  OptionNext_3: End
+}
+{ +Dialogue Name: Eden_ExplorationSite_Scan
+  Execute: "Eden_AnomalyPositionX = Random(-20,20) * Eden_ProbeCount; Eden_AnomalyPositionY = Random(-20,20) * Eden_ProbeCount; Eden_AnomalyPositionZ = Random(-20,20) * Eden_ProbeCount"
+  Next_1: Eden_ExplorationSite_ScanSelect
+}
+{ +Dialogue Name: Eden_ExplorationSite_ScanSelect
+  Execute: "Eden_ProbeDifferenceX = Eden_ProbePositionX - Eden_AnomalyPositionX;<nl>Eden_ProbeDifferenceY = Eden_ProbePositionY - Eden_AnomalyPositionY;<nl>Eden_ProbeDifferenceZ = Eden_ProbePositionZ - Eden_AnomalyPositionZ;<nl>Eden_ProbeDifference = System.Math.Abs(Eden_ProbeDifferenceX) + System.Math.Abs(Eden_ProbeDifferenceY) + System.Math.Abs(Eden_ProbeDifferenceZ)"
+  Output: eden_dialogue_8mCiCKS
+  Option_1: eden_dialogue_eamm8Ku
+  OptionIf_1: "Eden_ProbePositionX <= 360"
+  OptionNext_1: Eden_ExplorationSite_ScanSelect
+  OptionExecute_1: "Eden_ProbePositionX += 1"
+  Option_2: eden_dialogue_iOWCGmO
+  OptionIf_2: "Eden_ProbePositionX >= -360"
+  OptionNext_2: Eden_ExplorationSite_ScanSelect
+  OptionExecute_2: "Eden_ProbePositionX -= 1"
+  Option_3: eden_dialogue_iGmiWGe
+  OptionNext_3: Eden_ExplorationSite_ScanSelect
+  Option_4: eden_dialogue_KS04GOq
+  OptionIf_4: "Eden_ProbePositionY <= 360"
+  OptionNext_4: Eden_ExplorationSite_ScanSelect
+  OptionExecute_4: "Eden_ProbePositionY += 1"
+  Option_5: eden_dialogue_YKGTs8W
+  OptionIf_5: "Eden_ProbePositionY >= -360"
+  OptionNext_5: Eden_ExplorationSite_ScanSelect
+  OptionExecute_5: "Eden_ProbePositionY -= 1"
+  Option_6: eden_dialogue_q0mOWuF
+  OptionNext_6: Eden_ExplorationSite_ScanSelect
+  Option_7: eden_dialogue_amE8WOK
+  OptionIf_7: "Eden_ProbePositionZ <= 360"
+  OptionNext_7: Eden_ExplorationSite_ScanSelect
+  OptionExecute_7: "Eden_ProbePositionZ += 1"
+  Option_8: eden_dialogue_8SWu0C8
+  OptionIf_8: "Eden_ProbePositionZ >= -360"
+  OptionNext_8: Eden_ExplorationSite_ScanSelect
+  OptionExecute_8: "Eden_ProbePositionZ -= 1"
+  Option_9: eden_dialogue_egO0Kie
+  OptionNext_9: Eden_ExplorationSite_ScanSelect
+  Option_10: eden_dialogue_CKA4Wme
+  OptionIf_10: "Eden_ProbePositionX == Eden_AnomalyPositionX && Eden_ProbePositionY == Eden_AnomalyPositionY && Eden_ProbePositionZ == Eden_AnomalyPositionZ"
+  OptionNext_10: Eden_ExplorationSite_Complete
+  Option_11: eden_dialogue_8ueSBm8
+  OptionNext_11: End
+}
+{ +Dialogue Name: Eden_ExplorationSite_ScanCheck
+  Execute: "Eden_ProbeDifferenceX = Eden_ProbePositionX - Eden_AnomalyPositionX;<nl>Eden_ProbeDifferenceY = Eden_ProbePositionY - Eden_AnomalyPositionY;<nl>Eden_ProbeDifferenceZ = Eden_ProbePositionZ - Eden_AnomalyPositionZ;<nl>Eden_ProbeDifference = System.Math.Abs(Eden_ProbeDifferenceX) + System.Math.Abs(Eden_ProbeDifferenceY) + System.Math.Abs(Eden_ProbeDifferenceZ)"
+  Next_1: Eden_ExplorationSite_Complete
+  NextIf_1: "Eden_ProbePositionX == Eden_AnomalyPositionX && Eden_ProbePositionY == Eden_AnomalyPositionY && Eden_ProbePositionZ == Eden_AnomalyPositionZ"
+  Next_2: Eden_ExplorationSite_ScanSelect
+}
+{ +Dialogue Name: Eden_ExplorationSite_Complete
+  Execute: "RemoveItem(Eden_ProbeType,Eden_ProbeCount); Eden_Complete = 1; AddItemsFromContainer(Eden_ContainerID, Eden_RewardCount); Player.UpgradePoints += Eden_RewardCount * 3; Eden_ScanDate = GetGameTimeInSec(); "
+  Option_1: eden_dialogue_qmW8WrG
+  OptionNext_1: End
+  Output: eden_dialogue_2iKeeC0
+}
+{ +Dialogue Name: Eden_Science_Init
+  Variable_1: "Eden_ExpeditionType", param1: dbplayer_int
+  Variable_2: "Eden_ExpeditionLength", param1: dbplayer_int
+  Variable_3: "Eden_ExpeditionReward", param1: dbplayer_int
+  Variable_4: "Eden_ExpeditionStageCount", param1: dbplayer_int
+  Variable_5: "Eden_ExpeditionStageOption", param1: dbplayer_int
+  Variable_6: "Eden_Randomizer", param1: int
+  Variable_7: "Eden_ExpeditionStart", param1: dbplayer_int
+  Variable_8: "Eden_ExpeditionName", param1: dbplayer_string
+  Variable_9: "Eden_ExpeditionStartPDA", param1: dbplayer_int
+  Variable_10: "Eden_ExpeditionRewardMod", param1: dbplayer_int
+  Variable_11: "Eden_ExpeditionRegion", param1: dbplayer_string
+  Variable_12: "Eden_ExpeditionMissionSelect", param1: dbplayer_int
+  Next_1: Eden_Science_Setup
+  NextIf_1: "Eden_ExpeditionStart == 0"
+  Next_2: Eden_Expedition_Init
+  NextIf_2: "Eden_ExpeditionStartPDA == 1"
+  Next_3: Eden_Science_Greet
+  NextIf_3: "Eden_ExpeditionStageCount >= Eden_ExpeditionLength"
+  Next_4: Eden_Science_Greet
+}
+{ +Dialogue Name: Eden_Science_Setup
+  Execute: "Eden_ExpeditionName = 'none'; Eden_ExpeditionLength = 0"
+  Next_1: Eden_Science_Greet
+}
+{ +Dialogue Name: Eden_Science_Greet
+  Output: eden_dialogue_4ia4See
+  Option_1: eden_dialogue_S0im8us
+  OptionIf_1: "Eden_ExpeditionStart == 2"
+  OptionNext_1: End
+  Option_2: eden_dialogue_a4KGO8K
+  OptionIf_2: "Eden_ExpeditionStart == 1"
+  OptionNext_2: Eden_Science_Reward
+  Option_3: eden_dialogue_LGWCmWG
+  OptionIf_3: "Eden_ExpeditionStart != 2"
+  OptionNext_3: Eden_Science_Expeditions
+  Option_4: eden_dialogue_ePCGWaK
+  OptionIf_4: "Eden_ExpeditionStart == 2"
+  OptionNext_4: Eden_Science_Expeditions
+  Option_5: eden_dialogue_GWiGWK8
+  OptionNext_5: End
+}
+{ +Dialogue Name: Eden_Science_Expeditions
+  Output: eden_dialogue_00hSKCM
+  Option_1: eden_dialogue_aSu26WS
+  OptionIf_1: "Eden_ExpeditionStart == 2"
+  OptionNext_1: Eden_Science_Reward
+  Option_2: eden_dialogue_a4OWWCi
+  OptionIf_2: "Eden_ExpeditionStart == 1"
+  OptionNext_2: Eden_Expedition_Init
+  Option_3: eden_dialogue_K0aSSes
+  OptionIf_3: "Eden_ExpeditionStart == 0"
+  OptionNext_3: Eden_Science_ExpeditionsSelect
+  Option_4: eden_dialogue_mm0nO6W
+  OptionIf_4: "Eden_ExpeditionStart == 1"
+  OptionNext_4: Eden_Science_Quit3
+  Option_5: eden_dialogue_mS8WaKu
+  OptionIf_5: "Eden_ExpeditionStart == 1"
+  OptionNext_5: Eden_Science_Quit
+  Option_6: eden_dialogue_80KSGmS
+  OptionNext_6: End
+}
+{ +Dialogue Name: Eden_Science_ExpeditionsSelect
+  Output: eden_dialogue_eme04eu
+  Option_1: eden_dialogue_88eViio
+  OptionNext_1: Eden_Science_ExpeditionsExplore
+  Option_2: eden_dialogue_mjG0Caa
+  OptionNext_2: End
+  Option_3: eden_dialogue_WmS04ai
+  OptionNext_3: End
+  Option_4: eden_dialogue_CmwOwO4
+  OptionNext_4: End
+  Option_5: eden_dialogue_Ou4WejO
+  OptionNext_5: End
+  Option_6: eden_dialogue_C8G4K8G
+  OptionNext_6: Eden_Science_Expeditions
+  Option_7: eden_dialogue_WaWeWKS
+  OptionNext_7: End
+}
+{ +Dialogue Name: Eden_Science_ExpeditionsExplore
+  Option_1: eden_dialogue_qmmqWOG
+  OptionIf_1: "HasItem('Token', 1, 6556)"
+  OptionNext_1: Eden_Science_ExploreC1Start
+  Option_2: eden_dialogue_SS8eI8O
+  OptionIf_2: "HasItem('Token', 1, 6557)"
+  OptionNext_2: End
+  Option_3: eden_dialogue_JmWmrOG
+  OptionIf_3: "HasItem('Token', 1, 6558)"
+  OptionNext_3: End
+  Option_4: eden_dialogue_q4WOqKS
+  OptionNext_4: Eden_Science_ExpeditionsSelect
+  Option_5: eden_dialogue_0iSVu8q
+  OptionNext_5: End
+  Output: eden_dialogue_iRKC4ie
+}
+{ +Dialogue Name: Eden_Science_Quit
+  Output: eden_dialogue_Gk4CaKu
+  Option_1: eden_dialogue_ummSavG
+  OptionNext_1: Eden_Science_Quit2
+  Option_2: eden_dialogue_LiC4mKK
+  OptionNext_2: Eden_Science_Greet
+  Option_3: eden_dialogue_S8aGekS
+  OptionNext_3: End
+}
+{ +Dialogue Name: Eden_Science_Quit2
+  Output: eden_dialogue_imQ4OaC
+  Option_1: eden_dialogue_GuaaiWE
+  OptionNext_1: Eden_Science_Greet
+  Option_2: eden_dialogue_aG0uO98
+  OptionNext_2: End
+  Execute: "Eden_ExpeditionReward = 0; Eden_ExpeditionMissionSelect = 0; Eden_Randomizer = 0;<nl>Eden_ExpeditionType = 0; Eden_ExpeditionStageCount = 0; Eden_ExpeditionStageOption = 0;<nl>Eden_ExpeditionName = 'none'; Eden_ExpeditionRegion = 'Neutral Space'; Eden_ExpeditionStart = 0"
+}
+{ +Dialogue Name: Eden_Science_Quit3
+  Output: eden_dialogue_8qCua8u
+  Option_1: eden_dialogue_OWiKiu8
+  OptionNext_1: Eden_Science_Quit
+  Option_2: eden_dialogue_8i80eaq
+  OptionNext_2: Eden_Science_Expeditions
+  Option_3: eden_dialogue_Q2We0Ox
+  OptionNext_3: End
+}
+{ +Dialogue Name: Eden_Science_Reward
+}
+{ +Dialogue Name: Eden_Science_ExploreC1Start
+  Execute: "Eden_ExpeditionType = 1; Eden_ExpeditionLength = Random(3,5); Eden_ExpeditionReward = 1; Eden_ExpeditionStageCount = 1;<nl>Eden_ExpeditionStart = 1; Eden_ExpeditionName = 'Exploration Tier 1'; Eden_ExpeditionRegion = 'Neutral Space'"
+  Output: eden_dialogue_S08GamG
+  Option_1: eden_dialogue_amWWC8K
+  OptionNext_1: Eden_Science_Expeditions
+}
+{ +Dialogue Name: Eden_Expedition_InitT1
+  Variable_1: "Eden_ExpeditionReward", param1: dbplayer_int
+  Variable_2: "Eden_ExpeditionStageCount", param1: dbplayer_int
+  Variable_3: "Eden_ExpeditionStartPDA", param1: dbplayer_int
+  Variable_4: "Eden_ExpeditionStageOption", param1: dbplayer_int
+  Execute: "Eden_ExpeditionStartPDA = 0; Eden_ExpeditionStageCount += 1; Eden_ExpeditionReward += 1; Eden_ExpeditionStageOption = 0;"
+  Output: eden_dialogue_i4qWaOi
+  Option_1: eden_dialogue_mueeaSu
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_Expedition_InitT2
+  Variable_1: "Eden_ExpeditionReward", param1: dbplayer_int
+  Variable_2: "Eden_ExpeditionStageCount", param1: dbplayer_int
+  Variable_3: "Eden_ExpeditionStartPDA", param1: dbplayer_int
+  Variable_4: "Eden_ExpeditionStageOption", param1: dbplayer_int
+  Execute: "Eden_ExpeditionStartPDA = 0; Eden_ExpeditionStageCount += 1; Eden_ExpeditionReward += 2; Eden_ExpeditionStageOption = 0;"
+  Output: eden_dialogue_u6W08oi
+  Option_1: eden_dialogue_4WaaCCC
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_Expedition_InitT3
+  Variable_1: "Eden_ExpeditionReward", param1: dbplayer_int
+  Variable_2: "Eden_ExpeditionStageCount", param1: dbplayer_int
+  Variable_3: "Eden_ExpeditionStartPDA", param1: dbplayer_int
+  Variable_4: "Eden_ExpeditionStageOption", param1: dbplayer_int
+  Execute: "Eden_ExpeditionStartPDA = 0; Eden_ExpeditionStageCount += 1; Eden_ExpeditionReward += 3; Eden_ExpeditionStageOption = 0"
+  Output: eden_dialogue_uhSmqGq
+  Option_1: eden_dialogue_CmGGS0i
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_Expedition_Init
+  Next_1: Eden_Expedition_ExploreOptRandom
+  NextIf_1: "Eden_ExpeditionStageOption == 0"
+  Next_2: Eden_Expedition_ExploreStart2
+  NextIf_2: "Eden_ExpeditionType == 1"
+}
+{ +Dialogue Name: Eden_Expedition_ExploreOptRandom
+  Next_1: Eden_Expedition_ExploreStart2
+  Execute: "Eden_ExpeditionStageOption = Random(1,100)"
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStart2
+  Next_1: Eden_Expedition_ExploreStageEnd
+  NextIf_1: "Eden_ExpeditionStageCount >= Eden_ExpeditionLength"
+  Next_2: Eden_Expedition_ExploreStage1
+  NextIf_2: "Eden_ExpeditionStageCount == 1"
+  Next_3: Eden_Expedition_ExploreStage2
+  NextIf_3: "Eden_ExpeditionStageCount == 2"
+  Next_4: Eden_Expedition_ExploreStage3
+  NextIf_4: "Eden_ExpeditionStageCount == 3"
+  Next_5: Eden_Expedition_ExploreStage4
+  NextIf_5: "Eden_ExpeditionStageCount == 4"
+  Next_6: Eden_Expedition_ExploreStage5
+  NextIf_6: "Eden_ExpeditionStageCount == 5"
+  Next_7: Eden_Expedition_ExploreStage6
+  NextIf_7: "Eden_ExpeditionStageCount == 6"
+  Next_8: Eden_Expedition_ExploreStage7
+  NextIf_8: "Eden_ExpeditionStageCount == 7"
+  Next_9: Eden_Expedition_ExploreStage8
+  NextIf_9: "Eden_ExpeditionStageCount == 8"
+  Next_10: Eden_Expedition_ExploreStage9
+  NextIf_10: "Eden_ExpeditionStageCount == 9"
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStageEnd
+  Option_1: eden_dialogue_MCYWGm4
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_8C8Ku8m
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_O4uuO4G
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_CGquOmC
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_G8CMOPG
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_GqWC08S
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_COueiSa
+  OptionNext_7: End
+  Output: eden_dialogue_C6CSeOC
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStage1
+  Option_1: eden_dialogue_mmCKi8G
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_u0SeWwA
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_miiCKiu
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_eCeuC4i
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_GeuS0O0
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_uMWqK8C
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_MipWSOa
+  OptionNext_7: End
+  Output: eden_dialogue_4aGmOSm
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStage2
+  Option_1: eden_dialogue_0q4Ceai
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_4QKeIQK
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_WWKW8OG
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_SOOm4ww
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_Kq88Pqa
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_G4Wm4GC
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_ReOi8W8
+  OptionNext_7: End
+  Output: eden_dialogue_8q8Keuu
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStage3
+  Option_1: eden_dialogue_OqC8K44
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_KuSaKii
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_iC8W08O
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_G4OqKau
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_m4GKKea
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_SGuuumi
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_aiGOaK4
+  OptionNext_7: End
+  Output: eden_dialogue_WECqC08
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStage4
+  Option_1: eden_dialogue_aGAeiem
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_e0aeG4u
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_mGuKGOW
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_maOqt0W
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_CO0OqCY
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_m8Wsge8
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_m86aKWi
+  OptionNext_7: End
+  Output: eden_dialogue_eKQWeOe
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStage5
+  Option_1: eden_dialogue_CaSMmiW
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_uqqSm8K
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_O8WiCqm
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_iq2eW0O
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_Sq004Ye
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_mEmCq4a
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_eueC0GC
+  OptionNext_7: End
+  Output: eden_dialogue_ECiCu0a
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStage6
+  Option_1: eden_dialogue_aOCaESG
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_Eq0KEaW
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_muiWmOK
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_W8OmuGi
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_uu0y4aa
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_4OaCs0O
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_8in840G
+  OptionNext_7: End
+  Output: eden_dialogue_4eCi4iO
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStage7
+  Option_1: eden_dialogue_SC4miWY
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_ia0O0eW
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_GC8Lamq
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_uuGumOe
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_KGaG048
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_aaWamuu
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_88SSueS
+  OptionNext_7: End
+  Output: eden_dialogue_mK0qOO8
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStage8
+  Option_1: eden_dialogue_Wq4C4qu
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_8CCuqWW
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_0eW0eYu
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_quuKaCS
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_aWqqiCG
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_qSq0KJW
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_KWKqe0O
+  OptionNext_7: End
+  Output: eden_dialogue_euWCWOS
+}
+{ +Dialogue Name: Eden_Expedition_ExploreStage9
+  Option_1: eden_dialogue_GQii4Gu
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionNext_1: End
+  Option_2: eden_dialogue_YOOG8CK
+  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionNext_2: End
+  Option_3: eden_dialogue_SWe41OB
+  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionNext_3: End
+  Option_4: eden_dialogue_GqV4muG
+  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  OptionNext_4: End
+  Option_5: eden_dialogue_qmS8WiK
+  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
+  OptionNext_5: End
+  Option_6: eden_dialogue_iUu4meG
+  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
+  OptionNext_6: End
+  Option_7: eden_dialogue_0q8SSva
+  OptionNext_7: End
+  Output: eden_dialogue_iCO1W4o
+}
+{ +Dialogue Name: Eden_ExpeditionGeneral_Deny
+  Output: eden_dialogue_mK494Cm
+  Option_1: eden_dialogue_SrueOiu
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_ExpeditionGeneral_Greet
+  Output: eden_dialogue_GCEaGSS
+  Option_1: eden_dialogue_iu8iqWc
+  OptionNext_1: Eden_ExpeditionGeneral_StageResume
+  Option_2: eden_dialogue_aOO84uW
+  OptionNext_2: Eden_ExpeditionGeneral_Quit
+}
+{ +Dialogue Name: Eden_ExpeditionGeneral_StageSelect
+  Execute: "Eden_ExpeditionStage += 1; Eden_ExpeditionMissionSelect = Random(1,5; "
+  Next_1: Eden_ExpeditionGeneral_StageResume
+}
+{ +Dialogue Name: Eden_ExpeditionGeneral_StageResume
+  Next_1: Eden_Expedition1_StageResume
+  NextIf_1: "Eden_ExpeditionType == 1"
+}
+{ +Dialogue Name: Eden_Expedition1_StageCheck
+  Next_1: Eden_Expedition1_Complete
+  NextIf_1: "Eden_ExpeditionStage == Eden_ExpeditionStageCount"
+  Next_2: Eden_Expedition1_StageResume
+}
+{ +Dialogue Name: Eden_Expedition1_StageResume
+  Output: eden_dialogue_KmWeamx
+  Option_1: eden_dialogue_CiouqC6
+  OptionIf_1: "Eden_ExpeditionMissionSelect == 1"
+  OptionNext_1: End
+  Option_2: eden_dialogue_OCCumYG
+  OptionIf_2: "Eden_ExpeditionMissionSelect == 2"
+  OptionNext_2: End
+  Option_3: eden_dialogue_iGquicq
+  OptionIf_3: "Eden_ExpeditionMissionSelect >= 3"
+  OptionNext_3: End
+}
+{ +Dialogue Name: Eden_Expedition1_Complete
 }
 { +Dialogue Name: Eden_HackFrequency_Start
   Variable_1: "Code", param1: int

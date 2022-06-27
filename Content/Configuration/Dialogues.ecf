@@ -1,4 +1,4 @@
-/*  Created with eWCCT 3.36.0  */
+/*  Created with eWCCT 3.38.1  */
 /*  Website: https://empyrion-homeworld.net/tools/ewcct  */
 { +Dialogue Name: Trader_DialogueSwitch_Start
   NPCName: Trader
@@ -6769,13 +6769,40 @@
   OptionNext_6: Class_System_StatsEngineer, param1: Class_System_Statistics
   OptionExecute_6: "SkillDamage1 = Player.Skills['MultitoolDamage']; SkillDamage2 = Player.Skills['DrillDamage']; SkillDamage3 = Player.Skills['ChainsawDamage']; SkillDamage4 = Player.Skills['PilotLYRange']"
   Option_7: dialogue_4W0G8Oi
-  OptionIf_7: "MainLevel == 5 && SubLevel < 1"
+  OptionIf_7: "MainLevel > 4 && SubLevel < 1"
   OptionNext_7: Class_System_SubMenu
   Option_8: dialogue_OKeuK8K
   OptionNext_8: End
   Option_9: dialogue_O4GuOGG
   OptionIf_9: "HasItem('Token', 1, 4013)"
   OptionNext_9: Class_System_Medal, param1: Class_System_Statistics
+  Option_10: dialogue_qqwO88O
+  OptionIf_10: "MainClass != 'Soldier' && MainClass != 'Marksman' && MainClass != 'Agent' && MainClass != 'Vanguard' && MainClass != 'Specialist' && MainClass != 'Engineer'"
+  OptionNext_10: Class_System_Reconfirm
+}
+{ +Dialogue Name: Class_System_Reconfirm
+  Execute_1: "SetNPCName('Class System - DEBUG CONFIRMATION')"
+  Output: dialogue_KuK808G
+  Option_1: dialogue_8OuCOqB
+  OptionNext_1: Class_System_MainComplete
+  OptionExecute_1: "MainClass = 'Soldier'; SubLevel = 0"
+  Option_2: dialogue_O8CiKOO
+  OptionNext_2: Class_System_MainComplete
+  OptionExecute_2: "MainClass = 'Marksman'; SubLevel = 0"
+  Option_3: dialogue_Wt4eA0m
+  OptionNext_3: Class_System_MainComplete
+  OptionExecute_3: "MainClass = 'Agent'; SubLevel = 0"
+  Option_4: dialogue_muO8SSW
+  OptionNext_4: Class_System_MainComplete
+  OptionExecute_4: "MainClass = 'Vanguard'; SubLevel = 0"
+  Option_5: dialogue_qG08CcO
+  OptionNext_5: Class_System_MainComplete
+  OptionExecute_5: "MainClass = 'Specialist'; SubLevel = 0"
+  Option_6: dialogue_Ssu0eWq
+  OptionNext_6: Class_System_MainComplete
+  OptionExecute_6: "MainClass = 'Engineer'; SubLevel = 0"
+  Option_7: dialogue_GPwGCaW
+  OptionNext_7: End
 }
 { +Dialogue Name: Class_System_StatsSoldier
   Output: dialogue_qjuuEeO
@@ -14483,6 +14510,7 @@
   OptionNext_1: SM_HSP_Debug_Main
 }
 
+
 # ============================================================================================================================================================================================================
 # ===================================================================================================================================== Project Eden Custom Dialog
 # ============================================================================================================================================================================================================
@@ -18981,7 +19009,7 @@
 # ============================================================================================================================================================================================================
 # ===================================================================================================================================== Project Eden Custom Dialog eWCCT
 # ============================================================================================================================================================================================================
-/*  Created with eWCCT 3.38.0  */
+/*  Created with eWCCT 3.38.1  */
 /*  Website: https://empyrion-homeworld.net/tools/ewcct  */
 { +Dialogue Name: Eden_GlobalVariables
   Globals: "int Eden_G_DataChipT1R = 1; int Eden_G_DataChipT1C = 10000; int Eden_G_DataChipT1UP = 10; int Eden_G_DataChipT2R = 5; int Eden_G_DataChipT2C = 50000; int Eden_G_DataChipT2UP = 50; int Eden_G_DataChipT3R = 10; int Eden_G_DataChipT3C = 100000; int Eden_G_DataChipT3UP = 100;<nl>int Eden_G_BanditRewardT1 = 20000; int Eden_G_BanditRewardT2 = 40000; int Eden_G_BanditRewardT3 = 80000; int Eden_Global_DataPad = 50;"
@@ -20691,8 +20719,8 @@
   NextIf_1: "Eden_ExpeditionStart == 0"
   Next_2: Eden_Expedition_Init
   NextIf_2: "Eden_ExpeditionStartPDA == 1"
-  Next_3: Eden_Science_Greet
-  NextIf_3: "Eden_ExpeditionStageCount >= Eden_ExpeditionLength"
+  Next_3: Eden_Science_ExpeditionFallback
+  NextIf_3: "Eden_ExpeditionStageCount > Eden_ExpeditionLength"
   Next_4: Eden_Science_Greet
 }
 { +Dialogue Name: Eden_Science_Setup
@@ -20797,6 +20825,10 @@
 }
 { +Dialogue Name: Eden_Science_Reward
 }
+{ +Dialogue Name: Eden_Science_ExpeditionFallback
+  Functions: "Eden_ExpeditionStart = 2; Eden_ExpeditionStageCount = Eden_ExpeditionLength"
+  Next_1: Eden_Science_Greet
+}
 { +Dialogue Name: Eden_Science_ExploreC1Start
   Execute: "Eden_ExpeditionType = 1; Eden_ExpeditionLength = Random(3,5); Eden_ExpeditionReward = 1; Eden_ExpeditionStageCount = 1;<nl>Eden_ExpeditionStart = 1; Eden_ExpeditionName = 'Exploration Tier 1'; Eden_ExpeditionRegion = 'Neutral Space'"
   Output: eden_dialogue_S08GamG
@@ -20819,7 +20851,7 @@
   Variable_3: "Eden_ExpeditionStartPDA", param1: dbplayer_int
   Variable_4: "Eden_ExpeditionStageOption", param1: dbplayer_int
   Execute: "Eden_ExpeditionStartPDA = 0; Eden_ExpeditionStageCount += 1; Eden_ExpeditionReward += 2; Eden_ExpeditionStageOption = 0;"
-  Output: eden_dialogue_u6W08oi
+  Output: eden_dialogue_i4qWaOi
   Option_1: eden_dialogue_4WaaCCC
   OptionNext_1: End
 }
@@ -20829,7 +20861,7 @@
   Variable_3: "Eden_ExpeditionStartPDA", param1: dbplayer_int
   Variable_4: "Eden_ExpeditionStageOption", param1: dbplayer_int
   Execute: "Eden_ExpeditionStartPDA = 0; Eden_ExpeditionStageCount += 1; Eden_ExpeditionReward += 3; Eden_ExpeditionStageOption = 0"
-  Output: eden_dialogue_uhSmqGq
+  Output: eden_dialogue_i4qWaOi
   Option_1: eden_dialogue_CmGGS0i
   OptionNext_1: End
 }
@@ -20890,25 +20922,16 @@
 }
 { +Dialogue Name: Eden_Expedition_ExploreStage1
   Option_1: eden_dialogue_mmCKi8G
-  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 5"
+  OptionIf_1: "Eden_ExpeditionStageOption >= 1 && Eden_ExpeditionStageOption <= 35"
   OptionNext_1: End
   Option_2: eden_dialogue_u0SeWwA
-  OptionIf_2: "Eden_ExpeditionStageOption >= 6 && Eden_ExpeditionStageOption <= 20"
+  OptionIf_2: "Eden_ExpeditionStageOption >= 36 && Eden_ExpeditionStageOption <= 70"
   OptionNext_2: End
   Option_3: eden_dialogue_miiCKiu
-  OptionIf_3: "Eden_ExpeditionStageOption >= 21 && Eden_ExpeditionStageOption <= 40"
+  OptionIf_3: "Eden_ExpeditionStageOption >= 71 && Eden_ExpeditionStageOption <= 100"
   OptionNext_3: End
-  Option_4: eden_dialogue_eCeuC4i
-  OptionIf_4: "Eden_ExpeditionStageOption >= 41 && Eden_ExpeditionStageOption <= 60"
+  Option_4: eden_dialogue_MipWSOa
   OptionNext_4: End
-  Option_5: eden_dialogue_GeuS0O0
-  OptionIf_5: "Eden_ExpeditionStageOption >= 61 && Eden_ExpeditionStageOption <= 80"
-  OptionNext_5: End
-  Option_6: eden_dialogue_uMWqK8C
-  OptionIf_6: "Eden_ExpeditionStageOption >= 81 && Eden_ExpeditionStageOption <= 100"
-  OptionNext_6: End
-  Option_7: eden_dialogue_MipWSOa
-  OptionNext_7: End
   Output: eden_dialogue_4aGmOSm
 }
 { +Dialogue Name: Eden_Expedition_ExploreStage2
@@ -20932,7 +20955,7 @@
   OptionNext_6: End
   Option_7: eden_dialogue_ReOi8W8
   OptionNext_7: End
-  Output: eden_dialogue_8q8Keuu
+  Output: eden_dialogue_4aGmOSm
 }
 { +Dialogue Name: Eden_Expedition_ExploreStage3
   Option_1: eden_dialogue_OqC8K44
@@ -20955,7 +20978,7 @@
   OptionNext_6: End
   Option_7: eden_dialogue_aiGOaK4
   OptionNext_7: End
-  Output: eden_dialogue_WECqC08
+  Output: eden_dialogue_4aGmOSm
 }
 { +Dialogue Name: Eden_Expedition_ExploreStage4
   Option_1: eden_dialogue_aGAeiem
@@ -20978,7 +21001,7 @@
   OptionNext_6: End
   Option_7: eden_dialogue_m86aKWi
   OptionNext_7: End
-  Output: eden_dialogue_eKQWeOe
+  Output: eden_dialogue_4aGmOSm
 }
 { +Dialogue Name: Eden_Expedition_ExploreStage5
   Option_1: eden_dialogue_CaSMmiW
@@ -21001,7 +21024,7 @@
   OptionNext_6: End
   Option_7: eden_dialogue_eueC0GC
   OptionNext_7: End
-  Output: eden_dialogue_ECiCu0a
+  Output: eden_dialogue_4aGmOSm
 }
 { +Dialogue Name: Eden_Expedition_ExploreStage6
   Option_1: eden_dialogue_aOCaESG
@@ -21024,7 +21047,7 @@
   OptionNext_6: End
   Option_7: eden_dialogue_8in840G
   OptionNext_7: End
-  Output: eden_dialogue_4eCi4iO
+  Output: eden_dialogue_4aGmOSm
 }
 { +Dialogue Name: Eden_Expedition_ExploreStage7
   Option_1: eden_dialogue_SC4miWY
@@ -21047,7 +21070,7 @@
   OptionNext_6: End
   Option_7: eden_dialogue_88SSueS
   OptionNext_7: End
-  Output: eden_dialogue_mK0qOO8
+  Output: eden_dialogue_4aGmOSm
 }
 { +Dialogue Name: Eden_Expedition_ExploreStage8
   Option_1: eden_dialogue_Wq4C4qu
@@ -21070,7 +21093,7 @@
   OptionNext_6: End
   Option_7: eden_dialogue_KWKqe0O
   OptionNext_7: End
-  Output: eden_dialogue_euWCWOS
+  Output: eden_dialogue_4aGmOSm
 }
 { +Dialogue Name: Eden_Expedition_ExploreStage9
   Option_1: eden_dialogue_GQii4Gu
@@ -21093,7 +21116,7 @@
   OptionNext_6: End
   Option_7: eden_dialogue_0q8SSva
   OptionNext_7: End
-  Output: eden_dialogue_iCO1W4o
+  Output: eden_dialogue_4aGmOSm
 }
 { +Dialogue Name: Eden_ExpeditionGeneral_Deny
   Output: eden_dialogue_mK494Cm

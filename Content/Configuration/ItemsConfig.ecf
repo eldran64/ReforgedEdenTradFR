@@ -14771,31 +14771,31 @@
 { +Item Id: 1300, Name: KeyCardBlack , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: Une carte cle codee utilisee pour acceder a une porte ou à un panneau de controle. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou a un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1301, Name: KeyCardBlue , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: Une carte cle codee utilisee pour acceder a une porte ou à un panneau de controle. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou a un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1302, Name: KeyCardGreen , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: Une carte cle codee utilisee pour acceder a une porte ou à un panneau de controle. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou a un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1303, Name: KeyCardYellow , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: Une carte cle codee utilisee pour acceder a une porte ou à un panneau de controle. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou a un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1304, Name: KeyCardRed , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: Une carte cle codee utilisee pour acceder a une porte ou à un panneau de controle. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou a un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1305, Name: Token
@@ -20095,6 +20095,8 @@
   Info: itmCommunicationEquipment, display: true
 }
 
+
+
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Items
 # ============================================================================================================================================================================
@@ -22933,6 +22935,7 @@
   DropMeshfile: Entities/Misc/BagSmallPrefab
   ShowUser: NoButCSV  # reported by HWS
   Canhold: false
+  # Canhold: true
   Material: metalweapon
   HoldType: 0
   StackSize: 500
@@ -28440,6 +28443,60 @@
     AmmoType: laserChargeSpaceDrone, display: true
     SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
   }
+}
+
+# Exploration reports
+{ +Item Id: 3438, Name: Eden_SurveyExploreT1, Ref: TradingGoodsTemplate
+  Mass: 0, type: float, display: true, formatter: Kilogram
+  Volume: 0, type: float, display: true, formatter: Liter
+  ShowUser: Yes
+  Info: Eden_SurveyExploreT1info, display: true
+  StackSize: 1000
+  MarketPrice: 2500, display: true
+}
+
+{ +Item Id: 3439, Name: Eden_SurveyExploreT2, Ref: Eden_SurveyExploreT1
+  MarketPrice: 5000, display: true
+}
+
+{ +Item Id: 3440, Name: Eden_SurveyExploreT3, Ref: Eden_SurveyExploreT1
+  MarketPrice: 7500, display: true
+}
+
+# Mining reports
+{ +Item Id: 3441, Name: Eden_SurveyMiningT1, Ref: TradingGoodsTemplate
+  Mass: 0, type: float, display: true, formatter: Kilogram
+  Volume: 0, type: float, display: true, formatter: Liter
+  ShowUser: Yes
+  Info: Eden_SurveyMiningT1info, display: true
+  StackSize: 1000
+  MarketPrice: 5000, display: true
+}
+
+{ +Item Id: 3442, Name: Eden_SurveyMiningT2, Ref: Eden_SurveyMiningT1
+  MarketPrice: 10000, display: true
+}
+
+{ +Item Id: 3443, Name: Eden_SurveyMiningT3, Ref: Eden_SurveyMiningT1
+  MarketPrice: 20000, display: true
+}
+
+# Combat reports
+{ +Item Id: 3444, Name: Eden_SurveyCombatT1, Ref: TradingGoodsTemplate
+  Mass: 0, type: float, display: true, formatter: Kilogram
+  Volume: 0, type: float, display: true, formatter: Liter
+  ShowUser: Yes
+  Info: Eden_SurveyMiningT1info, display: true
+  StackSize: 1000
+  MarketPrice: 5000, display: true
+}
+
+{ +Item Id: 3445, Name: Eden_SurveyCombatT2, Ref: Eden_SurveyCombatT1
+  MarketPrice: 10000, display: true
+}
+
+{ +Item Id: 3446, Name: Eden_SurveyCombatT3, Ref: Eden_SurveyCombatT1
+  MarketPrice: 20000, display: true
 }
 
 # { +Item Id: 3438, Name: Eden_ExploreDataT1, Ref: TradingGoodsTemplate

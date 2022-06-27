@@ -27,13 +27,65 @@
   #===========================
   # General Galaxy Settings
   #===========================
-  
+
+
+
+
+# ======================================================================================================================================================
+# ==================================================================== FOR SERVERS: ====================================================================
+# ======================================================================================================================================================
+# ONLY PLAYERS EXPERIENCED WITH FILE EDITING SHOULD ATTEMPT TO CHANGE THE STAR COUNT. DOING SO INCORRECTLY MAY CORRUPT YOUR SAVE GAME PERMANETLY.
+# Directions for reducing the star count of the galaxy to help with long term server stability and save game size.
+# The more playfields are generated, the more data is kept in the save game and the larger the database grows.
+# This can cause issues on larger servers the longer the save game is run.
+# Reducing the star count will lower the total number of playfields in the galaxy which may help, but it is not a guarantee.
+# Not useful for smaller servers or single player where you will simply never generate most of the star systems anyway.
+
+# Notepad++ or equivalent text editor is recommended!
+
+# TO PREVIEW YOUR CHANGES IN A TEST GAME:
+# 1: Start a new test save game using the scenario.
+# 2: While still running the game, alt-tab out and go to your save game's Content/Configuration folder in file explorer.
+    # For example: Empyrion - Galactic Survival\Saves\Games\NewGame\Content\Configuration
+# 3: Open up GalaxyConfig.ecf and change the StarCount to whatever min and max values you want to try then save the file.
+# 4: Tab back to the game and open the console and type (without the quotes) "galaxy".
+# 5: Open the galaxy map and look at how the galaxy appears.
+# 6: Repeat until you're satisfied with the galaxy star count.
+# 7: Take note of the average warp distance between the stars. You may need to increase the warp drive range so players do not get stuck.
+
+
+# TO CHANGE THE STAR COUNT:
+# 1: After copying the scenario files to your server, but before starting the save game for the first time, open up the GalaxyConfig.ecf file in the scenario files you just copied over.
+    # The file is under Content\Configuration in the scenario.
+# 2: Change the StarCount values to whatever min and max value you want. The game will generate a galaxy with a total number of stars between those two values.
+    # For example: StarCount: "28000, 30000"
+# 3: Save and close the file, then start a new save game on the server. The new galaxy will have the star count specified.
+# NOTE: Never change the galaxy config file under the save game folder for any existing save game as it can corrupt the database of that save. Always use a throwaway test save to preview changes to the galaxy config before starting your save game.
+
+
+# TO CHANGE THE WARP DRIVE RANGE:
+# 1: Open up either the Config_PE.ecf or Config_RE.ecf files under the Content/Configuration folder in the scenario. Config_PE is for Project Eden and Config_RE is for Reforged Eden.
+# 2: Change the RangeLY value to whatever you want for each warp drive type.
+    # Note: Do not set any warp drive to longer than a 100ly range, as this will let players bypass the ancient warp gate and warp directly to the decay star cluster.
+    # Note2: Remember that the basic warp drive gets up to +50ly range from navigational data, while the advanced warp drive gets +100ly range from navigational data.
+# 3: Save the file as Config.ecf in the Content/Configuration folder.
+# 4: Scenario updates shouldn't remove your changes.
+# WARNING: The Config.ecf file is no longer supported by the developers. In the future you may have to make the warp drive changes directly to the BlocksConfig.ecf file and therefor will need to redo your changes each time you update the scenario.
+
+
 { GalaxyConfig, Name: General
-  # StarCount: "42000, 46000"
-  # StarCount: "30000, 32500"
-  StarCount: "28000, 30000"
+  StarCount: "28000, 30000" # Minimum and maximum star count based on seed. Lowering this number will take away stars from the main spiral shape of the galaxy. Individual star clusters will be unaffected (unless the main shape runs out of stars completely).
   Radius: "0, 850"                           # inner and outer radius of galaxy in LY (no random!)
-  
+
+
+# Do not change anything below this line unless you know what you're doing.
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
   NebulaCount: "150, 175"                     # random value min/max
   # NebulaCount: "175, 225"                     # random value min/max
   # NebulaCount: "0, 0"                     # random value min/max
@@ -180,6 +232,7 @@
     TotalSpawnCount: 25
     UseDefaultStarDef: false
     StarClass_1: N1a, param1: "SpawnAmount=25, ClusterProb=0"
+    StarClass_2: S-S, param1: "Prob=0.05"
     # NebulaSpawnCount: 5
     # NebulaColorIndex: 13
   }
@@ -195,6 +248,7 @@
     StarClass_1: M1Ia, param1: "Prob=0.01"
     StarClass_2: K, param1: "Prob=0.4"
     StarClass_3: M, param1: "Prob=0.4"
+    StarClass_4: S-S, param1: "Prob=0.05"
     NebulaSpawnCount: 5
     NebulaColorIndex: 3
   }
@@ -268,6 +322,7 @@
     TotalSpawnCount: 50
     FlattenFac: 0.15  # default is 0.2
     UseDefaultStarDef: true
+    StarClass_1: S, param1: "SpawnAmount=3, Prob=1"
     NebulaSpawnCount: 35
     NebulaColorIndex: 17
   }
@@ -280,6 +335,7 @@
     TotalSpawnCount: 125
     FlattenFac: 0.15  # default is 0.2
     UseDefaultStarDef: true
+    StarClass_1: S, param1: "SpawnAmount=3, Prob=1"
     NebulaSpawnCount: 35
     NebulaColorIndex: 17
   }
@@ -604,6 +660,7 @@
   }
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------ Random Star Clusters
+# Embers of Creation
   { Child StarRegion_41
     Name: "Star Cluster Red Supergiants"
     LabelName: "<align=center><voffset=6em><line-height=1em>Embers of Creation"
@@ -620,6 +677,7 @@
     StarClass_3: K, param1: "Prob=0.5"
   }
 
+# Demon Nebula
   { Child StarRegion_42
     Name: "Star Cluster Red Supergiants 2"
     LabelName: "<align=center><voffset=6em><line-height=1em>Demon Nebula"
@@ -987,6 +1045,7 @@
     StarClass_1: A, param1: "Prob=0.1, ClusterProb=1, ClusterRange=0.2-0.8"
   }
 
+# Blood Nebula
   { Child StarRegion_85
     Name: "Arm 1 Outer"
     LabelName: "<align=center><voffset=6em><line-height=1em>Blood Nebula"
@@ -1004,6 +1063,9 @@
     StarClass_4: K, param1: "Prob=0.2"
     StarClass_5: D, param1: "Prob=0.2"
     StarClass_6: T, param1: "Prob=0.15"
+    StarClass_7: M-M, param1: "SpawnAmount=4, Prob=1"
+    StarClass_8: M6, param1: "SpawnAmount=4, Prob=1"
+    StarClass_9: K7, param1: "SpawnAmount=4, Prob=1"
     NebulaSpawnCount: 22
     NebulaColorIndex: 11
   }
@@ -1398,7 +1460,8 @@
   ModelNoiseTiling: 140 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.4 # (values < 1 will make the flare smaller)
+  # ModelFlareBrightness: 0.4 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "5500, 6000" 
   Mass: 1
   Radius: 1
@@ -1429,7 +1492,8 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.75 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.5 # (default is 0.5)
-  ModelFlareBrightness: 0.4 # (values < 1 will make the flare smaller)
+  # ModelFlareBrightness: 0.4 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "6000, 7500"
   Mass: 1.5
   Radius: 1.8 
@@ -1461,7 +1525,7 @@
   ModelNoiseTiling: 40 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.25 # (default is 0.5)
-  ModelFlareBrightness: 0.45 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.3
   Radius: 0.4 
@@ -1526,7 +1590,7 @@
   ModelNoiseTiling: 100 # (default is 40, set to higher values for bigger stars)
   # ModelCoronaSpikesSize: .7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   # ModelPlasmaArcsSize: .7 # (default is 0.5)
-  # ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.5 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "30000, 50000" 
   Mass: 40     # Trivia: multiple of the solar sun mass 
   Radius: 18   # Trivia: multiple of the solar sun radius
@@ -1565,7 +1629,7 @@
   ModelNoiseTiling: 40
   # ModelCoronaSpikesSize: .7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.75
-  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 4 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "30000, 50000" 
   Mass: 40     # Trivia: multiple of the solar sun mass 
   Radius: 18   # Trivia: multiple of the solar sun radius
@@ -1604,7 +1668,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.8 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.45 # (default is 0.5)
-  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "10000, 30000" 
   Mass: 18
   Radius: 8 
@@ -1634,7 +1698,7 @@
   ModelNoiseTiling: 160 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.6 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "10000, 30000" 
   Mass: 18
   Radius: 8 
@@ -1669,7 +1733,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.8 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.45 # (default is 0.5)
-  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "10000, 30000" 
   Mass: 18
   Radius: 8 
@@ -1704,7 +1768,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.8 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.45 # (default is 0.5)
-  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "10000, 30000" 
   Mass: 18
   Radius: 8 
@@ -1736,7 +1800,7 @@
   ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.75 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.4 # (default is 0.5)
-  ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "7500, 10000" 
   Mass: 2.2
   Radius: 2.4
@@ -1766,7 +1830,7 @@
   ModelNoiseTiling: 140
   ModelCoronaSpikesSize: 0.7
   ModelPlasmaArcsSize: 0.45
-  ModelFlareBrightness: 0.6
+  ModelFlareBrightness: 1.2
   SurfaceTemperature: "7500, 10000" 
   Mass: 2.2
   Radius: 2.4
@@ -1797,7 +1861,7 @@
   ModelNoiseTiling: 105 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.75 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.55 # (default is 0.5)
-  ModelFlareBrightness: 0.65 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.3 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "7500, 10000" 
   Mass: 2.1
   Radius: 2.6
@@ -1828,7 +1892,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.75 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.5 # (default is 0.5)
-  ModelFlareBrightness: 0.4 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "6000, 7500"
   Mass: 1.5
   Radius: 1.8 
@@ -1858,7 +1922,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.85 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.45 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "6000, 7500"
   Mass: 1.5
   Radius: 1.8 
@@ -1888,7 +1952,7 @@
   ModelNoiseTiling: 140 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.4 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "5500, 6000" 
   Mass: 1
   Radius: 1
@@ -1919,7 +1983,7 @@
   ModelNoiseTiling: 110
   ModelCoronaSpikesSize: 0.7
   ModelPlasmaArcsSize: 0.3
-  ModelFlareBrightness: 0.55
+  ModelFlareBrightness: 1.1
   SurfaceTemperature: "5500, 6000" 
   Mass: 1.1
   Radius: 1.1
@@ -1949,7 +2013,7 @@
   ModelNoiseTiling: 185
   ModelCoronaSpikesSize: 0.6
   ModelPlasmaArcsSize: 0.4
-  ModelFlareBrightness: 0.65
+  ModelFlareBrightness: 1.3
   SurfaceTemperature: "5500, 6000" 
   Mass: 1.1
   Radius: 1.1
@@ -1983,7 +2047,7 @@
   ModelNoiseTiling: 55
   ModelCoronaSpikesSize: 0.85 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.4 # (default is 0.5)
-  ModelFlareBrightness: 0.75 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.5 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "7500, 10000" 
   Mass: 1.1
   Radius: 1.1
@@ -2015,7 +2079,7 @@
   ModelNoiseTiling: 60 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.85 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.7 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 5500" 
   Mass: 4
   Radius: 3 
@@ -2046,7 +2110,7 @@
   ModelNoiseTiling: 90 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.8 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.45 # (default is 0.5)
-  ModelFlareBrightness: 0.85 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.7 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 5500" 
   Mass: 4
   Radius: 3 
@@ -2077,7 +2141,7 @@
   ModelNoiseTiling: 60 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.65 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.3 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 5500" 
   Mass: 4
   Radius: 3 
@@ -2107,7 +2171,7 @@
   ModelNoiseTiling: 60 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.8 # (default is 0.5)
-  ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 5500" 
   Mass: 4
   Radius: 3 
@@ -2119,6 +2183,38 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
+}
+
+# Type K
+{ GalaxyConfig, Name: K Type Star
+  StarClass: K7
+  SolarSystemConfigSuffix: _MainHotT1
+  # Model: SunRedGiant  # better: yellow orange?
+  Model: SunGeneric  # better: yellow orange?
+  Probability: 0
+  SizeClass: 14
+  Color: "1,0.3,0.2"
+  LightColor: "1,0.85,0.44"
+  ModelColor: "1,0.5,0.4" # (can be used if you want a different color apart from Color or LightColor)
+  # ModelColor2: "1,0.7,0.5" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelColor2: "1,0.6,0.2" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 1.25 # (overall brightness)
+  ModelNoiseTiling: 25 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  ModelPlasmaArcsSize: 0.5 # (default is 0.5)
+  ModelFlareBrightness: 1.7 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "4000, 5500" 
+  Mass: 4
+  Radius: 3 
+  Luminosity: 0.3
+  ColorName: Orange
+  Age: 30
+  InnerSystem: "23, 30"
+  HabitableHot: "31, 40"
+  HabitableTemperate: "41, 55"
+  HabitableCold: "56, 80"
+  OuterSystem: "81, 140"
   Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
@@ -2137,7 +2233,7 @@
   ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.35 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.25 # (default is 0.5)
-  ModelFlareBrightness: 0.65 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.3 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -2169,7 +2265,7 @@
   ModelNoiseTiling: 40 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.25 # (default is 0.5)
-  ModelFlareBrightness: 0.45 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.3
   Radius: 0.4 
@@ -2201,7 +2297,7 @@
   ModelNoiseTiling: 60 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.45 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.3
   Radius: 0.4 
@@ -2233,7 +2329,7 @@
   ModelNoiseTiling: 25 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.25 # (default is 0.5)
-  ModelFlareBrightness: 0.65 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.3 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.2
   Radius: 0.3
@@ -2267,7 +2363,7 @@
   ModelNoiseTiling: 40 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.25 # (default is 0.5)
-  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.3
   Radius: 0.4 
@@ -2279,6 +2375,38 @@
   HabitableTemperate: "45, 50"
   HabitableCold: "51, 69"
   OuterSystem: "70, 149"
+  Description: "[c][ffff00]Système froid.[-][/c] Les étoiles de classe M sont de loin les plus communes. Environ 76 % des étoiles de la séquence principale dans le voisinage du Soleil sont des étoiles de classe M. Cependant, les étoiles de la séquence principale de classe M (naines rouges) ont des luminosités si faibles qu'aucune n'est assez brillante pour être vue à l'œil nu, sauf dans des conditions exceptionnelles. En général, la température de surface d'une étoile de type M est inférieure à 4 000 K environ."
+}
+
+# Type M
+{ GalaxyConfig, Name: M Type Star
+  StarClass: M6
+  SolarSystemConfigSuffix: _MainColdT1
+  # Model: SunRedDwarf
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 8
+  Color: "0.8,0.45,0.1"
+  LightColor: "0.97,0.5,0.15"
+  # ModelColor: "1.3,0.05,0" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor: "0.7,0.045,0" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor2: "0.97,0.2,0.1" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 0.9 # (overall brightness)
+  ModelNoiseTiling: 20 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  ModelPlasmaArcsSize: 0.35 # (default is 0.5)
+  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "2500, 4000" 
+  Mass: 0.2
+  Radius: 0.3
+  Luminosity: 0.002
+  ColorName: Red
+  Age: 200
+  InnerSystem: "5, 10"
+  HabitableHot: "11, 16"
+  HabitableTemperate: "17, 23"
+  HabitableCold: "24, 30"
+  OuterSystem: "31, 50"
   Description: "[c][ffff00]Système froid.[-][/c] Les étoiles de classe M sont de loin les plus communes. Environ 76 % des étoiles de la séquence principale dans le voisinage du Soleil sont des étoiles de classe M. Cependant, les étoiles de la séquence principale de classe M (naines rouges) ont des luminosités si faibles qu'aucune n'est assez brillante pour être vue à l'œil nu, sauf dans des conditions exceptionnelles. En général, la température de surface d'une étoile de type M est inférieure à 4 000 K environ."
 }
 
@@ -2300,7 +2428,7 @@
   ModelNoiseTiling: 40 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.25 # (default is 0.5)
-  ModelFlareBrightness: 0.45 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.3
   Radius: 0.4 
@@ -2356,7 +2484,7 @@
   ModelNoiseTiling: 20 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.1 # (default is 0.5)
-  ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 4000" 
   ColorName: White
   Mass: 2
@@ -2390,7 +2518,7 @@
   ModelNoiseTiling: 20 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 1 # (default is 0.5)
-  ModelFlareBrightness: 0.3 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.6 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 4000" 
   ColorName: White
   Mass: 2
@@ -2424,7 +2552,7 @@
   ModelNoiseTiling: 60 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 1 # (default is 0.5)
-  ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 4000" 
   ColorName: Blue-White
   Mass: 2
@@ -2458,7 +2586,7 @@
   ModelNoiseTiling: 60 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 1 # (default is 0.5)
-  ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 4000" 
   ColorName: Blue-White
   Mass: 2
@@ -2628,7 +2756,7 @@
   ModelNoiseTiling: 100 # (default is 40, set to higher values for bigger stars)
   # ModelCoronaSpikesSize: .7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   # ModelPlasmaArcsSize: .7 # (default is 0.5)
-  # ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "30000, 50000" 
   Mass: 40     # Trivia: multiple of the solar sun mass 
   Radius: 18   # Trivia: multiple of the solar sun radius
@@ -2922,7 +3050,7 @@
   ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.0 # (default is 0.5)
-  ModelFlareBrightness: 0.35 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "7500, 10000"
   Mass: 1.1
   Radius: 0.001
@@ -2954,7 +3082,7 @@
   ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.0 # (default is 0.5)
-  ModelFlareBrightness: 0.35 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "7500, 10000"
   Mass: 1.1
   Radius: 0.001
@@ -2985,7 +3113,7 @@
   ModelNoiseTiling: 125 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.0 # (default is 0.5)
-  ModelFlareBrightness: 0.4 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "7500, 10000"
   Mass: 1.1
   Radius: 0.001
@@ -3017,7 +3145,7 @@
   ModelNoiseTiling: 400 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.0 # (default is 0.5)
-  ModelFlareBrightness: 0.75 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.5 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "7500, 10000"
   Mass: 1.1
   Radius: 0.001
@@ -3049,7 +3177,7 @@
   ModelNoiseTiling: 60 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.4 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 5500" 
   Mass: 1.4
   Radius: 2
@@ -3080,7 +3208,7 @@
   ModelNoiseTiling: 160 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.8 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 4 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "3500, 4000" 
   Mass: 30
   Radius: 1200
@@ -3110,7 +3238,7 @@
   ModelNoiseTiling: 30
   ModelCoronaSpikesSize: 5
   ModelPlasmaArcsSize: 0.75
-  ModelFlareBrightness: 0.75
+  ModelFlareBrightness: 1.5
   SurfaceTemperature: "40000, 46000" 
   Mass: 10
   Radius: 8.7
@@ -3141,7 +3269,7 @@
   ModelNoiseTiling: 35
   ModelCoronaSpikesSize: 6
   ModelPlasmaArcsSize: 0.5
-  ModelFlareBrightness: 0.75
+  ModelFlareBrightness: 1.5
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -3178,7 +3306,7 @@
   ModelCoronaSpikesSize: 4
   # ModelPlasmaArcsSize: 0.75
   ModelPlasmaArcsSize: 1
-  ModelFlareBrightness: 0.75
+  ModelFlareBrightness: 1.5
   SurfaceTemperature: "40000, 46000" 
   Mass: 10
   Radius: 8.7
@@ -3239,7 +3367,7 @@
   ModelNoiseTiling: 400
   ModelCoronaSpikesSize: 20
   ModelPlasmaArcsSize: 0.5
-  ModelFlareBrightness: 0.25
+  ModelFlareBrightness: 0.5
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -3270,7 +3398,7 @@
   ModelNoiseTiling: 400
   ModelCoronaSpikesSize: 20
   ModelPlasmaArcsSize: 0.5
-  ModelFlareBrightness: 0.25
+  ModelFlareBrightness: 0.5
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -3303,7 +3431,7 @@
   ModelNoiseTiling: 400
   ModelCoronaSpikesSize: 5
   ModelPlasmaArcsSize: 0.5
-  ModelFlareBrightness: 0.25
+  ModelFlareBrightness: 0.5
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -3336,7 +3464,7 @@
   ModelNoiseTiling: 5
   ModelCoronaSpikesSize: 7
   ModelPlasmaArcsSize: 1
-  ModelFlareBrightness: 0.25
+  ModelFlareBrightness: 0.5
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -3362,6 +3490,7 @@
   SizeClass: 14
   Color: "1,0.5,0"
   LightColor: "0.7,0.4,0"
+  ModelFlareBrightness: 2
   SurfaceTemperature: "3500, 4000" 
   Mass: 30
   Radius: 1200
@@ -3396,7 +3525,7 @@
   ModelNoiseTiling: 180 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.3 # (default is 0.5)
-  ModelFlareBrightness: 2.5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 4 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "8000, 9500" 
   Mass: 1.75
   Radius: 1.55
@@ -3434,7 +3563,7 @@
   ModelNoiseTiling: 40 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.15 # (default is 0.5)
-  ModelFlareBrightness: 0.35 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.3
   Radius: 0.4 
@@ -3467,7 +3596,7 @@
   ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.0 # (default is 0.5)
-  ModelFlareBrightness: 0.35 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "7500, 10000"
   Mass: 1.1
   Radius: 0.001
@@ -3594,7 +3723,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.35 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0 # (default is 0.5)
-  ModelFlareBrightness: 0.45 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "30000, 50000" 
   Mass: 40     # Trivia: multiple of the solar sun mass 
   Radius: 18   # Trivia: multiple of the solar sun radius
@@ -3629,7 +3758,7 @@
   ModelNoiseTiling: 20 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.1 # (default is 0.5)
-  ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 4000"
   ColorName: White
   Mass: 2
@@ -3645,6 +3774,72 @@
   GalaxySpawnAmount: 0
 }
 
+# Type S
+{ GalaxyConfig, Name: S Type Strange Star
+  StarClass: S
+  SolarSystemConfigSuffix: _MainExoticT2
+  # Model: SunWhiteDwarf
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 8
+  # Color: "0.9,0.9,0.93"
+  Color: "0.72,1,0.75"
+  LightColor: "0.3,0.5,0.25"
+  ModelColor: "-0.3, 0.3, -0.3" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor2: "0.7, 0.7, 0.5" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 0.5 # (overall brightness)
+  ModelNoiseTiling: 45 # (default is 40, set to higher values for bigger stars)
+  # ModelCoronaSpikesSize:
+  ModelCoronaSpikesSize: 0.4
+  ModelPlasmaArcsSize: 0 # (default is 0.5)
+  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "7500, 10000"
+  Mass: 1.1
+  Radius: 0.001
+  Luminosity: 0.1
+  ColorName: White
+  Age: 2.5
+  InnerSystem: "5, 11"
+  HabitableHot: "12, 19"
+  HabitableTemperate: "20, 34"
+  HabitableCold: "35, 49"
+  OuterSystem: "50, 74"
+  Description: "[c][ff00ff]Exotic system.[-][/c] Strange stars had until now had only been theorized. Thought to be made out of unstable exotic matter, these stars may behave in strange, unpredictable ways."
+}
+
+# Type S
+{ GalaxyConfig, Name: S Type Strange Star
+  StarClass: S-S
+  SolarSystemConfigSuffix: _MainExoticT2
+  CompanionStarClass: S-S
+  # Model: SunWhiteDwarf
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 8
+  # Color: "0.9,0.9,0.93"
+  Color: "0.72,1,0.75"
+  LightColor: "0.7,1,.73"
+  ModelColor: "0.7, 1, 0.7" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor2: "0.7, 0.7, 0.5" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 0.75 # (overall brightness)
+  ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
+  # ModelCoronaSpikesSize:
+  ModelCoronaSpikesSize: 0.4
+  ModelPlasmaArcsSize: 0 # (default is 0.5)
+  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "7500, 10000"
+  Mass: 1.1
+  Radius: 0.001
+  Luminosity: 0.1
+  ColorName: White
+  Age: 2.5
+  InnerSystem: "5, 11"
+  HabitableHot: "12, 19"
+  HabitableTemperate: "20, 34"
+  HabitableCold: "35, 49"
+  OuterSystem: "50, 74"
+  Description: "[c][ff00ff]Exotic system.[-][/c] Strange stars had until now had only been theorized. Thought to be made out of unstable exotic matter, these stars may behave in strange, unpredictable ways."
+}
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ARC Stars
 # Type M
@@ -3655,6 +3850,7 @@
   Probability: 1
   SizeClass: 9
   Color: "0.97,0.64,0.19"
+  ModelFlareBrightness: 2
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.3
   Radius: 0.4 
@@ -3679,6 +3875,7 @@
   Probability: 1
   SizeClass: 11
   Color: "0.99,0.96,0.85"
+  ModelFlareBrightness: 2
   SurfaceTemperature: "6000, 7500" 
   Mass: 1.5
   Radius: 1.8 
@@ -3702,6 +3899,7 @@
   Probability: 1 
   SizeClass: 11
   Color: "0.97,0.97,1"
+  ModelFlareBrightness: 2
   SurfaceTemperature: "7500, 10000" 
   Mass: 2.2
   Radius: 2.4 
@@ -3732,7 +3930,7 @@
   ModelNoiseTiling: 100 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "5500, 6000" 
   Mass: 1
   Radius: 1
@@ -3768,7 +3966,7 @@
   ModelNoiseTiling: 180 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.3 # (default is 0.5)
-  ModelFlareBrightness: 5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 10 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "8000, 9500" 
   Mass: 1.75
   Radius: 1.55
@@ -3801,7 +3999,7 @@
   ModelNoiseTiling: 40 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.25 # (default is 0.5)
-  ModelFlareBrightness: 0.45 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.3
   Radius: 0.4 
@@ -3832,7 +4030,7 @@
   ModelNoiseTiling: 100 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: .8 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: .4 # (default is 0.5)
-  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.4 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "30000, 50000" 
   Mass: 40     # Trivia: multiple of the solar sun mass 
   Radius: 18   # Trivia: multiple of the solar sun radius
@@ -3862,7 +4060,7 @@
   ModelNoiseTiling: 120
   ModelCoronaSpikesSize: 0.8
   ModelPlasmaArcsSize: 0.45
-  ModelFlareBrightness: 1
+  ModelFlareBrightness: 2
   SurfaceTemperature: "20000, 22000" 
   Mass: 9
   Radius: 5
@@ -3895,7 +4093,7 @@
   ModelCoronaSpikesSize: 5
   # ModelPlasmaArcsSize: 0.5
   ModelPlasmaArcsSize: 0
-  ModelFlareBrightness: 0.25
+  ModelFlareBrightness: 0.5
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -3926,7 +4124,7 @@
   ModelCoronaSpikesSize: 5
   # ModelPlasmaArcsSize: 0.5
   ModelPlasmaArcsSize: 0
-  ModelFlareBrightness: 0.25
+  ModelFlareBrightness: 0.5
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -3957,7 +4155,7 @@
   ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.0 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.0 # (default is 0.5)
-  ModelFlareBrightness: 0.35 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "7500, 10000"
   Mass: 1.1
   Radius: 0.001
@@ -3987,7 +4185,7 @@
   ModelNoiseTiling: 65 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 1.5 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.0 # (default is 0.5)
-  ModelFlareBrightness: 0.35 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "1, 10000000"
   Mass: 0.1
   Radius: 200
@@ -4042,7 +4240,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.75 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.5 # (default is 0.5)
-  ModelFlareBrightness: 0.4 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "6000, 7500" 
   Mass: 1.5
   Radius: 1.8 
@@ -4072,7 +4270,7 @@
   ModelNoiseTiling: 85 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.85 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.6 # (default is 0.5)
-  ModelFlareBrightness: 0.65 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "6000, 7500" 
   Mass: 1.5
   Radius: 1.8 
@@ -4105,7 +4303,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.75 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.5 # (default is 0.5)
-  ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.4 # (values < 1 will make the flare smaller)
   
   SurfaceTemperature: "6000, 7500" 
   Mass: 1.5
@@ -4137,7 +4335,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.75 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.5 # (default is 0.5)
-  ModelFlareBrightness: 1 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "6000, 7500" 
   Mass: 0.3
   Radius: 0.2
@@ -4162,6 +4360,7 @@
   Probability: 1
   SizeClass: 9
   Color: "0.97,0.64,0.19"
+  ModelFlareBrightness: 2
   SurfaceTemperature: "2500, 4000" 
   Mass: 0.3
   Radius: 0.4 
@@ -4192,7 +4391,7 @@
   ModelNoiseTiling: 120 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.75 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.5 # (default is 0.5)
-  ModelFlareBrightness: 0.4 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "6000, 7500" 
   Mass: 1.5
   Radius: 1.8 
@@ -4223,7 +4422,7 @@
   ModelNoiseTiling: 50 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.45 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.5 # (default is 0.5)
-  ModelFlareBrightness: 0.6 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.2 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -4254,7 +4453,7 @@
   # ModelNoiseTiling: 120
   # ModelCoronaSpikesSize: 0.75
   # ModelPlasmaArcsSize: 0.5
-  ModelFlareBrightness: 0.5
+  ModelFlareBrightness: 1
   SurfaceTemperature: "5500, 6000" 
   Mass: 1
   Radius: 1
@@ -4277,6 +4476,7 @@
   SizeClass: 11
   # Color: "1,0.3,0.2"
   Color: "1,0.4,0.1"
+  ModelFlareBrightness: 2
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -4299,7 +4499,7 @@
   SizeClass: 9
   # Color: "0.35,0.35,0.4"
   Color: "0.4,0.4,0.6"
-  ModelFlareBrightness: 0.65
+  ModelFlareBrightness: 1.3
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -4322,6 +4522,7 @@
   Probability: 0
   SizeClass: 11
   Color: "1,0.3,0.2"
+  ModelFlareBrightness: 2
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -4354,7 +4555,7 @@
   ModelNoiseTiling: 25 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.8 # (default is 0.5)
-  ModelFlareBrightness: 0.75 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.5 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 5500" 
   Mass: 0.7
   Radius: 0.8 
@@ -4385,7 +4586,7 @@
   # ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.7
   # ModelPlasmaArcsSize: 1
-  # ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 2 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "5500, 6000" 
   Mass: 100
   Radius: 100
@@ -4423,7 +4624,7 @@
   ModelNoiseTiling: 60 # (default is 40, set to higher values for bigger stars)
   ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  ModelFlareBrightness: 0.85 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 1.7 # (values < 1 will make the flare smaller)
   SurfaceTemperature: "4000, 5500" 
   Mass: 4
   Radius: 3 

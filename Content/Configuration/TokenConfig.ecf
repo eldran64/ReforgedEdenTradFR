@@ -839,7 +839,7 @@
 # 
 { Token Id: 6611, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
-  Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-les a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour obtenir une recompense.\n\n[c][D5D5D5][-][/c]"
+  Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le à un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour une récompense.\n\n[c][D5D5D5]Savanth est une épine dans le pied des colons libres depuis plusieurs années. Responsable d'un certain nombre d'attaques de bandits sur les voies de navigation, il a maintenant intensifié ses attaques pour inclure les stations et les avant-postes civils.\nLes colons libres paieront pour une preuve de sa mort, bien qu'il ne tarde pas à revenir dans un corps fraîchement cloné.[-][/c]"
   MarketPrice: 50000, display: true
 }
 
@@ -1578,7 +1578,7 @@
 { Token Id: 6998, Name: [c][FFA500]Guide de soutien du projet Eden[/c]
   CustomIcon: Eden_Guide2
   DropOnDeath: false
-  Description: "[c][FFA500]Il s'agit d'un scenario personnalise cree par un joueur et les developpeurs du jeu ne peuvent pas aider a resoudre les problemes rencontres en y jouant.[-][/c]\n\n[c][FFFF00][b]VEUILLEZ REPRODUIRE TOUT PROBLEME DE JEU DANS UNE SAUVEGARDE PAR DEFAUT, NON MODIFIEE, AVANT DE LE SIGNALER AUX DEVELOPPEURS DU JEU.[/b][-][/c]\n\nVeuillez toujours quitter completement Empyrion pour revenir au bureau Windows lorsque vous changez de sauvegarde ou de serveur.\n\nIl y a certains risques a jouer un scenario personnalise et il peut etre plus exigeant pour le materiel de votre PC. SAUVEGARDEZ SOUVENT VOS PLANS.\n\nVous pouvez trouver de l'aide et signaler des problemes sur la page de l'atelier du Projet Eden ou de Reforged Eden.\n\nSi vous jouez sur un serveur, parlez-en a l'administrateur de votre serveur.\nPour toute mise a jour du scenario, veuillez consulter la page de l'atelier.\n\n[i][c][A9A9A9]Reforged Eden v1.7 (Build 30)[-][/c][/i]\n[i][c][A9A9A9]Cet objet peut etre mis a la poubelle en toute securite.[-][/c][/i]"
+  Description: "[c][FFA500]Il s'agit d'un scenario personnalise cree par un joueur et les developpeurs du jeu ne peuvent pas aider a resoudre les problemes rencontres en y jouant.[-][/c]\n\n[c][FFFF00][b]VEUILLEZ REPRODUIRE TOUT PROBLEME DE JEU DANS UNE SAUVEGARDE PAR DEFAUT, NON MODIFIEE, AVANT DE LE SIGNALER AUX DEVELOPPEURS DU JEU.[/b][-][/c]\n\nVeuillez toujours quitter completement Empyrion pour revenir au bureau Windows lorsque vous changez de sauvegarde ou de serveur.\n\nIl y a certains risques a jouer un scenario personnalise et il peut etre plus exigeant pour le materiel de votre PC. SAUVEGARDEZ SOUVENT VOS PLANS.\n\nVous pouvez trouver de l'aide et signaler des problemes sur la page de l'atelier du Projet Eden ou de Reforged Eden.\n\nSi vous jouez sur un serveur, parlez-en a l'administrateur de votre serveur.\nPour toute mise a jour du scenario, veuillez consulter la page de l'atelier.\n\n[i][c][A9A9A9]Reforged Eden v1.7 (Build 33)[-][/c][/i]\n[i][c][A9A9A9]Cet objet peut etre mis a la poubelle en toute securite.[-][/c][/i]"
 }
 
 { Token Id: 6999, Name: [c][00FFFF]Guide de jeu de Project Eden[/c]

@@ -384,7 +384,7 @@
   CustomIcon: ProgenitorKeyII
   DropOnDeath: false
   RemoveOnUse: true
-  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nThis key grants access to one of the doors of Object 82 located near the starting solar systems. You must also have personally activated the Subspace Link at Object 13. \n\nCaptains of UCH Research Ships can tell you where Object 82 is. \n\n[i][c][A9A9A9]...Not content with one mortal life we sought more...[-][/c][/i]
+  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette clé donne accès à l'une des portes de l'objet 82 situé près des systèmes solaires de départ. Vous devez également avoir personnellement activé le lien subspatial de l'objet 13. \n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer où se trouve l'objet 82. \n\n[i][c][A9A9A9]...Non contents d'une vie mortelle, nous en avons cherché d'autres...[-][/c][/i]
 }
 
 # Progenitor Key III - Object 42
@@ -392,7 +392,7 @@
   CustomIcon: ProgenitorKeyIII
   DropOnDeath: false
   RemoveOnUse: true
-  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nThis key grants access to one of the doors of Object 82 located near the starting solar systems. You must also have personally activated the Subspace Link at Object 42. \n\nCaptains of UCH Research Ships can tell you where Object 82 is. \n\n[i][c][A9A9A9]...We ascended to dreams and fell to nightmare...[-][/c][/i]
+  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette clé donne accès à l'une des portes de l'objet 82 situé près des systèmes solaires de départ. Vous devez également avoir personnellement activé le lien subspatial de l'objet 42. \n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer où se trouve l'objet 82. \n\n[i][c][A9A9A9]...Nous nous sommes élevés dans les rêves et nous sommes tombés dans les cauchemars...[-][/c][/i]
 }
 
 # Progenitor Key IV - Object 276
@@ -400,7 +400,7 @@
   CustomIcon: ProgenitorKeyIV
   DropOnDeath: false
   RemoveOnUse: true
-  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nThis key grants access to one of the doors of Object 82 located near the starting solar systems.  You must also have personally activated the Subspace Link at Object 276.\n\nCaptains of UCH Research Ships can tell you where Object 82 is. \n\n[i][c][A9A9A9]...Now we see our children following in our footsteps. Now we see you following in theirs.[-][/c][/i]
+  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette clé donne accès à l'une des portes de l'objet 82 situé près des systèmes solaires de départ. Vous devez également avoir personnellement activé le lien subspatial de l'objet 276.\n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer où se trouve l'objet 82. \n\n[i][c][A9A9A9]...Nous voyons maintenant nos enfants suivre nos traces. Nous vous voyons maintenant suivre les leurs.[-][/c][/i]
 }
 
 
@@ -460,7 +460,7 @@
 
 # Polaris Refinery License
 { Token Id: 6201, Name: [c][00FFFF]Licence de la raffinerie de Polaris[/c]
-  Description: Cette licence permet d'utiliser les fourneaux a bord des [c][FFA500]raffineries orbitales Polaris.[/c][-] \n\n[c][FFFFFF][i]Placez les minerais dans le conteneur d'entree du fourneau dans le hangar supérieur. \Recuperez les lingots raffines dans le hangar inferieur.[/i]
+  Description: "Cette licence permet d'utiliser les fourneaux a bord des [c][FFA500]raffineries orbitales Polaris.[/c][-] \n\n[c][FFFFFF][i]Placez les minerais dans le conteneur d'entree du fourneau dans le hangar supérieur. \nRecuperez les lingots raffines dans le hangar inferieur.[/i]"
   # Description: Eden_PolarisRefineryLicenseinfo
   MarketPrice: 500000, display: true
 }

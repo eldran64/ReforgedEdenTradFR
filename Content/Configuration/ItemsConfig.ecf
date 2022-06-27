@@ -7694,7 +7694,7 @@
   CustomIcon: IONCannonCharge
   Mass: 100, type: float, display: true, formatter: Kilogram
   Volume: 25, type: float, display: true, formatter: Liter
-  Info: Une sorte de condensateur alien qui semble... presque organique. Ce dont il est fait ou comment il peut être utilisé est un mystère., display: true
+  Info: Une sorte de condensateur alien qui semble... presque organique. Ce dont il est fait ou comment il peut etre utilise est un mystere., display: true
   Category: Weapons/Items
   MarketPrice: 100000, display: false
   { Child 0
@@ -9486,7 +9486,7 @@
 }
 # delete when save game break - Dragonfruit
 { +Item Id: 354, Name: AkuaFruit, Ref: FoodTemplate
- Info: Un étrange fruit à épines avec un intérieur blanc qui ressemble à un fruit du dragon., display: true
+ Info: Un etrange fruit a epines avec un interieur blanc qui ressemble a un fruit du dragon., display: true
  Category: Ingredients
  Mass: 0.09, type: float, display: true, formatter: Kilogram
  Volume: 0.18, type: float, display: true, formatter: Liter
@@ -13940,7 +13940,7 @@
   CustomIcon: IONCannonCharge
   Mass: 100, type: float, display: true, formatter: Kilogram
   Volume: 25, type: float, display: true, formatter: Liter
-  Info: Une pile jetable pour une sorte d'arme énergétique alien., display: true
+  Info: Une pile jetable pour une sorte d'arme energetique alien., display: true
   Category: Weapons/Items
   MarketPrice: 100000, display: false
   { Child 0
@@ -14018,7 +14018,7 @@
   CustomIcon: IONCannonCharge
   Mass: 100, type: float, display: true, formatter: Kilogram
   Volume: 25, type: float, display: true, formatter: Liter
-  Info: Une sorte de condensateur alien qui semble... presque organique. Ce dont il est fait ou comment il peut être utilisé est un mystère., display: true
+  Info: Une sorte de condensateur alien qui semble... presque organique. Ce dont il est fait ou comment il peut etre utilise est un mystere., display: true
   Category: Weapons/Items
   MarketPrice: 100000, display: false
   { Child 0
@@ -14771,31 +14771,31 @@
 { +Item Id: 1300, Name: KeyCardBlack , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: An encoded keycard used to access a door or control panel. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou Ã  un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1301, Name: KeyCardBlue , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: An encoded keycard used to access a door or control panel. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou Ã  un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1302, Name: KeyCardGreen , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: An encoded keycard used to access a door or control panel. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou Ã  un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1303, Name: KeyCardYellow , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: An encoded keycard used to access a door or control panel. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou Ã  un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1304, Name: KeyCardRed , Ref: KeysTemplate
   Mass: 0.1, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  Info: An encoded keycard used to access a door or control panel. , display: true
+  Info: Une carte cle codee utilisee pour acceder a une porte ou Ã  un panneau de controle. , display: true
   ShowUser: Yes
 }
 { +Item Id: 1305, Name: Token
@@ -14898,7 +14898,7 @@
   Canhold: false
   Mass: 950, type: float, display: true, formatter: Kilogram
   Volume: 240, type: float, display: true, formatter: Liter
-  Info: Un obus d'artillerie de gros calibre alternatif pour les tourelles d'artillerie qui n'inflige que des dégâts élevés à l'électronique et aux boucliers. Il doit être chargé et tiré manuellement., display: true
+  Info: Un obus d'artillerie de gros calibre alternatif pour les tourelles d'artillerie qui n'inflige que des degats eleves a l'electronique et aux boucliers. Il doit etre charge et tire manuellement., display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -16344,7 +16344,7 @@
   Category: Devices
   Mass: 1000, type: float, display: true, formatter: Kilogram
   Volume: 240, type: float, display: true, formatter: Liter
-  Info: Un Hoverbike portable conçu par FORGE AEROSPACE qui peut être déployé à partir de votre barre d'outils. NON DISPONIBLE EN MULTIJOUEUR ! , display: true
+  Info: Un Hoverbike portable concu par FORGE AEROSPACE qui peut etre deploye a partir de votre barre d'outils. NON DISPONIBLE EN MULTIJOUEUR ! , display: true
   { Child 0
     Class: SpawnPrefab
     PrefabEntity: CV_Player_S
@@ -20633,7 +20633,7 @@
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  Info: Un fusil à plasma de conception abyssale. \n\nIl tire rapidement des orbes de plasma surchauffées liées à un champ magnétique., display: true
+  Info: Un fusil a plasma de conception abyssale. \n\nIl tire rapidement des orbes de plasma surchauffees liees a un champ magnetique., display: true
   Mass: 5, type: float, display: true, formatter: Kilogram
   Volume: 4, type: float, display: true, formatter: Liter
   # Damage: 105
@@ -21174,7 +21174,7 @@
   Material: metalweapon
   HoldType: 0
   Canhold: false
-  Info: Une cellule de plasma de conception abyssale. \nRemplit tout le magasin. \n\nUtilisée dans les petites tourelles à plasma., display: true
+  Info: Une cellule de plasma de conception abyssale. \nRemplit tout le magasin. \n\nUtilisee dans les petites tourelles a plasma., display: true
   Category: Weapons/Items
   StackSize: 2000
   Mass: 4, type: float, display: true, formatter: Kilogram
@@ -21543,7 +21543,7 @@
   # # Material: metalweapon
   # # HoldType: 0
   # # Canhold: false
-  # # Info: A plasma cell of Abyssal design used in Entropic Weapons. \nRefills entire magazine. \n\nCan be broken down into Promethium Pellets in a deconstructor., display: true
+  # # Info: Une cellule plasma de conception abyssale utilisee dans les armes entropiques. \nRemplit tout le chargeur. \n\nPeut etre decomposee en pastilles de promethium dans un deconstructeur., display: true
   # # Category: Weapons/Items
   # # StackSize: 2000
   # # Mass: 625, type: float, display: true, formatter: Kilogram
@@ -21582,7 +21582,7 @@
   Material: metalweapon
   HoldType: 0
   Canhold: false
-  Info: Une cellule plasma de conception abyssale utilisée dans les armes entropiques. \nRemplit tout le chargeur. \n\nPeut être décomposée en pastilles de prométhium dans un déconstructeur., display: true
+  Info: Une cellule plasma de conception abyssale utilisee dans les armes entropiques. \nRemplit tout le chargeur. \n\nPeut etre decomposee en pastilles de promethium dans un deconstructeur., display: true
   Category: Weapons/Items
   StackSize: 2000
   Mass: 625, type: float, display: true, formatter: Kilogram
@@ -23285,7 +23285,7 @@
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  Info: Un fusil à plasma de conception abyssale. \n\nIl tire rapidement des orbes de plasma surchauffées liées à un champ magnétique., display: true
+  Info: Un fusil a plasma de conception abyssale. \n\nIl tire rapidement des orbes de plasma surchauffees liees a un champ magnetique., display: true
   Mass: 5, type: float, display: true, formatter: Kilogram
   Volume: 4, type: float, display: true, formatter: Liter
   # Damage: 105
@@ -23340,7 +23340,7 @@
   MarketPrice: 50000, display: true
   HoldType: 0
   Canhold: false
-  Info: Une cellule plasma de conception abyssale utilisée dans les armes entropiques. \nRemplit tout le chargeur. \n\nPeut être décomposée en pastilles de prométhium dans un déconstructeur., display: true
+  Info: Une cellule plasma de conception abyssale utilisee dans les armes entropiques. \nRemplit tout le chargeur. \n\nPeut etre decomposee en pastilles de promethium dans un deconstructeur., display: true
   Category: Weapons/Items
   StackSize: 2000
   Mass: 625, type: float, display: true, formatter: Kilogram
@@ -23401,7 +23401,7 @@
   StaminaFac: 1.00, type: float, display: true
   NrSlots: 1, type: int, display: true
   SlotItems: "Eden_JetpackBoostAugmented, Eden_HeatBoostAugmented, Eden_ColdBoostAugmented, Eden_RadiationBoostAugmented, Eden_TransportationBoostAugmented, Eden_ArmorBoostAugmented"
-  Info: Une armure avancée augmentée par la technologie des Progéniteurs. Elle peut être améliorée avec un seul Module d'Amélioration Augmentée. [c][FFFF00]N'installez que des Améliorations Augmentées dans cette armure.[-][/c], display: true
+  Info: Une armure avancee augmentee par la technologie des Progeniteurs. Elle peut etre amelioree avec un seul Module d'Amelioration Augmentee. [c][FFFF00]N'installez que des Ameliorations Augmentees dans cette armure.[-][/c], display: true
   UnlockCost: 1, display: true
   UnlockLevel: 2, display: true
   TechTreeParent: Eden_ResearchProgenitorArmor1
@@ -23454,7 +23454,7 @@
   StaminaFac: -0.35, type: float, display: true
 
   ShowUser: Yes
-  Info: Configure l'armure augmentée pour une mobilité accrue et une armure modérément améliorée. \n\nNe peut être installée que dans une armure augmentée. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous d'installer les améliorations augmentées dans une armure augmentée.[-][/c], display: true
+  Info: Configure l'armure augmentee pour une mobilite accrue et une armure moderement amelioree. \n\nNe peut etre installee que dans une armure augmentee. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer les ameliorations augmentees dans une armure augmentee.[-][/c], display: true
   UnlockCost: 1, display: true
   UnlockLevel: 3, display: true
   TechTreeParent: Eden_ResearchProgenitorArmor2
@@ -23477,7 +23477,7 @@
   Mass: 3.5, type: float, display: true, formatter: Kilogram
   MarketPrice: 3000
   ShowUser: Yes
-  Info: Configure l'armure augmentée pour un fonctionnement dans des environnements de chaleur extrême. \n\nIl ne peut être installé que dans une armure légère augmentée. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous d'installer des améliorations augmentées dans une armure augmentée.[-][/c], display: true
+  Info: Configure l'armure augmentee pour un fonctionnement dans des environnements de chaleur extreme. \n\nIl ne peut etre installe que dans une armure legere augmentee. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations augmentees dans une armure augmentee.[-][/c], display: true
   UnlockCost: 1, display: true
   UnlockLevel: 4, display: true
   TechTreeParent: Eden_ColdBoostAugmented
@@ -23493,7 +23493,7 @@
   VolumeCapacity: 1000, type: float, display: true, formatter: Liter
 
   ShowUser: Yes
-  Info: Configure l'armure augmentée pour les environnements de froid extrême. \n\nNe peut être installée que dans une armure légère augmentée. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous d'installer des améliorations augmentées dans une armure augmentée.[-][/c], display: true
+  Info: Configure l'armure augmentee pour les environnements de froid extreme. \n\nNe peut etre installee que dans une armure legere augmentee. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations augmentees dans une armure augmentee.[-][/c], display: true
   UnlockCost: 1, display: true
   UnlockLevel: 3, display: true
   TechTreeParent: Eden_ArmorLightAugmented
@@ -23512,7 +23512,7 @@
   FoodFac: 0.15, type: float, display: true
   
   ShowUser: Yes
-  Info: Configure l'armure augmentée pour les environnements radioactifs extrêmes. \n\nNe peut être installée que dans une armure légère augmentée. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous d'installer des améliorations augmentées dans une armure augmentée.[-][/c], display: true
+  Info: Configure l'armure augmentee pour les environnements radioactifs extremes. \n\nNe peut etre installee que dans une armure legere augmentee. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations augmentees dans une armure augmentee.[-][/c], display: true
   UnlockCost: 1, display: true
   UnlockLevel: 5, display: true
   TechTreeParent: Eden_HeatBoostAugmented
@@ -23533,7 +23533,7 @@
   FoodFac: 0.15, type: float, display: true
   
   ShowUser: Yes
-  Info: Configures Augmented Armor for combat and storage capacity. \n\nCan only be installed in Augmented Light Armor. \n\n[c][FFFF00]Attempting to install an incompatible armor upgrade in a suit of armor will DESTROY the armor booster. Ensure you are installing Augmented Upgrades into Augmented Armor.[-][/c], display: true
+  Info: Configure l'armure augmentee pour le combat et la capacite de stockage. \n\nNe peut etre installee que dans une armure legere augmentee. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations augmentees dans une armure augmentee.[-][/c], display: true
   UnlockCost: 1, display: true
   UnlockLevel: 4, display: true
   TechTreeParent: Eden_JetpackBoostAugmented
@@ -23553,7 +23553,7 @@
   FoodFac: 1, type: float, display: true
 
   ShowUser: Yes
-  Info: Configure l'armure augmentée pour les combats lourds. \n\nIl ne peut être installé que dans une armure légère augmentée. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous que vous installez des améliorations augmentées.[-][/c], display: true
+  Info: Configure l'armure augmentee pour les combats lourds. \n\nNe peut etre installee que dans une armure legere augmentee. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations augmentees dans une armure augmentee.[-][/c], display: true
   UnlockCost: 1, display: true
   UnlockLevel: 5, display: true
   TechTreeParent: Eden_TransportationBoostAugmented
@@ -23608,7 +23608,7 @@
   Material: metalweapon
   HoldType: 0
   Canhold: false
-  Info: Grenades à fusée pour le minigun incendiaire., display: true
+  Info: Grenades incendiaire pour le minigun incendiaire., display: true
   Category: Weapons/Items
   StackSize: 2000
   Mass: 0.1, type: float, display: true, formatter: Kilogram
@@ -23711,7 +23711,7 @@
   CustomIcon: Shotgun2Epic
   Meshfile: Entities/Items/Weapons/Shotguns/ScifiShotgun2EpicPrefab
   PickupToToolbar: true
-  Info: Un fusil de chasse semi-automatique qui utilise des bobines magnétisées pour accélérer rapidement les projectiles, ce qui permet une plus grande portée effective par rapport aux autres fusils de chasse, au détriment des dégâts et de la capacité de munitions., display: true
+  Info: Un fusil de chasse semi-automatique qui utilise des bobines magnetisees pour accelerer rapidement les projectiles, ce qui permet une plus grande portee effective par rapport aux autres fusils de chasse, au detriment des degats et de la capacite de munitions., display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: true
   DegradationProb: 0.305, type: float, display: false
@@ -23777,7 +23777,7 @@
   # Meshfile: Entities/Items/Weapons/Shotguns/SciFiShotgun1BlackPrefab
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxShotgunPlyPrefab
   PickupToToolbar: true
-  Info: Un fusil de chasse à double canon capable de tirer rapidement deux coups à bout portant. Efficace à très courte distance contre de grands groupes ou cibles., display: true
+  Info: Un fusil de chasse a double canon capable de tirer rapidement deux coups a bout portant. Efficace a tres courte distance contre de grands groupes ou cibles., display: true
   Material: metalweapon
   HoldType: 15
   StackSize: 1
@@ -23838,7 +23838,7 @@
   CustomIcon: Sniper2
   Meshfile: Entities/Items/Weapons/Snipers/ScifiSniper3Prefab
   PickupToToolbar: true
-  Info: Un fusil d'éclaireur à lunette conçu pour les engagements à moyenne et longue distance., display: true
+  Info: Un fusil d'eclaireur a lunette concu pour les engagements a moyenne et longue distance., display: true
   Material: metalweapon
   MarketPrice: 100000, display: true
   HoldType: 15
@@ -23907,7 +23907,7 @@
   HoldType: 16
   StackSize: 1
   Category: Weapons/Items
-  Info: Tire un jet à courte portée de plasma exotique super froid. \n\nApplique le cryoshock aux joueurs ennemis en ralentissant leur vitesse de déplacement et en abaissant la température de leur corps., display: true
+  Info: Tire un jet a courte portee de plasma exotique super froid. \n\nApplique le cryoshock aux joueurs ennemis en ralentissant leur vitesse de deplacement et en abaissant la temperature de leur corps., display: true
   Mass: 6.2, type: float, display: true, formatter: Kilogram
   Volume: 4.5, type: float, display: true, formatter: Liter
   Durability: 500, display: true
@@ -23956,7 +23956,7 @@
 # Stops end game POIs from destroying player armor halfway through.
 { +Item Id: 3123, Name: Eden_ArmorLightReinforced, Ref: ArmorLight
   CustomIcon: ArmorLightEpic
-  Info: Une armure légère renforcée avec des matériaux légers pour une durabilité maximale beaucoup plus grande.[c][FFFF00]N'installez que des boosters standards dans l'Armure Durable.[-][/c], display: true
+  Info: Une armure legere renforcee avec des materiaux legers pour une durabilite maximale beaucoup plus grande.[c][FFFF00]N'installez que des boosters standards dans l'Armure Durable.[-][/c], display: true
 
   Durability: 1500, display: true
   DegradationFac: 0.05, type: float, display: false    # do not display anymore 
@@ -23969,7 +23969,7 @@
 
 { +Item Id: 3124, Name: Eden_ArmorMediumReinforced, Ref: ArmorMedium
   CustomIcon: ArmorMediumEpic
-  Info: Une armure moyenne renforcée avec des matériaux légers pour une durabilité maximale beaucoup plus grande.[c][FFFF00]N'installez que des boosters standards dans l'armure durable.[-][/c], display: true
+  Info: Une armure moyenne renforcee avec des materiaux legers pour une durabilite maximale beaucoup plus grande.[c][FFFF00]N'installez que des boosters standards dans l'armure durable.[-][/c], display: true
 
   Durability: 2000, display: true
   DegradationFac: 0.05, type: float, display: false    # do not display anymore 
@@ -23982,7 +23982,7 @@
 
 { +Item Id: 3125, Name: Eden_ArmorHeavyReinforced, Ref: ArmorHeavy
   CustomIcon: ArmorHeavyEpic
-  Info: Une armure lourde renforcée avec des matériaux légers pour une durabilité maximale beaucoup plus grande.[c][FFFF00]N'installez que des boosters standards dans l'armure durable.[-][/c], display: true
+  Info: Une armure lourde renforcee avec des materiaux legers pour une durabilite maximale beaucoup plus grande.[c][FFFF00]N'installez que des boosters standards dans l'armure durable.[-][/c], display: true
 
   Durability: 3000, display: true
   DegradationFac: 0.05, type: float, display: false    # do not display anymore 
@@ -23995,7 +23995,7 @@
 
 { +Item Id: 3126, Name: Eden_ArmorHeavyEpicReinforced, Ref: ArmorHeavyEpic
   CustomIcon: ArmorHeavyEpic
-  Info: Une armure épique lourde renforcée avec des matériaux légers pour une durabilité maximale beaucoup plus grande. [c][FFFF00]N'installez que des boosters standards dans une armure durable.[-][/c], display: true
+  Info: Une armure epique lourde renforcee avec des materiaux legers pour une durabilite maximale beaucoup plus grande. [c][FFFF00]N'installez que des boosters standards dans une armure durable.[-][/c], display: true
 
   Durability: 5000, display: true
   DegradationFac: 0.05, type: float, display: false    # do not display anymore 
@@ -24008,7 +24008,7 @@
 
 { +Item Id: 3127, Name: Eden_ArmorAbyssLight, Ref: ArmorLight
   CustomIcon: ArmorLight
-  Info: Une armure légère améliorée de conception abyssale qui peut être équipée d'améliorations abyssales pour une personnalisation accrue. [c][FFFF00]N'installez les améliorations abyssales que dans l'armure du Marcheur des Abysses.[-][/c], display: true
+  Info: Une armure legere amelioree de conception abyssale qui peut etre equipee d'ameliorations abyssales pour une personnalisation accrue. [c][FFFF00]N'installez les ameliorations abyssales que dans l'armure du Marcheur des Abysses.[-][/c], display: true
 
   Durability: 2000, display: true
   DegradationFac: 0.05, type: float, display: false    # do not display anymore 
@@ -24280,7 +24280,7 @@
   Material: metalweapon
   HoldType: 14
   StackSize: 1
-  Info: Un petit SMG utile à tres courte portee. Souris gauche pour des tirs plus precis. Maintenez la souris gauche et droite enfoncee pour une vitesse de tir maximale., display: true
+  Info: Un petit SMG utile a tres courte portee. Souris gauche pour des tirs plus precis. Maintenez la souris gauche et droite enfoncee pour une vitesse de tir maximale., display: true
   Category: Weapons/Items
   ShowUser: Yes
   Durability: 500, display: true
@@ -24344,7 +24344,7 @@
   StackSize: 1
   Category: Weapons/Items
   IsNightVisionItem: true
-  Info: Un fusil railgun léger expérimental capable d'infliger des dégâts massifs aux cibles molles ou des dégâts légers aux structures. \n\nPossède un système de ciblage amélioré permettant la vision nocturne lorsque le casque est équipé. Il peut être activé par la touche de raccourci de la lumière de la combinaison. \n\n1500 points de dégâts par tir avant les modificateurs de résistance., display: true
+  Info: Un fusil railgun leger experimental capable d'infliger des degats massifs aux cibles molles ou des degats legers aux structures. \n\nPossede un systeme de ciblage ameliore permettant la vision nocturne lorsque le casque est equipe. Il peut etre active par la touche de raccourci de la lumiere de la combinaison. \n\n1500 points de degets par tir avant les modificateurs de resistance., display: true
   Mass: 25, type: float, display: true, formatter: Kilogram
   Volume: 4, type: float, display: true, formatter: Liter
   Durability: 500, display: true
@@ -24411,7 +24411,7 @@
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
-  Info: Un blaster ionique expérimental qui tire des éclairs ionisés qui infligent des dégâts accrus aux boucliers et aux dispositifs exposés., display: true
+  Info: Un blaster ionique experimental qui tire des eclairs ionises qui infligent des degats accrus aux boucliers et aux dispositifs exposes., display: true
   Mass: 4.2, type: float, display: true, formatter: Kilogram
   Volume: 5, type: float, display: true, formatter: Liter
   Durability: 500, display: true
@@ -24476,7 +24476,7 @@
   Mass: 4.25, type: float, display: true, formatter: Kilogram
   MarketPrice: 4000
   ShowUser: Yes
-  Info: Une mise à niveau avancée qui améliore considérablement le jetpack. \n\nNe peut être installée que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous d'installer des améliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
+  Info: Une mise a niveau avancee qui ameliore considerablement le jetpack. \n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
 }
 
 { +Item Id: 3133, Name: Eden_HeatBoostAbyss, Ref: Eden_ArmorBoostAugmentedTemplate
@@ -24487,7 +24487,7 @@
   Mass: 3.5, type: float, display: true, formatter: Kilogram
   MarketPrice: 3000
   ShowUser: Yes
-  Info: Une amélioration avancée qui augmente considérablement la protection contre la chaleur de votre combinaison, permettant au porteur de se déplacer librement dans des environnements extrêmement chauds. \n\nNe peut être installée que sur l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous d'installer des améliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
+  Info: Une amelioration avancee qui augmente considerablement la protection contre la chaleur de votre combinaison, permettant au porteur de se deplacer librement dans des environnements extremement chauds. \n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
 }
 
 { +Item Id: 3134, Name: Eden_RadiationBoostAbyss, Ref: Eden_ArmorBoostAugmentedTemplate
@@ -24498,7 +24498,7 @@
   Mass: 9.5, type: float, display: true, formatter: Kilogram
   MarketPrice: 3500
   ShowUser: Yes
-  Info: Une amélioration avancée qui augmente considérablement la protection contre les radiations de votre combinaison, permettant au porteur de se déplacer librement dans des environnements extrêmement radioactifs. \n\nNe peut être installée que sur l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous d'installer des améliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
+  Info: Une amelioration avancee qui augmente considerablement la protection contre les radiations de votre combinaison, permettant au porteur de se deplacer librement dans des environnements extremement radioactifs. \n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
 }
 
 { +Item Id: 3135, Name: Eden_ArmorBoostAbyss, Ref: Eden_ArmorBoostAugmentedTemplate
@@ -24509,7 +24509,7 @@
   Volume: 2.5, type: float, display: true, formatter: Liter
   Mass: 5.5, type: float, display: true, formatter: Kilogram
   ShowUser: Yes
-  Info: Une amélioration avancée qui augmente considérablement la protection de votre combinaison contre les dégâts. \n\nNe peut être installée que dans une armure de Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous d'installer des améliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
+  Info: Une amelioration avancee qui augmente considerablement la protection de votre combinaison contre les degats. \n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
 }
 
 { +Item Id: 3136, Name: Eden_ColdBoostAbyss, Ref: Eden_ArmorBoostAugmentedTemplate
@@ -24520,7 +24520,7 @@
   Mass: 3.5, type: float, display: true, formatter: Kilogram
   MarketPrice: 3000
   ShowUser: Yes
-  Info: Une amélioration avancée qui augmente considérablement la protection contre le froid de votre combinaison. \n\n Ne peut être installée que dans une armure de Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous d'installer des améliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
+  Info: Une amelioration avancee qui augmente considerablement la protection contre le froid de votre combinaison. \n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
 }
 
 { +Item Id: 3137, Name: Eden_TurretVulcanSmall_Weapon
@@ -27039,7 +27039,7 @@
   ShowUser: Yes
   MarketPrice: 150, display: true
   StackSize: 4000
-  Info: Un lingot de Magmacite hautement magnétisé. Utilisé dans la construction de composants et de dispositifs avancés., display: true
+  Info: Un lingot de Magmacite hautement magnetise. Utilise dans la construction de composants et de dispositifs avances., display: true
 }
 
 { +Item Id: 3206, Name: Eden_Voidium, Ref: ComponentsTemplate
@@ -27048,7 +27048,7 @@
   ShowUser: Yes
   MarketPrice: 1400
   StackSize: 4000
-  Info: Un morceau de Voidium brut. Des traces de matière noire peuvent être extraites dans un constructeur avancé. \n\nExtrêmement lourd., display: true
+  Info: Un morceau de Voidium brut. Des traces de matiere noire peuvent etre extraites dans un constructeur avance. \n\nExtremement lourd., display: true
 }
 
 { +Item Id: 3207, Name: Eden_DroneSalvageProcessor, Ref: ComponentsTemplate
@@ -27067,7 +27067,7 @@
   ShowUser: Yes
   MarketPrice: 350
   StackSize: 4000
-  Info: Une collection de pièces de récupération assorties. Un assortiment aléatoire de composants peut être récupéré à l'aide d'un déconstructeur. \n\nCertaines pièces de récupération ne s'empilent pas., display: true
+  Info: Une collection de pieces de recuperation assorties. Un assortiment aleatoire de composants peut etre recupere a l'aide d'un deconstructeur. \n\nCertaines pieces de recuperation ne s'empilent pas., display: true
 }
 { +Item Id: 3209, Name: Eden_Salvage2, Ref: Eden_Salvage1
 }
@@ -27091,7 +27091,7 @@
   ShowUser: Yes
   MarketPrice: 350
   StackSize: 4000
-  Info: Une grande quantité de matière noire suspendue presque en apesanteur dans un module de confinement. Utilisée dans la construction de grands appareils., display: true
+  Info: Une grande quantite de matiere noire suspendue presque en apesanteur dans un module de confinement. Utilisee dans la construction de grands appareils., display: true
 
   UnlockCost: 1, display: true
   UnlockLevel: 4, display: true
@@ -27106,7 +27106,7 @@
 }
 
 { +Item Id: 3216, Name: Eden_MagmacitePlate, Ref: ComponentsTemplate
-  Info: Une plaque magnétisée utilisée dans la construction de dispositifs avancés., display: true
+  Info: Une plaque magnetisee utilisee dans la construction de dispositifs avances., display: true
   StackSize: 4000
   ShowUser: Yes
   MarketPrice: 101, display: true
@@ -27115,7 +27115,7 @@
 }
 
 { +Item Id: 3217, Name: Eden_PlasmaCoil, Ref: ComponentsTemplate
-  Info: Une bobine magnétique pour contrôler le flux de plasma. Utilisée pour fabriquer des dispositifs avancés., display: true
+  Info: Une bobine magnetique pour controler le flux de plasma. Utilisee pour fabriquer des dispositifs avances., display: true
   StackSize: 4000
   ShowUser: Yes
   MarketPrice: 3703, display: true
@@ -27136,7 +27136,7 @@
 
 { +Item Id: 3220, Name: Eden_EmergencyLifeSupport, Ref: FoodTemplate
   CustomIcon: MedicinelabMS
-  Info: Un dispositif médical et de survie d'urgence d'origine extraterrestre. \n\nRemplit toutes les fonctions de la combinaison et stabilise les radiations. Guérit la plupart des maladies., display: true
+  Info: Un dispositif medical et de survie d'urgence d'origine extraterrestre. \n\nRemplit toutes les fonctions de la combinaison et stabilise les radiations. Guerit la plupart des maladies., display: true
   Mass: 10, type: float, display: true, formatter: Kilogram
   Volume: 100, type: float, display: true, formatter: Liter
   Category: Medical
@@ -27197,7 +27197,7 @@
   ShowUser: Yes
   MarketPrice: 350
   StackSize: 4000
-  Info: Une petite quantité de matière noire suspendue presque en apesanteur dans un module de confinement. Utilisée dans la construction de petits appareils., display: true
+  Info: Une petite quantite de matiere noire suspendue presque en apesanteur dans un module de confinement. Utilisee dans la construction de petits appareils., display: true
   
   UnlockCost: 1, display: true
   UnlockLevel: 3, display: true
@@ -27212,7 +27212,7 @@
   ShowUser: Yes
   MarketPrice: 350000
   StackSize: 4000
-  Info: Un moule de composants et de matériaux coûteux utilisé pour permettre à un constructeur avancé d'imprimer en 3D une armure augmentée. Comme cette technologie extraterrestre n'est pas encore totalement comprise, la plupart des matériaux seront gaspillés pendant la construction., display: true
+  Info: Un moule de composants et de materiaux couteux utilise pour permettre a un constructeur avance d'imprimer en 3D une armure augmentee. Comme cette technologie extraterrestre n'est pas encore totalement comprise, la plupart des materiaux seront gaspilles pendant la construction., display: true
 }
 
 
@@ -27231,7 +27231,7 @@
   StackSize: 50000
   Category: Research
   ShowUser: No
-  Info: Déverrouille la recherche sur le Voidium. Nécessaire pour récolter le Voidium et en extraire la matière noire., display: true
+  Info: Deverrouille la recherche sur le Voidium. Necessaire pour recolter le Voidium et en extraire la matiere noire., display: true
 
   UnlockCost: 500, display: true
   UnlockLevel: 1, display: true
@@ -27252,7 +27252,7 @@
   StackSize: 50000
   Category: Research
   ShowUser: No
-  Info: Recherches complémentaires sur la récolte du Voidium., display: true
+  Info: Recherches complementaires sur la recolte du Voidium., display: true
 
   UnlockCost: 1000, display: true
   UnlockLevel: 2, display: true
@@ -27273,7 +27273,7 @@
   StackSize: 50000
   Category: Research
   ShowUser: No
-  Info: Déverrouille les améliorations de protection environnementale pour les armures augmentées. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous que vous installez la bonne amélioration d'armure.[-][/c], display: true
+  Info: Deverrouille les ameliorations de protection environnementale pour les armures augmentees. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous que vous installez la bonne amelioration d'armure.[-][/c], display: true
 
   UnlockCost: 1000, display: true
   UnlockLevel: 1, display: true
@@ -27294,7 +27294,7 @@
   StackSize: 50000
   Category: Research
   ShowUser: No
-  Info: Débloque les améliorations de mobilité et de combat pour l'armure augmentée. \n\n[c][FFFF00]Tenter d'installer une amélioration d'armure incompatible dans une armure détruira le booster d'armure. Assurez-vous que vous installez la bonne amélioration d'armure.[-][/c], display: true
+  Info: Debloque les ameliorations de mobilite et de combat pour l'armure augmentee. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous que vous installez la bonne amelioration d'armure.[-][/c], display: true
 
   UnlockCost: 1000, display: true
   UnlockLevel: 2, display: true
@@ -27315,7 +27315,7 @@
   StackSize: 50000
   Category: Research
   ShowUser: No
-  Info: Déverrouille les générateurs de boucliers augmentés., display: true
+  Info: Deverrouille les generateurs de boucliers augmentes., display: true
 
   UnlockCost: 1000, display: true
   UnlockLevel: 1, display: true
@@ -27336,7 +27336,7 @@
   StackSize: 50000
   Category: Research
   ShowUser: No
-  Info: Déverrouille les systèmes de propulsion augmentés., display: true
+  Info: Deverrouille les systemes de propulsion augmentes., display: true
 
   UnlockCost: 1000, display: true
   UnlockLevel: 1, display: true
@@ -27357,7 +27357,7 @@
   StackSize: 50000
   Category: Research
   ShowUser: No
-  Info: Déverrouille les systèmes d'armes améliorés. N'a actuellement aucune utilité., display: true
+  Info: Deverrouille les systemes d'armes ameliores. N'a actuellement aucune utilite., display: true
 
   UnlockCost: 1000, display: true
   UnlockLevel: 1, display: true
@@ -27828,7 +27828,7 @@
   Mass: 0.12, type: float, display: true, formatter: Kilogram
   Volume: 0.11, type: float, display: true, formatter: Liter
   Category: Medical
-  Info: Lorsqu'il est consommé, il enferme l'utilisateur dans un champ de force quasi impénétrable qui le protège de pratiquement tous les dégâts pendant 30 secondes. \n\nLes attaques les plus puissantes peuvent néanmoins tuer l'utilisateur., display: true
+  Info: Lorsqu'il est consomme, il enferme l'utilisateur dans un champ de force quasi impenetrable qui le protege de pratiquement tous les degats pendant 30 secondes. \n\nLes attaques les plus puissantes peuvent neanmoins tuer l'utilisateur., display: true
   StackSize: 1000
   ShowUser: Yes
   { Child 0
@@ -27849,7 +27849,7 @@
   Volume: 4.5, type: float, display: true, formatter: Liter
   O2Value: 250, display: false, type: int
   MarketPrice: 4.2
-  # Info: Réservoir d'oxygène portable utilisé pour la recharge en oxygène des combinaisons. \nNon compatible avec le remplissage des réservoirs d'oxygène du vaisseau ou de la base., display: true
+  # Info: Reservoir d'oxygene portable utilise pour la recharge en oxygene des combinaisons. \nNon compatible avec le remplissage des reservoirs d'oxygene du vaisseau ou de la base., display: true
   Info: Eden_OxygenBottleLargeinfo, display: true
   { Child 0
     Class: Eat
@@ -27900,7 +27900,7 @@
   # CustomIcon: MedicStationHV
   Mass: 0.12, type: float, display: true, formatter: Kilogram
   Volume: 0.11, type: float, display: true, formatter: Liter
-  Info: Injecte des nanites nettoyant les radiations dans la circulation sanguine, réduisant lentement les radiations du corps. \n\nPermet une réduction lente des radiations pendant 15 minutes. Ne prévient ni ne guérit aucune radiation. illness., display: true
+  Info: Injecte des nanites nettoyant les radiations dans la circulation sanguine, reduisant lentement les radiations du corps. \n\nPermet une reduction lente des radiations pendant 15 minutes. Ne previent ni ne guerit aucune radiation. illness., display: true
   MarketPrice: 50
   Category: Medical
   StackSize: 2000
@@ -27930,7 +27930,7 @@
 
 { +Item Id: 3360, Name: Eden_WarpCoreMoonshine, Ref: FoodTemplate
   CustomIcon: AkuaWine
-  Info: Une boisson puissante qui augmente la régénération de l'endurance au détriment de la santé pendant 5 minutes. A utiliser avec précaution. \n[c][FFFFFF]Schéma requis pour le déblocage.[-][/c] \n\n[i][c][A9A9A9]Un autre bon breuvage développé par Appleseed Corporation.[-][/c][/i], display: true
+  Info: Une boisson puissante qui augmente la regeneration de l'endurance au detriment de la sante pendant 5 minutes. A utiliser avec precaution. \n[c][FFFFFF]Schema requis pour le deblocage.[-][/c] \n\n[i][c][A9A9A9]Un autre bon breuvage developpe par Appleseed Corporation.[-][/c][/i], display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -27952,7 +27952,7 @@
 
 { +Item Id: 3361, Name: Eden_PromethiumSlammers, Ref: FoodTemplate
   CustomIcon: AkuaWine
-  Info: Une boisson puissante qui permet d'augmenter l'endurance et de régénérer la santé au prix d'une augmentation de la température corporelle et des radiations pendant 5 minutes. A utiliser avec précaution. \n[c][FFFFFF]Schéma requis pour le déblocage.[-][/c] \n\n[i][c][A9A9A9]Un autre bon breuvage développé par Appleseed Corporation.[-][/c][/i], display: true
+  Info: Une boisson puissante qui permet d'augmenter l'endurance et de regenerer la sante au prix d'une augmentation de la temperature corporelle et des radiations pendant 5 minutes. A utiliser avec precaution. \n[c][FFFFFF]Schema requis pour le deblocage.[-][/c] \n\n[i][c][A9A9A9]Un autre bon breuvage developpe par Appleseed Corporation.[-][/c][/i], display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -27975,7 +27975,7 @@
 
 { +Item Id: 3362, Name: Eden_LiquidAssassin, Ref: FoodTemplate
   CustomIcon: AkuaWine
-  Info: Une boisson puissante qui réduit les radiations et la température du corps au prix de la santé et de la faim pendant 5 minutes. A utiliser avec précaution. \n[c][FFFFFF]Schéma requis pour le déverrouillage.[-][/c] \n\n[i][c][A9A9A9]Un autre bon breuvage développé par Appleseed Corporation.[-][/c][/i], display: true
+  Info: Une boisson puissante qui reduit les radiations et la temperature du corps au prix de la sante et de la faim pendant 5 minutes. A utiliser avec precaution. \n[c][FFFFFF]Schema requis pour le deverrouillage.[-][/c] \n\n[i][c][A9A9A9]Un autre bon breuvage developpe par Appleseed Corporation.[-][/c][/i], display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -27998,7 +27998,7 @@
 
 { +Item Id: 3363, Name: Eden_SpaceVodka, Ref: FoodTemplate
   CustomIcon: AkuaWine
-  Info: Une boisson puissante qui augmente la régénération de la santé au détriment de l'endurance et de la vitesse de déplacement pendant 5 minutes. A utiliser avec précaution. \n[c][FFFFFF]Schéma requis pour le déblocage.[-][/c] \n\n[i][c][A9A9A9]Un autre bon breuvage développé par Appleseed Corporation.[-][/c][/i], display: true
+  Info: Une boisson puissante qui augmente la regeneration de la sante au detriment de l'endurance et de la vitesse de deplacement pendant 5 minutes. A utiliser avec precaution. \n[c][FFFFFF]Schema requis pour le deblocage.[-][/c] \n\n[i][c][A9A9A9]Un autre bon breuvage developpe par Appleseed Corporation.[-][/c][/i], display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -28224,7 +28224,7 @@
   ShowUser: Yes
   MarketPrice: 350
   StackSize: 4000
-  Info: Un fragment de la technologie des progéniteurs. Utilisé dans la construction de dispositifs très avancés., display: true
+  Info: Un fragment de la technologie des progeniteurs. Utilise dans la construction de dispositifs tres avances., display: true
 }
 
 # Lowers build time in factory

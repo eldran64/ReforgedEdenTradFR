@@ -22,4 +22,4 @@ Le mod Reforged Eden pour le jeu Empyrion est la propriété de Vermillion et de
 
 Il y a 3 branches de disponibles concernant les 3 build traduits et partagés
 
-La branche principale concerne le build 30
+La branche principale concerne le build 32

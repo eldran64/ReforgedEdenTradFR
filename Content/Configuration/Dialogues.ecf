@@ -15890,14 +15890,14 @@
 # ====================================================================== Rumors about Arid Mesa planets
 { +Dialogue Name: Eden_Rumor9_Start
   Output: "Yo."
-  Option_1: "Overheard any talk?"
+  Option_1: "Vous avez entendu quelque chose ?"
   OptionNext_1: Eden_Rumor9_Answer
   Option_2: "Au revoir."
   OptionNext_2: End
 }
 
 { +Dialogue Name: Eden_Rumor9_Answer
-  Output: "Overheard some Polaris corporate officers complaining about some settlers on Arid Mesa planets blocking their mining rights."
+  Output: "J'ai entendu des officiers de Polaris se plaindre que des colons des planètes Arid Mesa bloquaient leurs droits miniers."
   Option_1: "Merci."
   OptionNext_1: End
 }

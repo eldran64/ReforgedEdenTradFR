@@ -6,7 +6,7 @@ Ces fichiers traduisent le mod Reforged Eden. Ils n'ont pas vocation à remplace
 1) Veuillez commencer par récupérer le mod Reforged Eden:
 https://steamcommunity.com/sharedfiles/filedetails/?id=2550354956
 
-2) Une fois que vous avez installé le mod Reforged Eden 1.7, vous pouvez remplacer les fichiers du mod RE par ceux du mod ReforgedEdenTradFR. La plupart du temps comme il s'agit d'un serveur, on utilise "steam en ligne de commande" ou autrement dit "steamcmd". Il faut aller dans l'arborsence suivante:
+2) Une fois que vous avez installé le mod Reforged Eden, vous pouvez remplacer les fichiers du mod RE par ceux du mod ReforgedEdenTradFR. La plupart du temps comme il s'agit d'un serveur, on utilise "steam en ligne de commande" ou autrement dit "steamcmd". Il faut aller dans l'arborsence suivante:
 
 steamcmd\steamapps\common\Empyrion - Dedicated Server\Content\Scenarios
 

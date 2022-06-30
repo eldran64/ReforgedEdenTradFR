@@ -23714,7 +23714,7 @@
   CustomIcon: Shotgun2Epic
   Meshfile: Entities/Items/Weapons/Shotguns/ScifiShotgun2EpicPrefab
   PickupToToolbar: true
-  Info: Un fusil de chasse semi-automatique qui utilise des bobines magnetisees pour accelerer rapidement les projectiles, ce qui permet une plus grande portee effective par rapport aux autres fusils de chasse, au detriment des degats et de la capacite de munitions., display: true
+  Info: Un fusil de chasse semi-automatique qui utilise des bobines magnetisees pour accelerer rapidement les projectiles ce qui permet une plus grande portee effective par rapport aux autres fusils de chasse au detriment des degats et de la capacite de munitions., display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: true
   DegradationProb: 0.305, type: float, display: false
@@ -24490,7 +24490,7 @@
   Mass: 3.5, type: float, display: true, formatter: Kilogram
   MarketPrice: 3000
   ShowUser: Yes
-  Info: Une amelioration avancee qui augmente considerablement la protection contre la chaleur de votre combinaison, permettant au porteur de se deplacer librement dans des environnements extremement chauds. \n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
+  Info: Une amelioration avancee qui augmente considerablement la protection contre la chaleur de votre combinaison permettant au porteur de se deplacer librement dans des environnements extremement chauds.\n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
 }
 
 { +Item Id: 3134, Name: Eden_RadiationBoostAbyss, Ref: Eden_ArmorBoostAugmentedTemplate
@@ -24501,7 +24501,7 @@
   Mass: 9.5, type: float, display: true, formatter: Kilogram
   MarketPrice: 3500
   ShowUser: Yes
-  Info: Une amelioration avancee qui augmente considerablement la protection contre les radiations de votre combinaison, permettant au porteur de se deplacer librement dans des environnements extremement radioactifs. \n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
+  Info: Une amelioration avancee qui augmente considerablement la protection contre les radiations de votre combinaison permettant au porteur de se deplacer librement dans des environnements extremement radioactifs.\n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
 }
 
 { +Item Id: 3135, Name: Eden_ArmorBoostAbyss, Ref: Eden_ArmorBoostAugmentedTemplate
@@ -24512,7 +24512,7 @@
   Volume: 2.5, type: float, display: true, formatter: Liter
   Mass: 5.5, type: float, display: true, formatter: Kilogram
   ShowUser: Yes
-  Info: Une amelioration avancee qui augmente considerablement la protection de votre combinaison contre les degats. \n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
+  Info: Une amelioration avancee qui augmente considerablement la protection de votre combinaison contre les degats.\n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
 }
 
 { +Item Id: 3136, Name: Eden_ColdBoostAbyss, Ref: Eden_ArmorBoostAugmentedTemplate
@@ -24523,7 +24523,7 @@
   Mass: 3.5, type: float, display: true, formatter: Kilogram
   MarketPrice: 3000
   ShowUser: Yes
-  Info: Une amelioration avancee qui augmente considerablement la protection contre le froid de votre combinaison. \n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
+  Info: Une amelioration avancee qui augmente considerablement la protection contre le froid de votre combinaison.\n\nNe peut etre installee que dans l'armure du Marcheur des Abysses. \n\n[c][FFFF00]Tenter d'installer une amelioration d'armure incompatible dans une armure detruira le booster d'armure. Assurez-vous d'installer des ameliorations abyssales dans une armure de marcheur abyssal.[-][/c], display: true
 }
 
 { +Item Id: 3137, Name: Eden_TurretVulcanSmall_Weapon
@@ -27215,7 +27215,7 @@
   ShowUser: Yes
   MarketPrice: 350000
   StackSize: 4000
-  Info: Un moule de composants et de materiaux couteux utilise pour permettre a un constructeur avance d'imprimer en 3D une armure augmentee. Comme cette technologie extraterrestre n'est pas encore totalement comprise, la plupart des materiaux seront gaspilles pendant la construction., display: true
+  Info: Un moule de composants et de materiaux couteux utilise pour permettre a un constructeur avance d'imprimer en 3D une armure augmentee. Comme cette technologie extraterrestre n'est pas encore totalement comprise la plupart des materiaux seront gaspilles pendant la construction., display: true
 }
 
 
@@ -27831,7 +27831,7 @@
   Mass: 0.12, type: float, display: true, formatter: Kilogram
   Volume: 0.11, type: float, display: true, formatter: Liter
   Category: Medical
-  Info: Lorsqu'il est consomme, il enferme l'utilisateur dans un champ de force quasi impenetrable qui le protege de pratiquement tous les degats pendant 30 secondes. \n\nLes attaques les plus puissantes peuvent neanmoins tuer l'utilisateur., display: true
+  Info: Lorsqu'il est consomme il enferme l'utilisateur dans un champ de force quasi impenetrable qui le protege de pratiquement tous les degats pendant 30 secondes. \n\nLes attaques les plus puissantes peuvent neanmoins tuer l'utilisateur., display: true
   StackSize: 1000
   ShowUser: Yes
   { Child 0
@@ -27903,7 +27903,7 @@
   # CustomIcon: MedicStationHV
   Mass: 0.12, type: float, display: true, formatter: Kilogram
   Volume: 0.11, type: float, display: true, formatter: Liter
-  Info: Injecte des nanites nettoyant les radiations dans la circulation sanguine, reduisant lentement les radiations du corps. \n\nPermet une reduction lente des radiations pendant 15 minutes. Ne previent ni ne guerit aucune radiation. illness., display: true
+  Info: Injecte des nanites nettoyant les radiations dans la circulation sanguine reduisant lentement les radiations du corps. \n\nPermet une reduction lente des radiations pendant 15 minutes. Ne previent ni ne guerit aucune radiation. illness., display: true
   MarketPrice: 50
   Category: Medical
   StackSize: 2000

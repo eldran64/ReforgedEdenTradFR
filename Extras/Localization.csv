@@ -1832,7 +1832,7 @@ ZiraxMSPlasmaCharge,[c][FF8800]Zirax Plasma Cell[-][/c],,[c][FF8800]Cellule plas
 AblativeSpray,Ablative Spray,,Spray Ablatif,,,,,,,,,,,,,,
 BugSpray,Insect Repellent,,Insecticide,,,,,,,,,,,,,,
 rdlDeconstructT2Txt,Salvages owned and public structures.\nWill return 50% of a block's components.,,Récupère les éléments des structures publiques et privées. Permet de récupérer 50 % des composants d'un bloc mais pas les blocs complets.,,,,,,,,,,,,,,
-rdlDeconstructT3Txt,Salvages owned and public structures.\nWill return 75% of a block's components.,,Récupère les éléments des structures publiques et privées. Permet de récupérer 50 % des composants d'un bloc mais pas les blocs complets.,,,,,,,,,,,,,,
+rdlDeconstructT3Txt,Salvages owned and public structures.\nWill return 75% of a block's components.,,Récupère les éléments des structures publiques et privées. Permet de récupérer 75 % des composants d'un bloc mais pas les blocs complets.,,,,,,,,,,,,,,
 LargeHarvestContainer,Large Harvest Container,,Grand conteneur de récolte,,,,,,,,,,,,,,
 LargeCargoContainer,Large Cargo Container,,Grand conteneur de fret,,,,,,,,,,,,,,
 ZiraxRocketLauncher,[c][FF0000]Zirax Rocket Launcher[-][/c],,[c][FF0000]Lance-roquettes Zirax[-][/c],,,,,,,,,,,,,,

@@ -1839,7 +1839,7 @@ ZiraxRocketLauncher,[c][FF0000]Zirax Rocket Launcher[-][/c],,[c][FF0000]Lance-ro
 ZiraxSniperRifle,[c][FF0000]Zirax Marksman Rifle[-][/c],,[c][FF0000]Fusil de tireur d'élite Zirax[-][/c],,,,,,,,,,,,,,
 TalonRepeatingCrossbow,[c][15FF58]Repeating Crossbow[-][/c],,[c][15FF58]Arbalète à répétition[-][/c],,,,,,,,,,,,,,
 HeavyPistol,[c][FFD837]Starhawk Heavy Pistol[-][/c],,[c][FFD837]Pistolet lourd Starhawk[-][/c],,,,,,,,,,,,,,
-CrossbowBoltPlayer,Crossbow Bolt,,Boulon d'arbalète,,,,,,,,,,,,,,
+CrossbowBoltPlayer,Crossbow Bolt,,Carreau d'arbalète,,,,,,,,,,,,,,
 PlasmaCartridge,Plasma Cartridge,,Cartouche de plasma,,,,,,,,,,,,,,
 TurretEnemyPurple,Dark Matter Cannon,,Canon à matière noire,,,,,,,,,,,,,,
 TurretEnemyCyan,Lightning Cannon,,Canon à foudre,,,,,,,,,,,,,,

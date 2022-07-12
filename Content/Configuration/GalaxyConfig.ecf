@@ -1473,7 +1473,7 @@
   HabitableTemperate: "64, 89"
   HabitableCold: "90, 104"
   OuterSystem: "105, 132"
-  Description: "C'est l'un des systèmes de départ. [c][A9A9A9][i]Sauvegarde du jeu commencée avec Reforged Eden 1.7 Build 32[/i][-][/c]"
+  Description: "C'est l'un des systèmes de départ. [c][A9A9A9][i]Sauvegarde du jeu commencée avec Reforged Eden 1.8 Build 34[/i][-][/c]"
   GalaxySpawnAmount: 0
 }
 

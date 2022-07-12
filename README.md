@@ -20,6 +20,4 @@ Cette traduction française est sous la protection de la licence GPL3.
 
 Le mod Reforged Eden pour le jeu Empyrion est la propriété de Vermillion et de ravien_ff.
 
-Il y a 3 branches de disponibles concernant les 3 build traduits et partagés
-
-La branche principale concerne le build 33
+La branche principale concerne le build 34

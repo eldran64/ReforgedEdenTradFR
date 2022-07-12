@@ -14,11 +14,14 @@
 # - Currently only the item 'Token' (Itemsconfig.ecf id: 1305) can have a 4-digit META element. Any OTHER "keycard" named item or other items in general can NOT have meta info attached!
 # - When working with the TokenConfig.ecf, adding custom names for the Token:Meta combination, you can use the console command 'token reload' when you are ingame. You do not need to restart the game when working with this file!
 # =================================
-
+#
+# DropOnDeath:   > If set to 'False'  this item or block is not dropped on player death. Use for important story items that players shall not lose on death. Default is set to 'True'.
+# =================================
 # Example Token
 { Token Id: 1, Name: KeyCardRed
   Description: La carte cle rouge ouvre les portes rouges
 # CustomIcon: AddAnIconNameHere
+  DropMeshfile: Entities/Misc/BagSmallChristmasPrefab
 }
 
 { Token Id: 2, Name: KeyCardGreen
@@ -26,98 +29,198 @@
 }
 
 { Token Id: 1234, Name: Golden Key
-  Description: Avec la cle en or, vous pouvez ouvrir toutes les portes dorees
+  Description: With the golden key you can open all golden doors
   #RemoveOnUse: true
 }
 
 # === RP Creditibility Token ===
 
 { Token Id: 100, Name: CredTokenZiraxEmpire
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenZiraxEmpire
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 101, Name: CredTokenXenu
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenXenu
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 102, Name: CredTokenRados
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenRados
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 103, Name: CredTokenGhyst
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenGhyst
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 104, Name: CredTokenEpsilon
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenEpsilon
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 105, Name: CredTokenSerdu
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenSerdu
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 106, Name: CredTokenAbyssal
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenAbyssal
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 107, Name: CredTokenPolaris
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenPolaris
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 108, Name: CredTokenTradersGuild
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenTradersGuild
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 109, Name: CredTokenPirates
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenPirates
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 110, Name: CredTokenKriel
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenKriel
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 111, Name: CredTokenTesch
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenTesch
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 112, Name: CredTokenTalon
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenTalon
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 113, Name: CredTokenColonists
-  Description: Retablissez votre reputation aupres de la faction, en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: KeyCardRed
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenColonists
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 114, Name: CredTokenFarr
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenFarr
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 115, Name: CredTokenUCH
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: CredTokenUCH
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 
+# === Objets de quêtes ===
 
+{ Token Id: 200, Name: ExplReportPlanet
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: Tablet
+  MarketPrice: 25000, display: true
+  #RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 1
+{ Token Id: 201, Name: QuestItemCrops
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: QuestItemCrops  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 2
+{ Token Id: 202, Name: QuestItemMushroomExtract
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: QuestItemMushroomExtract  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 3
+{ Token Id: 203, Name: QuestItemBrewingLichen
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: QuestItemBrewingLichen  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 4
+{ Token Id: 204, Name: QuestItemPumpSpareParts
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: QuestItemPumpSpareParts  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 5
+{ Token Id: 205, Name: QuestItemRaptorSkin
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: QuestItemRaptorSkin  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 1
+{ Token Id: 206, Name: QuestItemAmmoCrossbow
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: QuestItemAmmoCrossbow  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 2
+{ Token Id: 207, Name: QuestItemButterflySecretion
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: QuestItemButterflySecretion  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 3
+{ Token Id: 208, Name: QuestItemFishParasite
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: QuestItemFishParasite  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 4
+{ Token Id: 209, Name: QuestItemWildCorn
+  Description: Quest Item. Will not be dropped on death.
+  CustomIcon: QuestItemWildCorn  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 5 Item 1
+{ Token Id: 210, Name: QuestItemTelluropodClutches
+  Description: Quest Item. Will not be dropped on death.
+ CustomIcon: QuestItemTelluropodClutches  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+ 
 # === Story Tokens (Do not change! === 
 
 { Token Id: 9999, Name: AI Routine 32 Key
@@ -164,91 +267,37 @@
 { Token Id: 9988, Name: Ghyst Command Card
   Description: "Carte d'acces aux zones restreintes. Se trouve dans les poches des commandants de Ghyst"
 }
-
-
-# ======================================================================================================================================================================
-# =================================================================================================================================Project Eden Tokens:
-# ======================================================================================================================================================================
-# ================================================================================================================================ Test Tokens
-
-# Test
-{ Token Id: 5000, Name: [c][FFFFFF]Contracted Cargo[-][/c]
-  Description: [c][ffffff]Mission Item.[-][/c] \n\nDeliver this cargo to the TOP Manager on board the Polaris Trading Station in orbit around Haven Akua Tallodar Omicron Roggery or Ningues in the Alpha or Beta star systems.
+{ Token Id: 9987, Name: Brotherhood Command Card
+  Description: "Access Card for restricted areas. Can be found in the pockets of Commanders of the Brotherhood of Farr"
 }
-
-{ Token Id: 5001, Name: [c][FF00FF]Virus Sample 127-Beta[-][/c]
-  Description: [c][ff00ff]Mission Item.[-][/c] \n\nA virus sample discovered by Polaris miners in the Deep Core Mining Facility on Helion IV. \nDeliver to the UCHN Artemis in orbit of Helion IV in the Helion system. \n\n[c][A9A9A9][i]Maybe you should not handle this with your bare hands?[/i][-][/c]
+{ Token Id: 9986, Name: Doctor Mandors' Space Anomalies report
+  Description: "Give this report to Agent Kezzel in the Sanctuary"
 }
-
-{ Token Id: 5002, Name: [c][00FF00]Green Voucher[-][/c]
-  Description: [c][FFFFFF]50000 Credits[-][/c] \n\nCash in at any Trader Guild Bank.
+{ Token Id: 9985, Name: Temperate Planet Data 
+  CustomIcon: KeyCardGreen
+  Description: "Contains a list of plants, animals and resources and their relative positions on this planet.The entries can be viewed in the HELP area (F1) > PLANET DATA > TEMPERATE."
 }
-
-# ================================================================================================================================ The Infected mission tokens
-
-# =============================================== REFORGED TOKENS ============================================================
-# UCH Keycard (Offworld Grave)
-{ Token Id: 4001, Name: [c][F0F8FF]Carte-cle UCH[/c]
-  CustomIcon: UCHKeycard
-  Description: Une carte cle personnelle du M.S Titan trouvee dans les quartiers de l'equipage. Elle autorise l'acces aux systemes securises du Titan.
+{ Token Id: 9984, Name: Snow Planet Data 
+  CustomIcon: KeyCardBlue
+  Description: "Contains a list of plants, animals and resources and their relative positions on this planet.The entries can be viewed in the HELP area (F1) > PLANET DATA > SNOW."
 }
-# Missing Cargo (GIN cargo)
-{ Token Id: 4002, Name: [c][00FFFF]Cargaison non livree[/c]
-  CustomIcon: ScifiContainer1Small
-  Description: Un conteneur scelle rempli de marchandises destine a un destinataire de la guilde du commerce. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
+{ Token Id: 9983, Name: Barren Planet Data 
+  CustomIcon: KeyCardYellow
+  Description: "Contains a list of plants, animals and resources and their relative positions on this planet.The entries can be viewed in the HELP area (F1) > PLANET DATA > BARREN."
 }
-{ Token Id: 4003, Name: [c][FFFF00]Cargaison non livree[/c]
-  CustomIcon: ScifiContainer1Small
-  Description: Un conteneur scelle rempli de marchandises. Il y a un destinataire sur l'etiquette mais aucune autre marque. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
+{ Token Id: 9982, Name: Alien Planet Data 
+  CustomIcon: KeyCardRed
+  Description: "Contains a list of plants, animals and resources and their relative positions on this planet.The entries can be viewed in the HELP area (F1) > PLANET DATA > ALIEN."
 }
-{ Token Id: 4004, Name: [c][FF0000]Cargaison non livree[/c]
-  CustomIcon: ScifiContainer1Small
-  Description: Un conteneur scelle rempli de marchandises. Le texte sur les etiquettes indique que cette cargaison appartient a RADOS. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
+{ Token Id: 9981, Name: Tales of Tash Damaged Datapad 
+  CustomIcon: Tablet
+  Description: "Unlocks the associated Tales of Tash log when picking up this item."
 }
-{ Token Id: 4005, Name: [c][FFC100]Cargaison non livree[/c]
-  CustomIcon: ScifiContainer1Small
-  Description: Un conteneur scelle rempli de marchandises destinees a un Polaris Habitat. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
+{ Token Id: 9965, Name: Key Matrix
+  CustomIcon: Tablet
+  DropOnDeath: false
+  Description: "Allows to use the Progenitor teleport network. DO NOT LOOSE!"
 }
-# Illegal Goods (Unlawful Possession)
-{ Token Id: 4006, Name: [c][FF9900]Marchandises illegales[/c]
-  CustomIcon: ContainerMission
-  Description: Un conteneur de marchandises vraisemblablement volees qui a ete confisque par Polaris apres avoir ete recupere aupres d'un contrebandier travaillant pour Markos.
-}
-# Demo Charges (Freedom Fighter)
-{ Token Id: 4007, Name: [c][FF0000]Charge de demolition[/c]
-  CustomIcon: DemoCharge
-  Description: Une charge explosive generalement utilisee pour la demolition controlee de bâtiments et les operations minieres qui necessitent un dynamitage.\n\n[c][FFFFFF]Objet de la mission d'histoire - Non fonctionnel [-][/c]
-}
-# Weapons Crate (Instigator)
-{ Token Id: 4008, Name: [c][0080FF]Mallette d'armes[/c]
-  CustomIcon: PlasticItemCrate
-  Description: Un conteneur en plastique qui contient une cache d'armes UCH standard bien emballees.
-}
-# Ancient Box (Instigator)
-{ Token Id: 4009, Name: [c][C77900]Caisse scellee[/c]
-  CustomIcon: WoodenItemCrate
-  Description: Une caisse scellee obtenue sur un site sacre Tal'on. Elle contient apparemment une technologie interdite gardee par l'Ordre Chamanique.\n\n[c][FFFFFF]Objet de mission de l'histoire[-][/c]
-}
-# Decryption Device (Cloak-and-Dagger)
-{ Token Id: 4010, Name: [c][FFFF00]Dispositif de decryptage[/c]
-  CustomIcon: Decryptor
-  Description: Un dispositif sophistique de guerre electronique conçu pour se connecter au relais de communication d'un navire ou d'une station et siphonner les donnees envoyees et reçues.
-}
-{ Token Id: 4011, Name: [c][FFFFFF]Cargaison non livree[/c]
-  CustomIcon: ScifiContainer1Small
-  Description: Un conteneur scelle rempli de marchandises destinees a une colonie frontaliere. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
-}
-{ Token Id: 4012, Name: [c][FFBB00]Mining Shipment[/c]
-  CustomIcon: LargeHarvestContainer
-  Description: Un conteneur de minerai portant le logo de Polaris Mining provenant de l'une de leurs nombreuses installations industrielles. \n\n[c][ffffff]Peut etre renvoye a Polaris en utilisant le service d'expedition de n'importe quelle console GIN.[-][/c]
-}
-{ Token Id: 4013, Name: [c][F0F8FF]Citation de la marine[/c]
-  CustomIcon: NavalCommendation
-  Description: Une citation de l'UCH Naval pour des actes d'heroïsme distingues contre l'ennemi. \n\n[c][ffffff]Peut etre utilise pour augmenter d'un niveau le rang principal ou secondaire actuel du joueur.[-][/c]
-}
-
-
-
 
 # ======================================================================================================================================================================
 # =================================================================================================================================Project Eden Custom Tokens:
@@ -308,7 +357,7 @@
 # ================================================================================================================================ Empyrion Shrine Tokens
 
 # Empyrion Shrine Key I
-{ Token Id: 6011, Name: [c][ff8000]Clé du sanctuaire d'Empyrion I[/c]
+{ Token Id: 6011, Name: [c][ff8000]Cle du sanctuaire d'Empyrion I[/c]
   DropOnDeath: false
   Description: This key will open a door in the Empyrion Shrine near the galactic core. NOT YET IN.
 }
@@ -376,7 +425,7 @@
   CustomIcon: ProgenitorKeyI
   DropOnDeath: false
   RemoveOnUse: true
-  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette clé donne accès à l'une des portes de l'objet 82 situé près des systèmes solaires de départ. Vous devez également avoir personnellement activé le lien subspatial de l'objet 1. \n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer où se trouve l'objet 82. \n\n[i][c][A9A9A9]Autrefois nous ne faisions qu'un. Il fut un temps où nous étions en harmonie...[-][/c][/i]
+  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette cle donne acces a l'une des portes de l'objet 82 situe pres des systemes solaires de depart. Vous devez egalement avoir personnellement active le lien subspatial de l'objet 1. \n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer ou se trouve l'objet 82. \n\n[i][c][A9A9A9]Autrefois nous ne faisions qu'un. Il fut un temps ou nous etions en harmonie...[-][/c][/i]
 }
 
 # Progenitor Key II - Object 13
@@ -384,7 +433,7 @@
   CustomIcon: ProgenitorKeyII
   DropOnDeath: false
   RemoveOnUse: true
-  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette clé donne accès à l'une des portes de l'objet 82 situé près des systèmes solaires de départ. Vous devez également avoir personnellement activé le lien subspatial de l'objet 13. \n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer où se trouve l'objet 82. \n\n[i][c][A9A9A9]...Non contents d'une vie mortelle, nous en avons cherché d'autres...[-][/c][/i]
+  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette cle donne acces a l'une des portes de l'objet 82 situe pres des systemes solaires de depart. Vous devez egalement avoir personnellement active le lien subspatial de l'objet 13. \n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer ou se trouve l'objet 82. \n\n[i][c][A9A9A9]...Non contents d'une vie mortelle nous en avons cherche d'autres...[-][/c][/i]
 }
 
 # Progenitor Key III - Object 42
@@ -392,7 +441,7 @@
   CustomIcon: ProgenitorKeyIII
   DropOnDeath: false
   RemoveOnUse: true
-  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette clé donne accès à l'une des portes de l'objet 82 situé près des systèmes solaires de départ. Vous devez également avoir personnellement activé le lien subspatial de l'objet 42. \n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer où se trouve l'objet 82. \n\n[i][c][A9A9A9]...Nous nous sommes élevés dans les rêves et nous sommes tombés dans les cauchemars...[-][/c][/i]
+  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette cle donne acces a l'une des portes de l'objet 82 situe pres des systemes solaires de depart. Vous devez egalement avoir personnellement active le lien subspatial de l'objet 42. \n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer ou se trouve l'objet 82. \n\n[i][c][A9A9A9]...Nous nous sommes eleves dans les rêves et nous sommes tombes dans les cauchemars...[-][/c][/i]
 }
 
 # Progenitor Key IV - Object 276
@@ -400,7 +449,7 @@
   CustomIcon: ProgenitorKeyIV
   DropOnDeath: false
   RemoveOnUse: true
-  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette clé donne accès à l'une des portes de l'objet 82 situé près des systèmes solaires de départ. Vous devez également avoir personnellement activé le lien subspatial de l'objet 276.\n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer où se trouve l'objet 82. \n\n[i][c][A9A9A9]...Nous voyons maintenant nos enfants suivre nos traces. Nous vous voyons maintenant suivre les leurs.[-][/c][/i]
+  Description: [c][FF0000]Consomme a l'utilisation.[-][/c] \n\nCette cle donne acces a l'une des portes de l'objet 82 situe pres des systemes solaires de depart. Vous devez egalement avoir personnellement active le lien subspatial de l'objet 276.\n\nLes capitaines des vaisseaux de recherche de l'UCH peuvent vous indiquer ou se trouve l'objet 82. \n\n[i][c][A9A9A9]...Nous voyons maintenant nos enfants suivre nos traces. Nous vous voyons maintenant suivre les leurs.[-][/c][/i]
 }
 
 
@@ -460,21 +509,21 @@
 
 # Polaris Refinery License
 { Token Id: 6201, Name: [c][00FFFF]Licence de la raffinerie de Polaris[/c]
-  Description: "Cette licence permet d'utiliser les fourneaux a bord des [c][FFA500]raffineries orbitales Polaris.[/c][-] \n\n[c][FFFFFF][i]Placez les minerais dans le conteneur d'entree du fourneau dans le hangar supérieur. \nRecuperez les lingots raffines dans le hangar inferieur.[/i]"
+  Description: "Cette licence permet d'utiliser les fourneaux a bord des [c][FFA500]raffineries orbitales Polaris.[/c][-] \n\n[c][FFFFFF][i]Placez les minerais dans le conteneur d'entree du fourneau dans le hangar superieur. \nRecuperez les lingots raffines dans le hangar inferieur.[/i]"
   # Description: Eden_PolarisRefineryLicenseinfo
   MarketPrice: 500000, display: true
 }
 
 # Colonists Refinery License
-{ Token Id: 6202, Name: Licence de récupération des colons
-  Description: Cette licence donne à l'utilisateur l'acces au retrait au verrou entourant le noyau d'une epave à recuperer dans les parcs à ferrailles des colons, ce qui vous permet de la piller et de la recuperer librement sans penalite. Utilisation unique.
+{ Token Id: 6202, Name: Licence de recuperation des colons
+  Description: Cette licence donne a l'utilisateur l'acces au retrait au verrou entourant le noyau d'une epave a recuperer dans les parcs a ferrailles des colons ce qui vous permet de la piller et de la recuperer librement sans penalite. Utilisation unique.
   # Description: Eden_PolarisRefineryLicenseinfo
   MarketPrice: 50000, display: true
   RemoveOnUse: true
 }
 
 # Colonists Refinery License
-{ Token Id: 6203, Name: Carte volee d'acces à la cachette d'approvisionnement de Polaris
+{ Token Id: 6203, Name: Carte volee d'acces a la cachette d'approvisionnement de Polaris
   Description: "Ouvre la porte d'une cache d'approvisionnement Polaris, vous permettant de vous y introduire sans penalite de reputation. Utilisation unique."
   # Description: Eden_PolarisRefineryLicenseinfo
   MarketPrice: 50000, display: true
@@ -497,20 +546,20 @@
 }
 
 { Token Id: 6302, Name: [c][8FFF8F]Paquet suspect[/c]
-  Description: Un petit paquet a livrer à la chambre 4 du Casino du Syndicat. \n\n[i][c][A9A9A9]Ca fait tic-tac...[-][/c][/i]
+  Description: Un petit paquet a livrer a la chambre 4 du Casino du Syndicat. \n\n[i][c][A9A9A9]Ca fait tic-tac...[-][/c][/i]
 }
 
 
 { Token Id: 6303, Name: Carte cle de contrebandier
   CustomIcon: KeyCardYellow
   RemoveOnUse: true
-  Description: Déverrouille une cache renforcee pour les contrebandiers. \n\n[c][FF0000]Consomme a l'utilisation.[-][/c]
+  Description: Deverrouille une cache renforcee pour les contrebandiers. \n\n[c][FF0000]Consomme a l'utilisation.[-][/c]
   MarketPrice: 25000, display: true
 }
 
 { Token Id: 6304, Name: [c][A9A9A9]Voler pour les nuls[-][/c]
   CustomIcon: Tablet
-  Description: \n\n[c][A9A9A9]Une collection de leçons de vol pour les pilotes débutants. \nEcrit par le Capitaine Pang.[-][/c]
+  Description: \n\n[c][A9A9A9]Une collection de leçons de vol pour les pilotes debutants. \nEcrit par le Capitaine Pang.[-][/c]
   MarketPrice: 25, display: true
 }
 
@@ -630,7 +679,7 @@
   CustomIcon: Eden_AutoMiningDeviceT4_Recipe
   DropOnDeath: false
   Description: "Categorie de Schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
-  MarketPrice: 50000, 100000, display: true
+  MarketPrice: 100000, display: true
 }
 
 # Automated Industrial Mining Rig
@@ -737,26 +786,53 @@
 
 { Token Id: 6555, Name: "Rapport d'anomalie de classe 6"
   CustomIcon: Eden_DataExplorationT6
-  Description: "Cet objet n'a actuellement aucune utilite. Il pourra avoir une utilite plus tard. Le systeme d'exploration est actuellement en phase de test."
-  MarketPrice: 50000, display: true
-}
-
-{ Token Id: 6556, Name: "Expedition d'exploration de niveau 1"
-  CustomIcon: Eden_DataExplorationEndT1
   Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
   MarketPrice: 50000, display: true
 }
 
-{ Token Id: 6557, Name: "Expedition d'exploration de niveau 2"
-  CustomIcon: Eden_DataExplorationEndT2
-  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+# Expedition starts
+{ Token Id: 6556, Name: "Tier 1 Exploration Expedition"
+  CustomIcon: Eden_ExpeditionExploreT1
+  # Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  Description: "[c][FFFF00]The expedition system is currently a work in progress and should only be used for testing. Rewards, missions, and mechanics are not final and may not be balanced or work properly.[/c]\n\nA report containing various sensor logs and other information on a strange signal that was detected. Bring to a science station to analyze and begin an expedition to discover the source of the signal.\n\nExploration expeditions are long journeys through the galaxy that typically involve traveling to new areas to discover various anomalies as you follow the trail of clues to discover the source of the signal.\nSee the Expeditions section of the PDA for more information."
   MarketPrice: 50000, display: true
 }
 
-{ Token Id: 6558, Name: "Expedition d'exploration de niveau 3"
-  CustomIcon: Eden_DataExplorationEndT3
-  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+{ Token Id: 6557, Name: "Tier 2 Exploration Expedition"
+  CustomIcon: Eden_ExpeditionExploreT2
+  Description: "[c][FFFF00]The expedition system is currently a work in progress and should only be used for testing. Rewards, missions, and mechanics are not final and may not be balanced or work properly.[/c]\n\nA report containing various sensor logs and other information on a strange signal that was detected. Bring to a science station to analyze and begin an expedition to discover the source of the signal.\n\nExploration expeditions are long journeys through the galaxy that typically involve traveling to new areas to discover various anomalies as you follow the trail of clues to discover the source of the signal.\nSee the Expeditions section of the PDA for more information."
   MarketPrice: 50000, display: true
+}
+
+{ Token Id: 6558, Name: "Tier 3 Exploration Expedition"
+  CustomIcon: Eden_ExpeditionExploreT3
+  Description: "[c][FFFF00]The expedition system is currently a work in progress and should only be used for testing. Rewards, missions, and mechanics are not final and may not be balanced or work properly.[/c]\n\nA report containing various sensor logs and other information on a strange signal that was detected. Bring to a science station to analyze and begin an expedition to discover the source of the signal.\n\nExploration expeditions are long journeys through the galaxy that typically involve traveling to new areas to discover various anomalies as you follow the trail of clues to discover the source of the signal.\nSee the Expeditions section of the PDA for more information."
+  MarketPrice: 50000, display: true
+}
+
+# Expedition reports
+{ Token Id: 6559, Name: "Tier 1 Expedition Report"
+  CustomIcon: Eden_ExpeditionExploreT1
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 100000, display: true
+}
+
+{ Token Id: 6560, Name: "Tier 2 Expedition Report"
+  CustomIcon: Eden_ExpeditionExploreT1
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 200000, display: true
+}
+
+{ Token Id: 6561, Name: "Tier 3 Expedition Report"
+  CustomIcon: Eden_ExpeditionExploreT1
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 300000, display: true
+}
+
+{ Token Id: 6562, Name: "Tier 4 Expedition Report"
+  CustomIcon: Eden_ExpeditionExploreT1
+  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  MarketPrice: 400000, display: true
 }
 
 
@@ -839,7 +915,7 @@
 # 
 { Token Id: 6611, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
   CustomIcon: Eden_InsigniaBandits
-  Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le à un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour une récompense.\n\n[c][D5D5D5]Savanth est une épine dans le pied des colons libres depuis plusieurs années. Responsable d'un certain nombre d'attaques de bandits sur les voies de navigation, il a maintenant intensifié ses attaques pour inclure les stations et les avant-postes civils.\nLes colons libres paieront pour une preuve de sa mort, bien qu'il ne tarde pas à revenir dans un corps fraîchement cloné.[-][/c]"
+  Description: "[c][FFFFFF][b]Recherche par:[-][/c][/b] [c][FF0000]L'empire Zirax[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseurs de primes dans les secteurs des stations commerciales du territoire de Zirax pour une recompense.\n\n[c][D5D5D5]Savanth est une epine dans le pied des colons libres depuis plusieurs annees. Responsable d'un certain nombre d'attaques de bandits sur les voies de navigation, il a maintenant intensifie ses attaques pour inclure les stations et les avant-postes civils.\nLes colons libres paieront pour une preuve de sa mort, bien qu'il ne tarde pas a revenir dans un corps fraîchement clone.[-][/c]"
   MarketPrice: 50000, display: true
 }
 
@@ -931,7 +1007,7 @@
 # Director Crennek
 { Token Id: 6624, Name: [c][FFFFFF]Insigne du Directeur Crennek[-][/c] (Prime)
   CustomIcon: Eden_InsigniaZirax
-  Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][FF0000]X-Corp (Empire Zirax)[-][/c]\nApportez-la à un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de Polaris pour une recompense.\n\n[c][D5D5D5]Le directeur Crennek a dirige les efforts de recherche de XCorp sur la nouvelle technologie d'armement pour l'empire Zirax. Nous ne pouvons pas leur permettre de prendre le dessus. Nos renseignements rapportent que le directeur peut parfois etre trouvé dans les locaux des serveurs de XCorp, situes sur certains types de lunes cristallines.\nArretez leurs efforts de recherche en l'eliminant, au moins jusqu'a ce qu'ils puissent faire pousser un nouveau clone.\n\nAttention, le directeur abandonnera l'installation si vous détruisez le noyau ou les generateurs.[-][/c]"
+  Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][FF0000]X-Corp (Empire Zirax)[-][/c]\nApportez-la a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de Polaris pour une recompense.\n\n[c][D5D5D5]Le directeur Crennek a dirige les efforts de recherche de XCorp sur la nouvelle technologie d'armement pour l'empire Zirax. Nous ne pouvons pas leur permettre de prendre le dessus. Nos renseignements rapportent que le directeur peut parfois etre trouve dans les locaux des serveurs de XCorp, situes sur certains types de lunes cristallines.\nArretez leurs efforts de recherche en l'eliminant, au moins jusqu'a ce qu'ils puissent faire pousser un nouveau clone.\n\nAttention, le directeur abandonnera l'installation si vous detruisez le noyau ou les generateurs.[-][/c]"
   MarketPrice: 200000, display: true
 }
 
@@ -1020,8 +1096,8 @@
   MarketPrice: 200000, display: true
 }
 
-#
-{ Token Id: 6637, Name: [c][FFFFFF]Insigne[-][/c] (Prime)
+# The Three Angels
+{ Token Id: 6637, Name: [c][FFFFFF]Insignia[-][/c] of The Three Angels (Bounty)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
   MarketPrice: 150000, display: true
@@ -1130,76 +1206,76 @@
 # ================================================================================================================================ Bulk Trading Tokens
 
 # Free Colonists
-{ Token Id: 6700, Name: Petit paquet scellé [c][4CA5FF](Colons)[-][/c]
+{ Token Id: 6700, Name: Petit paquet scelle [c][4CA5FF](Colons)[-][/c]
   CustomIcon: CargoContainerSV
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][4CA5FF]Colons[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Neutre\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 2500\n[c][FFFFFF][b]Paiement:[-][/c][/b] 7% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
   MarketPrice: 2500, display: true
 }
 
-{ Token Id: 6701, Name: Paquet scellé moyen [c][4CA5FF](Colons)[-][/c]
+{ Token Id: 6701, Name: Paquet scelle moyen [c][4CA5FF](Colons)[-][/c]
   CustomIcon: ScifiContainer1Small
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][4CA5FF]Colons[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Amicale\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 20000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 11% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
   MarketPrice: 20000, display: true
 }
 
-{ Token Id: 6702, Name: Grand paquet scellé [c][4CA5FF](Colons)[-][/c]
+{ Token Id: 6702, Name: Grand paquet scelle [c][4CA5FF](Colons)[-][/c]
   CustomIcon: ContainerMS02Large
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][4CA5FF]Colons[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Honore\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 100000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 15% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
   MarketPrice: 100000, display: true
 }
 
 # Polaris
-{ Token Id: 6703, Name: Petit boîtier scellé [c][E59933](Polaris)[-][/c]
+{ Token Id: 6703, Name: Petit boîtier scelle [c][E59933](Polaris)[-][/c]
   CustomIcon: CargoContainerSV
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Neutre\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 2500\n[c][FFFFFF][b]Paiement:[-][/c][/b] 7% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
   MarketPrice: 2500, display: true
 }
 
-{ Token Id: 6704, Name: Paquet scellé moyen [c][E59933](Polaris)[-][/c]
+{ Token Id: 6704, Name: Paquet scelle moyen [c][E59933](Polaris)[-][/c]
   CustomIcon: ScifiContainer1Small
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Amicale\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 20000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 11% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
   MarketPrice: 20000, display: true
 }
 
-{ Token Id: 6705, Name: Grand paquet scellé [c][E59933](Polaris)[-][/c]
+{ Token Id: 6705, Name: Grand paquet scelle [c][E59933](Polaris)[-][/c]
   CustomIcon: ContainerMS02Large
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Honore\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 100000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 15% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
   MarketPrice: 100000, display: true
 }
 
 # Zirax
-{ Token Id: 6706, Name: Petit paquet scellé [c][FF0000](Zirax)[-][/c]
+{ Token Id: 6706, Name: Petit paquet scelle [c][FF0000](Zirax)[-][/c]
   CustomIcon: CargoContainerSV
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FF0000]Zirax[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Neutre\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 2500\n[c][FFFFFF][b]Paiement:[-][/c][/b] 10% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
   MarketPrice: 3000, display: true
 }
 
-{ Token Id: 6707, Name: Paquet scellé moyen [c][FF0000](Zirax)[-][/c]
+{ Token Id: 6707, Name: Paquet scelle moyen [c][FF0000](Zirax)[-][/c]
   CustomIcon: ScifiContainer1Small
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FF0000]Zirax[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Amicale\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 20000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 15% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
   MarketPrice: 20000, display: true
 }
 
-{ Token Id: 6708, Name: Grand paquet scellé [c][FF0000](Zirax)[-][/c]
+{ Token Id: 6708, Name: Grand paquet scelle [c][FF0000](Zirax)[-][/c]
   CustomIcon: ContainerMS02Large
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FF0000]Zirax[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Honore\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 100000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 20% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
   MarketPrice: 100000, display: true
 }
 
 # Pirates
-{ Token Id: 6709, Name: Petit paquet scellé [c][FFFF00](Pirates)[-][/c]
+{ Token Id: 6709, Name: Petit paquet scelle [c][FFFF00](Pirates)[-][/c]
   CustomIcon: CargoContainerSV
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Neutre\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 2500\n[c][FFFFFF][b]Paiement:[-][/c][/b] 10% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
   MarketPrice: 2500, display: true
 }
 
-{ Token Id: 6710, Name: Paquet scellé moyen [c][FFFF00](Pirates)[-][/c]
+{ Token Id: 6710, Name: Paquet scelle moyen [c][FFFF00](Pirates)[-][/c]
   CustomIcon: ScifiContainer1Small
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Amicale\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 20000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 15% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 64000 cargo space.[-][/c]"
   MarketPrice: 20000, display: true
 }
 
-{ Token Id: 6711, Name: Grand paquet scellé [c][FFFF00](Pirates)[-][/c]
+{ Token Id: 6711, Name: Grand paquet scelle [c][FFFF00](Pirates)[-][/c]
   CustomIcon: ContainerMS02Large
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Honore\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 100000\n[c][FFFFFF][b]Paiement:[-][/c][/b] 20% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 320000 cargo space.[-][/c]"
   MarketPrice: 100000, display: true

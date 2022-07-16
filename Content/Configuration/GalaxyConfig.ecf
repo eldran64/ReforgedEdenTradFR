@@ -1440,7 +1440,7 @@
   HabitableTemperate: "64, 89"
   HabitableCold: "90, 104"
   OuterSystem: "105, 132"
-  Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type G, dont le Soleil, ont des raies spectrales H et K de Ca II très marquées, qui sont plus prononcées à G2. Elles ont des raies d'hydrogène encore plus faibles que celles de F, mais avec les métaux ionisés, elles ont des métaux neutres. Il y a un pic proéminent dans la bande G des molécules CH."
   GalaxySpawnAmount: 0
 }
 
@@ -1473,7 +1473,7 @@
   HabitableTemperate: "64, 89"
   HabitableCold: "90, 104"
   OuterSystem: "105, 132"
-  Description: "This is one of the starting systems. [c][A9A9A9][i]Save game started with Reforged Eden 1.8 Build 34[/i][-][/c]"
+  Description: "C'est l'un des systèmes de départ. [c][A9A9A9][i]Sauvegarde du jeu commencée avec Reforged Eden 1.8 Build 34[/i][-][/c]"
   GalaxySpawnAmount: 0
 }
 
@@ -1505,7 +1505,7 @@
   HabitableTemperate: "85, 104"
   HabitableCold: "105, 129"
   OuterSystem: "130, 155"
-  Description: "This is one of the starting systems."
+  Description: "C'est l'un des systèmes de départ."
   GalaxySpawnAmount: 0
 }
 
@@ -1537,7 +1537,7 @@
   HabitableTemperate: "45, 50"
   HabitableCold: "51, 69"
   OuterSystem: "70, 149"
-  Description: "This is one of the starting systems."
+  Description: "C'est l'un des systèmes de départ."
   GalaxySpawnAmount: 0
 }
 
@@ -1567,7 +1567,7 @@
   HabitableTemperate: "70, 99" 
   HabitableCold: "100, 149" 
   OuterSystem: "150, 350"
-  Description: "This is one of the starting systems."
+  Description: "C'est l'un des systèmes de départ."
   GalaxySpawnAmount: 0
 }
 
@@ -1603,7 +1603,7 @@
   HabitableTemperate: "136, 159"  # GENERATION:  RANGE (start-end) for temperate playfields (or those that are set to appear in the center hab zone)
   HabitableCold: "160, 189"  # GENERATION: RANGE (start-end) for colder playfields. Example: ColdArid or ColdDesert or Snow
   OuterSystem: "190, 350"  # GENERATION: RANGE (start-end) for very cold playfields. Snow, barren, GasPlanets
-  Description: "[c][ff0000]Hot system.[-][/c] An O-type star is a hot, blue-white star of spectral type O in the Yerkes classification system employed by astronomers. They have temperatures in excess of 30,000 Kelvin (K)."
+  Description: "[c][ff0000]Système chaud.[-][/c] Une étoile de type O est une étoile chaude, bleu-blanc, de type spectral O dans le système de classification de Yerkes employé par les astronomes. Elles ont des températures supérieures à 30 000 Kelvin (K)."
   #GalaxySpawnRadius: "300, 400"  # min and max in LY from the center where this star should spawn, if not set star will spawn everywhere
   #GalaxySpawnAmount: 10 # for special stars, specify the max number that should be spawned, if not set, star will spawn unlimited
   #ClusterProb: 0.9 # probability that this star class is placed within a cluster
@@ -1642,7 +1642,7 @@
   HabitableTemperate: "136, 159"  # GENERATION:  RANGE (start-end) for temperate playfields (or those that are set to appear in the center hab zone)
   HabitableCold: "160, 189"  # GENERATION: RANGE (start-end) for colder playfields. Example: ColdArid or ColdDesert or Snow
   OuterSystem: "190, 350"  # GENERATION: RANGE (start-end) for very cold playfields. Snow, barren, GasPlanets
-  Description: "[c][ff0000]Hot system.[-][/c] An O-type star is a hot, blue-white star of spectral type O in the Yerkes classification system employed by astronomers. They have temperatures in excess of 30,000 Kelvin (K)."
+  Description: "[c][ff0000]Système chaud.[-][/c] Une étoile de type O est une étoile chaude, bleu-blanc, de type spectral O dans le système de classification de Yerkes utilisé par les astronomes. Leurs températures sont supérieures à 30 000 Kelvin (K)."
   #GalaxySpawnRadius: "300, 400"  # min and max in LY from the center where this star should spawn, if not set star will spawn everywhere
   #GalaxySpawnAmount: 10 # for special stars, specify the max number that should be spawned, if not set, star will spawn unlimited
   #ClusterProb: 0.9 # probability that this star class is placed within a cluster
@@ -1680,7 +1680,7 @@
   HabitableTemperate: "103, 122"
   HabitableCold: "123, 142"
   OuterSystem: "143, 254"
-  Description: "[c][ff0000]Hot system.[-][/c] A B-type main-sequence star (B V) is a main-sequence (hydrogen-burning) star of spectral type B and luminosity class V. These stars have from 2 to 16 times the mass of the Sun and surface temperatures between 10,000 and 30,000 K. B-type stars are extremely luminous and blue."
+  Description: "[c][ff0000]Système chaud.[-][/c] Une étoile de la séquence principale de type B (B V) est une étoile de la séquence principale (brûlant de l'hydrogène) de type spectral B et de classe de luminosité V. Ces étoiles ont une masse de 2 à 16 fois celle du Soleil et des températures de surface comprises entre 10 000 et 30 000 K. Les étoiles de type B sont extrêmement lumineuses et bleues."
 }
 
 { GalaxyConfig, Name: B Type Star
@@ -1710,7 +1710,7 @@
   HabitableTemperate: "103, 122"
   HabitableCold: "123, 142"
   OuterSystem: "143, 254"
-  Description: "[c][ff0000]Hot system.[-][/c] A B-type main-sequence star (B V) is a main-sequence (hydrogen-burning) star of spectral type B and luminosity class V. These stars have from 2 to 16 times the mass of the Sun and surface temperatures between 10,000 and 30,000 K. B-type stars are extremely luminous and blue."
+  Description: "[c][ff0000]Système chaud.[-][/c] Une étoile de la séquence principale de type B (B V) est une étoile de la séquence principale (brûlant de l'hydrogène) de type spectral B et de classe de luminosité V. Ces étoiles ont une masse de 2 à 16 fois celle du Soleil et des températures de surface comprises entre 10 000 et 30 000 K. Les étoiles de type B sont extrêmement lumineuses et bleues."
 }
 
 # Type B-A4V Binary
@@ -1745,7 +1745,7 @@
   HabitableTemperate: "103, 122"
   HabitableCold: "123, 142"
   OuterSystem: "143, 254"
-  Description: "[c][ff0000]Hot system.[-][/c] A B-type main-sequence star (B V) is a main-sequence (hydrogen-burning) star of spectral type B and luminosity class V. These stars have from 2 to 16 times the mass of the Sun and surface temperatures between 10,000 and 30,000 K. B-type stars are extremely luminous and blue."
+  Description: "[c][ff0000]Système chaud.[-][/c] Une étoile de la séquence principale de type B (B V) est une étoile de la séquence principale (brûlant de l'hydrogène) de type spectral B et de classe de luminosité V. Ces étoiles ont une masse de 2 à 16 fois celle du Soleil et des températures de surface comprises entre 10 000 et 30 000 K. Les étoiles de type B sont extrêmement lumineuses et bleues."
 }
 
 # Type B-D Binary
@@ -1780,7 +1780,7 @@
   HabitableTemperate: "103, 122"
   HabitableCold: "123, 142"
   OuterSystem: "143, 254"
-  Description: "[c][ff0000]Hot system.[-][/c] A B-type main-sequence star (B V) is a main-sequence (hydrogen-burning) star of spectral type B and luminosity class V. These stars have from 2 to 16 times the mass of the Sun and surface temperatures between 10,000 and 30,000 K. B-type stars are extremely luminous and blue."
+  Description: "[c][ff0000]Système chaud.[-][/c] Une étoile de la séquence principale de type B (B V) est une étoile de la séquence principale (brûlant de l'hydrogène) de type spectral B et de classe de luminosité V. Ces étoiles ont une masse de 2 à 16 fois celle du Soleil et des températures de surface comprises entre 10 000 et 30 000 K. Les étoiles de type B sont extrêmement lumineuses et bleues."
 }
 
 
@@ -1812,7 +1812,7 @@
   HabitableTemperate: "98, 139"
   HabitableCold: "140, 179"
   OuterSystem: "180, 250"
-  Description: "[c][00ff00]Habitable system.[-][/c] An A-type main-sequence star is a main-sequence (hydrogen-burning) star of spectral type A and luminosity class V. They have masses from 1.4 to 2.1 times the mass of the Sun and surface temperatures between 7600 and 10,000  K"
+  Description: "[c][00ff00]Système habitable.[-][/c] Une étoile de séquence principale de type A est une étoile de séquence principale (brûlant de l'hydrogène) de type spectral A et de classe de luminosité V. Elles ont des masses de 1,4 à 2,1 fois la masse du Soleil et des températures de surface comprises entre 7 600 et 10 000 K."
 }
 
 { GalaxyConfig, Name: A Type Star
@@ -1842,7 +1842,7 @@
   HabitableTemperate: "98, 139"
   HabitableCold: "140, 179"
   OuterSystem: "180, 250"
-  Description: "[c][00ff00]Habitable system.[-][/c] An A-type main-sequence star is a main-sequence (hydrogen-burning) star of spectral type A and luminosity class V. They have masses from 1.4 to 2.1 times the mass of the Sun and surface temperatures between 7600 and 10,000  K"
+  Description: "[c][00ff00]Système habitable.[-][/c] Une étoile de séquence principale de type A est une étoile de séquence principale (brûlant de l'hydrogène) de type spectral A et de classe de luminosité V. Elles ont des masses de 1,4 à 2,1 fois la masse du Soleil et des températures de surface comprises entre 7 600 et 10 000 K."
 }
 
 # Type A
@@ -1873,7 +1873,7 @@
   HabitableTemperate: "98, 139"
   HabitableCold: "140, 179"
   OuterSystem: "180, 250"
-  Description: "[c][00ff00]Habitable system.[-][/c] An A-type main-sequence star is a main-sequence (hydrogen-burning) star of spectral type A and luminosity class V. They have masses from 1.4 to 2.1 times the mass of the Sun and surface temperatures between 7600 and 10,000  K"
+  Description: "[c][00ff00]Système habitable.[-][/c] Une étoile de séquence principale de type A est une étoile de séquence principale (brûlant de l'hydrogène) de type spectral A et de classe de luminosité V. Elles ont des masses de 1,4 à 2,1 fois la masse du Soleil et des températures de surface comprises entre 7 600 et 10 000 K."
 }
 
 # Type F
@@ -1904,7 +1904,7 @@
   HabitableTemperate: "85, 104"
   HabitableCold: "105, 129"
   OuterSystem: "130, 155"
-  Description: "[c][00ff00]Habitable system.[-][/c] F-type stars have strengthening spectral lines H and K of Ca II. Neutral metals (Fe I, Cr I) beginning to gain on ionized metal lines by late F. Their spectra are characterized by the weaker hydrogen lines and ionized metals. Their color is white."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type F ont un renforcement des raies spectrales H et K du Ca II. Les métaux neutres (Fe I, Cr I) commencent à gagner sur les raies des métaux ionisés à la fin de F. Leurs spectres sont caractérisés par des raies d'hydrogène plus faibles et des métaux ionisés. Leur couleur est blanche."
 }
 # Type F
 { GalaxyConfig, Name: F Type Star
@@ -1934,7 +1934,7 @@
   HabitableTemperate: "85, 104"
   HabitableCold: "105, 129"
   OuterSystem: "130, 155"
-  Description: "[c][00ff00]Habitable system.[-][/c] F-type stars have strengthening spectral lines H and K of Ca II. Neutral metals (Fe I, Cr I) beginning to gain on ionized metal lines by late F. Their spectra are characterized by the weaker hydrogen lines and ionized metals. Their color is white."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type F ont un renforcement des raies spectrales H et K du Ca II. Les métaux neutres (Fe I, Cr I) commencent à gagner sur les raies des métaux ionisés à la fin de F. Leurs spectres sont caractérisés par des raies d'hydrogène plus faibles et des métaux ionisés. Leur couleur est blanche."
 }
 # Type G
 { GalaxyConfig, Name: G Type Star
@@ -1964,7 +1964,7 @@
   HabitableTemperate: "64, 89"
   HabitableCold: "90, 104"
   OuterSystem: "105, 132"
-  Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type G, dont le Soleil, ont des raies spectrales H et K de Ca II très marquées, qui sont plus prononcées à G2. Elles ont des raies d'hydrogène encore plus faibles que celles de F, mais avec les métaux ionisés, elles ont des métaux neutres. Il y a un pic proéminent dans la bande G des molécules CH."
 }
 
 { GalaxyConfig, Name: G Type Star
@@ -1995,7 +1995,7 @@
   HabitableTemperate: "64, 89"
   HabitableCold: "90, 104"
   OuterSystem: "105, 132"
-  Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type G, dont le Soleil, ont des raies spectrales H et K de Ca II très marquées, qui sont plus prononcées à G2. Elles ont des raies d'hydrogène encore plus faibles que celles de F, mais avec les métaux ionisés, elles ont des métaux neutres. Il y a un pic proéminent dans la bande G des molécules CH."
 }
 
 { GalaxyConfig, Name: G Type Star
@@ -2025,7 +2025,7 @@
   HabitableTemperate: "64, 89"
   HabitableCold: "90, 104"
   OuterSystem: "105, 132"
-  Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type G, dont le Soleil, ont des raies spectrales H et K de Ca II très marquées, qui sont plus prononcées à G2. Elles ont des raies d'hydrogène encore plus faibles que celles de F, mais avec les métaux ionisés, elles ont des métaux neutres. Il y a un pic proéminent dans la bande G des molécules CH."
 }
 
 # Type G
@@ -2059,7 +2059,7 @@
   HabitableTemperate: "98, 139"
   HabitableCold: "140, 179"
   OuterSystem: "180, 250"
-  Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type G, dont le Soleil, ont des raies spectrales H et K de Ca II très marquées, qui sont plus prononcées à G2. Elles ont des raies d'hydrogène encore plus faibles que celles de F, mais avec les métaux ionisés, elles ont des métaux neutres. Il y a un pic proéminent dans la bande G des molécules CH."
 }
 
 
@@ -2091,7 +2091,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Hot system.[-][/c] K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 { GalaxyConfig, Name: K Type Star
@@ -2122,7 +2122,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Hot system.[-][/c] K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 { GalaxyConfig, Name: K Type Star
@@ -2153,7 +2153,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Hot system.[-][/c] K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 { GalaxyConfig, Name: K Type Star
@@ -2183,7 +2183,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Hot system.[-][/c] K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 # Type K
@@ -2215,7 +2215,7 @@
   HabitableTemperate: "41, 55"
   HabitableCold: "56, 80"
   OuterSystem: "81, 140"
-  Description: "[c][ff0000]Hot system.[-][/c] K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 # Type K
@@ -2245,7 +2245,7 @@
   HabitableTemperate: "64, 89"
   HabitableCold: "90, 104"
   OuterSystem: "105, 132"
-  Description: "[c][00ff00]Habitable system.[-][/c] K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 # Type M
@@ -2277,7 +2277,7 @@
   HabitableTemperate: "45, 50"
   HabitableCold: "51, 69"
   OuterSystem: "70, 149"
-  Description: "[c][ffff00]Cold system.[-][/c] Class M stars are by far the most common. About 76% of the main-sequence stars in the solar neighborhood are class M stars. However, class M main-sequence stars (red dwarfs) have such low luminosities that none are bright enough to be seen with the unaided eye, unless under exceptional conditions. Typically, an M-type star's surface temperature is under about 4,000 K."
+  Description: "[c][ffff00]Système froid.[-][/c] Les étoiles de classe M sont de loin les plus communes. Environ 76 % des étoiles de la séquence principale dans le voisinage du Soleil sont des étoiles de classe M. Cependant, les étoiles de la séquence principale de classe M (naines rouges) ont des luminosités si faibles qu'aucune n'est assez brillante pour être vue à l'œil nu, sauf dans des conditions exceptionnelles. En général, la température de surface d'une étoile de type M est inférieure à 4 000 K environ."
 }
 
 # Type M
@@ -2309,7 +2309,7 @@
   HabitableTemperate: "45, 50"
   HabitableCold: "51, 69"
   OuterSystem: "70, 149"
-  Description: "[c][ffff00]Cold system.[-][/c] Class M stars are by far the most common. About 76% of the main-sequence stars in the solar neighborhood are class M stars. However, class M main-sequence stars (red dwarfs) have such low luminosities that none are bright enough to be seen with the unaided eye, unless under exceptional conditions. Typically, an M-type star's surface temperature is under about 4,000 K."
+  Description: "[c][ffff00]Système froid.[-][/c] Les étoiles de classe M sont de loin les plus communes. Environ 76 % des étoiles de la séquence principale dans le voisinage du Soleil sont des étoiles de classe M. Cependant, les étoiles de la séquence principale de classe M (naines rouges) ont des luminosités si faibles qu'aucune n'est assez brillante pour être vue à l'œil nu, sauf dans des conditions exceptionnelles. En général, la température de surface d'une étoile de type M est inférieure à 4 000 K environ."
 }
 
 # Type M
@@ -2341,7 +2341,7 @@
   HabitableTemperate: "21, 30"
   HabitableCold: "31, 44"
   OuterSystem: "45, 69"
-  Description: "[c][ffff00]Cold system.[-][/c] Class M stars are by far the most common. About 76% of the main-sequence stars in the solar neighborhood are class M stars. However, class M main-sequence stars (red dwarfs) have such low luminosities that none are bright enough to be seen with the unaided eye, unless under exceptional conditions. Typically, an M-type star's surface temperature is under about 4,000 K."
+  Description: "[c][ffff00]Système froid.[-][/c] Les étoiles de classe M sont de loin les plus communes. Environ 76 % des étoiles de la séquence principale dans le voisinage du Soleil sont des étoiles de classe M. Cependant, les étoiles de la séquence principale de classe M (naines rouges) ont des luminosités si faibles qu'aucune n'est assez brillante pour être vue à l'œil nu, sauf dans des conditions exceptionnelles. En général, la température de surface d'une étoile de type M est inférieure à 4 000 K environ."
 }
 
 # Type M
@@ -2375,7 +2375,7 @@
   HabitableTemperate: "45, 50"
   HabitableCold: "51, 69"
   OuterSystem: "70, 149"
-  Description: "[c][ffff00]Cold system.[-][/c] Class M stars are by far the most common. About 76% of the main-sequence stars in the solar neighborhood are class M stars. However, class M main-sequence stars (red dwarfs) have such low luminosities that none are bright enough to be seen with the unaided eye, unless under exceptional conditions. Typically, an M-type star's surface temperature is under about 4,000 K."
+  Description: "[c][ffff00]Système froid.[-][/c] Les étoiles de classe M sont de loin les plus communes. Environ 76 % des étoiles de la séquence principale dans le voisinage du Soleil sont des étoiles de classe M. Cependant, les étoiles de la séquence principale de classe M (naines rouges) ont des luminosités si faibles qu'aucune n'est assez brillante pour être vue à l'œil nu, sauf dans des conditions exceptionnelles. En général, la température de surface d'une étoile de type M est inférieure à 4 000 K environ."
 }
 
 # Type M
@@ -2407,7 +2407,7 @@
   HabitableTemperate: "17, 23"
   HabitableCold: "24, 30"
   OuterSystem: "31, 50"
-  Description: "[c][ffff00]Cold system.[-][/c] Class M stars are by far the most common. About 76% of the main-sequence stars in the solar neighborhood are class M stars. However, class M main-sequence stars (red dwarfs) have such low luminosities that none are bright enough to be seen with the unaided eye, unless under exceptional conditions. Typically, an M-type star's surface temperature is under about 4,000 K."
+  Description: "[c][ffff00]Système froid.[-][/c] Les étoiles de classe M sont de loin les plus communes. Environ 76 % des étoiles de la séquence principale dans le voisinage du Soleil sont des étoiles de classe M. Cependant, les étoiles de la séquence principale de classe M (naines rouges) ont des luminosités si faibles qu'aucune n'est assez brillante pour être vue à l'œil nu, sauf dans des conditions exceptionnelles. En général, la température de surface d'une étoile de type M est inférieure à 4 000 K environ."
 }
 
 # Type M Binary
@@ -2440,7 +2440,7 @@
   HabitableTemperate: "45, 50"
   HabitableCold: "51, 69"
   OuterSystem: "70, 149"
-  Description: "[c][ffff00]Cold system.[-][/c] Class M stars are by far the most common. About 76% of the main-sequence stars in the solar neighborhood are class M stars. However, class M main-sequence stars (red dwarfs) have such low luminosities that none are bright enough to be seen with the unaided eye, unless under exceptional conditions. Typically, an M-type star's surface temperature is under about 4,000 K."
+  Description: "[c][ffff00]Système froid.[-][/c] Les étoiles de classe M sont de loin les plus communes. Environ 76 % des étoiles de la séquence principale dans le voisinage du Soleil sont des étoiles de classe M. Cependant, les étoiles de la séquence principale de classe M (naines rouges) ont des luminosités si faibles qu'aucune n'est assez brillante pour être vue à l'œil nu, sauf dans des conditions exceptionnelles. En général, la température de surface d'une étoile de type M est inférieure à 4 000 K environ."
 }
 
 # Type N
@@ -2455,7 +2455,7 @@
   ColorName: White
   Mass: 2
   Radius: 0.00004 
-  Description: "[c][ff00ff]Exotic system.[-][/c] A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes, hypothetical white holes, quark stars and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une étoile à neutrons est le noyau effondré d'une étoile géante qui, avant son effondrement, avait une masse totale comprise entre 10 et 29 masses solaires. Les étoiles à neutrons sont les étoiles les plus petites et les plus denses, à l'exception des trous noirs, des hypothétiques trous blancs, des étoiles à quark et des étoiles étranges. Les étoiles à neutrons ont un rayon de l'ordre de 10 kilomètres (6,2 milles) et une masse d'environ 1,4 masse solaire. Elles résultent de l'explosion en supernova d'une étoile massive, combinée à un effondrement gravitationnel, qui comprime le noyau au-delà de la densité d'une étoile naine blanche jusqu'à celle des noyaux atomiques."
   #Luminosity: 0.002
   Age: 400
   InnerSystem: "5, 19"
@@ -2489,7 +2489,7 @@
   ColorName: White
   Mass: 2
   Radius: 0.00004 
-  Description: "[c][ff00ff]Exotic system.[-][/c] A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes, hypothetical white holes, quark stars and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une étoile à neutrons est le noyau effondré d'une étoile géante qui, avant son effondrement, avait une masse totale comprise entre 10 et 29 masses solaires. Les étoiles à neutrons sont les étoiles les plus petites et les plus denses, à l'exception des trous noirs, des hypothétiques trous blancs, des étoiles à quark et des étoiles étranges. Les étoiles à neutrons ont un rayon de l'ordre de 10 kilomètres (6,2 milles) et une masse d'environ 1,4 masse solaire. Elles résultent de l'explosion en supernova d'une étoile massive, combinée à un effondrement gravitationnel, qui comprime le noyau au-delà de la densité d'une étoile naine blanche jusqu'à celle des noyaux atomiques."
   #Luminosity: 0.002
   Age: 400
   InnerSystem: "5, 9"
@@ -2523,7 +2523,7 @@
   ColorName: White
   Mass: 2
   Radius: 0.00004 
-  Description: "[c][ff00ff]Exotic system.[-][/c] A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes, hypothetical white holes, quark stars and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une étoile à neutrons est le noyau effondré d'une étoile géante qui, avant son effondrement, avait une masse totale comprise entre 10 et 29 masses solaires. Les étoiles à neutrons sont les étoiles les plus petites et les plus denses, à l'exception des trous noirs, des hypothétiques trous blancs, des étoiles à quark et des étoiles étranges. Les étoiles à neutrons ont un rayon de l'ordre de 10 kilomètres (6,2 milles) et une masse d'environ 1,4 masse solaire. Elles résultent de l'explosion en supernova d'une étoile massive, combinée à un effondrement gravitationnel, qui comprime le noyau au-delà de la densité d'une étoile naine blanche jusqu'à celle des noyaux atomiques."
   Luminosity: 11
   Age: 400
   InnerSystem: "3, 5"
@@ -2557,7 +2557,7 @@
   ColorName: Blue-White
   Mass: 2
   Radius: 0.00004 
-  Description: "[c][ff00ff]Exotic system.[-][/c] A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes, hypothetical white holes, quark stars and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une étoile à neutrons est le noyau effondré d'une étoile géante qui, avant son effondrement, avait une masse totale comprise entre 10 et 29 masses solaires. Les étoiles à neutrons sont les étoiles les plus petites et les plus denses, à l'exception des trous noirs, des hypothétiques trous blancs, des étoiles à quark et des étoiles étranges. Les étoiles à neutrons ont un rayon de l'ordre de 10 kilomètres (6,2 milles) et une masse d'environ 1,4 masse solaire. Elles résultent de l'explosion en supernova d'une étoile massive, combinée à un effondrement gravitationnel, qui comprime le noyau au-delà de la densité d'une étoile naine blanche jusqu'à celle des noyaux atomiques."
   Luminosity: 11
   Age: 400
   InnerSystem: "3, 5"
@@ -2591,7 +2591,7 @@
   ColorName: Blue-White
   Mass: 2
   Radius: 0.00004 
-  Description: "[c][ff00ff]Exotic system.[-][/c] A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes, hypothetical white holes, quark stars and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une étoile à neutrons est le noyau effondré d'une étoile géante qui, avant son effondrement, avait une masse totale comprise entre 10 et 29 masses solaires. Les étoiles à neutrons sont les étoiles les plus petites et les plus denses, à l'exception des trous noirs, des hypothétiques trous blancs, des étoiles à quark et des étoiles étranges. Les étoiles à neutrons ont un rayon de l'ordre de 10 kilomètres (6,2 milles) et une masse d'environ 1,4 masse solaire. Elles résultent de l'explosion en supernova d'une étoile massive, combinée à un effondrement gravitationnel, qui comprime le noyau au-delà de la densité d'une étoile naine blanche jusqu'à celle des noyaux atomiques."
   Luminosity: 11
   Age: 400
   InnerSystem: "3, 5"
@@ -2616,7 +2616,7 @@
   # Schwarzschildradius
   Radius: 0.21 
   ColorName: Black
-  Description: "[c][ff00ff]Exotic system.[-][/c] A black hole is a region of spacetime exhibiting gravitational acceleration so strong that nothing—no particles or even electromagnetic radiation such as light—can escape from it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of the region from which no escape is possible is called the event horizon. Although the event horizon has an enormous effect on the fate and circumstances of an object crossing it, no locally detectable features appear to be observed."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Un trou noir est une région de l'espace-temps présentant une accélération gravitationnelle si forte que rien - ni particules ni même rayonnement électromagnétique comme la lumière - ne peut s'en échapper. La théorie de la relativité générale prévoit qu'une masse suffisamment compacte peut déformer l'espace-temps pour former un trou noir. La limite de la région d'où aucune fuite n'est possible s'appelle l'horizon des événements. Bien que l'horizon des événements ait un effet énorme sur le sort et les circonstances d'un objet qui le traverse, aucune caractéristique détectable localement ne semble être observée."
   #Luminosity: 0.002
   Age: 900
   InnerSystem: "5, 39" 
@@ -2648,7 +2648,7 @@
   # Schwarzschildradius
   Radius: 0.21
   ColorName: Black
-  Description: "[c][ff00ff]Exotic system.[-][/c] A black hole is a region of spacetime exhibiting gravitational acceleration so strong that nothing—no particles or even electromagnetic radiation such as light—can escape from it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of the region from which no escape is possible is called the event horizon. Although the event horizon has an enormous effect on the fate and circumstances of an object crossing it, no locally detectable features appear to be observed."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Un trou noir est une région de l'espace-temps présentant une accélération gravitationnelle si forte que rien - ni particules ni même rayonnement électromagnétique comme la lumière - ne peut s'en échapper. La théorie de la relativité générale prévoit qu'une masse suffisamment compacte peut déformer l'espace-temps pour former un trou noir. La limite de la région d'où aucune fuite n'est possible s'appelle l'horizon des événements. Bien que l'horizon des événements ait un effet énorme sur le sort et les circonstances d'un objet qui le traverse, aucune caractéristique détectable localement ne semble être observée."
   #Luminosity: 0.002
   Age: 900
   InnerSystem: "5, 39" 
@@ -2678,7 +2678,7 @@
   Mass: 1000000
   Radius: 0.21
   ColorName: Black
-  Description: "[c][ff00ff]Exotic system.[-][/c] A black hole is a region of spacetime exhibiting gravitational acceleration so strong that nothing—no particles or even electromagnetic radiation such as light—can escape from it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of the region from which no escape is possible is called the event horizon. Although the event horizon has an enormous effect on the fate and circumstances of an object crossing it, no locally detectable features appear to be observed."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Un trou noir est une région de l'espace-temps présentant une accélération gravitationnelle si forte que rien - ni particules ni même rayonnement électromagnétique comme la lumière - ne peut s'en échapper. La théorie de la relativité générale prévoit qu'une masse suffisamment compacte peut déformer l'espace-temps pour former un trou noir. La limite de la région d'où aucune fuite n'est possible s'appelle l'horizon des événements. Bien que l'horizon des événements ait un effet énorme sur le sort et les circonstances d'un objet qui le traverse, aucune caractéristique détectable localement ne semble être observée."
   Age: 900
   InnerSystem: "5, 39" 
   HabitableHot: "40, 89" 
@@ -2707,7 +2707,7 @@
   # Schwarzschildradius
   Radius: 0.21
   ColorName: Black
-  Description: "[c][ff00ff]Exotic system.[-][/c] A black hole is a region of spacetime exhibiting gravitational acceleration so strong that nothing—no particles or even electromagnetic radiation such as light—can escape from it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of the region from which no escape is possible is called the event horizon. Although the event horizon has an enormous effect on the fate and circumstances of an object crossing it, no locally detectable features appear to be observed."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Un trou noir est une région de l'espace-temps présentant une accélération gravitationnelle si forte que rien - ni particules ni même rayonnement électromagnétique comme la lumière - ne peut s'en échapper. La théorie de la relativité générale prévoit qu'une masse suffisamment compacte peut déformer l'espace-temps pour former un trou noir. La limite de la région d'où aucune fuite n'est possible s'appelle l'horizon des événements. Bien que l'horizon des événements ait un effet énorme sur le sort et les circonstances d'un objet qui le traverse, aucune caractéristique détectable localement ne semble être observée."
   #Luminosity: 0.002
   Age: 900
   InnerSystem: "5, 20" 
@@ -2730,7 +2730,7 @@
   # Schwarzschildradius
   Radius: 0.21 
   ColorName: Black
-  Description: "[c][ff00ff]Exotic system.[-][/c] A supermassive black hole."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Un trou noir supermassif."
   #Luminosity: 0.002
   Age: 900
   InnerSystem: "90, 108" 
@@ -2769,7 +2769,7 @@
   HabitableTemperate: "121, 132"  # GENERATION:  RANGE (start-end) for temperate playfields (or those that are set to appear in the center hab zone)
   HabitableCold: "133, 144"  # GENERATION: RANGE (start-end) for colder playfields. Example: ColdArid or ColdDesert or Snow
   OuterSystem: "145, 252"  # GENERATION: RANGE (start-end) for very cold playfields. Snow, barren, GasPlanets
-  Description: "[c][ff0000]Hot system.[-][/c] A belt of white giants  guarding the center of the galaxy. "
+  Description: "[c][ff0000]Système chaud.[-][/c] Une ceinture de géantes blanches gardant le centre de la galaxie. "
   # GalaxySpawnRadius: "90, 100"           # Does not work anymore. Will be removed.
   GalaxySpawnAmount: 0                     # Set to 0 and use in a Region = StarClass will ONLY spawn in that region!
 }
@@ -2794,7 +2794,7 @@
   HabitableCold: "60, 64" 
   OuterSystem: "65, 112"
   GalaxySpawnAmount: 0
-  Description: "Sigma Zero is the nickname of a system, situated nearly exactly between the Zirax, Polaris and Trader Guild territories. Once a profitable claim of the Polaris Megacorp, the company suddenly and hastily retreated from this place. The infamous 'Sigma Fulcrum', one of the stations that were left behind fully operational, has become a central launchpad for basically any non-legal activity in this sector between the three territories."
+  Description: "Sigma Zero est le surnom d'un système, situé presque exactement entre les territoires de Zirax, Polaris et la Guilde des Traders. Autrefois une concession rentable de la Polaris Megacorp, la société s'est soudainement et précipitamment retirée de cet endroit. La tristement célèbre 'Sigma Fulcrum', l'une des stations laissées derrière elle, entièrement opérationnelle, est devenue une rampe de lancement centrale pour toute activité non légale dans ce secteur entre les trois territoires."
 }
 
 { GalaxyConfig, Name: Containment Area 13b-7   #Mission Story Part II - chapter 2: Hypernoise
@@ -2816,7 +2816,7 @@
   HabitableCold: "133, 144" 
   OuterSystem: "145, 252"  
   GalaxySpawnAmount: 0
-  Description: "Containment Area 13b-7 (Galactic Catalogue identifier U1B-01a3X) is a nearly empty star system with a massive black hole in its center. The energetic wavefronts frequently emitting from this system has lead to all galactic nations to agree on making this a no-travel zone. Enter at own risk!"
+  Description: "La zone de confinement 13b-7 (identifiant du catalogue galactique U1B-01a3X) est un système stellaire presque vide avec un trou noir massif en son centre. Les fronts d'ondes énergétiques fréquemment émis par ce système ont conduit toutes les nations galactiques à se mettre d'accord pour en faire une zone interdite aux voyageurs. Entrez à vos risques et périls !"
 }
 
 { GalaxyConfig, Name: Containment Area 1a-95 #Mission Story Part II: Deep Mine Progenitor
@@ -2829,7 +2829,7 @@
   ColorName: White
   Mass: 2
   Radius: 0.00004 
-  Description: "Containment Area 1a-95 (Galactic Catalogue identifier Jm32-Nb32x1) was defined as a non-travel zone, because of the activity of its irregular Neutron star is said to having lead to a total loss of several Zirax expedition fleets which were heading for the galactic center, using the star as a reststop. No incident reports about this area are available in the Galactic Catalogue. Enter at own risk!"
+  Description: "La zone de confinement 1a-95 (identifiant Jm32-Nb32x1 dans le catalogue galactique) a été définie comme une zone de non-voyage, en raison de l'activité de son étoile à neutrons irréguliers qui aurait entraîné la perte totale de plusieurs flottes d'expédition Zirax qui se dirigeaient vers le centre galactique, en utilisant l'étoile comme halte. Aucun rapport d'incident concernant cette zone n'est disponible dans le Catalogue Galactique. Entrez à vos risques et périls !"
   #Luminosity: 0.002
   Age: 400
   InnerSystem: "1, 2" 
@@ -2857,7 +2857,7 @@
   HabitableTemperate: "88, 95" 
   HabitableCold: "96, 104" 
   OuterSystem: "105, 182"
-  Description: "One of many High Security areas in the Zirax Empire. Only enter with permission!"
+  Description: "Une des nombreuses zones de haute sécurité de l'Empire Zirax. N'y entrez qu'avec une permission !"
   GalaxySpawnAmount: 0
 }
 
@@ -2871,7 +2871,7 @@
   ColorName: White
   Mass: 2
   Radius: 0.00004 
-  Description: "Safe harbour for remains of the UCH fleet"
+  Description: "Un port sûr pour les restes de la flotte de l'UCH"
   #Luminosity: 0.002
   Age: 400
   InnerSystem: "1, 2" 
@@ -2898,7 +2898,7 @@
   HabitableTemperate: "75, 81" 
   HabitableCold: "82, 88" 
   OuterSystem: "89, 155"
-  Description: "Ten years ago, this solar system has been the setting of an overwhelmingly strong pirate attack. The pirates of the Salurian clan were defeated by local Zirax forces, but it remains unknown what has been the real target for this concerted attack."
+  Description: "Il y a dix ans, ce système solaire a été le théâtre d'une attaque de pirates d'une force écrasante. Les pirates du clan Salurian ont été vaincus par les forces locales de Zirax, mais on ignore encore quelle était la véritable cible de cette attaque concertée."
   GalaxySpawnAmount: 0
 }
 
@@ -2927,7 +2927,7 @@
   HabitableTemperate: "70, 99" 
   HabitableCold: "100, 149" 
   OuterSystem: "150, 350"
-  Description: "A warp beacon in empty space."
+  Description: "Une balise de distorsion dans l'espace vide."
   GalaxySpawnAmount: 0
 }
 
@@ -2951,7 +2951,7 @@
   HabitableTemperate: "70, 99" 
   HabitableCold: "100, 149" 
   OuterSystem: "150, 350"
-  Description: "A warp gate in empty space."
+  Description: "Une porte de distorsion - autrement appellée porte des étoiles - dans l'espace vide."
   GalaxySpawnAmount: 0
 }
 
@@ -2982,7 +2982,7 @@
   HabitableTemperate: "17, 25"  # GENERATION:  RANGE (start-end) for temperate playfields (or those that are set to appear in the center hab zone)
   HabitableCold: "26, 35"  # GENERATION: RANGE (start-end) for colder playfields. Example: ColdArid or ColdDesert or Snow
   OuterSystem: "36, 300"  # GENERATION: RANGE (start-end) for very cold playfields. Snow, barren, GasPlanets
-  Description: "[c][ff00ff]Exotic system.[-][/c]  An anomalous star system. It is unknown what might be found here."
+  Description: "[c][ff00ff]Système exotique.[-][/c]  Un système stellaire anormal. On ignore ce qu'on peut y trouver."
   GalaxySpawnAmount: 0
 }
 
@@ -3005,7 +3005,7 @@
   HabitableCold: "125, 149" 
   InnerSystem: "20, 35" 
   OuterSystem: "150, 1000"
-  Description: "[c][ff00ff]Exotic system.[-][/c] An anomalous star system. It is unknown what might be found here."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Un système stellaire anormal. On ignore ce qu'on peut y trouver."
   GalaxySpawnAmount: 0
 }
 
@@ -3028,7 +3028,7 @@
   HabitableCold: "31, 100" 
   InnerSystem: "5, 10" 
   OuterSystem: "101, 500"
-  Description: "[c][ff00ff]Exotic system.[-][/c] An anomalous star system. It is unknown what might be found here."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Un système stellaire anormal. On ignore ce qu'on peut y trouver."
   GalaxySpawnAmount: 0
 }
 
@@ -3062,7 +3062,7 @@
   HabitableTemperate: "20, 34"
   HabitableCold: "35, 49"
   OuterSystem: "50, 74"
-  Description: "[c][ffff00]Cold system.[-][/c] A white dwarf, also called a degenerate dwarf, is a stellar core remnant composed mostly of electron-degenerate matter. A white dwarf is very dense: its mass is comparable to that of the Sun, while its volume is comparable to that of Earth."
+  Description: "[c][ffff00]Système froid.[-][/c] Une naine blanche, également appelée naine dégénérée, est un reste de noyau stellaire composé principalement de matière dégénérée en électrons. Une naine blanche est très dense : sa masse est comparable à celle du Soleil, tandis que son volume est comparable à celui de la Terre."
 }
 
 # Type D Binary
@@ -3094,7 +3094,7 @@
   HabitableTemperate: "20, 34"
   HabitableCold: "35, 49"
   OuterSystem: "50, 74"
-  Description: "[c][ffff00]Cold system.[-][/c] A white dwarf, also called a degenerate dwarf, is a stellar core remnant composed mostly of electron-degenerate matter. A white dwarf is very dense: its mass is comparable to that of the Sun, while its volume is comparable to that of Earth."
+  Description: "[c][ffff00]Système froid.[-][/c] Une naine blanche, également appelée naine dégénérée, est un reste de noyau stellaire composé principalement de matière dégénérée en électrons. Une naine blanche est très dense : sa masse est comparable à celle du Soleil, tandis que son volume est comparable à celui de la Terre."
 }
 
 { GalaxyConfig, Name: D Type White Dwarf
@@ -3125,7 +3125,7 @@
   HabitableTemperate: "20, 34"
   HabitableCold: "35, 49"
   OuterSystem: "50, 74"
-  Description: "[c][ffff00]Cold system.[-][/c] A white dwarf, also called a degenerate dwarf, is a stellar core remnant composed mostly of electron-degenerate matter. A white dwarf is very dense: its mass is comparable to that of the Sun, while its volume is comparable to that of Earth."
+  Description: "[c][ffff00]Système froid.[-][/c] Une naine blanche, également appelée naine dégénérée, est un reste de noyau stellaire composé principalement de matière dégénérée en électrons. Une naine blanche est très dense : sa masse est comparable à celle du Soleil, tandis que son volume est comparable à celui de la Terre."
 }
 
 # Type D
@@ -3157,7 +3157,7 @@
   HabitableTemperate: "20, 34"
   HabitableCold: "35, 49"
   OuterSystem: "50, 74"
-  Description: "[c][ffff00]Cold system.[-][/c] A white dwarf, also called a degenerate dwarf, is a stellar core remnant composed mostly of electron-degenerate matter. A white dwarf is very dense: its mass is comparable to that of the Sun, while its volume is comparable to that of Earth."
+  Description: "[c][ffff00]Système froid.[-][/c] Une naine blanche, également appelée naine dégénérée, est un reste de noyau stellaire composé principalement de matière dégénérée en électrons. Une naine blanche est très dense : sa masse est comparable à celle du Soleil, tandis que son volume est comparable à celui de la Terre."
 }
 
 # Type K-G
@@ -3189,7 +3189,7 @@
   HabitableTemperate: "55, 69" 
   HabitableCold: "70, 89" 
   OuterSystem: "90, 150"
-  Description: "[c][FF0000]Hot system.[-][/c] A binary system composed of a K and a G class star."
+  Description: "[c][FF0000]Système chaud.[-][/c] Un système binaire composé d'une étoile de classe K et d'une étoile de classe G."
 }
 
 # Type M1Ia
@@ -3220,7 +3220,7 @@
   HabitableTemperate: "100, 119" 
   HabitableCold: "120, 149" 
   OuterSystem: "150, 300"
-  Description: "[c][ff0000]Hot system.[-][/c] Luminous red supergiants are stars with a luminosity class of spectral type K or M. They are extremely bright but lower in temperature."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les supergéantes rouges lumineuses sont des étoiles dont la classe de luminosité est de type spectral K ou M. Elles sont extrêmement brillantes mais leur température est plus basse."
 }
 
 # Wolf-Rayet Orange
@@ -3250,7 +3250,7 @@
   HabitableTemperate: "60, 89"
   HabitableCold: "90, 174"
   OuterSystem: "175, 500"
-  Description: "[c][ff0000]Hot system.[-][/c] Wolf-Rayets are evolved, massive stars that have completely lost their outer hydrogen and are fusing helium or heavier elements in the core."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les Wolf-Rayets sont des étoiles massives et évoluées qui ont complètement perdu leur hydrogène externe et qui fusionnent de l'hélium ou des éléments plus lourds dans leur noyau."
   GalaxySpawnAmount: 10
 }
 
@@ -3281,7 +3281,7 @@
   HabitableTemperate: "60, 89"
   HabitableCold: "90, 174"
   OuterSystem: "175, 300"
-  Description: "[c][ff0000]Hot system.[-][/c] Wolf-Rayets are evolved, massive stars that have completely lost their outer hydrogen and are fusing helium or heavier elements in the core."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les Wolf-Rayets sont des étoiles massives et évoluées qui ont complètement perdu leur hydrogène externe et qui fusionnent de l'hélium ou des éléments plus lourds dans leur noyau."
   GalaxySpawnAmount: 5
 }
 
@@ -3318,7 +3318,7 @@
   HabitableTemperate: "60, 89"
   HabitableCold: "90, 174"
   OuterSystem: "175, 500"
-  Description: "[c][ff0000]Hot system.[-][/c] Wolf-Rayets are evolved, massive stars that have completely lost their outer hydrogen and are fusing helium or heavier elements in the core."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les Wolf-Rayets sont des étoiles massives et évoluées qui ont complètement perdu leur hydrogène externe et qui fusionnent de l'hélium ou des éléments plus lourds dans leur noyau."
   GalaxySpawnAmount: 5
 }
 
@@ -3348,7 +3348,7 @@
   HabitableTemperate: "40, 69"
   HabitableCold: "70, 99"
   OuterSystem: "100, 150"
-  Description: "[c][ff00ff]Exotic system.[-][/c] Brown Dwarfs are failed stars that never grew massive enough to initiate fusion."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Les naines brunes sont des étoiles ratées qui ne sont jamais devenues assez massives pour amorcer la fusion."
   GalaxySpawnAmount: 0
 }
 
@@ -3379,7 +3379,7 @@
   HabitableTemperate: "40, 69"
   HabitableCold: "70, 99"
   OuterSystem: "100, 150"
-  Description: "[c][ff00ff]Exotic system.[-][/c] An unknown anomaly."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une anomalie inconnue."
   GalaxySpawnAmount: 3
 }
 
@@ -3410,7 +3410,7 @@
   HabitableTemperate: "40, 69"
   HabitableCold: "70, 99"
   OuterSystem: "100, 150"
-  Description: "[c][ff00ff]Exotic system.[-][/c] An unknown anomaly."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une anomalie inconnue."
   GalaxySpawnAmount: 3
 }
 
@@ -3443,7 +3443,7 @@
   HabitableTemperate: "40, 69"
   HabitableCold: "70, 99"
   OuterSystem: "100, 150"
-  Description: "[c][ff00ff]Exotic system.[-][/c] An unknown anomaly."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une anomalie inconnue."
   GalaxySpawnAmount: 3
 }
 
@@ -3476,7 +3476,7 @@
   HabitableTemperate: "40, 69"
   HabitableCold: "70, 99"
   OuterSystem: "100, 150"
-  Description: "[c][ff00ff]Exotic system.[-][/c] An unknown anomaly."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une anomalie inconnue."
   GalaxySpawnAmount: 3
 }
 
@@ -3502,7 +3502,7 @@
   HabitableTemperate: "100, 119" 
   HabitableCold: "120, 149" 
   OuterSystem: "150, 300"
-  Description: "[c][ff0000]Hot system.[-][/c] K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
   GalaxySpawnAmount: 0
 }
 
@@ -3537,7 +3537,7 @@
   HabitableTemperate: "45, 69" 
   HabitableCold: "70, 99" 
   OuterSystem: "100, 149"
-  Description: "[c][ffff00]Cold system.[-][/c] An A-type main-sequence star is a main-sequence (hydrogen-burning) star of spectral type A and luminosity class V. They have masses from 1.4 to 2.1 times the mass of the Sun and surface temperatures between 7600 and 10,000  K"
+  Description: "[c][ffff00]Système froid.[-][/c] Une étoile de séquence principale de type A est une étoile de séquence principale (brûlant de l'hydrogène) de type spectral A et de classe de luminosité V. Elles ont des masses de 1,4 à 2,1 fois la masse du Soleil et des températures de surface comprises entre 7 600 et 10 000 K."
 }
 
 
@@ -3575,7 +3575,7 @@
   HabitableTemperate: "40, 59"
   HabitableCold: "60, 69"
   OuterSystem: "70, 95"
-  Description: "[c][ffff00]Cold system.[-][/c] Class M2 stars are by far the most common on the outer edge of the galaxy. Typically, an M-type star's surface temperature is under about 4,000 K. Active Drone Swarm detected."
+  Description: "[c][ffff00]Système froid.[-][/c] Les étoiles de classe M2 sont de loin les plus communes sur le bord extérieur de la galaxie. Typiquement, la température de surface d'une étoile de type M est inférieure à environ 4 000 K. Essaim de drones actifs détecté."
   GalaxySpawnAmount: 0
 }
 
@@ -3608,7 +3608,7 @@
   HabitableTemperate: "20, 34"
   HabitableCold: "35, 49"
   OuterSystem: "50, 74"
-  Description: "[c][ffff00]Cold system.[-][/c] A white dwarf, also called a degenerate dwarf, is a stellar core remnant composed mostly of electron-degenerate matter. A white dwarf is very dense: its mass is comparable to that of the Sun, while its volume is comparable to that of Earth. Active Drone Swarm detected."
+  Description: "[c][ffff00]Système froid.[-][/c] Une naine blanche, également appelée naine dégénérée, est un reste de noyau stellaire composé principalement de matière dégénérée en électrons. Une naine blanche est très dense : sa masse est comparable à celle du Soleil, tandis que son volume est comparable à celui de la Terre. Essaim de drones actifs détecté."
 }
 
 # Type R
@@ -3638,7 +3638,7 @@
   HabitableTemperate: "70, 99" 
   HabitableCold: "100, 149" 
   OuterSystem: "150, 350"
-  Description: "[c][ff00ff]Exotic system.[-][/c] A rogue planet or other object or signal that is not orbiting any star."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une planète rebelle ou un autre objet ou signal qui n'est en orbite autour d'aucune étoile."
   GalaxySpawnAmount: 0
 }
 
@@ -3669,7 +3669,7 @@
   HabitableTemperate: "40, 69"
   HabitableCold: "70, 99"
   OuterSystem: "100, 150"
-  Description: "[c][ff00ff]Exotic system.[-][/c] Brown Dwarfs are failed stars that never grew massive enough to initiate fusion. Active Drone Swarm detected."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Les naines brunes sont des étoiles ratées qui ne sont jamais devenues assez massives pour initier la fusion. Essaim de drones actifs détecté."
   GalaxySpawnAmount: 0
 }
 
@@ -3693,7 +3693,7 @@
   # Schwarzschildradius
   Radius: 0.21
   ColorName: Black
-  Description: "[c][ff00ff]Exotic system.[-][/c] A black hole is a region of spacetime exhibiting gravitational acceleration so strong that nothing—no particles or even electromagnetic radiation such as light—can escape from it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of the region from which no escape is possible is called the event horizon. Although the event horizon has an enormous effect on the fate and circumstances of an object crossing it, no locally detectable features appear to be observed. Active Drone Swarm detected."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Un trou noir est une région de l'espace-temps présentant une accélération gravitationnelle si forte que rien - ni particules ni même rayonnement électromagnétique comme la lumière - ne peut s'en échapper. La théorie de la relativité générale prévoit qu'une masse suffisamment compacte peut déformer l'espace-temps pour former un trou noir. La limite de la région d'où aucune fuite n'est possible s'appelle l'horizon des événements. Bien que l'horizon des événements ait un effet énorme sur le sort et les circonstances d'un objet qui le traverse, aucune caractéristique détectable localement ne semble être observée. Active Drone Swarm detected."
   #Luminosity: 0.002
   Age: 900
   InnerSystem: "5, 39" 
@@ -3736,7 +3736,7 @@
   HabitableTemperate: "121, 132"  # GENERATION:  RANGE (start-end) for temperate playfields (or those that are set to appear in the center hab zone)
   HabitableCold: "133, 144"  # GENERATION: RANGE (start-end) for colder playfields. Example: ColdArid or ColdDesert or Snow
   OuterSystem: "145, 252"  # GENERATION: RANGE (start-end) for very cold playfields. Snow, barren, GasPlanets
-  Description: "[c][ff00ff]Exotic system.[-][/c] One of only a few green suns.. what will you find here?"
+  Description: "[c][ff00ff]Système exotique.[-][/c] L'un des rares soleils verts. Que trouverez-vous ici ?"
   # GalaxySpawnRadius: "0, 15"           # Does not work anymore. Will be removed.
   GalaxySpawnAmount: 0                   # Set to 0 and use in a Region = StarClass will ONLY spawn in that region!
 }
@@ -3763,7 +3763,7 @@
   ColorName: White
   Mass: 2
   Radius: 0.00004 
-  Description: "[c][ff00ff]Exotic system.[-][/c] A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes, hypothetical white holes, quark stars and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Une étoile à neutrons est le noyau effondré d'une étoile géante qui, avant son effondrement, avait une masse totale comprise entre 10 et 29 masses solaires. Les étoiles à neutrons sont les étoiles les plus petites et les plus denses, à l'exception des trous noirs, des hypothétiques trous blancs, des étoiles à quark et des étoiles étranges. Les étoiles à neutrons ont un rayon de l'ordre de 10 kilomètres (6,2 milles) et une masse d'environ 1,4 masse solaire. Elles résultent de l'explosion en supernova d'une étoile massive, combinée à un effondrement gravitationnel, qui comprime le noyau au-delà de la densité d'une étoile naine blanche jusqu'à celle des noyaux atomiques."
   #Luminosity: 0.002
   Age: 400
   InnerSystem: "5, 9" 
@@ -3862,7 +3862,7 @@
   HabitableTemperate: "46, 50" 
   HabitableCold: "51, 54" 
   OuterSystem: "55, 95"
-  Description: "The home system of the ARC faction."  
+  Description: "Le système d'origine de la faction ARC."  
   GalaxySpawnAmount: 0
 }
 
@@ -3888,7 +3888,7 @@
   HabitableCold: "82, 88" 
   OuterSystem: "89, 155"
   GalaxySpawnAmount: 0
-  Description: "The home system of the Polaris Megacorp."
+  Description: "Le système d'origine de la Polaris Megacorp."
 }
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Trader Stars
 # Type A
@@ -3911,7 +3911,7 @@
   HabitableTemperate: "88, 95" 
   HabitableCold: "96, 104" 
   OuterSystem: "105, 182"
-  Description: "It is not exactly the home system of all guilds, but an official center and pivot point of any of the Traders Guild ventures in the galaxy."
+  Description: "Ce n'est pas exactement le système d'origine de toutes les guildes, mais un centre officiel et un point de pivot de toutes les entreprises de la guilde des commerçants dans la galaxie."
   GalaxySpawnAmount: 0
 }
 # Type G
@@ -3942,7 +3942,7 @@
   HabitableTemperate: "64, 69" 
   HabitableCold: "70, 75" 
   OuterSystem: "76, 132"
-  Description: "[c][ffff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  Description: "[c][ffff00]Système habitable.[-][/c] Les étoiles de type G, dont le Soleil, ont des raies spectrales H et K de Ca II très marquées, qui sont plus prononcées à G2. Elles ont des raies d'hydrogène encore plus faibles que celles de F, mais avec les métaux ionisés, elles ont des métaux neutres. Il y a un pic proéminent dans la bande G des molécules CH."
   GalaxySpawnAmount: 0
 }
 
@@ -3978,7 +3978,7 @@
   HabitableTemperate: "45, 69" 
   HabitableCold: "70, 99" 
   OuterSystem: "100, 149"
-  Description: "[c][ffff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  Description: "[c][ffff00]Système habitable.[-][/c] Les étoiles de type G, dont le Soleil, ont des raies spectrales H et K de Ca II très marquées, qui sont plus prononcées à G2. Elles ont des raies d'hydrogène encore plus faibles que celles de F, mais avec les métaux ionisés, elles ont des métaux neutres. Il y a un pic proéminent dans la bande G des molécules CH."
   GalaxySpawnAmount: 0
 }
 
@@ -4012,7 +4012,7 @@
   HabitableCold: "51, 54" 
   OuterSystem: "55, 95"
   GalaxySpawnAmount: 0
-  Description: "[c][ff0000]Hot system.[-][/c] The said-to-be home system of the Kriel. It is not entirely sure if this is also the cradle of their civilization, because the Kriel do not leave a lot behind that can be studied. Planets stripped from any resource is what usually is left when the Kriel forces leave. Maybe it is only a place where they hide and protect something very important. Expect strong military presence."
+  Description: "[c][ff0000]Système chaud.[-][/c] Le soi-disant système d'origine des Kriel. Il n'est pas tout à fait sûr qu'il s'agisse également du berceau de leur civilisation, car les Kriel ne laissent pas grand-chose derrière eux qui puisse être étudié. Les planètes dépouillées de toute ressource sont ce qui reste généralement lorsque les forces Kriel partent. Peut-être est-ce seulement un endroit où ils cachent et protègent quelque chose de très important. Attendez-vous à une forte présence militaire."
 }
 
 # Type O2
@@ -4043,7 +4043,7 @@
   HabitableTemperate: "121, 132"  # GENERATION:  RANGE (start-end) for temperate playfields (or those that are set to appear in the center hab zone)
   HabitableCold: "133, 144"  # GENERATION: RANGE (start-end) for colder playfields. Example: ColdArid or ColdDesert or Snow
   OuterSystem: "145, 252"  # GENERATION: RANGE (start-end) for very cold playfields. Snow, barren, GasPlanets
-  Description: "[c][ff0000]Hot system.[-][/c] An O-type star is a hot, blue-white star of spectral type O in the Yerkes classification system employed by astronomers. They have temperatures in excess of 30,000 Kelvin (K)."
+  Description: "[c][ff0000]Système chaud.[-][/c] Une étoile de type O est une étoile chaude, bleu-blanc, de type spectral O dans le système de classification de Yerkes utilisé par les astronomes. Leurs températures sont supérieures à 30 000 Kelvin (K)."
 }
 
 # Type B2V
@@ -4072,7 +4072,7 @@
   HabitableTemperate: "80, 119" 
   HabitableCold: "120, 159" 
   OuterSystem: "160, 260"
-  Description: "[c][ff0000]Hot system.[-][/c] A B-type main-sequence star (B V) is a main-sequence (hydrogen-burning) star of spectral type B and luminosity class V. These stars have from 2 to 16 times the mass of the Sun and surface temperatures between 10,000 and 30,000 K. B-type stars are extremely luminous and blue."
+  Description: "[c][ff0000]Système chaud.[-][/c] Une étoile de la séquence principale de type B (B V) est une étoile de la séquence principale (brûlant de l'hydrogène) de type spectral B et de classe de luminosité V. Ces étoiles ont une masse de 2 à 16 fois celle du Soleil et des températures de surface comprises entre 10 000 et 30 000 K. Les étoiles de type B sont extrêmement lumineuses et bleues."
 }
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Tesch Stars
@@ -4105,7 +4105,7 @@
   HabitableTemperate: "150, 174"
   HabitableCold: "175, 200"
   OuterSystem: "201, 300"
-  Description: "The home system of the TESCH"
+  Description: "Le système d'origine des TESCH"
 }
 
 { GalaxyConfig, Name: Tesch Home System B
@@ -4136,7 +4136,7 @@
   HabitableTemperate: "150, 174"
   HabitableCold: "175, 200"
   OuterSystem: "201, 300"
-  Description: "A companion star for the Tesch."
+  Description: "Une étoile compagnon pour les Tesch."
 }
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Ancient Progenitor Decay cluster Stars
@@ -4167,7 +4167,7 @@
   HabitableTemperate: "21, 27"
   HabitableCold: "28, 35"
   OuterSystem: "36, 75"
-  Description: "[c][ffff00]Cold system.[-][/c] A relatively dim white dwarf star in the Decay star cluster."
+  Description: "[c][ffff00]Système froid.[-][/c] Une étoile naine blanche relativement faible dans l'amas d'étoiles Decay."
 }
 
 # Type S2
@@ -4197,7 +4197,7 @@
   HabitableTemperate: "21, 27"
   HabitableCold: "28, 35"
   OuterSystem: "36, 75"
-  Description: "[c][ff00ff]Exotic system.[-][/c] Strange stars had until now had only been theorized. Thought to be made out of unstable exotic matter, these stars may behave in strange, unpredictable ways."
+  Description: "[c][ff00ff]Système exotique.[-][/c] Ces étoiles étranges n'avaient jusqu'à présent fait l'objet que de théories. Pensées comme étant constituées de matière exotique instable, ces étoiles peuvent se comporter de manière étrange et imprévisible."
 }
 
 
@@ -4214,7 +4214,7 @@
   ColorName: White
   Mass: 2
   Radius: 0.00004 
-  Description: "Pirates hiding in the space near a Neutron star"
+  Description: "Les pirates se cachent dans l'espace près d'une étoile à neutrons"
   #Luminosity: 0.002
   Age: 400
   InnerSystem: "1, 2" 
@@ -4252,7 +4252,7 @@
   HabitableTemperate: "80, 99" 
   HabitableCold: "100, 109" 
   OuterSystem: "110, 155"
-  Description: "[c][ffff00]Habitable system.[-][/c] F-type stars have strengthening spectral lines H and K of Ca II. Neutral metals (Fe I, Cr I) beginning to gain on ionized metal lines by late F. Their spectra are characterized by the weaker hydrogen lines and ionized metals. Their color is white."
+  Description: "[c][ffff00]Système habitable.[-][/c] Les étoiles de type F ont un renforcement des raies spectrales H et K du Ca II. Les métaux neutres (Fe I, Cr I) commencent à gagner sur les raies des métaux ionisés à la fin de F. Leurs spectres sont caractérisés par des raies d'hydrogène plus faibles et des métaux ionisés. Leur couleur est blanche."
 }
 
 # Type F
@@ -4282,7 +4282,7 @@
   HabitableTemperate: "80, 99" 
   HabitableCold: "100, 109" 
   OuterSystem: "110, 155"
-  Description: "[c][ffff00]Habitable system.[-][/c] F-type stars have strengthening spectral lines H and K of Ca II. Neutral metals (Fe I, Cr I) beginning to gain on ionized metal lines by late F. Their spectra are characterized by the weaker hydrogen lines and ionized metals. Their color is white."
+  Description: "[c][ffff00]Système habitable.[-][/c] Les étoiles de type F ont un renforcement des raies spectrales H et K du Ca II. Les métaux neutres (Fe I, Cr I) commencent à gagner sur les raies des métaux ionisés à la fin de F. Leurs spectres sont caractérisés par des raies d'hydrogène plus faibles et des métaux ionisés. Leur couleur est blanche."
   GalaxySpawnAmount: 0
 }
 
@@ -4316,7 +4316,7 @@
   HabitableTemperate: "85, 104"
   HabitableCold: "105, 129"
   OuterSystem: "130, 155"
-  Description: "The home system of the Wastelanders faction."  
+  Description: "Le système d'origine de la faction Wastelanders."  
   GalaxySpawnAmount: 0
 }
 
@@ -4347,7 +4347,7 @@
   HabitableTemperate: "70, 89" 
   HabitableCold: "99, 129" 
   OuterSystem: "130, 159"
-  Description: "[c][00ff00]Habitable system.[-][/c] F-type stars have strengthening spectral lines H and K of Ca II. Neutral metals (Fe I, Cr I) beginning to gain on ionized metal lines by late F. Their spectra are characterized by the weaker hydrogen lines and ionized metals. Their color is white."
+  Description: "[c][00ff00]Système habitable.[-][/c] Les étoiles de type F ont un renforcement des raies spectrales H et K du Ca II. Les métaux neutres (Fe I, Cr I) commencent à gagner sur les raies des métaux ionisés à la fin de F. Leurs spectres sont caractérisés par des raies d'hydrogène plus faibles et des métaux ionisés. Leur couleur est blanche."
   # GalaxySpawnAmount: 0
 }
 
@@ -4372,7 +4372,7 @@
   HabitableTemperate: "46, 50" 
   HabitableCold: "51, 54" 
   OuterSystem: "55, 95"
-  Description: "The home system of the Ravagers faction."  
+  Description: "Le système d'origine de la faction des Ravageurs."  
   GalaxySpawnAmount: 0
 }
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Zirax Stars
@@ -4434,7 +4434,7 @@
   HabitableTemperate: "40, 59" 
   HabitableCold: "60, 89" 
   OuterSystem: "90, 139"
-  Description: "[c][ff0000]Hot system.[-][/c] K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
 }
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Brotherhood of Farr Stars
@@ -4465,7 +4465,7 @@
   HabitableTemperate: "54, 59" 
   HabitableCold: "60, 64" 
   OuterSystem: "65, 112"
-  Description: "G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  Description: "Les étoiles de type G, dont le Soleil, ont des raies spectrales H et K de Ca II très marquées, qui sont plus prononcées à G2. Elles ont des raies d'hydrogène encore plus faibles que celles de F, mais avec les métaux ionisés, elles ont des métaux neutres. Il y a un pic proéminent dans la bande G des molécules CH."
   GalaxySpawnAmount: 0
 }
 
@@ -4488,7 +4488,7 @@
   HabitableTemperate: "54, 59" 
   HabitableCold: "60, 64" 
   OuterSystem: "65, 112"
-  Description: "K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
   GalaxySpawnAmount: 0
 }
 
@@ -4511,7 +4511,7 @@
   HabitableTemperate: "54, 59" 
   HabitableCold: "60, 64" 
   OuterSystem: "65, 112"
-  Description: "K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
   GalaxySpawnAmount: 0
 }
 
@@ -4534,7 +4534,7 @@
   HabitableTemperate: "54, 59" 
   HabitableCold: "60, 64" 
   OuterSystem: "65, 112"
-  Description: "K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire. Elles représentent environ 12 % des étoiles de la séquence principale dans le voisinage du soleil."
   GalaxySpawnAmount: 0
 }
 
@@ -4567,7 +4567,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
 }
 
 # Test2 star
@@ -4599,7 +4599,7 @@
   HabitableTemperate: "50, 99"  # GENERATION:  RANGE (start-end) for temperate playfields (or those that are set to appear in the center hab zone)
   HabitableCold: "100, 189"  # GENERATION: RANGE (start-end) for colder playfields. Example: ColdArid or ColdDesert or Snow
   OuterSystem: "190, 350"  # GENERATION: RANGE (start-end) for very cold playfields. Snow, barren, GasPlanets
-  Description: "G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  Description: "Les étoiles de type G, dont le Soleil, ont des raies spectrales H et K de Ca II très marquées, qui sont plus prononcées à G2. Elles ont des raies d'hydrogène encore plus faibles que celles de F, mais avec les métaux ionisés, elles ont des métaux neutres. Il y a un pic proéminent dans la bande G des molécules CH."
 }
 
 
@@ -4636,7 +4636,7 @@
   HabitableTemperate: "70, 89"
   HabitableCold: "90, 109"
   OuterSystem: "110, 140"
-  Description: "[c][ff0000]Hot system.[-][/c] K-type stars are orangish stars that are slightly cooler than a G-Type star. They make up about 12% of the main-sequence stars in the solar neighborhood."
+  Description: "[c][ff0000]Système chaud.[-][/c] Les étoiles de type K sont des étoiles orangées qui sont légèrement plus froides qu'une étoile de type G. Elles constituent environ 12 % des étoiles de la séquence principale dans le voisinage solaire."
   GalaxySpawnAmount: 0
 }
 

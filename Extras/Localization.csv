@@ -2515,12 +2515,12 @@ Eden_CargoContainerReinforcedS,Reinforced Cargo Container,,Conteneur de fret ren
 Eden_CargoContainerReinforcedSinfo,A reinforced cargo container for POIs and NPC ships.\n\nVery high HP to survive most battles. Set loot via container ID in the control panel.\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c],,Un conteneur de marchandises renforcé pour les POI et les vaisseaux des PNJ. HP très élevés pour survivre à la plupart des batailles. Définissez le butin via l'ID du conteneur dans le panneau de contrôle.\n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c],,,,,,,,,,,,,,
 Eden_CargoContainerReinforcedL,Reinforced Cargo Container Large,,Conteneur de fret renforcé grand,,,,,,,,,,,,,,
 Eden_CargoContainerReinforcedL2,Reinforced Cargo Container Large 2,,Conteneur de fret renforcé grand 2,,,,,,,,,,,,,,
-Eden_StatueDialog,Statue
-Eden_StatueDialoginfo,"A decorative block for POIs. Dialog enabled. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]"
-Eden_ConsoleDialog,Console
-Eden_ConsoleDialog2,Console
-Eden_CargoDialog,Cargo Container
-Eden_TreasureDialog,Chest
+Eden_StatueDialog,Statue,,,,,,,,,,,,,,,,
+Eden_StatueDialoginfo,A decorative block for POIs. Dialog enabled. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c],,,,,,,,,,,,,,,,
+Eden_ConsoleDialog,Console,,,,,,,,,,,,,,,,
+Eden_ConsoleDialog2,Console,,,,,,,,,,,,,,,,
+Eden_CargoDialog,Cargo Container,,,,,,,,,,,,,,,,
+Eden_TreasureDialog,Chest,,,,,,,,,,,,,,,,
 Eden_RadioPirates,Subspace Radio (Pirates),,Radio Subspatiale (Pirates),,,,,,,,,,,,,,
 Eden_RadioPiratesinfo,"A subspace radio that transmits audio on all frequencies. Can be shot at to remove, or deactivated in the control panel.\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]",,"Une radio subspatiale qui transmet de l'audio sur toutes les fréquences. On peut tirer dessus pour la retirer, ou la désactiver dans le panneau de contrôle.\n[c][A9A9A9][i]Nécessite le Projet Eden.[/i][-][/c]",,,,,,,,,,,,,,
 Eden_RadioColonists,Subspace Radio (Colonists),,Radio Subspatiale (Colonistes),,,,,,,,,,,,,,
@@ -2625,8 +2625,8 @@ Eden_DrillIceCV_Weapon,Modulated Ice Harvester Drill,,Foreuse modulée pour la r
 Eden_DrillRichCV,Modulated Asteroid Harvester Drill,,Foreuse modulée pour la récolte d'astéroïdes,,,,,,,,,,,,,,
 Eden_DrillRichCVinfo,"A fixed mining laser for mining rich asteroids found in special sites.\nThis mining laser is specially modulated to only mine rich asteroids and will not work on any other material.\nFocus on a target rich asteroid until it is depleted, it can take some time and take some fiddling depending on the number of lasers being used.\n\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]",,"Un laser minier fixe pour l'exploitation des astéroïdes riches trouvés dans des sites spéciaux.\nCe laser minier est spécialement modulé pour n'exploiter que les astéroïdes riches et ne fonctionnera sur aucun autre matériau.\nConcentrez-vous sur un astéroïde riche jusqu'à ce qu'il soit épuisé, cela peut prendre un certain temps et nécessiter quelques manipulations en fonction du nombre de lasers utilisés.\n\n[c][A9A9A9][i]Requier Projet Eden.[/i][-][/c]",,,,,,,,,,,,,,
 Eden_DrillRichCV_Weapon,Modulated Asteroid Harvester Drill,,Foreuse modulée pour la récolte d'astéroïdes,,,,,,,,,,,,,,
-Eden_DrillDebug,Project Eden Debug Drill
-Eden_DrillDebuginfo,"This is a debug drill for Project Eden. Used to assist in the shaping of caves and asteroids in creative mode. See radial menu for drill modes."
+Eden_DrillDebug,Project Eden Debug Drill,,,,,,,,,,,,,,,,
+Eden_DrillDebuginfo,This is a debug drill for Project Eden. Used to assist in the shaping of caves and asteroids in creative mode. See radial menu for drill modes.,,,,,,,,,,,,,,,,
 Eden_DrillIceTurretCV,Automated Ice Harvester Drill Turret,,Tourelle de forage automatisée pour la récolte de la glace,,,,,,,,,,,,,,
 Eden_DrillIceTurretCVinfo,"Modulated for dense or rich ice asteroids. Not effective versus other targets.\nAlternative manual firing mode available via RMB.\n[c][FFA500]Will automatically mine out any dense or rich asteroids within range when set to target the following: [b]NPC Factions[/b] and [b]Prey[/b], [b]Bases[/b], [b]Warp Drives[/b].[-][/c]\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]",,"Modulé pour les astéroïdes de glace denses ou riches. N'est pas efficace contre les autres cibles.\nUn mode de tir manuel alternatif est disponible via le clique droit.\n[c][FFA500]Détruira automatiquement tous les astéroïdes denses ou riches à portée lorsqu'il est réglé pour cibler les éléments suivants : [b]Factions PNJ[/b] et [b]Proies[/b], [b]Bases[/b], [b]Hyperpropulsion[/b].[-][/c]\n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c]",,,,,,,,,,,,,,
 Eden_DrillIceTurretCV_Weapon,Automated Ice Harvester Drill Turret,,Tourelle de forage automatisée pour la récolte de la glace,,,,,,,,,,,,,,
@@ -2642,7 +2642,7 @@ Eden_DrillIceTurretCVAlien_Weapon,Inefficient Automated Ice Harvester Drill,,For
 Eden_DrillTurretAutoCVAlien,Inefficient Automated Asteroid Harvester Drill,,Foreuse automatisée inefficace pour la récolte d'astéroïdes,,,,,,,,,,,,,,
 Eden_DrillTurretAutoCVAlieninfo,"Modulated for dense or rich asteroids. Not effective versus other targets.\nAlternative manual firing mode available via RMB.\n[c][FFA500]Will automatically mine out any dense or rich asteroids within range when set to target the following: [b]NPC Factions[/b] and [b]Prey[/b], [b]Bases[/b], [b]Warp Drives[/b].[-][/c]\n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c]",,"Modulé pour les astéroïdes denses ou riches. N'est pas efficace contre d'autres cibles.\nUn mode de tir manuel alternatif est disponible via le clique droit.\n[c][FFA500]Détruit automatiquement tous les astéroïdes denses ou riches à portée lorsqu'il est réglé pour cibler les éléments suivants : [b]Factions PNJ[/b] et [b]Proies[/b], [b]Bases[/b], [b]Hyperpropulsion[/b].[-][/c]\n[c][A9A9A9][i]Nécessite Project Eden.[/i][-][/c]",,,,,,,,,,,,,,
 Eden_DrillTurretAutoCVAlien_Weapon,Inefficient Automated Asteroid Harvester Drill,,Foreuse automatisée inefficace pour la récolte d'astéroïdes,,,,,,,,,,,,,,
-Eden_TurretAlienShieldBooster,Remote Shield Booster (POI),,Booster de bouclier à distance (POI),,,,,,,,,,,,,
+Eden_TurretAlienShieldBooster,Remote Shield Booster (POI),,Booster de bouclier à distance (POI),,,,,,,,,,,,,,
 Eden_TurretAlienShieldBoosterinfo,A turret for POIs that will restore the shield capacitor of the target.,,Une tourelle pour les POIs qui restaurera le condensateur de bouclier de la cible.,,,,,,,,,,,,,,
 Eden_TurretAlienShieldBooster_Weapon,Remote Shield Booster (POI),,Booster de bouclier à distance (POI),,,,,,,,,,,,,,
 Eden_FarrPlasmaCrossbow,[c][FFD700]The Golden Rule[-][/c],,[c][FFD700]La règle d'or[-][/c],,,,,,,,,,,,,,
@@ -2951,18 +2951,18 @@ Eden_TradePiratesT2,Medium Sealed Package [c][FFFF00](Pirates)[-][/c],,Paquet sc
 Eden_TradePiratesT2info,[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Friendly\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 40000\n[c][FFFFFF][b]Payment:[-][/c][/b] 18% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package.,,"[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Réputation requise:[-][/c][/b] Friendly\n[c][FFFFFF][b]Destination: [-][/c][/b] Centre de distribution\n[c][FFFFFF][b]Garantie : [-][/c][/b] 40000\n[c][FFFFFF][b]Paiement : [-][/c][/b] 18% de la garantie\n\nUn conteneur scellé marqué pour la livraison à un destinataire spécifique. Achetez cet objet pour sa garantie, puis livrez-le à un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplémentaire.\n\nUtilisez votre barre d'outils connectée pour acheter ou vendre ce paquet.",,,,,,,,,,,,,,
 Eden_TradePiratesT3,Large Sealed Package [c][FFFF00](Pirates)[-][/c],,Grand paquet scellé [c][FFFF00](Pirates)[-][/c],,,,,,,,,,,,,,
 Eden_TradePiratesT3info,[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Required reputation:[-][/c][/b] Honored\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Collateral:[-][/c][/b] 200000\n[c][FFFFFF][b]Payment:[-][/c][/b] 25% of collateral\n\nA sealed container marked for delivery to a specific recipient. Purchase this item for its collateral and then deliver to a distribution center in a trading station sector in the recipient faction's territory for a return of your collateral plus an additional payment.\n\nUse your connected toolbar to buy or sell this package.,,"[c][FFFFFF][b]Faction:[-][/c][/b] [c][FFFF00]Pirates[-][/c]\n[c][FFFFFF][b]Réputation requise:[-][/c][/b] Honoré\n[c][FFFFFF][b]Destination: [-][/c][/b] Centre de distribution\n[c][FFFFFF][b]Garantie : [-][/c][/b] 200000\n[c][FFFFFF][b]Paiement : [-][/c][/b] 25% de la garantie\n\nUn conteneur scellé marqué pour être livré à un destinataire spécifique. Achetez cet objet pour sa garantie, puis livrez-le à un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplémentaire.\n\nUtilisez votre barre d'outils connectée pour acheter ou vendre ce paquet.",,,,,,,,,,,,,,
-Eden_SurveyExploreT1,Exploration Report Tier 1
-Eden_SurveyExploreT1info,"A survey report on various spacial anomalies, wrecks, or other objects of interest. UCH Research Vessels may be interested in this."
-Eden_SurveyExploreT2,Exploration Report Tier 2
-Eden_SurveyExploreT3,Exploration Report Tier 3
-Eden_SurveyMiningT1,Mining Report Tier 1
-Eden_SurveyMiningT1info,"A survey report of asteroids, gasses, and interstellar dust. Mining Foremen on deep space mining vessels may be interested in this."
-Eden_SurveyMiningT2,Mining Report Tier 2
-Eden_SurveyMiningT3,Mining Report Tier 3
-Eden_SurveyCombatT1,Combat Report Tier 1
-Eden_SurveyCombatT1info,"A survey report of wrecks, weapon signatures, and subspace communications. Bounty hunter offices may be interested in this."
-Eden_SurveyCombatT2,Combat Report Tier 2
-Eden_SurveyCombatT3,Combat Report Tier 3
+Eden_SurveyExploreT1,Exploration Report Tier 1,,Rapport d'exploration de niveau 1,,,,,,,,,,,,,,
+Eden_SurveyExploreT1info,"A survey report on various spacial anomalies, wrecks, or other objects of interest. UCH Research Vessels may be interested in this.",,"Un rapport d'enquête sur diverses anomalies spatiales, épaves, ou autres objets d'intérêt. Les vaisseaux de recherche de l'UCH peuvent être intéressés par cela.",,,,,,,,,,,,,,
+Eden_SurveyExploreT2,Exploration Report Tier 2,,Rapport d'exploration de niveau 2,,,,,,,,,,,,,,
+Eden_SurveyExploreT3,Exploration Report Tier 3,,Rapport d'exploration de niveau 3,,,,,,,,,,,,,,
+Eden_SurveyMiningT1,Mining Report Tier 1,,Rapport minier de niveau 1,,,,,,,,,,,,,,
+Eden_SurveyMiningT1info,"A survey report of asteroids, gasses, and interstellar dust. Mining Foremen on deep space mining vessels may be interested in this.",,"Un rapport d'enquête sur les astéroïdes, les gaz et la poussière interstellaire. Les contremaîtres des vaisseaux miniers de l'espace profond pourraient être intéressés par ce rapport.",,,,,,,,,,,,,,
+Eden_SurveyMiningT2,Mining Report Tier 2,,Rapport minier de niveau 2,,,,,,,,,,,,,,
+Eden_SurveyMiningT3,Mining Report Tier 3,,Rapport minier de niveau 3,,,,,,,,,,,,,,
+Eden_SurveyCombatT1,Combat Report Tier 1,,Rapport de combat de niveau 1,,,,,,,,,,,,,,
+Eden_SurveyCombatT1info,"A survey report of wrecks, weapon signatures, and subspace communications. Bounty hunter offices may be interested in this.",,"Un rapport d'enquête sur les épaves, les signatures d'armes et les communications subspatiales. Les bureaux de chasseurs de primes pourraient être intéressés par ça.",,,,,,,,,,,,,,
+Eden_SurveyCombatT2,Combat Report Tier 2,,Rapport de combat de niveau 2,,,,,,,,,,,,,,
+Eden_SurveyCombatT3,Combat Report Tier 3,,Rapport de combat de niveau 3,,,,,,,,,,,,,,
 Eden_ProgenitorArtifact,[c][69F5CD]Progenitor Technology Fragment[-][/c],,[c][69F5CD]Fragment de technologie des progéniteurs[-][/c],,,,,,,,,,,,,,
 Eden_DroneSalvageProcessor,[c][FF9A01]Salvaged Drone Swarm Processor,,[c][FF9A01]Processeur d'essaim de drones récupéré,,,,,,,,,,,,,,
 Eden_DroneSalvageProcessorinfo,Salvaged part from an alien Drone used in the construction of computational devices.,,Pièce récupérée d'un drone alien utilisée dans la construction de dispositifs informatiques.,,,,,,,,,,,,,,

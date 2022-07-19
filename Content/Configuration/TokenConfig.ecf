@@ -525,7 +525,7 @@
 { Token Id: 6401, Name: "Schema - [c][FFFFFF]Tourelle Flak Sentinel[-][/c]"
   CustomIcon: Eden_TurretFlakClose_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema : [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]50 Points de deverrouillage[-][/c]\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema : [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]50 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -533,7 +533,7 @@
 { Token Id: 6402, Name: "Schema - [c][FFFFFF]Petite tourelle vulcaine[-][/c]"
   CustomIcon: Eden_TurretVulcanSmall_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema : [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema : [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -541,7 +541,7 @@
 { Token Id: 6403, Name: "Schema - [c][FFFFFF]Injecteurs de nanites[-][/c]"
   CustomIcon: Eden_RegenKit_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -549,7 +549,7 @@
 { Token Id: 6404, Name: "Schema - [c][FFFFFF]Injecteurs de nanites avances[-][/c]"
   CustomIcon: Eden_RegenKit_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -557,7 +557,7 @@
 { Token Id: 6405, Name: "Schema - [c][FFFFFF]Brassins de Pomme de Terre[-][/c]"
   CustomIcon: Eden_WarpCoreMoonshine_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs de Schemas sur les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus aux commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs de Schemas sur les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus aux commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -565,7 +565,7 @@
 { Token Id: 6406, Name: "Schema - [c][FFFFFF]Bandages avances[-][/c]"
   CustomIcon: Eden_BandagesT2_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -573,7 +573,7 @@
 { Token Id: 6407, Name: "Schema - [c][FFFFFF]Tourelle de canon lourd[-][/c]"
   CustomIcon: Eden_TurretRailgunHeavy_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n[c][FFFF00]Necessite d'avoir deverrouille la tourelle du canon a rail leger.[-][/c]\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n[c][FFFF00]Necessite d'avoir deverrouille la tourelle du canon a rail leger.[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -581,7 +581,7 @@
 { Token Id: 6408, Name: "Schema - [c][FFFFFF]Minigun incendiaire[-][/c]"
   CustomIcon: Eden_MinigunIncendiary_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -589,7 +589,7 @@
 { Token Id: 6409, Name: "Schema - [c][FFFFFF]Canon blaster lourd[-][/c]"
   CustomIcon: Eden_BlasterCV_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FFFF00]Technologie pirate[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FFFF00]Technologie pirate[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -597,7 +597,7 @@
 { Token Id: 6410, Name: "Schema - [c][FFFFFF]Lance-torpilles rapide MX-4[-][/c]"
   CustomIcon: Eden_CVTorpedoRapid_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 100000, display: true
 }
 
@@ -605,7 +605,7 @@
 { Token Id: 6411, Name: "Schema - [c][FFFFFF]Prototype de canon a rail leger LX-2[-][/c]"
   CustomIcon: Eden_RailgunCVSpinal_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 200000, display: true
 }
 
@@ -613,7 +613,7 @@
 { Token Id: 6412, Name: "Schema - [c][FFFFFF]Automate d'exploitation miniere industrielle[-][/c]"
   CustomIcon: Eden_AutoMiningDeviceT4_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 300000, display: true
 }
 
@@ -621,7 +621,7 @@
 { Token Id: 6413, Name: "Schema - [c][FFFFFF]Grande tourelle vulcaine[-][/c]"
   CustomIcon: Eden_TurretVulcanSmall_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 100000, display: true
 }
 
@@ -629,7 +629,7 @@
 { Token Id: 6414, Name: "Schema - [c][FFFFFF]Foreuse pour l'extraction de glace[-][/c]"
   CustomIcon: Eden_AutoMiningDeviceT4_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 100000, display: true
 }
 
@@ -637,7 +637,7 @@
 { Token Id: 6415, Name: "Schema - [c][FFFFFF]Foreuses pour l'extraction d'asteroïdes riches[-][/c]"
   CustomIcon: Eden_AutoMiningDeviceT4_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 300000, display: true
 }
 

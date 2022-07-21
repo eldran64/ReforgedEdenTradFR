@@ -315,30 +315,30 @@
 
 # ================================================================================================================================ Tutorial Tokens:
 
-# --------------------------------------------------------- Solar System Surveys:
+# --------------------------------------------------------- Enquêtes sur le système solaire :
 
 # Alpha System Survey Report
 { Token Id: 6012, Name: [c][ffffff]Rapport d'enquete sur le systeme Alpha[-][/c]
   DropOnDeath: false
-  Description: A report detailing the planets and sectors of the Alpha system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
+  Description: Un rapport détaillant les planètes et les secteurs du système Alpha.\n\nCollectez les rapports d'enquête sur les systèmes Alpha Bêta Delta et Epsilon pour obtenir une récompense. \n\n[i][c][ffffff]Une fois que les 4 rapports sont dans votre inventaire personnel, une mission spéciale sera activée.[-][/c][/i]
 }
 
 # Beta System Survey Report
-{ Token Id: 6013, Name: [c][ffffff]Beta System Survey Report[-][/c]
+{ Token Id: 6013, Name: [c][ffffff]Rapport d'enquete sur le systeme Beta[-][/c]
   DropOnDeath: false
-  Description: A report detailing the planets and sectors of the Beta system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
+  Description: Un rapport détaillant les planètes et les secteurs du système Beta.\n\nCollectez les rapports d'enquête sur les systèmes Alpha Bêta Delta et Epsilon pour obtenir une récompense. \n\n[i][c][ffffff]Une fois que les 4 rapports sont dans votre inventaire personnel, une mission spéciale sera activée.[-][/c][/i]
 }
 
 # Delta System Survey Report
-{ Token Id: 6014, Name: [c][ffffff]Delta System Survey Report[-][/c]
+{ Token Id: 6014, Name: [c][ffffff]Rapport d'enquete sur le systeme Delta[-][/c]
   DropOnDeath: false
-  Description: A report detailing the planets and sectors of the Delta system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
+  Description: Un rapport détaillant les planètes et les secteurs du système Delta.\n\nCollectez les rapports d'enquête sur les systèmes Alpha Bêta Delta et Epsilon pour obtenir une récompense. \n\n[i][c][ffffff]Une fois que les 4 rapports sont dans votre inventaire personnel, une mission spéciale sera activée.[-][/c][/i]
 }
 
 # Epsilon System Survey Report
-{ Token Id: 6015, Name: [c][ffffff]Epsilon System Survey Report[-][/c]
+{ Token Id: 6015, Name: [c][ffffff]Rapport d'enquete sur le systeme Epsilon[-][/c]
   DropOnDeath: false
-  Description: A report detailing the planets and sectors of the Epsilon system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
+  Description: Un rapport détaillant les planètes et les secteurs du système Epsilon.\n\nCollectez les rapports d'enquête sur les systèmes Alpha Bêta Delta et Epsilon pour obtenir une récompense. \n\n[i][c][ffffff]Une fois que les 4 rapports sont dans votre inventaire personnel, une mission spéciale sera activée.[-][/c][/i]
 }
 
 
@@ -361,10 +361,10 @@
 }
 
 # Progenitor Translation Matrix
-{ Token Id: 6104, Name: [c][ff8000]Matrice de traduction des progeniteurs[/c]
+{ Token Id: 6104, Name: [c][ff8000]Cle de traduction des progeniteurs[/c]
   CustomIcon: Eden_ProgenitorTranslationMatrix
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \n\nThis matrix grants access to Progenitor computer terminals. \n\nRequired to access the core system controls on Progenitor Cores and other Progenitor computer systems.
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \n\nCette matrice donne accès aux terminaux informatiques de Progenitor. \n\nNécessaire pour accéder aux contrôles du système central sur les noyaux Progenitor et les autres systèmes informatiques de Progenitor.
 }
 
 
@@ -424,14 +424,14 @@
 { Token Id: 6111, Name: [c][FFFF33]Shard of the Sun[/c]
   CustomIcon: Eden_RelicoftheSun
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]And the ancients came upon Osarius and bathed it in eternal light...[-][/c][/i]
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]And the ancients came upon Osarius and bathed it in eternal light...[-][/c][/i]
 }
 
 # Shard of the Moon
 { Token Id: 6112, Name: [c][F0F8FF]Shard of the Moon[/c]
   CustomIcon: Eden_RelicoftheMoon
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...But Osarius could not thrive without the night...[-][/c][/i]
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...But Osarius could not thrive without the night...[-][/c][/i]
 }
 
 # Corrupted Shard of the Stars
@@ -445,14 +445,14 @@
 { Token Id: 6114, Name: [c][FFFFFF]Shard of the Stars[/c]
   CustomIcon: Eden_RelicoftheStars
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...As eternal light and everlasting night fought others sought out the stars. They settled on strange moons and called themselves the Clan of the Stars.[-][/c][/i]
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...As eternal light and everlasting night fought others sought out the stars. They settled on strange moons and called themselves the Clan of the Stars.[-][/c][/i]
 }
 
 # Depleted Progenitor Translation Matrix
 { Token Id: 6115, Name: [c][ff8000]Depleted Progenitor Translation Matrix[/c]
   CustomIcon: Eden_ProgenitorTranslationMatrix2
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \n\nThis matrix has been depleted and will no longer access the computer systems on Progenitor Cores.\n\nStill functions as a Progenitor Translation Matrix for all other purposes and can still access non-core Progenitor computer systems.
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \n\nThis matrix has been depleted and will no longer access the computer systems on Progenitor Cores.\n\nStill functions as a Progenitor Translation Matrix for all other purposes and can still access non-core Progenitor computer systems.
 }
 
 

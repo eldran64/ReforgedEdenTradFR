@@ -14,14 +14,11 @@
 # - Currently only the item 'Token' (Itemsconfig.ecf id: 1305) can have a 4-digit META element. Any OTHER "keycard" named item or other items in general can NOT have meta info attached!
 # - When working with the TokenConfig.ecf, adding custom names for the Token:Meta combination, you can use the console command 'token reload' when you are ingame. You do not need to restart the game when working with this file!
 # =================================
-#
-# DropOnDeath:   > If set to 'False'  this item or block is not dropped on player death. Use for important story items that players shall not lose on death. Default is set to 'True'.
-# =================================
+
 # Example Token
 { Token Id: 1, Name: KeyCardRed
   Description: La carte cle rouge ouvre les portes rouges
 # CustomIcon: AddAnIconNameHere
-  DropMeshfile: Entities/Misc/BagSmallChristmasPrefab
 }
 
 { Token Id: 2, Name: KeyCardGreen
@@ -29,198 +26,98 @@
 }
 
 { Token Id: 1234, Name: Golden Key
-  Description: With the golden key you can open all golden doors
+  Description: Avec la cle en or vous pouvez ouvrir toutes les portes dorees
   #RemoveOnUse: true
 }
 
 # === RP Creditibility Token ===
 
 { Token Id: 100, Name: CredTokenZiraxEmpire
-  Description: Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenZiraxEmpire
+  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 101, Name: CredTokenXenu
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenXenu
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 102, Name: CredTokenRados
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenRados
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 103, Name: CredTokenGhyst
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenGhyst
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 104, Name: CredTokenEpsilon
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenEpsilon
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 105, Name: CredTokenSerdu
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenSerdu
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 106, Name: CredTokenAbyssal
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenAbyssal
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 107, Name: CredTokenPolaris
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenPolaris
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 108, Name: CredTokenTradersGuild
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenTradersGuild
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 109, Name: CredTokenPirates
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenPirates
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 110, Name: CredTokenKriel
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenKriel
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 111, Name: CredTokenTesch
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenTesch
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 112, Name: CredTokenTalon
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenTalon
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 { Token Id: 113, Name: CredTokenColonists
   Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenColonists
-  MarketPrice: 300000, display: true
-  #RemoveOnUse: true
-}
-{ Token Id: 114, Name: CredTokenFarr
-  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenFarr
-  MarketPrice: 300000, display: true
-  #RemoveOnUse: true
-}
-{ Token Id: 115, Name: CredTokenUCH
-  Description: Retablissez votre reputation aupres de la faction en la faisant passer d'Hostile ou d'Inamicale a Neutre. Trouvez son ambassadeur ou une console du reseau d'information galactique (GIN)
-  CustomIcon: CredTokenUCH
+  CustomIcon: KeyCardRed
   MarketPrice: 300000, display: true
   #RemoveOnUse: true
 }
 
-# === Objets de quêtes ===
 
-{ Token Id: 200, Name: ExplReportPlanet
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: Tablet
-  MarketPrice: 25000, display: true
-  #RemoveOnUse: true
-}
-# Quest Temperate Starter FARM 1
-{ Token Id: 201, Name: QuestItemCrops
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: QuestItemCrops  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
-# Quest Temperate Starter FARM 2
-{ Token Id: 202, Name: QuestItemMushroomExtract
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: QuestItemMushroomExtract  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
-# Quest Temperate Starter FARM 3
-{ Token Id: 203, Name: QuestItemBrewingLichen
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: QuestItemBrewingLichen  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
-# Quest Temperate Starter FARM 4
-{ Token Id: 204, Name: QuestItemPumpSpareParts
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: QuestItemPumpSpareParts  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
-# Quest Temperate Starter FARM 5
-{ Token Id: 205, Name: QuestItemRaptorSkin
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: QuestItemRaptorSkin  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
-# Quest Temperate Starter FIELD 1
-{ Token Id: 206, Name: QuestItemAmmoCrossbow
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: QuestItemAmmoCrossbow  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
-# Quest Temperate Starter FIELD 2
-{ Token Id: 207, Name: QuestItemButterflySecretion
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: QuestItemButterflySecretion  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
-# Quest Temperate Starter FIELD 3
-{ Token Id: 208, Name: QuestItemFishParasite
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: QuestItemFishParasite  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
-# Quest Temperate Starter FIELD 4
-{ Token Id: 209, Name: QuestItemWildCorn
-  Description: Quest Item. Will not be dropped on death.
-  CustomIcon: QuestItemWildCorn  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
-# Quest Temperate Starter FIELD 5 Item 1
-{ Token Id: 210, Name: QuestItemTelluropodClutches
-  Description: Quest Item. Will not be dropped on death.
- CustomIcon: QuestItemTelluropodClutches  
-  DropOnDeath: false
-  # MarketPrice: 25000, display: true
-  # RemoveOnUse: true
-}
- 
 # === Story Tokens (Do not change! === 
 
 { Token Id: 9999, Name: AI Routine 32 Key
@@ -267,37 +164,91 @@
 { Token Id: 9988, Name: Ghyst Command Card
   Description: "Carte d'acces aux zones restreintes. Se trouve dans les poches des commandants de Ghyst"
 }
-{ Token Id: 9987, Name: Brotherhood Command Card
-  Description: "Access Card for restricted areas. Can be found in the pockets of Commanders of the Brotherhood of Farr"
+
+
+# ======================================================================================================================================================================
+# =================================================================================================================================Project Eden Tokens:
+# ======================================================================================================================================================================
+# ================================================================================================================================ Test Tokens
+
+# Test
+{ Token Id: 5000, Name: [c][FFFFFF]Contracted Cargo[-][/c]
+  Description: [c][ffffff]Mission Item.[-][/c] \n\nDeliver this cargo to the TOP Manager on board the Polaris Trading Station in orbit around Haven Akua Tallodar Omicron Roggery or Ningues in the Alpha or Beta star systems.
 }
-{ Token Id: 9986, Name: Doctor Mandors' Space Anomalies report
-  Description: "Give this report to Agent Kezzel in the Sanctuary"
+
+{ Token Id: 5001, Name: [c][FF00FF]Virus Sample 127-Beta[-][/c]
+  Description: [c][ff00ff]Mission Item.[-][/c] \n\nA virus sample discovered by Polaris miners in the Deep Core Mining Facility on Helion IV. \nDeliver to the UCHN Artemis in orbit of Helion IV in the Helion system. \n\n[c][A9A9A9][i]Maybe you should not handle this with your bare hands?[/i][-][/c]
 }
-{ Token Id: 9985, Name: Temperate Planet Data 
-  CustomIcon: KeyCardGreen
-  Description: "Contains a list of plants, animals and resources and their relative positions on this planet.The entries can be viewed in the HELP area (F1) > PLANET DATA > TEMPERATE."
+
+{ Token Id: 5002, Name: [c][00FF00]Green Voucher[-][/c]
+  Description: [c][FFFFFF]50000 Credits[-][/c] \n\nCash in at any Trader Guild Bank.
 }
-{ Token Id: 9984, Name: Snow Planet Data 
-  CustomIcon: KeyCardBlue
-  Description: "Contains a list of plants, animals and resources and their relative positions on this planet.The entries can be viewed in the HELP area (F1) > PLANET DATA > SNOW."
+
+# ================================================================================================================================ The Infected mission tokens
+
+# =============================================== REFORGED TOKENS ============================================================
+# UCH Keycard (Offworld Grave)
+{ Token Id: 4001, Name: [c][F0F8FF]Carte-cle UCH[/c]
+  CustomIcon: UCHKeycard
+  Description: Une carte cle personnelle du M.S Titan trouvee dans les quartiers de l'equipage. Elle autorise l'acces aux systemes securises du Titan.
 }
-{ Token Id: 9983, Name: Barren Planet Data 
-  CustomIcon: KeyCardYellow
-  Description: "Contains a list of plants, animals and resources and their relative positions on this planet.The entries can be viewed in the HELP area (F1) > PLANET DATA > BARREN."
+# Missing Cargo (GIN cargo)
+{ Token Id: 4002, Name: [c][00FFFF]Cargaison non livree[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: Un conteneur scelle rempli de marchandises destine a un destinataire de la guilde du commerce. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
 }
-{ Token Id: 9982, Name: Alien Planet Data 
-  CustomIcon: KeyCardRed
-  Description: "Contains a list of plants, animals and resources and their relative positions on this planet.The entries can be viewed in the HELP area (F1) > PLANET DATA > ALIEN."
+{ Token Id: 4003, Name: [c][FFFF00]Cargaison non livree[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: Un conteneur scelle rempli de marchandises. Il y a un destinataire sur l'etiquette mais aucune autre marque. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
 }
-{ Token Id: 9981, Name: Tales of Tash Damaged Datapad 
-  CustomIcon: Tablet
-  Description: "Unlocks the associated Tales of Tash log when picking up this item."
+{ Token Id: 4004, Name: [c][FF0000]Cargaison non livree[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: Un conteneur scelle rempli de marchandises. Le texte sur les etiquettes indique que cette cargaison appartient a RADOS. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
 }
-{ Token Id: 9965, Name: Key Matrix
-  CustomIcon: Tablet
-  DropOnDeath: false
-  Description: "Allows to use the Progenitor teleport network. DO NOT LOOSE!"
+{ Token Id: 4005, Name: [c][FFC100]Cargaison non livree[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: Un conteneur scelle rempli de marchandises destinees a un Polaris Habitat. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
 }
+# Illegal Goods (Unlawful Possession)
+{ Token Id: 4006, Name: [c][FF9900]Marchandises illegales[/c]
+  CustomIcon: ContainerMission
+  Description: Un conteneur de marchandises vraisemblablement volees qui a ete confisque par Polaris apres avoir ete recupere aupres d'un contrebandier travaillant pour Markos.
+}
+# Demo Charges (Freedom Fighter)
+{ Token Id: 4007, Name: [c][FF0000]Charge de demolition[/c]
+  CustomIcon: DemoCharge
+  Description: Une charge explosive generalement utilisee pour la demolition controlee de bâtiments et les operations minieres qui necessitent un dynamitage.\n\n[c][FFFFFF]Objet de la mission d'histoire - Non fonctionnel [-][/c]
+}
+# Weapons Crate (Instigator)
+{ Token Id: 4008, Name: [c][0080FF]Mallette d'armes[/c]
+  CustomIcon: PlasticItemCrate
+  Description: Un conteneur en plastique qui contient une cache d'armes UCH standard bien emballees.
+}
+# Ancient Box (Instigator)
+{ Token Id: 4009, Name: [c][C77900]Caisse scellee[/c]
+  CustomIcon: WoodenItemCrate
+  Description: Une caisse scellee obtenue sur un site sacre Tal'on. Elle contient apparemment une technologie interdite gardee par l'Ordre Chamanique.\n\n[c][FFFFFF]Objet de mission de l'histoire[-][/c]
+}
+# Decryption Device (Cloak-and-Dagger)
+{ Token Id: 4010, Name: [c][FFFF00]Dispositif de decryptage[/c]
+  CustomIcon: Decryptor
+  Description: Un dispositif sophistique de guerre electronique conçu pour se connecter au relais de communication d'un navire ou d'une station et siphonner les donnees envoyees et reçues.
+}
+{ Token Id: 4011, Name: [c][FFFFFF]Cargaison non livree[/c]
+  CustomIcon: ScifiContainer1Small
+  Description: Un conteneur scelle rempli de marchandises destinees a une colonie frontaliere. \n\n[c][ffffff]Apportez cette cargaison perdue au Terminal du Reseau d'Information Galactique sur n'importe quelle station commerciale primaire pour obtenir une recompense ![-][/c]
+}
+{ Token Id: 4012, Name: [c][FFBB00]Mining Shipment[/c]
+  CustomIcon: LargeHarvestContainer
+  Description: Un conteneur de minerai portant le logo de Polaris Mining provenant de l'une de leurs nombreuses installations industrielles. \n\n[c][ffffff]Peut etre renvoye a Polaris en utilisant le service d'expedition de n'importe quelle console GIN.[-][/c]
+}
+{ Token Id: 4013, Name: [c][F0F8FF]Citation de la marine[/c]
+  CustomIcon: NavalCommendation
+  Description: Une citation de l'UCH Naval pour des actes d'heroïsme distingues contre l'ennemi. \n\n[c][ffffff]Peut etre utilise pour augmenter d'un niveau le rang principal ou secondaire actuel du joueur.[-][/c]
+}
+
+
+
 
 # ======================================================================================================================================================================
 # =================================================================================================================================Project Eden Custom Tokens:
@@ -364,30 +315,30 @@
 
 # ================================================================================================================================ Tutorial Tokens:
 
-# --------------------------------------------------------- Solar System Surveys:
+# --------------------------------------------------------- Enquêtes sur le système solaire :
 
 # Alpha System Survey Report
 { Token Id: 6012, Name: [c][ffffff]Rapport d'enquete sur le systeme Alpha[-][/c]
   DropOnDeath: false
-  Description: A report detailing the planets and sectors of the Alpha system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
+  Description: Un rapport détaillant les planètes et les secteurs du système Alpha.\n\nCollectez les rapports d'enquête sur les systèmes Alpha Bêta Delta et Epsilon pour obtenir une récompense. \n\n[i][c][ffffff]Une fois que les 4 rapports sont dans votre inventaire personnel, une mission spéciale sera activée.[-][/c][/i]
 }
 
 # Beta System Survey Report
-{ Token Id: 6013, Name: [c][ffffff]Beta System Survey Report[-][/c]
+{ Token Id: 6013, Name: [c][ffffff]Rapport d'enquete sur le systeme Beta[-][/c]
   DropOnDeath: false
-  Description: A report detailing the planets and sectors of the Beta system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
+  Description: Un rapport détaillant les planètes et les secteurs du système Beta.\n\nCollectez les rapports d'enquête sur les systèmes Alpha Bêta Delta et Epsilon pour obtenir une récompense. \n\n[i][c][ffffff]Une fois que les 4 rapports sont dans votre inventaire personnel, une mission spéciale sera activée.[-][/c][/i]
 }
 
 # Delta System Survey Report
-{ Token Id: 6014, Name: [c][ffffff]Delta System Survey Report[-][/c]
+{ Token Id: 6014, Name: [c][ffffff]Rapport d'enquete sur le systeme Delta[-][/c]
   DropOnDeath: false
-  Description: A report detailing the planets and sectors of the Delta system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
+  Description: Un rapport détaillant les planètes et les secteurs du système Delta.\n\nCollectez les rapports d'enquête sur les systèmes Alpha Bêta Delta et Epsilon pour obtenir une récompense. \n\n[i][c][ffffff]Une fois que les 4 rapports sont dans votre inventaire personnel, une mission spéciale sera activée.[-][/c][/i]
 }
 
 # Epsilon System Survey Report
-{ Token Id: 6015, Name: [c][ffffff]Epsilon System Survey Report[-][/c]
+{ Token Id: 6015, Name: [c][ffffff]Rapport d'enquete sur le systeme Epsilon[-][/c]
   DropOnDeath: false
-  Description: A report detailing the planets and sectors of the Epsilon system.\n\nCollect survey reports on the Alpha Beta Delta and Epsilon systems to obtain a reward. \n\n[i][c][ffffff]Once all 4 reports are in your personal inventory a special mission will activate.[-][/c][/i]
+  Description: Un rapport détaillant les planètes et les secteurs du système Epsilon.\n\nCollectez les rapports d'enquête sur les systèmes Alpha Bêta Delta et Epsilon pour obtenir une récompense. \n\n[i][c][ffffff]Une fois que les 4 rapports sont dans votre inventaire personnel, une mission spéciale sera activée.[-][/c][/i]
 }
 
 
@@ -410,10 +361,10 @@
 }
 
 # Progenitor Translation Matrix
-{ Token Id: 6104, Name: [c][ff8000]Matrice de traduction des progeniteurs[/c]
+{ Token Id: 6104, Name: [c][ff8000]Cle de traduction des progeniteurs[/c]
   CustomIcon: Eden_ProgenitorTranslationMatrix
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \n\nThis matrix grants access to Progenitor computer terminals. \n\nRequired to access the core system controls on Progenitor Cores and other Progenitor computer systems.
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \n\nCette matrice donne accès aux terminaux informatiques de Progenitor. \n\nNécessaire pour accéder aux contrôles du système central sur les noyaux Progenitor et les autres systèmes informatiques de Progenitor.
 }
 
 
@@ -473,14 +424,14 @@
 { Token Id: 6111, Name: [c][FFFF33]Shard of the Sun[/c]
   CustomIcon: Eden_RelicoftheSun
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]And the ancients came upon Osarius and bathed it in eternal light...[-][/c][/i]
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]And the ancients came upon Osarius and bathed it in eternal light...[-][/c][/i]
 }
 
 # Shard of the Moon
 { Token Id: 6112, Name: [c][F0F8FF]Shard of the Moon[/c]
   CustomIcon: Eden_RelicoftheMoon
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...But Osarius could not thrive without the night...[-][/c][/i]
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...But Osarius could not thrive without the night...[-][/c][/i]
 }
 
 # Corrupted Shard of the Stars
@@ -494,14 +445,14 @@
 { Token Id: 6114, Name: [c][FFFFFF]Shard of the Stars[/c]
   CustomIcon: Eden_RelicoftheStars
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...As eternal light and everlasting night fought others sought out the stars. They settled on strange moons and called themselves the Clan of the Stars.[-][/c][/i]
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \nA fragment from an ancient Talon relic. \nThere are notches visible to connect to two other parts. \n\n[i][c][A9A9A9]...As eternal light and everlasting night fought others sought out the stars. They settled on strange moons and called themselves the Clan of the Stars.[-][/c][/i]
 }
 
 # Depleted Progenitor Translation Matrix
 { Token Id: 6115, Name: [c][ff8000]Depleted Progenitor Translation Matrix[/c]
   CustomIcon: Eden_ProgenitorTranslationMatrix2
   DropOnDeath: false
-  Description: [c][ff8000]Story mission item.[-][/c] \n\nThis matrix has been depleted and will no longer access the computer systems on Progenitor Cores.\n\nStill functions as a Progenitor Translation Matrix for all other purposes and can still access non-core Progenitor computer systems.
+  Description: [c][ff8000]Objet de la mission de l'histoire.[-][/c] \n\nThis matrix has been depleted and will no longer access the computer systems on Progenitor Cores.\n\nStill functions as a Progenitor Translation Matrix for all other purposes and can still access non-core Progenitor computer systems.
 }
 
 
@@ -574,7 +525,7 @@
 { Token Id: 6401, Name: "Schema - [c][FFFFFF]Tourelle Flak Sentinel[-][/c]"
   CustomIcon: Eden_TurretFlakClose_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema : [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]50 Points de deverrouillage[-][/c]\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema : [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]50 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -582,7 +533,7 @@
 { Token Id: 6402, Name: "Schema - [c][FFFFFF]Petite tourelle vulcaine[-][/c]"
   CustomIcon: Eden_TurretVulcanSmall_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema : [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema : [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -590,7 +541,7 @@
 { Token Id: 6403, Name: "Schema - [c][FFFFFF]Injecteurs de nanites[-][/c]"
   CustomIcon: Eden_RegenKit_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -598,7 +549,7 @@
 { Token Id: 6404, Name: "Schema - [c][FFFFFF]Injecteurs de nanites avances[-][/c]"
   CustomIcon: Eden_RegenKit_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -606,7 +557,7 @@
 { Token Id: 6405, Name: "Schema - [c][FFFFFF]Brassins de Pomme de Terre[-][/c]"
   CustomIcon: Eden_WarpCoreMoonshine_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs de Schemas sur les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus aux commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs de Schemas sur les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus aux commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -614,7 +565,7 @@
 { Token Id: 6406, Name: "Schema - [c][FFFFFF]Bandages avances[-][/c]"
   CustomIcon: Eden_BandagesT2_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -622,7 +573,7 @@
 { Token Id: 6407, Name: "Schema - [c][FFFFFF]Tourelle de canon lourd[-][/c]"
   CustomIcon: Eden_TurretRailgunHeavy_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n[c][FFFF00]Necessite d'avoir deverrouille la tourelle du canon a rail leger.[-][/c]\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n[c][FFFF00]Necessite d'avoir deverrouille la tourelle du canon a rail leger.[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -630,7 +581,7 @@
 { Token Id: 6408, Name: "Schema - [c][FFFFFF]Minigun incendiaire[-][/c]"
   CustomIcon: Eden_MinigunIncendiary_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FF00FF]Technologie alien[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -638,7 +589,7 @@
 { Token Id: 6409, Name: "Schema - [c][FFFFFF]Canon blaster lourd[-][/c]"
   CustomIcon: Eden_BlasterCV_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][FFFF00]Technologie pirate[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][FFFF00]Technologie pirate[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 50000, display: true
 }
 
@@ -646,7 +597,7 @@
 { Token Id: 6410, Name: "Schema - [c][FFFFFF]Lance-torpilles rapide MX-4[-][/c]"
   CustomIcon: Eden_CVTorpedoRapid_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 100000, display: true
 }
 
@@ -654,7 +605,7 @@
 { Token Id: 6411, Name: "Schema - [c][FFFFFF]Prototype de canon a rail leger LX-2[-][/c]"
   CustomIcon: Eden_RailgunCVSpinal_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]100 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 200000, display: true
 }
 
@@ -662,7 +613,7 @@
 { Token Id: 6412, Name: "Schema - [c][FFFFFF]Automate d'exploitation miniere industrielle[-][/c]"
   CustomIcon: Eden_AutoMiningDeviceT4_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 300000, display: true
 }
 
@@ -670,7 +621,7 @@
 { Token Id: 6413, Name: "Schema - [c][FFFFFF]Grande tourelle vulcaine[-][/c]"
   CustomIcon: Eden_TurretVulcanSmall_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie UCH[-][/c].\nCoute: [c][00FFFF]75 Points de deverrouillage[-][/c]\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 100000, display: true
 }
 
@@ -678,7 +629,7 @@
 { Token Id: 6414, Name: "Schema - [c][FFFFFF]Foreuse pour l'extraction de glace[-][/c]"
   CustomIcon: Eden_AutoMiningDeviceT4_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 100000, display: true
 }
 
@@ -686,7 +637,7 @@
 { Token Id: 6415, Name: "Schema - [c][FFFFFF]Foreuses pour l'extraction d'asteroïdes riches[-][/c]"
   CustomIcon: Eden_AutoMiningDeviceT4_Recipe
   DropOnDeath: false
-  Description: "Categorie de Schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes Schemas peuvent etre rendus aux ordinateurs a Schemas des navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
+  Description: "Categorie de schema: [c][00FFFF]Technologie civile[-][/c].\n\nLes schemas peuvent etre rendus aux ordinateurs specialises dans les schemas dans les navires de recherche de l'UCH pour debloquer le modele d'artisanat indique ou vendus a des commerçants."
   MarketPrice: 300000, display: true
 }
 
@@ -786,52 +737,52 @@
 
 { Token Id: 6555, Name: "Rapport d'anomalie de classe 6"
   CustomIcon: Eden_DataExplorationT6
-  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  Description: "Cet objet n'a actuellement aucune utilite. Il pourra avoir une utilite plus tard. Le systeme d'exploration est actuellement en phase de test."
   MarketPrice: 50000, display: true
 }
 
 # Expedition starts
-{ Token Id: 6556, Name: "Tier 1 Exploration Expedition"
+{ Token Id: 6556, Name: "Expedition d'exploration de niveau 1"
   CustomIcon: Eden_ExpeditionExploreT1
-  # Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
-  Description: "[c][FFFF00]The expedition system is currently a work in progress and should only be used for testing. Rewards, missions, and mechanics are not final and may not be balanced or work properly.[/c]\n\nA report containing various sensor logs and other information on a strange signal that was detected. Bring to a science station to analyze and begin an expedition to discover the source of the signal.\n\nExploration expeditions are long journeys through the galaxy that typically involve traveling to new areas to discover various anomalies as you follow the trail of clues to discover the source of the signal.\nSee the Expeditions section of the PDA for more information."
+  # Description: "Cet objet n'a actuellement aucune utilité. Il pourra avoir une utilité plus tard. Le système d'exploration est actuellement en phase de test."
+  Description: "[c][FFFF00]Le système d'expédition est actuellement en cours d'élaboration et ne doit être utilisé qu'à des fins de test. Les récompenses, les missions et les mécanismes ne sont pas définitifs et peuvent ne pas être équilibrés ou ne pas fonctionner correctement.[/c]\n\nUn rapport contenant divers journaux de capteurs et d'autres informations sur un étrange signal qui a été détecté. Apportez-le à une station scientifique pour qu'il soit analysé et commencez une expédition pour découvrir la source du signal. Les expéditions d'exploration sont de longs voyages à travers la galaxie qui impliquent généralement de se rendre dans de nouvelles zones pour découvrir diverses anomalies alors que vous suivez la piste des indices pour découvrir la source du signal."
   MarketPrice: 50000, display: true
 }
 
-{ Token Id: 6557, Name: "Tier 2 Exploration Expedition"
+{ Token Id: 6557, Name: "Expedition d'exploration de niveau 2"
   CustomIcon: Eden_ExpeditionExploreT2
-  Description: "[c][FFFF00]The expedition system is currently a work in progress and should only be used for testing. Rewards, missions, and mechanics are not final and may not be balanced or work properly.[/c]\n\nA report containing various sensor logs and other information on a strange signal that was detected. Bring to a science station to analyze and begin an expedition to discover the source of the signal.\n\nExploration expeditions are long journeys through the galaxy that typically involve traveling to new areas to discover various anomalies as you follow the trail of clues to discover the source of the signal.\nSee the Expeditions section of the PDA for more information."
+  Description: "[c][FFFF00]Le système d'expédition est actuellement en cours d'élaboration et ne doit être utilisé qu'à des fins de test. Les récompenses, les missions et les mécanismes ne sont pas définitifs et peuvent ne pas être équilibrés ou ne pas fonctionner correctement.[/c]\n\nUn rapport contenant divers journaux de capteurs et d'autres informations sur un étrange signal qui a été détecté. Apportez-le à une station scientifique pour qu'il soit analysé et commencez une expédition pour découvrir la source du signal. Les expéditions d'exploration sont de longs voyages à travers la galaxie qui impliquent généralement de se rendre dans de nouvelles zones pour découvrir diverses anomalies alors que vous suivez la piste des indices pour découvrir la source du signal."
   MarketPrice: 50000, display: true
 }
 
-{ Token Id: 6558, Name: "Tier 3 Exploration Expedition"
+{ Token Id: 6558, Name: "Expedition d'exploration de niveau 3"
   CustomIcon: Eden_ExpeditionExploreT3
-  Description: "[c][FFFF00]The expedition system is currently a work in progress and should only be used for testing. Rewards, missions, and mechanics are not final and may not be balanced or work properly.[/c]\n\nA report containing various sensor logs and other information on a strange signal that was detected. Bring to a science station to analyze and begin an expedition to discover the source of the signal.\n\nExploration expeditions are long journeys through the galaxy that typically involve traveling to new areas to discover various anomalies as you follow the trail of clues to discover the source of the signal.\nSee the Expeditions section of the PDA for more information."
+  Description: "[c][FFFF00]Le système d'expédition est actuellement en cours d'élaboration et ne doit être utilisé qu'à des fins de test. Les récompenses, les missions et les mécanismes ne sont pas définitifs et peuvent ne pas être équilibrés ou ne pas fonctionner correctement.[/c]\n\nUn rapport contenant divers journaux de capteurs et d'autres informations sur un étrange signal qui a été détecté. Apportez-le à une station scientifique pour qu'il soit analysé et commencez une expédition pour découvrir la source du signal. Les expéditions d'exploration sont de longs voyages à travers la galaxie qui impliquent généralement de se rendre dans de nouvelles zones pour découvrir diverses anomalies alors que vous suivez la piste des indices pour découvrir la source du signal."
   MarketPrice: 50000, display: true
 }
 
 # Expedition reports
-{ Token Id: 6559, Name: "Tier 1 Expedition Report"
+{ Token Id: 6559, Name: "Expedition d'exploration de niveau 1"
   CustomIcon: Eden_ExpeditionExploreT1
-  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  Description: "Cet objet n'a actuellement aucune utilité. Il pourra avoir une utilité plus tard. Le système d'exploration est actuellement en phase de test."
   MarketPrice: 100000, display: true
 }
 
-{ Token Id: 6560, Name: "Tier 2 Expedition Report"
+{ Token Id: 6560, Name: "Expedition d'exploration de niveau 2"
   CustomIcon: Eden_ExpeditionExploreT1
-  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  Description: "Cet objet n'a actuellement aucune utilité. Il pourra avoir une utilité plus tard. Le système d'exploration est actuellement en phase de test."
   MarketPrice: 200000, display: true
 }
 
-{ Token Id: 6561, Name: "Tier 3 Expedition Report"
+{ Token Id: 6561, Name: "Expedition d'exploration de niveau 3"
   CustomIcon: Eden_ExpeditionExploreT1
-  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  Description: "Cet objet n'a actuellement aucune utilité. Il pourra avoir une utilité plus tard. Le système d'exploration est actuellement en phase de test."
   MarketPrice: 300000, display: true
 }
 
-{ Token Id: 6562, Name: "Tier 4 Expedition Report"
+{ Token Id: 6562, Name: "Expedition d'exploration de niveau 4"
   CustomIcon: Eden_ExpeditionExploreT1
-  Description: "This item currently has no use. It may get a use later on. Exploration system is currently in testing."
+  Description: "Cet objet n'a actuellement aucune utilité. Il pourra avoir une utilité plus tard. Le système d'exploration est actuellement en phase de test."
   MarketPrice: 400000, display: true
 }
 
@@ -1097,7 +1048,7 @@
 }
 
 # The Three Angels
-{ Token Id: 6637, Name: [c][FFFFFF]Insignia[-][/c] of The Three Angels (Bounty)
+{ Token Id: 6637, Name: [c][FFFFFF]Insigne[-][/c] des trois anges (Bounty)
   CustomIcon: Eden_InsigniaBandits
   Description: "[c][FFFFFF][b]Recherche par:[-][/c] [c][00FFFF]Guilde du commerce[-][/c]\n[c][FFFFFF][b][b]Membre de:[/b][-][/c] [c][BF0000]Bandits[-][/c]\nApportez-le a un bureau de chasseur de primes dans les secteurs des stations commerciales du territoire de la guilde du commerce pour obtenir une recompense.\n\n[c][D5D5D5].[-][/c]"
   MarketPrice: 150000, display: true
@@ -1225,7 +1176,7 @@
 }
 
 # Polaris
-{ Token Id: 6703, Name: Petit boîtier scelle [c][E59933](Polaris)[-][/c]
+{ Token Id: 6703, Name: Petit paquet scelle [c][E59933](Polaris)[-][/c]
   CustomIcon: CargoContainerSV
   Description: "[c][FFFFFF][b]Faction:[-][/c][/b] [c][E59933]Polaris[-][/c]\n[c][FFFFFF][b]Reputation requise : [-][/c][/b] Neutre\n[c][FFFFFF][b]Destination:[-][/c][/b] Distribution Center\n[c][FFFFFF][b]Garantie:[-][/c][/b] 2500\n[c][FFFFFF][b]Paiement:[-][/c][/b] 7% de garantie\n\nUn conteneur scelle marque pour être livre a un destinataire specifique. Achetez cet objet pour sa garantie, puis livrez-le a un centre de distribution dans un secteur de station commerciale sur le territoire de la faction destinataire pour obtenir le retour de votre garantie plus un paiement supplementaire.\n\nUtilisez votre barre d'outils connectee pour acheter ou vendre ce paquet. [c][FFFF00]Requires 8000 cargo space.[-][/c]"
   MarketPrice: 2500, display: true
